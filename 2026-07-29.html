@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-07-29</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1b1e23;--muted:#6b7280;--line:#e6e8ec;
+ --accent:#2563eb;--accentsoft:#eaf1fe;--whybg:#fff8e8;--whyline:#f0a92e;
+ --chip:#f1f3f5;--shadow:0 1px 2px rgba(16,24,40,.05),0 1px 3px rgba(16,24,40,.07)}
+@media (prefers-color-scheme: dark){:root{--bg:#0e1013;--card:#16191f;--ink:#e7e9ee;
+ --muted:#98a0ac;--line:#262b33;--accent:#5b9dff;--accentsoft:#0f1c30;--whybg:#241c0e;
+ --whyline:#b9831f;--chip:#20252d;--shadow:0 1px 2px rgba(0,0,0,.45)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif;
+ -webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:36px 20px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.crumb{margin-bottom:14px;font-size:14px}
+.crumb a{color:var(--muted)}
+h1{font-size:30px;line-height:1.3;margin:0 0 4px;letter-spacing:-.02em}
+.subtitle{color:var(--muted);font-size:15px;margin:0;padding:0;border:0}
+.lede{background:linear-gradient(180deg,var(--accentsoft),transparent);border:1px solid var(--line);
+ border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;margin:18px 0 4px;font-size:15.5px}
+h2{font-size:22px;margin:36px 0 14px;padding-left:12px;border-left:4px solid var(--accent);letter-spacing:-.01em}
+ul.toc{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+ul.toc li{margin:0}
+ul.toc a{display:inline-block;background:var(--card);border:1px solid var(--line);border-radius:999px;
+ padding:6px 14px;font-size:14px;box-shadow:var(--shadow)}
+ul.toc a:hover{border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ol.items{list-style:none;padding:0;margin:0;counter-reset:it}
+li.item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+ margin:0 0 14px;box-shadow:var(--shadow);counter-increment:it;position:relative;transition:transform .12s ease}
+li.item:hover{transform:translateY(-1px)}
+li.item::before{content:counter(it);position:absolute;top:14px;right:16px;font-size:12.5px;color:var(--muted);
+ background:var(--chip);border-radius:999px;min-width:24px;height:24px;display:flex;align-items:center;
+ justify-content:center;padding:0 6px}
+.item-head{font-size:16.5px;font-weight:600;line-height:1.55;padding-right:36px}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:var(--whybg);border-left:3px solid var(--whyline);border-radius:8px;
+ padding:9px 12px;margin-top:12px;font-size:14px}
+blockquote.note{background:var(--chip);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--muted);margin:14px 0}
+.meta{margin-top:11px;display:flex;flex-wrap:wrap;gap:6px}
+code.chip{background:var(--chip);color:var(--muted);border-radius:6px;padding:2px 8px;font-size:12px;
+ font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+p{margin:10px 0}
+em{color:var(--muted)}
+.footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:13px;text-align:center}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:8px 14px;font-size:13px;box-shadow:var(--shadow);z-index:9}
+/* 首页 index */
+.day{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
+ padding:16px 18px;margin:0 0 12px;box-shadow:var(--shadow)}
+.day:hover{border-color:var(--accent);text-decoration:none}
+.day .dt{font-size:17px;font-weight:600;color:var(--ink)}
+.day .ct{font-size:12.5px;color:var(--muted);background:var(--chip);border-radius:999px;
+ padding:2px 9px;margin-left:8px}
+.day .th{margin-top:6px;font-size:14px;color:var(--muted);line-height:1.5}
+@media (max-width:560px){h1{font-size:25px}.wrap{padding:22px 14px 70px}}
+</style></head><body><div class="wrap" id="top"><div class="crumb"><a href="index.html">⌂ 全部日报</a></div><h1 id="ai-前沿日报--2026-07-29">AI 前沿日报 · 2026-07-29</h1>
+<blockquote class="subtitle">每日精选全球 AI 热门进展 · 简要速览 · 共 17 条</blockquote>
+<div class="lede">🎯 <strong>今日主线</strong>:中国开源模型进入「刷屏消化期」——Kimi K3 架构被深度拆解、M1 Max 本地跑通、生态适配跟进,与百度 Unlimited OCR 并称「开源双子星」霸榜海外;与此同时 Anthropic 公开其开放权重立场、全球千人联名呼吁「AI 刹车」,开源浪潮与安全博弈的拉锯持续加码。</div>
+<h2 id="-目录">📑 目录</h2>
+<ul class="toc"><li><a href="#-官方动态">🏢 官方动态</a>(3 条)</li><li><a href="#-海外热榜">🔥 海外热榜</a>(5 条)</li><li><a href="#-论文前沿">📄 论文前沿</a>(4 条)</li><li><a href="#-中文社区">🇨🇳 中文社区</a>(5 条)</li></ul>
+<hr>
+<h2 id="-官方动态">🏢 官方动态</h2>
+<ol class="items"><li class="item"><div class="item-head"><strong><a href="https://www.anthropic.com/news/position-open-weights-models" target="_blank" rel="noopener noreferrer">Anthropic:我们对开放权重模型的立场</a></strong> — CEO Dario Amodei 署名文章:从未主张禁止开放权重,无害能力的开放模型是「公共产品」;但主张对华限售高端芯片、打击工业级蒸馏、强制所有强模型发布前安全测试。</div><blockquote class="why">💡 为什么值得关注:开放权重之争的权威一方表态,是理解当前「开源 vs 安全」博弈的关键文本。</blockquote><div class="meta"><code class="chip">Anthropic</code><code class="chip">07-27</code></div></li><li class="item"><div class="item-head"><strong><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/" target="_blank" rel="noopener noreferrer">谷歌连发 Gemini 3.6 Flash / 3.5 Flash-Lite / 3.5 Flash Cyber</a></strong> — Flash 家族一次补齐三款,其中 Flash Cyber 是面向网络安全场景的专用模型。</div><blockquote class="why">💡 为什么值得关注:小模型赛道继续卷「专细化」,安全垂直模型成为新方向。</blockquote><div class="meta"><code class="chip">Google DeepMind</code><code class="chip">07 月</code></div></li><li class="item"><div class="item-head"><strong><a href="https://huggingface.co/blog/hugging-science/run-aifs-yourself" target="_blank" rel="noopener noreferrer">ECMWF 的 AI 天气预报模型开源,并可自行本地运行</a></strong> — Hugging Face 发布教程,把欧洲中期天气预报中心的 AIFS 开源模型跑起来,降低气象 AI 使用门槛。</div><blockquote class="why">💡 为什么值得关注:AI for Science 的开放权重范本,传统数值预报正被开源 AI 快速渗透。</blockquote><div class="meta"><code class="chip">Hugging Face</code><code class="chip">07-29</code></div></li></ol>
+<h2 id="-海外热榜">🔥 海外热榜</h2>
+<ol class="items"><li class="item"><div class="item-head"><strong><a href="https://github.com/openai/codex-security" target="_blank" rel="noopener noreferrer">OpenAI 发布 Codex Security</a></strong> — OpenAI 开源 Codex 安全相关项目,聚焦代码智能体的安全能力,登顶 HN(347 分)。</div><blockquote class="why">💡 为什么值得关注:编程 Agent 进入「安全能力」竞争阶段,与 Codex 反超 Claude Code 的传闻相呼应。</blockquote><div class="meta"><code class="chip">Hacker News</code><code class="chip">07-29</code></div></li><li class="item"><div class="item-head"><strong><a href="https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html" target="_blank" rel="noopener noreferrer">Kimi K3 架构深度解读(Sebastian Raschka)</a></strong> — 知名作者逐层拆解 K3 架构设计笔记,HN 316 分,成为理解这款 3T 级开源模型的首选技术读物。</div><blockquote class="why">💡 为什么值得关注:顶级技术 KOL 跟进解读,标志 K3 从「发布热度」进入「技术消化期」。</blockquote><div class="meta"><code class="chip">Hacker News</code><code class="chip">07-29</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses" target="_blank" rel="noopener noreferrer">用 Claude 发现密码学弱点</a></strong> — Anthropic 研究展示 Claude 辅助挖掘密码实现中的安全漏洞,HN 182 分、125 条讨论。</div><blockquote class="why">💡 为什么值得关注:LLM 在安全研究/漏洞发现上的实战能力正快速兑现。</blockquote><div class="meta"><code class="chip">Hacker News</code><code class="chip">07-29</code></div></li><li class="item"><div class="item-head"><strong>GitHub 趋势被 Claude/Agent 工具链刷屏</strong> — <a href="https://github.com/bradautomates/claude-video" target="_blank" rel="noopener noreferrer">claude-video</a>(让 Claude 看视频,日增 988⭐)、<a href="https://github.com/virgiliojr94/book-to-skill" target="_blank" rel="noopener noreferrer">book-to-skill</a>(把技术书 PDF 转成 Claude skill)、<a href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener noreferrer">ECC</a>(Agent 性能优化)齐上榜。</div><blockquote class="why">💡 为什么值得关注:Claude Code 的「skill / 工具链」生态正社区化爆发,是 Agent 工程化的直观信号。</blockquote><div class="meta"><code class="chip">GitHub Trending</code><code class="chip">07-29</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/microsoft/agent-governance-toolkit" target="_blank" rel="noopener noreferrer">微软开源 Agent 治理工具包</a></strong> + <a href="https://github.com/huggingface/speech-to-speech" target="_blank" rel="noopener noreferrer">HF 本地语音 Agent</a> — 前者主打策略执行、零信任身份、沙箱,号称覆盖 OWASP Agentic Top 10;后者用开源模型本地搭建语音智能体。</div><blockquote class="why">💡 为什么值得关注:Agent 从「能用」走向「可控、可治理」,企业级落地配套开始成型。</blockquote><div class="meta"><code class="chip">GitHub Trending</code><code class="chip">07-29</code></div></li></ol>
+<h2 id="-论文前沿">📄 论文前沿</h2>
+<ol class="items"><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2510.26692" target="_blank" rel="noopener noreferrer">Kimi Linear:富有表现力的高效注意力架构</a></strong> — Kimi 团队的高效线性注意力论文,因 K3 发布被重新推上 HN(281 分),是 K3 的技术底座之一。</div><blockquote class="why">💡 为什么值得关注:想读懂 K3 为何高效,这篇架构论文是绕不开的底层。</blockquote><div class="meta"><code class="chip">arXiv</code><code class="chip">07-29 热议</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2607.26057" target="_blank" rel="noopener noreferrer">Pass the Baton:轨迹接力式 On-Policy 蒸馏</a></strong> — 提出「接力棒」式的在策略蒸馏方法,提升小模型 Agent 的训练效率与稳定性。</div><blockquote class="why">💡 为什么值得关注:Agent 蒸馏是让强能力「降本增效」落地的关键路径。</blockquote><div class="meta"><code class="chip">arXiv cs.CL</code><code class="chip">07-29</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2607.25308" target="_blank" rel="noopener noreferrer">CAST:让博弈求解器当 LLM Agent 的回合级老师</a></strong> — 用游戏求解器在回合粒度上指导 Agent 学习,改善决策能力。</div><blockquote class="why">💡 为什么值得关注:「搜索/求解器 + LLM」的混合训练仍是提升 Agent 推理的热门范式。</blockquote><div class="meta"><code class="chip">arXiv cs.CL</code><code class="chip">07-29</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2607.25907" target="_blank" rel="noopener noreferrer">输入侧抑制 LLM 的「评估感知」</a></strong> — 仅通过输入即可抑制模型「察觉自己正被评测」的潜在表征,直指评估真实性与对齐问题。</div><blockquote class="why">💡 为什么值得关注:模型「装乖」给安全评测带来根本性挑战,这是值得关注的前沿应对。</blockquote><div class="meta"><code class="chip">arXiv cs.LG</code><code class="chip">07-29</code></div></li></ol>
+<h2 id="-中文社区">🇨🇳 中文社区</h2>
+<ol class="items"><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/07/461949.html" target="_blank" rel="noopener noreferrer">Kimi K3、Unlimited OCR 包揽全球前二,中国开源模型持续刷屏海外</a></strong> — 月之暗面 K3(7-27 开源,全球首个开源 3T 级)发布几十分钟登顶 HF 趋势榜;百度 Unlimited OCR 拿下 GitHub/HF 四榜第一、获 Yann LeCun 转发,并称「开源双子星」。</div><blockquote class="why">💡 为什么值得关注:中国开源模型从「单点突破」走向「集体霸榜」,全球影响力肉眼可见。</blockquote><div class="meta"><code class="chip">量子位</code><code class="chip">07-28</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/07/461911.html" target="_blank" rel="noopener noreferrer">Ilya 获黄仁勋 50 亿美元押注:「是时候 Scaling 了」</a></strong> — 英伟达据传向 Ilya Sutskever 的 SSI 大额注资,Ilya 表态重回规模化路线。</div><blockquote class="why">💡 为什么值得关注:顶级 AI 领袖 + 芯片巨头的重金组合,可能重塑前沿模型竞争格局。</blockquote><div class="meta"><code class="chip">量子位</code><code class="chip">07-28</code></div></li><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3915298041834883" target="_blank" rel="noopener noreferrer">Codex 终于反超 Claude Code,但付出了惨重代价</a></strong> — OpenAI Codex 在编程 Agent 能力上据称反超 Claude Code,但背后是巨大的算力/成本投入。</div><blockquote class="why">💡 为什么值得关注:编程 Agent 双雄争霸进入白热化,「能力 vs 成本」的权衡值得关注。</blockquote><div class="meta"><code class="chip">36氪</code><code class="chip">07-29</code></div></li><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3915961421737608" target="_blank" rel="noopener noreferrer">全球千人联名逼 AI「刹车」,OpenAI、Anthropic 带头签</a></strong> — 又一轮大规模行业联名,呼吁对前沿 AI 发展施加约束,头部实验室高层参与签署。</div><blockquote class="why">💡 为什么值得关注:与 Anthropic 开放权重立场同源,安全治理的行业共识正在凝聚。</blockquote><div class="meta"><code class="chip">36氪</code><code class="chip">07-29</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/07/461517.html" target="_blank" rel="noopener noreferrer">突发:翁荔(Lilian Weng)离职 Thinking Machines</a></strong> — 前 OpenAI 安全研究 VP、知名博主翁荔从 Mira Murati 创立的 Thinking Machines 离职。</div><blockquote class="why">💡 为什么值得关注:明星研究员流动往往预示方向调整,值得持续跟踪其下一站。</blockquote><div class="meta"><code class="chip">量子位</code><code class="chip">07-28</code></div></li></ol>
+<hr>
+<p><em>由 Claude 自动生成 · 条目均附原文链接,点击可深入学习</em></p><div class="footer">由 Claude 自动采集 · 本地脚本渲染网页版 · 条目均附原文链接</div></div><a class="toplink" href="#top">↑ 顶部</a></body></html>
