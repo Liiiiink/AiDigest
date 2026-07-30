@@ -1,139 +1,136 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>🛠️ 每周动手实操 · 2026-07-30</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>每周动手实操 · 2026-07-30</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
 *{box-sizing:border-box}
-:root{--bg:#edf0f4;--card:#fff;--ink:#14181d;--muted:#5f6b7a;--line:#e3e7ee;
- --accent:#2563eb;--accentsoft:#e8effe;
- --official:#2563eb;--hot:#ea580c;--papers:#7c3aed;--china:#059669;
- --whybg:#fff7e6;--whyline:#f0a92e;--chip:#eef1f5;
- --shadow:0 1px 2px rgba(16,24,40,.06),0 4px 16px rgba(16,24,40,.07);
- --heroa:#2563eb;--herob:#7c3aed}
-@media (prefers-color-scheme: dark){:root:not(.light){--bg:#0d1015;--card:#161a21;--ink:#e8ebf0;
- --muted:#98a1ad;--line:#262c37;--accent:#5b9dff;--accentsoft:#12203a;
- --official:#5b9dff;--hot:#fb8c3c;--papers:#a78bfa;--china:#34d399;
- --whybg:#241c0e;--whyline:#b9831f;--chip:#20262f;--shadow:0 1px 2px rgba(0,0,0,.5);
- --heroa:#1e3a8a;--herob:#4c1d95}}
-:root.dark{--bg:#0d1015;--card:#161a21;--ink:#e8ebf0;--muted:#98a1ad;--line:#262c37;
- --accent:#5b9dff;--accentsoft:#12203a;--official:#5b9dff;--hot:#fb8c3c;--papers:#a78bfa;--china:#34d399;
- --whybg:#241c0e;--whyline:#b9831f;--chip:#20262f;--shadow:0 1px 2px rgba(0,0,0,.5);
- --heroa:#1e3a8a;--herob:#4c1d95}
-body{margin:0;background:var(--bg);color:var(--ink);
- font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif;
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
  -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
-.wrap{max-width:800px;margin:0 auto;padding:24px 20px 90px}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
-/* 头部 hero */
-.hero{background:linear-gradient(135deg,var(--heroa),var(--herob));color:#fff;border-radius:18px;
- padding:26px 26px 22px;margin:6px 0 18px;box-shadow:var(--shadow)}
-.hero h1{margin:0;font-size:29px;line-height:1.25;color:#fff;letter-spacing:-.02em}
-.hero .subtitle{color:rgba(255,255,255,.85);font-size:14.5px;margin:8px 0 0;padding:0;border:0}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
 .hero blockquote{border:0;background:none;padding:0;margin:0}
-.hero .lede{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);border-radius:12px;
- padding:12px 15px;margin-top:16px;font-size:15px;line-height:1.6}
-.hero .lede strong{color:#fff}
-/* 上/下一篇导航 */
-.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:12px 0 4px}
-.daynav a{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;
- font-size:14px;box-shadow:var(--shadow)}
-.daynav a:hover{border-color:var(--accent);text-decoration:none}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
 .daynav .home{color:var(--muted)}
 .daynav span{width:1px}
-/* 分区标题 + 分类配色 */
-h2{font-size:21px;margin:32px 0 14px;padding-left:12px;border-left:4px solid var(--accent);letter-spacing:-.01em}
-h2.cat-official{border-color:var(--official)}
-h2.cat-hot{border-color:var(--hot)}
-h2.cat-papers{border-color:var(--papers)}
-h2.cat-china{border-color:var(--china)}
-/* 目录胶囊 */
-ul.toc{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
 ul.toc li{margin:0}
-ul.toc a{display:inline-block;background:var(--card);border:1.5px solid var(--line);border-radius:999px;
- padding:6px 14px;font-size:14px;box-shadow:var(--shadow)}
-ul.toc a:hover{text-decoration:none;transform:translateY(-1px)}
-ul.toc li.cat-official a{border-color:var(--official);color:var(--official)}
-ul.toc li.cat-hot a{border-color:var(--hot);color:var(--hot)}
-ul.toc li.cat-papers a{border-color:var(--papers);color:var(--papers)}
-ul.toc li.cat-china a{border-color:var(--china);color:var(--china)}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
 ul.list{margin:8px 0;padding-left:22px}
 hr{border:0;border-top:1px solid var(--line);margin:26px 0}
-/* 条目卡片 */
-ol.items{list-style:none;padding:0;margin:0;counter-reset:it}
-li.item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px 14px;
- margin:0 0 14px;box-shadow:var(--shadow);counter-increment:it;position:relative;
- transition:transform .14s ease,box-shadow .14s ease}
-li.item:hover{transform:translateY(-2px)}
-li.item::before{content:counter(it);position:absolute;top:14px;right:16px;font-size:12.5px;color:#fff;
- background:var(--accent);border-radius:999px;min-width:24px;height:24px;display:flex;align-items:center;
- justify-content:center;padding:0 6px}
-ol.items.cat-official li.item::before{background:var(--official)}
-ol.items.cat-hot li.item::before{background:var(--hot)}
-ol.items.cat-papers li.item::before{background:var(--papers)}
-ol.items.cat-china li.item::before{background:var(--china)}
-.item-head{font-size:16.5px;font-weight:600;line-height:1.55;padding-right:36px}
-/* 「📈 后续」徽标 */
-.fubadge{display:inline-block;background:var(--papers);color:#fff;font-size:11px;font-weight:600;
- border-radius:6px;padding:1px 7px;margin-right:7px;vertical-align:2px}
-li.followup{border-left:3px solid var(--papers)}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
 blockquote{margin:10px 0 0;padding:0;border:0}
-blockquote.why{background:var(--whybg);border-left:3px solid var(--whyline);border-radius:8px;
- padding:9px 12px;margin-top:12px;font-size:14px}
-blockquote.note{background:var(--chip);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--muted);margin:14px 0}
-.meta{margin-top:11px;display:flex;flex-wrap:wrap;gap:6px}
-code.chip{background:var(--chip);color:var(--muted);border-radius:6px;padding:2px 8px;font-size:12px;
- font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
 p{margin:10px 0}
 em{color:var(--muted)}
-.footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);
- font-size:13px;text-align:center}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
 .toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
- border-radius:999px;padding:8px 14px;font-size:13px;box-shadow:var(--shadow);z-index:9}
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
 .themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
- border-radius:999px;width:42px;height:42px;font-size:18px;cursor:pointer;box-shadow:var(--shadow);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
  display:flex;align-items:center;justify-content:center;padding:0}
 .themebtn:hover{border-color:var(--accent)}
-/* 首页搜索框 */
-.search{margin:4px 0 16px}
-.search input{width:100%;background:var(--card);border:1.5px solid var(--line);border-radius:12px;
- padding:12px 16px;font-size:15px;color:var(--ink);box-shadow:var(--shadow);outline:none}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
 .search input:focus{border-color:var(--accent)}
-/* 首页日期卡 */
-.day{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
- padding:16px 18px;margin:0 0 12px;box-shadow:var(--shadow);transition:transform .14s ease,border-color .14s}
-.day:hover{border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
-.day .dt{font-size:17px;font-weight:600;color:var(--ink)}
-.day .ct{font-size:12.5px;color:var(--muted);background:var(--chip);border-radius:999px;padding:2px 9px;margin-left:8px}
-.day .th{margin-top:6px;font-size:14px;color:var(--muted);line-height:1.5}
-.pcard{display:block;background:linear-gradient(135deg,var(--heroa),var(--herob));color:#fff;border:0;
- border-radius:14px;padding:16px 18px;margin:0 0 16px;box-shadow:var(--shadow);transition:transform .14s ease}
-.pcard:hover{text-decoration:none;transform:translateY(-1px)}
-.pcard .dt{font-size:17px;font-weight:700;color:#fff}
-.pcard .ct{font-size:12px;color:rgba(255,255,255,.9);background:rgba(255,255,255,.18);border-radius:999px;
- padding:2px 9px;margin-left:8px}
-.pcard .th{margin-top:6px;font-size:14px;color:rgba(255,255,255,.92);line-height:1.5}
-@media (max-width:560px){.hero h1{font-size:24px}.wrap{padding:16px 14px 70px}}
-</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>🛠️ 每周动手实操 · 2026-07-30</h1>
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>每周动手实操 · 2026-07-30</h1>
 <blockquote class="quote">每周一篇模型精讲 + 一个动手小教程 · 数据截至 2026-07-30</blockquote>
-</div><nav class="daynav"><span></span><a class="home" href="index.html">⌂ 全部</a><span></span></nav><h2 id="-模型精讲scaling-laws缩放定律">📘 模型精讲:Scaling Laws(缩放定律)</h2>
+</div><nav class="daynav"><span></span><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-模型精讲scaling-laws缩放定律">模型精讲:Scaling Laws(缩放定律)</h2>
 <p><strong>大模型为什么&quot;越练越强&quot;是能提前算出来的?</strong></p>
-<blockquote class="why">💡 核心看点:训练损失随模型、数据、算力呈幂律下降——这意味着大厂在按下「训练」按钮之前,就能预测烧掉几千万美元后模型会变多聪明。</blockquote>
+<blockquote class="why">核心看点:训练损失随模型、数据、算力呈幂律下降——这意味着大厂在按下「训练」按钮之前,就能预测烧掉几千万美元后模型会变多聪明。</blockquote>
 <p>你有没有发现,这几年 AI 的进步有一种奇怪的&quot;确定性&quot;:GPT-2 到 GPT-3 到 GPT-4,每一代都把参数和数据量放大一个数量级,然后能力就真的上了一个台阶。这不是碰运气,而是背后有一条经验定律在兜底——<strong>Scaling Laws(缩放定律)</strong>:模型的训练损失(可以粗略理解为&quot;犯错率&quot;)与参数量 N、训练数据量 D、算力 C 之间呈<strong>幂律关系</strong>。所谓幂律,就是在&quot;对数-对数坐标图&quot;上,损失和规模的关系近似一条直线:规模每扩大 10 倍,损失就按固定比例下降一格。打个比方:它像健身的&quot;进步曲线&quot;——新手期进步飞快,之后每进一步都要付出成倍努力,但这个衰减节奏是稳定、可外推的。OpenAI(Kaplan 等,2020)最早系统提出这条定律,DeepMind 随后用 Chinchilla 论文(2022)修正了关键细节。</p>
 <p>Chinchilla 的核心结论一句话:<strong>模型和数据要&quot;门当户对&quot;,等比放大</strong>。这就像给车配发动机:光换更大的发动机(堆参数)却不加更多油(数据),车跑不远;反之亦然。Chinchilla 证明,在同样算力预算下,最优策略是参数翻倍、训练 token 也翻倍——它用只有 Gopher 1/4 的参数、4 倍的数据,在相同算力下全面反超了 Gopher。这个结论直接改写了后来所有主流大模型的训练配方(比如 Llama 系列明显&quot;数据管够&quot;)。<strong>进阶点一</strong>:当数据不够、只能反复训练同一批数据时(Muennighoff 等 2023),重复数据的价值会指数衰减,此时&quot;多训几轮&quot;比&quot;继续堆参数&quot;更划算。</p>
 <p><strong>进阶点二</strong>:为什么偏偏是幂律?一个有趣假说(Michaud 等 2023)认为,知识是一块块离散的&quot;量子技能&quot;,而这些技能在数据中的出现频率本身就服从幂律分布——模型先学会常见技能、再啃稀有技能,损失自然走出一条平滑的幂律曲线。读完后你再回头看本期教程:你亲手训练的小 GPT,损失从 4.x 一路降到 1.x 的那条曲线,就是这条宇宙级定律在你笔记本上的微缩演示。</p>
 <ul class="list"><li>🔗 原文:<a href="https://lilianweng.github.io/posts/2026-06-24-scaling-laws/" target="_blank" rel="noopener noreferrer">Scaling Laws — Lilian Weng</a></li><li>🏷️ 来源:Lilian Weng 博客(前 OpenAI 安全研究负责人)· 难度:进阶(概念入门友好,细节偏深)</li></ul>
-<h2 id="-动手教程用-nanogpt-亲手训练你的第一个-gpt">🔧 动手教程:用 nanoGPT 亲手训练你的第一个 GPT</h2>
+<h2 id="-动手教程用-nanogpt-亲手训练你的第一个-gpt">动手教程:用 nanoGPT 亲手训练你的第一个 GPT</h2>
 <p><strong>不到 600 行核心代码,在你的电脑上训练一个会&quot;写莎士比亚&quot;的迷你 GPT</strong></p>
-<blockquote class="why">💡 你将做出:一个从零训练出来的字符级 GPT,能生成莎士比亚腔的&quot;伪英文剧本&quot;,并亲眼看到训练损失一路下降。</blockquote>
+<blockquote class="why">你将做出:一个从零训练出来的字符级 GPT,能生成莎士比亚腔的&quot;伪英文剧本&quot;,并亲眼看到训练损失一路下降。</blockquote>
 <p><strong>准备</strong>:一台能跑 Python 的电脑(Mac / Linux / Windows 均可;有 GPU 更快,纯 CPU 或 Apple Silicon 也能跑)。先装好 Python 3.9+ 和 git。不需要任何账号,全部免费。</p>
 <p><strong>跟着做</strong>:</p>
 <ol class="items "><li class="item"><div class="item-head"><strong>拉取代码并装依赖</strong>(约 2 分钟):</div><p>```bash</p><p>git clone https://github.com/karpathy/nanoGPT.git</p><p>cd nanoGPT</p><p>pip install torch numpy transformers datasets tiktoken tqdm</p><p>```</p></li><li class="item"><div class="item-head"><strong>准备数据集</strong>:运行 <code>python data/shakespeare_char/prepare.py</code>。它会下载约 1MB 的莎士比亚全集,并切成一个个字符,打包成 <code>train.bin</code> 训练文件。</div></li><li class="item"><div class="item-head"><strong>开始训练</strong>:有 GPU 的话直接运行 <code>python train.py config/train_shakespeare_char.py</code>,约 3 分钟训完;纯 CPU 或 Mac 笔记本就加参数缩小模型,例如 <code>--device=cpu --compile=False --block_size=64 --n_layer=4 --n_head=4 --n_embd=128 --max_iters=2000</code>(Mac 可把 <code>--device=cpu</code> 换成 <code>--device=mps</code> 用 Metal 加速)。盯着屏幕:你会看到 <code>loss</code> 从 4.x 一路往下掉——这就是上一篇 Scaling Laws 的幂律曲线在你眼前直播。</div></li><li class="item"><div class="item-head"><strong>让它&quot;写作&quot;</strong>:运行 <code>python sample.py --out_dir=out-shakespeare-char</code>,你的小 GPT 就会输出一段莎士比亚风格的角色对白——语法半通不通,但神韵十足。</div></li></ol>
-<blockquote class="quote">✅ 做完你会:完整走过一遍&quot;数据准备 → 训练 → 采样生成&quot;的大模型最小闭环,理解 <code>train.py</code>(~300 行)和 <code>model.py</code>(~300 行)里到底发生了什么。下一步可以读 <code>model.py</code> 对照 attention 的实现,或者试试官方进阶玩法:加载 GPT-2 预训练权重做微调(<code>config/finetune_shakespeare.py</code>)。注意:作者已把 nanoGPT 标记为&quot;维护放缓&quot;,同作者的全新项目 <a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener noreferrer">nanochat</a> 可以花约 100 美元从零炼出一个完整的 ChatGPT 克隆,适合作为进阶下一站。</blockquote>
+<blockquote class="quote">做完你会:完整走过一遍&quot;数据准备 → 训练 → 采样生成&quot;的大模型最小闭环,理解 <code>train.py</code>(~300 行)和 <code>model.py</code>(~300 行)里到底发生了什么。下一步可以读 <code>model.py</code> 对照 attention 的实现,或者试试官方进阶玩法:加载 GPT-2 预训练权重做微调(<code>config/finetune_shakespeare.py</code>)。注意:作者已把 nanoGPT 标记为&quot;维护放缓&quot;,同作者的全新项目 <a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener noreferrer">nanochat</a> 可以花约 100 美元从零炼出一个完整的 ChatGPT 克隆,适合作为进阶下一站。</blockquote>
 <ul class="list"><li>🔗 教程/代码:<a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener noreferrer">karpathy/nanoGPT — The simplest, fastest repository for training/finetuning medium-sized GPTs</a></li><li>🏷️ 来源:GitHub(Andrej Karpathy,前 Tesla AI 总监 / OpenAI 创始成员)· 难度:入门</li></ul>
 <hr>
-<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><span></span><a class="home" href="index.html">⌂ 全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><span></span><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
 (function(){
   var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
   function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
   function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
-  function paint(){ if(btn) btn.textContent = isDark()? '☀️':'🌙'; }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
   var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
   if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
   window.toggleTheme=function(){
@@ -149,5 +146,17 @@ em{color:var(--muted)}
       days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
     }
   }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
 })();
 </script></body></html>

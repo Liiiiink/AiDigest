@@ -1,129 +1,133 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-07-30</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
 *{box-sizing:border-box}
-:root{--bg:#edf0f4;--card:#fff;--ink:#14181d;--muted:#5f6b7a;--line:#e3e7ee;
- --accent:#2563eb;--accentsoft:#e8effe;
- --official:#2563eb;--hot:#ea580c;--papers:#7c3aed;--china:#059669;
- --whybg:#fff7e6;--whyline:#f0a92e;--chip:#eef1f5;
- --shadow:0 1px 2px rgba(16,24,40,.06),0 4px 16px rgba(16,24,40,.07);
- --heroa:#2563eb;--herob:#7c3aed}
-@media (prefers-color-scheme: dark){:root:not(.light){--bg:#0d1015;--card:#161a21;--ink:#e8ebf0;
- --muted:#98a1ad;--line:#262c37;--accent:#5b9dff;--accentsoft:#12203a;
- --official:#5b9dff;--hot:#fb8c3c;--papers:#a78bfa;--china:#34d399;
- --whybg:#241c0e;--whyline:#b9831f;--chip:#20262f;--shadow:0 1px 2px rgba(0,0,0,.5);
- --heroa:#1e3a8a;--herob:#4c1d95}}
-:root.dark{--bg:#0d1015;--card:#161a21;--ink:#e8ebf0;--muted:#98a1ad;--line:#262c37;
- --accent:#5b9dff;--accentsoft:#12203a;--official:#5b9dff;--hot:#fb8c3c;--papers:#a78bfa;--china:#34d399;
- --whybg:#241c0e;--whyline:#b9831f;--chip:#20262f;--shadow:0 1px 2px rgba(0,0,0,.5);
- --heroa:#1e3a8a;--herob:#4c1d95}
-body{margin:0;background:var(--bg);color:var(--ink);
- font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif;
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
  -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
-.wrap{max-width:800px;margin:0 auto;padding:24px 20px 90px}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
-/* 头部 hero */
-.hero{background:linear-gradient(135deg,var(--heroa),var(--herob));color:#fff;border-radius:18px;
- padding:26px 26px 22px;margin:6px 0 18px;box-shadow:var(--shadow)}
-.hero h1{margin:0;font-size:29px;line-height:1.25;color:#fff;letter-spacing:-.02em}
-.hero .subtitle{color:rgba(255,255,255,.85);font-size:14.5px;margin:8px 0 0;padding:0;border:0}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
 .hero blockquote{border:0;background:none;padding:0;margin:0}
-.hero .lede{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);border-radius:12px;
- padding:12px 15px;margin-top:16px;font-size:15px;line-height:1.6}
-.hero .lede strong{color:#fff}
-/* 上/下一篇导航 */
-.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:12px 0 4px}
-.daynav a{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;
- font-size:14px;box-shadow:var(--shadow)}
-.daynav a:hover{border-color:var(--accent);text-decoration:none}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
 .daynav .home{color:var(--muted)}
 .daynav span{width:1px}
-/* 分区标题 + 分类配色 */
-h2{font-size:21px;margin:32px 0 14px;padding-left:12px;border-left:4px solid var(--accent);letter-spacing:-.01em}
-h2.cat-official{border-color:var(--official)}
-h2.cat-hot{border-color:var(--hot)}
-h2.cat-papers{border-color:var(--papers)}
-h2.cat-china{border-color:var(--china)}
-/* 目录胶囊 */
-ul.toc{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
 ul.toc li{margin:0}
-ul.toc a{display:inline-block;background:var(--card);border:1.5px solid var(--line);border-radius:999px;
- padding:6px 14px;font-size:14px;box-shadow:var(--shadow)}
-ul.toc a:hover{text-decoration:none;transform:translateY(-1px)}
-ul.toc li.cat-official a{border-color:var(--official);color:var(--official)}
-ul.toc li.cat-hot a{border-color:var(--hot);color:var(--hot)}
-ul.toc li.cat-papers a{border-color:var(--papers);color:var(--papers)}
-ul.toc li.cat-china a{border-color:var(--china);color:var(--china)}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
 ul.list{margin:8px 0;padding-left:22px}
 hr{border:0;border-top:1px solid var(--line);margin:26px 0}
-/* 条目卡片 */
-ol.items{list-style:none;padding:0;margin:0;counter-reset:it}
-li.item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px 14px;
- margin:0 0 14px;box-shadow:var(--shadow);counter-increment:it;position:relative;
- transition:transform .14s ease,box-shadow .14s ease}
-li.item:hover{transform:translateY(-2px)}
-li.item::before{content:counter(it);position:absolute;top:14px;right:16px;font-size:12.5px;color:#fff;
- background:var(--accent);border-radius:999px;min-width:24px;height:24px;display:flex;align-items:center;
- justify-content:center;padding:0 6px}
-ol.items.cat-official li.item::before{background:var(--official)}
-ol.items.cat-hot li.item::before{background:var(--hot)}
-ol.items.cat-papers li.item::before{background:var(--papers)}
-ol.items.cat-china li.item::before{background:var(--china)}
-.item-head{font-size:16.5px;font-weight:600;line-height:1.55;padding-right:36px}
-/* 「📈 后续」徽标 */
-.fubadge{display:inline-block;background:var(--papers);color:#fff;font-size:11px;font-weight:600;
- border-radius:6px;padding:1px 7px;margin-right:7px;vertical-align:2px}
-li.followup{border-left:3px solid var(--papers)}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
 blockquote{margin:10px 0 0;padding:0;border:0}
-blockquote.why{background:var(--whybg);border-left:3px solid var(--whyline);border-radius:8px;
- padding:9px 12px;margin-top:12px;font-size:14px}
-blockquote.note{background:var(--chip);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--muted);margin:14px 0}
-.meta{margin-top:11px;display:flex;flex-wrap:wrap;gap:6px}
-code.chip{background:var(--chip);color:var(--muted);border-radius:6px;padding:2px 8px;font-size:12px;
- font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
 p{margin:10px 0}
 em{color:var(--muted)}
-.footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);
- font-size:13px;text-align:center}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
 .toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
- border-radius:999px;padding:8px 14px;font-size:13px;box-shadow:var(--shadow);z-index:9}
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
 .themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
- border-radius:999px;width:42px;height:42px;font-size:18px;cursor:pointer;box-shadow:var(--shadow);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
  display:flex;align-items:center;justify-content:center;padding:0}
 .themebtn:hover{border-color:var(--accent)}
-/* 首页搜索框 */
-.search{margin:4px 0 16px}
-.search input{width:100%;background:var(--card);border:1.5px solid var(--line);border-radius:12px;
- padding:12px 16px;font-size:15px;color:var(--ink);box-shadow:var(--shadow);outline:none}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
 .search input:focus{border-color:var(--accent)}
-/* 首页日期卡 */
-.day{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
- padding:16px 18px;margin:0 0 12px;box-shadow:var(--shadow);transition:transform .14s ease,border-color .14s}
-.day:hover{border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
-.day .dt{font-size:17px;font-weight:600;color:var(--ink)}
-.day .ct{font-size:12.5px;color:var(--muted);background:var(--chip);border-radius:999px;padding:2px 9px;margin-left:8px}
-.day .th{margin-top:6px;font-size:14px;color:var(--muted);line-height:1.5}
-@media (max-width:560px){.hero h1{font-size:24px}.wrap{padding:16px 14px 70px}}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
 </style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-07-30</h1>
 <blockquote class="subtitle">每日精选全球 AI 热门进展 · 简要速览 · 共 17 条</blockquote>
-<div class="lede">🎯 <strong>今日主线</strong>:<strong>开源权重之争全面升温</strong>。Moonshot 的 Kimi K3(256k 长上下文)开源引爆海内外热榜,黄仁勋公开力挺开源引发与吴恩达等的论战,Anthropic 则微妙表态「从未主张禁止开放权重」——「开源 vs 闭源」成为当下行业最核心的路线交锋。</div>
-</div><nav class="daynav"><a href="2026-07-29.html">← 前一天</a><a class="home" href="index.html">⌂ 全部日报</a><span></span></nav><h2 id="-目录">📑 目录</h2>
-<ul class="toc"><li class="cat-official"><a href="#-官方动态">🏢 官方动态</a>(4 条)</li><li class="cat-hot"><a href="#-海外热榜">🔥 海外热榜</a>(5 条)</li><li class="cat-papers"><a href="#-论文前沿">📄 论文前沿</a>(4 条)</li><li class="cat-china"><a href="#-中文社区">🇨🇳 中文社区</a>(4 条)</li></ul>
+<div class="lede"><strong>今日主线</strong>:<strong>开源权重之争全面升温</strong>。Moonshot 的 Kimi K3(256k 长上下文)开源引爆海内外热榜,黄仁勋公开力挺开源引发与吴恩达等的论战,Anthropic 则微妙表态「从未主张禁止开放权重」——「开源 vs 闭源」成为当下行业最核心的路线交锋。</div>
+</div><nav class="daynav"><a href="2026-07-29.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-official"><a href="#-官方动态"> 官方动态</a>(4 条)</li><li class="cat-hot"><a href="#-海外热榜"> 海外热榜</a>(5 条)</li><li class="cat-papers"><a href="#-论文前沿"> 论文前沿</a>(4 条)</li><li class="cat-china"><a href="#-中文社区"> 中文社区</a>(4 条)</li></ul>
 <hr>
-<h2 id="-官方动态" class="cat-official">🏢 官方动态</h2>
-<ol class="items cat-official"><li class="item"><div class="item-head"><strong><a href="https://www.anthropic.com/news/position-open-weights-models" target="_blank" rel="noopener noreferrer">Anthropic:Our position on open-weights models</a></strong> — Anthropic 正式阐明对开放权重模型的立场,强调安全治理但不主张一刀切禁止,被解读为对 Kimi 开源的「微妙回应」。</div><blockquote class="why">💡 为什么值得关注:头部闭源厂商首次系统表态,直接影响开源生态政策走向。</blockquote><div class="meta"><code class="chip">Anthropic</code><code class="chip">2026-07-27</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.anthropic.com/news/claude-opus-5" target="_blank" rel="noopener noreferrer">Introducing Claude Opus 5</a></strong> — Anthropic 发布新一代旗舰 Claude Opus 5,主攻更强推理与 Agent 编码能力。</div><blockquote class="why">💡 为什么值得关注:Opus 系列是当前 Agent/编码标杆之一,值得上手实测。</blockquote><div class="meta"><code class="chip">Anthropic</code><code class="chip">2026-07-24</code></div></li><li class="item"><div class="item-head"><strong><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/" target="_blank" rel="noopener noreferrer">Google:Gemini 3.6 Flash / 3.5 Flash-Lite / 3.5 Flash Cyber</a></strong> — 谷歌一口气更新 Flash 家族,其中 <strong>Flash Cyber</strong> 为面向网络安全的专用模型。</div><blockquote class="why">💡 为什么值得关注:安全垂直模型成新战场,与微软安全模型同日对垒。</blockquote><div class="meta"><code class="chip">Google DeepMind</code><code class="chip">2026-07</code></div></li><li class="item"><div class="item-head"><strong><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/lyria-3-5/" target="_blank" rel="noopener noreferrer">Google:Lyria 3.5 登陆 Flow Music</a></strong> — 音乐生成模型 Lyria 3.5 上线,在旋律、歌词、人声与创作控制上全面升级。</div><blockquote class="why">💡 为什么值得关注:音乐 AIGC 的「可控性」是落地关键。</blockquote><div class="meta"><code class="chip">Google</code><code class="chip">2026-07</code></div></li></ol>
-<h2 id="-海外热榜" class="cat-hot">🔥 海外热榜</h2>
-<ol class="items cat-hot"><li class="item"><div class="item-head"><strong><a href="https://www.kimi.com/code/docs/en/kimi-code/models" target="_blank" rel="noopener noreferrer">Kimi K3-256k</a></strong> — Moonshot 新一代 Kimi K3 开放权重,256k 长上下文 + 强编码,登 HN 热榜(312+ 赞)。</div><blockquote class="why">💡 为什么值得关注:中国开源模型再次冲击全球第一梯队,是今日主线核心。</blockquote><div class="meta"><code class="chip">Hacker News</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/drumih/turbo-fieldfare" target="_blank" rel="noopener noreferrer">Show HN:在任意 M 系列 Mac 上用 2GB 内存跑 Gemma 4 26B</a></strong> — 开源推理引擎 turbo-fieldfare,极致内存压缩让大模型本地跑(616 赞,今日最热)。</div><blockquote class="why">💡 为什么值得关注:端侧/本地推理的工程极限不断被刷新。</blockquote><div class="meta"><code class="chip">Hacker News</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://huggingface.co/blog/agent-intrusion-technical-timeline" target="_blank" rel="noopener noreferrer">Anatomy of a Frontier Lab Agent Intrusion(2026 年 7 月事件时间线)</a></strong> — Hugging Face 复盘一起前沿实验室 Agent 入侵安全事件,披露完整攻击链。</div><blockquote class="why">💡 为什么值得关注:Agent 时代的安全风险已从理论变为真实事件。</blockquote><div class="meta"><code class="chip">Hugging Face Blog</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research" target="_blank" rel="noopener noreferrer">AI 顶级初创几乎不再公开发表研究</a></strong> —《Science》报道头部 AI 公司研究透明度大幅下降。</div><blockquote class="why">💡 为什么值得关注:技术封闭化趋势,与「开源之争」主线互为镜像。</blockquote><div class="meta"><code class="chip">Science</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/microsoft/VibeVoice" target="_blank" rel="noopener noreferrer">microsoft/VibeVoice:开源前沿语音 AI</a></strong> 与 <strong><a href="https://github.com/huggingface/speech-to-speech" target="_blank" rel="noopener noreferrer">huggingface/speech-to-speech</a></strong> — 微软开源语音模型 VibeVoice(51k+ ⭐)与 HF 本地语音 Agent 框架双双登 GitHub Trending。</div><blockquote class="why">💡 为什么值得关注:语音 Agent 成为开源新热点。</blockquote><div class="meta"><code class="chip">GitHub Trending</code><code class="chip">2026-07-30</code></div></li></ol>
-<h2 id="-论文前沿" class="cat-papers">📄 论文前沿</h2>
-<ol class="items cat-papers"><li class="item"><div class="item-head"><strong><a href="https://huggingface.co/papers/2607.25895" target="_blank" rel="noopener noreferrer">HiFi-UMI:仅凭高保真 UMI 数据学习可部署操作策略</a></strong> — Simple World Lab 提出从高保真手持(UMI)数据直接训练可部署机器人操作策略,134 赞居今日 HF 论文榜首。</div><blockquote class="why">💡 为什么值得关注:降低机器人数据采集门槛,具身智能热门方向。</blockquote><div class="meta"><code class="chip">HF Papers</code><code class="chip">2026-07-28</code></div></li><li class="item"><div class="item-head"><strong><a href="https://huggingface.co/papers/2607.24223" target="_blank" rel="noopener noreferrer">A New Role for Relevance:引导 Agentic Search 中的语料交互</a></strong> — 腾讯提出在智能体检索中重新定位「相关性」,优化语料交互效率(82 赞)。</div><blockquote class="why">💡 为什么值得关注:Agentic RAG/搜索是当前 Agent 工程化关键一环。</blockquote><div class="meta"><code class="chip">HF Papers</code><code class="chip">2026-07-28</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2607.26057" target="_blank" rel="noopener noreferrer">Pass the Baton:轨迹接力式在线蒸馏</a></strong> — 通过跨训练步接力推理轨迹实现 LLM 在线策略蒸馏,提升小模型推理能力。</div><blockquote class="why">💡 为什么值得关注:蒸馏技术持续进化,关系小模型能力上限。</blockquote><div class="meta"><code class="chip">arXiv cs.CL</code><code class="chip">2026-07-29</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2607.25857" target="_blank" rel="noopener noreferrer">Shieldstral(Mistral 团队安全模型)</a></strong> — Mistral 推出聚焦内容审核与危害防护的安全模型。</div><blockquote class="why">💡 为什么值得关注:安全/审核专用模型与通用模型走向分工。</blockquote><div class="meta"><code class="chip">arXiv cs.CL</code><code class="chip">2026-07-29</code></div></li></ol>
-<h2 id="-中文社区" class="cat-china">🇨🇳 中文社区</h2>
-<ol class="items cat-china"><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3916645622967680" target="_blank" rel="noopener noreferrer">Kimi K3 卷起风暴,终极赢家还是黄仁勋?</a></strong> — 36氪解读 Kimi K3 开源冲击波及其背后的算力格局。</div><blockquote class="why">💡 为什么值得关注:从产业视角看开源模型与算力的博弈。</blockquote><div class="meta"><code class="chip">36氪</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.infoq.cn/article/BXOUaAvzZQpGrzMg3lDK" target="_blank" rel="noopener noreferrer">黄仁勋开源论战:吴恩达反击「你可以不开源,但别阻止别人」</a></strong> — 黄仁勋力挺开源引 Anthropic 员工喊话 CUDA/Windows 开源,吴恩达下场回应,论战升级。</div><blockquote class="why">💡 为什么值得关注:今日主线的舆论主战场,反映行业路线分歧。</blockquote><div class="meta"><code class="chip">InfoQ</code><code class="chip">2026-07-29</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/07/461911.html" target="_blank" rel="noopener noreferrer">Ilya 获黄仁勋 50 亿美元押注:「是时候 Scaling 了」</a></strong> — 英伟达重金押注 Ilya 的 SSI,Ilya 表态回归 Scaling 路线。</div><blockquote class="why">💡 为什么值得关注:顶级人才 + 巨额算力的组合,预示下一代模型竞赛。</blockquote><div class="meta"><code class="chip">量子位</code><code class="chip">2026-07-27</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/07/461517.html" target="_blank" rel="noopener noreferrer">突发:翁荔离职 Thinking Machines</a></strong> — 前 OpenAI 安全负责人翁荔离开 Mira Murati 创办的 Thinking Machines,称「20 个月像过完一辈子」。</div><blockquote class="why">💡 为什么值得关注:AI 人才流动风向标,安全派去向受关注。</blockquote><div class="meta"><code class="chip">量子位</code><code class="chip">2026-07-27</code></div></li></ol>
+<h2 id="-官方动态" class="cat-official">官方动态</h2>
+<ol class="items cat-official"><li class="item"><div class="item-head"><strong><a href="https://www.anthropic.com/news/position-open-weights-models" target="_blank" rel="noopener noreferrer">Anthropic:Our position on open-weights models</a></strong> — Anthropic 正式阐明对开放权重模型的立场,强调安全治理但不主张一刀切禁止,被解读为对 Kimi 开源的「微妙回应」。</div><blockquote class="why">为什么值得关注:头部闭源厂商首次系统表态,直接影响开源生态政策走向。</blockquote><div class="meta"><code class="chip">Anthropic</code><code class="chip">2026-07-27</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.anthropic.com/news/claude-opus-5" target="_blank" rel="noopener noreferrer">Introducing Claude Opus 5</a></strong> — Anthropic 发布新一代旗舰 Claude Opus 5,主攻更强推理与 Agent 编码能力。</div><blockquote class="why">为什么值得关注:Opus 系列是当前 Agent/编码标杆之一,值得上手实测。</blockquote><div class="meta"><code class="chip">Anthropic</code><code class="chip">2026-07-24</code></div></li><li class="item"><div class="item-head"><strong><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/" target="_blank" rel="noopener noreferrer">Google:Gemini 3.6 Flash / 3.5 Flash-Lite / 3.5 Flash Cyber</a></strong> — 谷歌一口气更新 Flash 家族,其中 <strong>Flash Cyber</strong> 为面向网络安全的专用模型。</div><blockquote class="why">为什么值得关注:安全垂直模型成新战场,与微软安全模型同日对垒。</blockquote><div class="meta"><code class="chip">Google DeepMind</code><code class="chip">2026-07</code></div></li><li class="item"><div class="item-head"><strong><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/lyria-3-5/" target="_blank" rel="noopener noreferrer">Google:Lyria 3.5 登陆 Flow Music</a></strong> — 音乐生成模型 Lyria 3.5 上线,在旋律、歌词、人声与创作控制上全面升级。</div><blockquote class="why">为什么值得关注:音乐 AIGC 的「可控性」是落地关键。</blockquote><div class="meta"><code class="chip">Google</code><code class="chip">2026-07</code></div></li></ol>
+<h2 id="-海外热榜" class="cat-hot">海外热榜</h2>
+<ol class="items cat-hot"><li class="item"><div class="item-head"><strong><a href="https://www.kimi.com/code/docs/en/kimi-code/models" target="_blank" rel="noopener noreferrer">Kimi K3-256k</a></strong> — Moonshot 新一代 Kimi K3 开放权重,256k 长上下文 + 强编码,登 HN 热榜(312+ 赞)。</div><blockquote class="why">为什么值得关注:中国开源模型再次冲击全球第一梯队,是今日主线核心。</blockquote><div class="meta"><code class="chip">Hacker News</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/drumih/turbo-fieldfare" target="_blank" rel="noopener noreferrer">Show HN:在任意 M 系列 Mac 上用 2GB 内存跑 Gemma 4 26B</a></strong> — 开源推理引擎 turbo-fieldfare,极致内存压缩让大模型本地跑(616 赞,今日最热)。</div><blockquote class="why">为什么值得关注:端侧/本地推理的工程极限不断被刷新。</blockquote><div class="meta"><code class="chip">Hacker News</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://huggingface.co/blog/agent-intrusion-technical-timeline" target="_blank" rel="noopener noreferrer">Anatomy of a Frontier Lab Agent Intrusion(2026 年 7 月事件时间线)</a></strong> — Hugging Face 复盘一起前沿实验室 Agent 入侵安全事件,披露完整攻击链。</div><blockquote class="why">为什么值得关注:Agent 时代的安全风险已从理论变为真实事件。</blockquote><div class="meta"><code class="chip">Hugging Face Blog</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research" target="_blank" rel="noopener noreferrer">AI 顶级初创几乎不再公开发表研究</a></strong> —《Science》报道头部 AI 公司研究透明度大幅下降。</div><blockquote class="why">为什么值得关注:技术封闭化趋势,与「开源之争」主线互为镜像。</blockquote><div class="meta"><code class="chip">Science</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/microsoft/VibeVoice" target="_blank" rel="noopener noreferrer">microsoft/VibeVoice:开源前沿语音 AI</a></strong> 与 <strong><a href="https://github.com/huggingface/speech-to-speech" target="_blank" rel="noopener noreferrer">huggingface/speech-to-speech</a></strong> — 微软开源语音模型 VibeVoice(51k+ ⭐)与 HF 本地语音 Agent 框架双双登 GitHub Trending。</div><blockquote class="why">为什么值得关注:语音 Agent 成为开源新热点。</blockquote><div class="meta"><code class="chip">GitHub Trending</code><code class="chip">2026-07-30</code></div></li></ol>
+<h2 id="-论文前沿" class="cat-papers">论文前沿</h2>
+<ol class="items cat-papers"><li class="item"><div class="item-head"><strong><a href="https://huggingface.co/papers/2607.25895" target="_blank" rel="noopener noreferrer">HiFi-UMI:仅凭高保真 UMI 数据学习可部署操作策略</a></strong> — Simple World Lab 提出从高保真手持(UMI)数据直接训练可部署机器人操作策略,134 赞居今日 HF 论文榜首。</div><blockquote class="why">为什么值得关注:降低机器人数据采集门槛,具身智能热门方向。</blockquote><div class="meta"><code class="chip">HF Papers</code><code class="chip">2026-07-28</code></div></li><li class="item"><div class="item-head"><strong><a href="https://huggingface.co/papers/2607.24223" target="_blank" rel="noopener noreferrer">A New Role for Relevance:引导 Agentic Search 中的语料交互</a></strong> — 腾讯提出在智能体检索中重新定位「相关性」,优化语料交互效率(82 赞)。</div><blockquote class="why">为什么值得关注:Agentic RAG/搜索是当前 Agent 工程化关键一环。</blockquote><div class="meta"><code class="chip">HF Papers</code><code class="chip">2026-07-28</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2607.26057" target="_blank" rel="noopener noreferrer">Pass the Baton:轨迹接力式在线蒸馏</a></strong> — 通过跨训练步接力推理轨迹实现 LLM 在线策略蒸馏,提升小模型推理能力。</div><blockquote class="why">为什么值得关注:蒸馏技术持续进化,关系小模型能力上限。</blockquote><div class="meta"><code class="chip">arXiv cs.CL</code><code class="chip">2026-07-29</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2607.25857" target="_blank" rel="noopener noreferrer">Shieldstral(Mistral 团队安全模型)</a></strong> — Mistral 推出聚焦内容审核与危害防护的安全模型。</div><blockquote class="why">为什么值得关注:安全/审核专用模型与通用模型走向分工。</blockquote><div class="meta"><code class="chip">arXiv cs.CL</code><code class="chip">2026-07-29</code></div></li></ol>
+<h2 id="-中文社区" class="cat-china">中文社区</h2>
+<ol class="items cat-china"><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3916645622967680" target="_blank" rel="noopener noreferrer">Kimi K3 卷起风暴,终极赢家还是黄仁勋?</a></strong> — 36氪解读 Kimi K3 开源冲击波及其背后的算力格局。</div><blockquote class="why">为什么值得关注:从产业视角看开源模型与算力的博弈。</blockquote><div class="meta"><code class="chip">36氪</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.infoq.cn/article/BXOUaAvzZQpGrzMg3lDK" target="_blank" rel="noopener noreferrer">黄仁勋开源论战:吴恩达反击「你可以不开源,但别阻止别人」</a></strong> — 黄仁勋力挺开源引 Anthropic 员工喊话 CUDA/Windows 开源,吴恩达下场回应,论战升级。</div><blockquote class="why">为什么值得关注:今日主线的舆论主战场,反映行业路线分歧。</blockquote><div class="meta"><code class="chip">InfoQ</code><code class="chip">2026-07-29</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/07/461911.html" target="_blank" rel="noopener noreferrer">Ilya 获黄仁勋 50 亿美元押注:「是时候 Scaling 了」</a></strong> — 英伟达重金押注 Ilya 的 SSI,Ilya 表态回归 Scaling 路线。</div><blockquote class="why">为什么值得关注:顶级人才 + 巨额算力的组合,预示下一代模型竞赛。</blockquote><div class="meta"><code class="chip">量子位</code><code class="chip">2026-07-27</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/07/461517.html" target="_blank" rel="noopener noreferrer">突发:翁荔离职 Thinking Machines</a></strong> — 前 OpenAI 安全负责人翁荔离开 Mira Murati 创办的 Thinking Machines,称「20 个月像过完一辈子」。</div><blockquote class="why">为什么值得关注:AI 人才流动风向标,安全派去向受关注。</blockquote><div class="meta"><code class="chip">量子位</code><code class="chip">2026-07-27</code></div></li></ol>
 <hr>
-<p><em>由 Claude 自动生成 · 条目均附原文链接,点击可深入学习</em></p><nav class="daynav"><a href="2026-07-29.html">← 前一天</a><a class="home" href="index.html">⌂ 全部日报</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+<p><em>由 Claude 自动生成 · 条目均附原文链接,点击可深入学习</em></p><nav class="daynav"><a href="2026-07-29.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
 (function(){
   var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
   function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
   function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
-  function paint(){ if(btn) btn.textContent = isDark()? '☀️':'🌙'; }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
   var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
   if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
   window.toggleTheme=function(){
@@ -139,5 +143,17 @@ em{color:var(--muted)}
       days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
     }
   }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
 })();
 </script></body></html>
