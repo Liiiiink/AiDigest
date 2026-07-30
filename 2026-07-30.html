@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-07-30</title><style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1b1e23;--muted:#6b7280;--line:#e6e8ec;
+ --accent:#2563eb;--accentsoft:#eaf1fe;--whybg:#fff8e8;--whyline:#f0a92e;
+ --chip:#f1f3f5;--shadow:0 1px 2px rgba(16,24,40,.05),0 1px 3px rgba(16,24,40,.07)}
+@media (prefers-color-scheme: dark){:root{--bg:#0e1013;--card:#16191f;--ink:#e7e9ee;
+ --muted:#98a0ac;--line:#262b33;--accent:#5b9dff;--accentsoft:#0f1c30;--whybg:#241c0e;
+ --whyline:#b9831f;--chip:#20252d;--shadow:0 1px 2px rgba(0,0,0,.45)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif;
+ -webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:36px 20px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.crumb{margin-bottom:14px;font-size:14px}
+.crumb a{color:var(--muted)}
+h1{font-size:30px;line-height:1.3;margin:0 0 4px;letter-spacing:-.02em}
+.subtitle{color:var(--muted);font-size:15px;margin:0;padding:0;border:0}
+.lede{background:linear-gradient(180deg,var(--accentsoft),transparent);border:1px solid var(--line);
+ border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;margin:18px 0 4px;font-size:15.5px}
+h2{font-size:22px;margin:36px 0 14px;padding-left:12px;border-left:4px solid var(--accent);letter-spacing:-.01em}
+ul.toc{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+ul.toc li{margin:0}
+ul.toc a{display:inline-block;background:var(--card);border:1px solid var(--line);border-radius:999px;
+ padding:6px 14px;font-size:14px;box-shadow:var(--shadow)}
+ul.toc a:hover{border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+ol.items{list-style:none;padding:0;margin:0;counter-reset:it}
+li.item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+ margin:0 0 14px;box-shadow:var(--shadow);counter-increment:it;position:relative;transition:transform .12s ease}
+li.item:hover{transform:translateY(-1px)}
+li.item::before{content:counter(it);position:absolute;top:14px;right:16px;font-size:12.5px;color:var(--muted);
+ background:var(--chip);border-radius:999px;min-width:24px;height:24px;display:flex;align-items:center;
+ justify-content:center;padding:0 6px}
+.item-head{font-size:16.5px;font-weight:600;line-height:1.55;padding-right:36px}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:var(--whybg);border-left:3px solid var(--whyline);border-radius:8px;
+ padding:9px 12px;margin-top:12px;font-size:14px}
+blockquote.note{background:var(--chip);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--muted);margin:14px 0}
+.meta{margin-top:11px;display:flex;flex-wrap:wrap;gap:6px}
+code.chip{background:var(--chip);color:var(--muted);border-radius:6px;padding:2px 8px;font-size:12px;
+ font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+p{margin:10px 0}
+em{color:var(--muted)}
+.footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:13px;text-align:center}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:8px 14px;font-size:13px;box-shadow:var(--shadow);z-index:9}
+/* 首页 index */
+.day{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
+ padding:16px 18px;margin:0 0 12px;box-shadow:var(--shadow)}
+.day:hover{border-color:var(--accent);text-decoration:none}
+.day .dt{font-size:17px;font-weight:600;color:var(--ink)}
+.day .ct{font-size:12.5px;color:var(--muted);background:var(--chip);border-radius:999px;
+ padding:2px 9px;margin-left:8px}
+.day .th{margin-top:6px;font-size:14px;color:var(--muted);line-height:1.5}
+@media (max-width:560px){h1{font-size:25px}.wrap{padding:22px 14px 70px}}
+</style></head><body><div class="wrap" id="top"><div class="crumb"><a href="index.html">⌂ 全部日报</a></div><h1 id="ai-前沿日报--2026-07-30">AI 前沿日报 · 2026-07-30</h1>
+<blockquote class="subtitle">每日精选全球 AI 热门进展 · 简要速览 · 共 17 条</blockquote>
+<div class="lede">🎯 <strong>今日主线</strong>:<strong>开源权重之争全面升温</strong>。Moonshot 的 Kimi K3(256k 长上下文)开源引爆海内外热榜,黄仁勋公开力挺开源引发与吴恩达等的论战,Anthropic 则微妙表态「从未主张禁止开放权重」——「开源 vs 闭源」成为当下行业最核心的路线交锋。</div>
+<h2 id="-目录">📑 目录</h2>
+<ul class="toc"><li><a href="#-官方动态">🏢 官方动态</a>(4 条)</li><li><a href="#-海外热榜">🔥 海外热榜</a>(5 条)</li><li><a href="#-论文前沿">📄 论文前沿</a>(4 条)</li><li><a href="#-中文社区">🇨🇳 中文社区</a>(4 条)</li></ul>
+<hr>
+<h2 id="-官方动态">🏢 官方动态</h2>
+<ol class="items"><li class="item"><div class="item-head"><strong><a href="https://www.anthropic.com/news/position-open-weights-models" target="_blank" rel="noopener noreferrer">Anthropic:Our position on open-weights models</a></strong> — Anthropic 正式阐明对开放权重模型的立场,强调安全治理但不主张一刀切禁止,被解读为对 Kimi 开源的「微妙回应」。</div><blockquote class="why">💡 为什么值得关注:头部闭源厂商首次系统表态,直接影响开源生态政策走向。</blockquote><div class="meta"><code class="chip">Anthropic</code><code class="chip">2026-07-27</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.anthropic.com/news/claude-opus-5" target="_blank" rel="noopener noreferrer">Introducing Claude Opus 5</a></strong> — Anthropic 发布新一代旗舰 Claude Opus 5,主攻更强推理与 Agent 编码能力。</div><blockquote class="why">💡 为什么值得关注:Opus 系列是当前 Agent/编码标杆之一,值得上手实测。</blockquote><div class="meta"><code class="chip">Anthropic</code><code class="chip">2026-07-24</code></div></li><li class="item"><div class="item-head"><strong><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/" target="_blank" rel="noopener noreferrer">Google:Gemini 3.6 Flash / 3.5 Flash-Lite / 3.5 Flash Cyber</a></strong> — 谷歌一口气更新 Flash 家族,其中 <strong>Flash Cyber</strong> 为面向网络安全的专用模型。</div><blockquote class="why">💡 为什么值得关注:安全垂直模型成新战场,与微软安全模型同日对垒。</blockquote><div class="meta"><code class="chip">Google DeepMind</code><code class="chip">2026-07</code></div></li><li class="item"><div class="item-head"><strong><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/lyria-3-5/" target="_blank" rel="noopener noreferrer">Google:Lyria 3.5 登陆 Flow Music</a></strong> — 音乐生成模型 Lyria 3.5 上线,在旋律、歌词、人声与创作控制上全面升级。</div><blockquote class="why">💡 为什么值得关注:音乐 AIGC 的「可控性」是落地关键。</blockquote><div class="meta"><code class="chip">Google</code><code class="chip">2026-07</code></div></li></ol>
+<h2 id="-海外热榜">🔥 海外热榜</h2>
+<ol class="items"><li class="item"><div class="item-head"><strong><a href="https://www.kimi.com/code/docs/en/kimi-code/models" target="_blank" rel="noopener noreferrer">Kimi K3-256k</a></strong> — Moonshot 新一代 Kimi K3 开放权重,256k 长上下文 + 强编码,登 HN 热榜(312+ 赞)。</div><blockquote class="why">💡 为什么值得关注:中国开源模型再次冲击全球第一梯队,是今日主线核心。</blockquote><div class="meta"><code class="chip">Hacker News</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/drumih/turbo-fieldfare" target="_blank" rel="noopener noreferrer">Show HN:在任意 M 系列 Mac 上用 2GB 内存跑 Gemma 4 26B</a></strong> — 开源推理引擎 turbo-fieldfare,极致内存压缩让大模型本地跑(616 赞,今日最热)。</div><blockquote class="why">💡 为什么值得关注:端侧/本地推理的工程极限不断被刷新。</blockquote><div class="meta"><code class="chip">Hacker News</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://huggingface.co/blog/agent-intrusion-technical-timeline" target="_blank" rel="noopener noreferrer">Anatomy of a Frontier Lab Agent Intrusion(2026 年 7 月事件时间线)</a></strong> — Hugging Face 复盘一起前沿实验室 Agent 入侵安全事件,披露完整攻击链。</div><blockquote class="why">💡 为什么值得关注:Agent 时代的安全风险已从理论变为真实事件。</blockquote><div class="meta"><code class="chip">Hugging Face Blog</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research" target="_blank" rel="noopener noreferrer">AI 顶级初创几乎不再公开发表研究</a></strong> —《Science》报道头部 AI 公司研究透明度大幅下降。</div><blockquote class="why">💡 为什么值得关注:技术封闭化趋势,与「开源之争」主线互为镜像。</blockquote><div class="meta"><code class="chip">Science</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/microsoft/VibeVoice" target="_blank" rel="noopener noreferrer">microsoft/VibeVoice:开源前沿语音 AI</a></strong> 与 <strong><a href="https://github.com/huggingface/speech-to-speech" target="_blank" rel="noopener noreferrer">huggingface/speech-to-speech</a></strong> — 微软开源语音模型 VibeVoice(51k+ ⭐)与 HF 本地语音 Agent 框架双双登 GitHub Trending。</div><blockquote class="why">💡 为什么值得关注:语音 Agent 成为开源新热点。</blockquote><div class="meta"><code class="chip">GitHub Trending</code><code class="chip">2026-07-30</code></div></li></ol>
+<h2 id="-论文前沿">📄 论文前沿</h2>
+<ol class="items"><li class="item"><div class="item-head"><strong><a href="https://huggingface.co/papers/2607.25895" target="_blank" rel="noopener noreferrer">HiFi-UMI:仅凭高保真 UMI 数据学习可部署操作策略</a></strong> — Simple World Lab 提出从高保真手持(UMI)数据直接训练可部署机器人操作策略,134 赞居今日 HF 论文榜首。</div><blockquote class="why">💡 为什么值得关注:降低机器人数据采集门槛,具身智能热门方向。</blockquote><div class="meta"><code class="chip">HF Papers</code><code class="chip">2026-07-28</code></div></li><li class="item"><div class="item-head"><strong><a href="https://huggingface.co/papers/2607.24223" target="_blank" rel="noopener noreferrer">A New Role for Relevance:引导 Agentic Search 中的语料交互</a></strong> — 腾讯提出在智能体检索中重新定位「相关性」,优化语料交互效率(82 赞)。</div><blockquote class="why">💡 为什么值得关注:Agentic RAG/搜索是当前 Agent 工程化关键一环。</blockquote><div class="meta"><code class="chip">HF Papers</code><code class="chip">2026-07-28</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2607.26057" target="_blank" rel="noopener noreferrer">Pass the Baton:轨迹接力式在线蒸馏</a></strong> — 通过跨训练步接力推理轨迹实现 LLM 在线策略蒸馏,提升小模型推理能力。</div><blockquote class="why">💡 为什么值得关注:蒸馏技术持续进化,关系小模型能力上限。</blockquote><div class="meta"><code class="chip">arXiv cs.CL</code><code class="chip">2026-07-29</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2607.25857" target="_blank" rel="noopener noreferrer">Shieldstral(Mistral 团队安全模型)</a></strong> — Mistral 推出聚焦内容审核与危害防护的安全模型。</div><blockquote class="why">💡 为什么值得关注:安全/审核专用模型与通用模型走向分工。</blockquote><div class="meta"><code class="chip">arXiv cs.CL</code><code class="chip">2026-07-29</code></div></li></ol>
+<h2 id="-中文社区">🇨🇳 中文社区</h2>
+<ol class="items"><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3916645622967680" target="_blank" rel="noopener noreferrer">Kimi K3 卷起风暴,终极赢家还是黄仁勋?</a></strong> — 36氪解读 Kimi K3 开源冲击波及其背后的算力格局。</div><blockquote class="why">💡 为什么值得关注:从产业视角看开源模型与算力的博弈。</blockquote><div class="meta"><code class="chip">36氪</code><code class="chip">2026-07-30</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.infoq.cn/article/BXOUaAvzZQpGrzMg3lDK" target="_blank" rel="noopener noreferrer">黄仁勋开源论战:吴恩达反击「你可以不开源,但别阻止别人」</a></strong> — 黄仁勋力挺开源引 Anthropic 员工喊话 CUDA/Windows 开源,吴恩达下场回应,论战升级。</div><blockquote class="why">💡 为什么值得关注:今日主线的舆论主战场,反映行业路线分歧。</blockquote><div class="meta"><code class="chip">InfoQ</code><code class="chip">2026-07-29</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/07/461911.html" target="_blank" rel="noopener noreferrer">Ilya 获黄仁勋 50 亿美元押注:「是时候 Scaling 了」</a></strong> — 英伟达重金押注 Ilya 的 SSI,Ilya 表态回归 Scaling 路线。</div><blockquote class="why">💡 为什么值得关注:顶级人才 + 巨额算力的组合,预示下一代模型竞赛。</blockquote><div class="meta"><code class="chip">量子位</code><code class="chip">2026-07-27</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/07/461517.html" target="_blank" rel="noopener noreferrer">突发:翁荔离职 Thinking Machines</a></strong> — 前 OpenAI 安全负责人翁荔离开 Mira Murati 创办的 Thinking Machines,称「20 个月像过完一辈子」。</div><blockquote class="why">💡 为什么值得关注:AI 人才流动风向标,安全派去向受关注。</blockquote><div class="meta"><code class="chip">量子位</code><code class="chip">2026-07-27</code></div></li></ol>
+<hr>
+<p><em>由 Claude 自动生成 · 条目均附原文链接,点击可深入学习</em></p><div class="footer">由 Claude 自动采集 · 本地脚本渲染网页版 · 条目均附原文链接</div></div><a class="toplink" href="#top">↑ 顶部</a></body></html>
