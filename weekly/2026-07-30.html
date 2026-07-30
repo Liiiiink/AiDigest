@@ -36,6 +36,9 @@ a:hover{text-decoration:underline}
 /* 分区标题:serif + 发丝线,无彩色 */
 h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
  border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
 /* 目录:简洁文本索引 */
 ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
  font-size:14px;font-family:var(--sans)}
@@ -66,6 +69,8 @@ blockquote.quote{background:none;border:0;border-left:2px solid var(--line);bord
 .meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
 code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
 code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
 p{margin:10px 0}
 em{color:var(--muted)}
 .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
@@ -109,21 +114,26 @@ em{color:var(--muted)}
 @media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
 </style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>每周动手实操 · 2026-07-30</h1>
 <blockquote class="quote">每周一篇模型精讲 + 一个动手小教程 · 数据截至 2026-07-30</blockquote>
-</div><nav class="daynav"><span></span><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-模型精讲scaling-laws缩放定律">模型精讲:Scaling Laws(缩放定律)</h2>
-<p><strong>大模型为什么&quot;越练越强&quot;是能提前算出来的?</strong></p>
-<blockquote class="why">核心看点:训练损失随模型、数据、算力呈幂律下降——这意味着大厂在按下「训练」按钮之前,就能预测烧掉几千万美元后模型会变多聪明。</blockquote>
-<p>你有没有发现,这几年 AI 的进步有一种奇怪的&quot;确定性&quot;:GPT-2 到 GPT-3 到 GPT-4,每一代都把参数和数据量放大一个数量级,然后能力就真的上了一个台阶。这不是碰运气,而是背后有一条经验定律在兜底——<strong>Scaling Laws(缩放定律)</strong>:模型的训练损失(可以粗略理解为&quot;犯错率&quot;)与参数量 N、训练数据量 D、算力 C 之间呈<strong>幂律关系</strong>。所谓幂律,就是在&quot;对数-对数坐标图&quot;上,损失和规模的关系近似一条直线:规模每扩大 10 倍,损失就按固定比例下降一格。打个比方:它像健身的&quot;进步曲线&quot;——新手期进步飞快,之后每进一步都要付出成倍努力,但这个衰减节奏是稳定、可外推的。OpenAI(Kaplan 等,2020)最早系统提出这条定律,DeepMind 随后用 Chinchilla 论文(2022)修正了关键细节。</p>
-<p>Chinchilla 的核心结论一句话:<strong>模型和数据要&quot;门当户对&quot;,等比放大</strong>。这就像给车配发动机:光换更大的发动机(堆参数)却不加更多油(数据),车跑不远;反之亦然。Chinchilla 证明,在同样算力预算下,最优策略是参数翻倍、训练 token 也翻倍——它用只有 Gopher 1/4 的参数、4 倍的数据,在相同算力下全面反超了 Gopher。这个结论直接改写了后来所有主流大模型的训练配方(比如 Llama 系列明显&quot;数据管够&quot;)。<strong>进阶点一</strong>:当数据不够、只能反复训练同一批数据时(Muennighoff 等 2023),重复数据的价值会指数衰减,此时&quot;多训几轮&quot;比&quot;继续堆参数&quot;更划算。</p>
-<p><strong>进阶点二</strong>:为什么偏偏是幂律?一个有趣假说(Michaud 等 2023)认为,知识是一块块离散的&quot;量子技能&quot;,而这些技能在数据中的出现频率本身就服从幂律分布——模型先学会常见技能、再啃稀有技能,损失自然走出一条平滑的幂律曲线。读完后你再回头看本期教程:你亲手训练的小 GPT,损失从 4.x 一路降到 1.x 的那条曲线,就是这条宇宙级定律在你笔记本上的微缩演示。</p>
-<ul class="list"><li>🔗 原文:<a href="https://lilianweng.github.io/posts/2026-06-24-scaling-laws/" target="_blank" rel="noopener noreferrer">Scaling Laws — Lilian Weng</a></li><li>🏷️ 来源:Lilian Weng 博客(前 OpenAI 安全研究负责人)· 难度:进阶(概念入门友好,细节偏深)</li></ul>
-<h2 id="-动手教程用-nanogpt-亲手训练你的第一个-gpt">动手教程:用 nanoGPT 亲手训练你的第一个 GPT</h2>
-<p><strong>不到 600 行核心代码,在你的电脑上训练一个会&quot;写莎士比亚&quot;的迷你 GPT</strong></p>
-<blockquote class="why">你将做出:一个从零训练出来的字符级 GPT,能生成莎士比亚腔的&quot;伪英文剧本&quot;,并亲眼看到训练损失一路下降。</blockquote>
-<p><strong>准备</strong>:一台能跑 Python 的电脑(Mac / Linux / Windows 均可;有 GPU 更快,纯 CPU 或 Apple Silicon 也能跑)。先装好 Python 3.9+ 和 git。不需要任何账号,全部免费。</p>
+</div><nav class="daynav"><span></span><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-模型精讲注意力机制attention">模型精讲:注意力机制(Attention)</h2>
+<p><strong>大模型的&quot;理解力&quot;到底从哪来?答案是一种会&quot;环顾四周&quot;的机制</strong></p>
+<blockquote class="why">核心看点:注意力机制让每个词在处理时都能&quot;看一眼&quot;句子里所有其他的词,并决定该重点听谁的——这是整个 Transformer 乃至今天所有大模型的地基。</blockquote>
+<h3 id="它是什么">它是什么</h3>
+<ul class="list"><li><strong>注意力机制(Attention)</strong> 是 Transformer 模型的核心零件,作用是:处理一个词时,不再孤立地看它,而是让它<strong>同时参考整句话里所有其他的词</strong>。</li><li>打个比方:读&quot;The animal didn&#x27;t cross the street because <strong>it</strong> was too tired&quot;时,人脑会自动把&quot;it&quot;连回&quot;animal&quot;而不是&quot;street&quot;——注意力就是让模型学会这种&quot;该关联谁&quot;的能力。</li></ul>
+<h3 id="为什么重要">为什么重要</h3>
+<ul class="list"><li>在 Transformer 之前,模型(RNN/LSTM)只能<strong>按顺序</strong>一个词一个词地&quot;读&quot;,读到后面容易忘了前面,长句子尤其吃力。</li><li>注意力让每个位置都能<strong>直接、并行地</strong>访问任意其他位置,既解决了&quot;记性差&quot;,又让训练可以大规模并行——这才有了后来把模型一路做大的可能。</li><li>可以说:没有注意力,就没有 GPT、Claude、Gemini。它是理解现代 AI 的<strong>第一道必过的门槛</strong>。</li></ul>
+<h3 id="它是怎么工作的">它是怎么工作的</h3>
+<ul class="list"><li>核心是三个向量:<strong>Query(查询)</strong>、<strong>Key(键)</strong>、<strong>Value(值)</strong>。类比查字典:Query 是&quot;你想查什么&quot;,Key 是每个词条挂的&quot;标签&quot;,Value 是词条里真正的内容。</li><li>用当前词的 Query 去和句子里<strong>所有词的 Key 算相关度</strong>(点积后过 <strong>softmax</strong> 归一化成权重),再按权重把大家的 Value <strong>加权求和</strong>——得到的输出就&quot;融合&quot;了全句相关信息。</li><li><strong>多头注意力(Multi-Head)</strong>:不止算一遍,而是同时用好几组不同的 Q/K/V,从多个&quot;平行视角&quot;看同一句话——有的头关注语法结构,有的关注指代关系,最后把各视角拼接起来。</li><li><strong>位置编码(Positional Encoding)</strong>:注意力本身<strong>不看词序</strong>(句子打乱它算出来一样),所以要额外给每个词加一个&quot;座位号&quot;,模型才知道谁先谁后。</li></ul>
+<blockquote class="quote"><strong>进阶点一(代价)</strong>:注意力的计算量随句子长度呈 <strong>O(n²)</strong> 增长——序列翻倍,成本翻四倍。这正是&quot;长上下文&quot;又贵又难的根源,也催生了滑动窗口、稀疏注意力、线性注意力等一系列省算力的改进。</blockquote>
+<blockquote class="quote"><strong>进阶点二(今天的变体)</strong>:GPT 这类生成模型用的是 <strong>decoder-only + 掩码自注意力(Masked Self-Attention)</strong>——每个词只许看<strong>前面</strong>的词、看不到未来,这样才好&quot;逐字往外蹦&quot;;推理时再用 <strong>KV Cache</strong> 把已算过的 Key/Value 缓存起来,避免重复计算、大幅提速。</blockquote>
+<ul class="list"><li>🔗 原文:<a href="https://jalammar.github.io/illustrated-transformer/" target="_blank" rel="noopener noreferrer">The Illustrated Transformer — Jay Alammar</a></li><li>🏷️ 来源:Jay Alammar 博客(可视化讲解 AI 的经典作者)· 难度:入门(有 1~2 个进阶注记)</li></ul>
+<h2 id="-动手教程用-ollama-在自己电脑上跑一个开源大模型">动手教程:用 Ollama 在自己电脑上跑一个开源大模型</h2>
+<p><strong>不写一行代码,10 分钟在本地拥有一个免费、离线、保护隐私的 AI 助手</strong></p>
+<blockquote class="why">你将做出:一个跑在你自己电脑上、不联网也能用的大模型,可以跟它对话、让它写文案、改代码——全程免费,数据不出你的机器。</blockquote>
+<p><strong>准备</strong>:一台电脑(Mac / Windows / Linux 均可),能联网下载模型,<strong>无需任何账号,全部免费</strong>。建议 8GB 以上内存;没有 GPU 也没关系,纯 CPU 就能跑。上一期我们&quot;训练&quot;模型,这一期反过来——直接<strong>用</strong>别人训好的开源模型(这叫<strong>推理 / inference</strong>)。</p>
 <p><strong>跟着做</strong>:</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>拉取代码并装依赖</strong>(约 2 分钟):</div><p>```bash</p><p>git clone https://github.com/karpathy/nanoGPT.git</p><p>cd nanoGPT</p><p>pip install torch numpy transformers datasets tiktoken tqdm</p><p>```</p></li><li class="item"><div class="item-head"><strong>准备数据集</strong>:运行 <code>python data/shakespeare_char/prepare.py</code>。它会下载约 1MB 的莎士比亚全集,并切成一个个字符,打包成 <code>train.bin</code> 训练文件。</div></li><li class="item"><div class="item-head"><strong>开始训练</strong>:有 GPU 的话直接运行 <code>python train.py config/train_shakespeare_char.py</code>,约 3 分钟训完;纯 CPU 或 Mac 笔记本就加参数缩小模型,例如 <code>--device=cpu --compile=False --block_size=64 --n_layer=4 --n_head=4 --n_embd=128 --max_iters=2000</code>(Mac 可把 <code>--device=cpu</code> 换成 <code>--device=mps</code> 用 Metal 加速)。盯着屏幕:你会看到 <code>loss</code> 从 4.x 一路往下掉——这就是上一篇 Scaling Laws 的幂律曲线在你眼前直播。</div></li><li class="item"><div class="item-head"><strong>让它&quot;写作&quot;</strong>:运行 <code>python sample.py --out_dir=out-shakespeare-char</code>,你的小 GPT 就会输出一段莎士比亚风格的角色对白——语法半通不通,但神韵十足。</div></li></ol>
-<blockquote class="quote">做完你会:完整走过一遍&quot;数据准备 → 训练 → 采样生成&quot;的大模型最小闭环,理解 <code>train.py</code>(~300 行)和 <code>model.py</code>(~300 行)里到底发生了什么。下一步可以读 <code>model.py</code> 对照 attention 的实现,或者试试官方进阶玩法:加载 GPT-2 预训练权重做微调(<code>config/finetune_shakespeare.py</code>)。注意:作者已把 nanoGPT 标记为&quot;维护放缓&quot;,同作者的全新项目 <a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener noreferrer">nanochat</a> 可以花约 100 美元从零炼出一个完整的 ChatGPT 克隆,适合作为进阶下一站。</blockquote>
-<ul class="list"><li>🔗 教程/代码:<a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener noreferrer">karpathy/nanoGPT — The simplest, fastest repository for training/finetuning medium-sized GPTs</a></li><li>🏷️ 来源:GitHub(Andrej Karpathy,前 Tesla AI 总监 / OpenAI 创始成员)· 难度:入门</li></ul>
+<ol class="items "><li class="item"><div class="item-head"><strong>安装 Ollama</strong>(约 2 分钟):</div><p>- macOS:去官网下载 <code>Ollama.dmg</code> 拖进应用程序,或终端运行 <code>curl -fsSL https://ollama.com/install.sh | sh</code></p><p>- Windows:下载 <code>OllamaSetup.exe</code> 安装,或 PowerShell 运行 <code>irm https://ollama.com/install.ps1 | iex</code></p><p>- Linux:终端运行 <code>curl -fsSL https://ollama.com/install.sh | sh</code></p></li><li class="item"><div class="item-head"><strong>跑一个小模型</strong>(约 3 分钟,含下载):终端运行</div><p>```bash</p><p>ollama run qwen3:0.6b</p><p>```</p><p>这是阿里 Qwen3 的最小版本,仅 <strong>523MB</strong>,几乎任何电脑都跑得动。想更强就换 <code>ollama run qwen3:4b</code>(<strong>2.5GB</strong>,256K 超长上下文,小模型里的性价比之王)。</p></li><li class="item"><div class="item-head"><strong>开始对话</strong>:命令跑起来后会直接进入交互界面,像聊天一样输入问题即可,比如让它&quot;用三句话向小学生解释什么是黑洞&quot;。试着追问几句,感受它&quot;记得&quot;上文——这背后正是上一篇讲的注意力机制在工作。</div></li><li class="item"><div class="item-head"><strong>管理你的模型</strong>:新开一个终端,用 <code>ollama list</code> 查看已下载的模型,<code>ollama pull &lt;模型名&gt;</code> 预先下载别的模型(完整模型库见文末链接)。</div></li></ol>
+<blockquote class="quote">做完你会:在本地拥有一个随叫随到、不花钱、数据不出门的大模型,并直观理解&quot;推理&quot;和上一期&quot;训练&quot;的区别。下一步可探索:Ollama 自带<strong>本地 API</strong>(默认 <code>http://localhost:11434</code>),可以把它接到你自己的小脚本/网页里当后端;或去模型库换更大的模型、试试带&quot;思考&quot;能力的版本。</blockquote>
+<ul class="list"><li>🔗 教程/代码:<a href="https://ollama.com/" target="_blank" rel="noopener noreferrer">Ollama 官网</a> · <a href="https://github.com/ollama/ollama" target="_blank" rel="noopener noreferrer">GitHub:ollama/ollama</a> · <a href="https://ollama.com/library/qwen3" target="_blank" rel="noopener noreferrer">Qwen3 模型库</a></li><li>🏷️ 来源:Ollama 官方(开源本地模型运行时)· 难度:入门</li></ul>
 <hr>
 <p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><span></span><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
 (function(){
