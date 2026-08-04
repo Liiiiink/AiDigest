@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>每周动手实操 · 2026-08-04</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+p{margin:10px 0}
+em{color:var(--muted)}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>每周动手实操 · 2026-08-04</h1>
+<blockquote class="quote">每周一篇模型精讲 + 一个动手小教程 · 数据截至 2026-08-04</blockquote>
+</div><nav class="daynav"><a href="2026-07-30.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-模型精讲coding-agent-是怎么工作的工具记忆与-agent-loop">模型精讲:Coding Agent 是怎么工作的(工具、记忆与 Agent Loop)</h2>
+<p><strong>你天天用的 Claude Code / Codex,核心不是&quot;更聪明的模型&quot;,而是模型外面那层&quot;会干活的壳&quot;</strong></p>
+<blockquote class="why">核心看点:Agent = <strong>模型 + 工具 + 记忆 + 环境反馈</strong>组成的一个循环;很多看似&quot;模型变聪明&quot;的体验,其实是这层壳(Harness)在替模型管理上下文。</blockquote>
+<h3 id="它是什么">它是什么</h3>
+<p>先把四个常被混用的名词分清:</p>
+<ul class="list"><li><strong>LLM</strong>:只会&quot;预测下一个词&quot;的裸模型,是地基。</li><li><strong>推理模型(Reasoning Model)</strong>:被专门优化成&quot;先输出思考过程、再作答&quot;的 LLM。</li><li><strong>Agent(智能体)</strong>:&quot;用模型 + 工具 + 记忆 + 环境反馈组成的一个<strong>循环</strong>&quot;——模型不再只说一遍话,而是反复观察、行动、再看结果。</li><li><strong>Harness(壳 / 脚手架)</strong>:包在 Agent 外面的软件,负责管理上下文、工具调用、权限和流程。</li></ul>
+<p>作者的汽车类比很妙:LLM 是<strong>发动机</strong>,推理模型是<strong>更强的发动机</strong>,而 Harness 是<strong>方向盘和仪表盘</strong>——发动机再强,没有方向盘也到不了目的地。</p>
+<h3 id="为什么重要">为什么重要</h3>
+<ul class="list"><li>2026 年 AI 的主战场早已不是&quot;聊天&quot;,而是&quot;做事&quot;:写代码、查资料、操作软件。做事靠的就是 Agent。</li><li>文章里最扎心的一句:<strong>&quot;很多看起来像&#x27;模型质量&#x27;的东西,其实是上下文质量。&quot;</strong> 同一个模型,放进好的 Harness 里表现判若两人——这解释了为什么不同 Agent 产品体验差距巨大。</li><li>对学习者:看懂 Harness 的构造,你就不再只是&quot;用&quot;AI,而是能判断一个 Agent 产品到底强在哪、噱头在哪。</li></ul>
+<h3 id="它是怎么工作的一个循环--六个零件">它是怎么工作的:一个循环 + 六个零件</h3>
+<p><strong>Agent Loop(智能体循环)</strong>:Observe(观察环境)→ Inspect(分析)→ Choose(选下一步/调哪个工具)→ Act(执行)→ 结果回到观察,如此往复,直到任务完成。</p>
+<p>围绕这个循环,Harness 有六个核心组件:</p>
+<ol class="items "><li class="item"><div class="item-head"><strong>实时仓库上下文</strong>:开工前先收集&quot;稳定事实&quot;(git 分支、目录结构、README / AGENTS.md),避免模型每次都从零瞎猜。</div></li><li class="item"><div class="item-head"><strong>稳定提示词前缀 + 缓存复用</strong>:系统指令、工具说明等几乎不变的部分放在提示词最前面,配合 <strong>Prompt Caching</strong> 复用——又快又省钱。</div></li><li class="item"><div class="item-head"><strong>结构化工具 + 校验 + 权限</strong>:不让模型&quot;即兴写命令&quot;,而是给一份<strong>带输入 Schema 的命名工具清单</strong>(读文件 / 搜索 / 跑命令 / 改文件 / 派生子 Agent);执行前先程序化检查:是已知工具吗?参数合法吗?需要用户批准吗?路径在工作区内吗?</div></li><li class="item"><div class="item-head"><strong>上下文压缩</strong>:反复读文件、日志刷屏会让上下文爆炸。手段包括<strong>裁剪</strong>(Clipping)超长输出、<strong>总结</strong>旧对话、<strong>去重</strong>重复读过的内容。</div></li><li class="item"><div class="item-head"><strong>转录 + 记忆 + 断点续传</strong>:完整 Transcript 以 JSON 落盘(可恢复会话);另维护一份精炼的<strong>工作记忆</strong>(当前任务、关键文件、笔记),随对话不断更新压缩。</div></li><li class="item"><div class="item-head"><strong>有边界的子 Agent</strong>:主 Agent 可派生子 Agent 干杂活(找符号定义、查配置),但子 Agent 上下文更紧、权限更小(只读、限制递归深度),防止多个 Agent 乱改同一批文件。</div></li></ol>
+<blockquote class="quote"><strong>进阶点一(省钱原理)</strong>:&quot;稳定前缀&quot;为什么能省钱?因为推理时的 <strong>KV Cache / Prompt Caching</strong> 机制——前缀不变,之前算过的 Key/Value 可以直接复用,不必重算。这正是上一期讲的注意力机制在工程上的延伸。</blockquote>
+<blockquote class="quote"><strong>进阶点二(设计哲学)</strong>:约束带来能力。命名工具、参数校验、权限闸门、沙箱,看似&quot;限制了模型自由&quot;,实则是可靠性的大半来源——自由聊天的模型很强,但被圈好边界的模型才<strong>有用</strong>。</blockquote>
+<ul class="list"><li>🔗 原文:<a href="https://magazine.sebastianraschka.com/p/components-of-a-coding-agent" target="_blank" rel="noopener noreferrer">Components of A Coding Agent — Sebastian Raschka</a></li><li>🏷️ 来源:Sebastian Raschka《Ahead of AI》 · 难度:入门(含 2 个进阶注记)</li></ul>
+<blockquote class="quote">彩蛋:作者还开源了一个纯 Python、零依赖的迷你实现 <a href="https://github.com/rasbt/mini-coding-agent" target="_blank" rel="noopener noreferrer">mini-coding-agent</a>,代码注释与文章六个组件一一对应,读完文章可直接看代码。</blockquote>
+<h2 id="-动手教程用-nanochat-从零训练一个你自己的-chatgpt">动手教程:用 nanochat 从零训练一个你自己的 ChatGPT</h2>
+<p><strong>Karpathy 的极简项目:三条命令,亲手走完&quot;分词器 → 预训练 → 微调 → 对话&quot;全流程</strong></p>
+<blockquote class="why">你将做出:一个从你手里训出来、能在命令行里聊天的小 GPT。完整版能力达 GPT-2 级别(评测分数超过 2019 年原版);免费快速版可在自己笔记本上跑通整个流程。</blockquote>
+<p><strong>准备</strong>:</p>
+<ul class="list"><li>一台电脑(Mac / Linux / Windows 配 WSL),装没装 Python 都行——依赖由 <strong>uv</strong> 自动管理。</li><li><strong>免费路线</strong>:纯 CPU 或苹果芯片,跑缩小版模型,几十分钟走完流程(效果弱,但全流程一步不少)。</li><li><strong>完整路线(可选,要花钱)</strong>:租云 GPU。8×H100 约 1.5~2 小时,按需约 $48、竞价实例约 $15;单卡 GPU 也能跑,时间约 8 倍。对照:2019 年原版 GPT-2 训练要 168 小时、约 $43,000。</li></ul>
+<p><strong>跟着做</strong>:</p>
+<ol class="items "><li class="item"><div class="item-head"><strong>装环境</strong>(约 5 分钟):</div><p>```bash</p><p>git clone https://github.com/karpathy/nanochat.git</p><p>cd nanochat</p><p>uv sync --extra cpu        # 有 NVIDIA 显卡则用:uv sync --extra gpu</p><p>source .venv/bin/activate</p><p>```</p></li><li class="item"><div class="item-head"><strong>快速跑通全流程</strong>(免费,几十分钟):</div><p>```bash</p><p>bash runs/runcpu.sh</p><p>```</p><p>一个脚本自动完成:训练分词器 → 预训练 → 微调 → 评测。建议放在 <code>screen</code> / <code>tmux</code> 里跑,防止断线。</p></li><li class="item"><div class="item-head"><strong>跟它聊天</strong>:</div><p>```bash</p><p>python -m scripts.chat_cli</p><p>```</p><p>用你亲手训出的权重对话——作者形容&quot;有点像跟幼儿园小朋友聊天&quot;,会答话、会写诗,也会一本正经地胡说八道。</p></li><li class="item"><div class="item-head"><strong>(可选,进阶)完整版 speedrun</strong>:在租来的 8×H100 上跑</div><p>```bash</p><p>bash runs/speedrun.sh</p><p>```</p><p>约 1.5~2 小时得到 GPT-2 级别模型。想快速试验可加 <code>--depth=12</code>,几分钟训一个 GPT-1 大小的小模型;显存不足就调小 <code>--device-batch-size</code>(32 → 16/8/4/2/1)。</p></li></ol>
+<blockquote class="quote">做完你会:亲手走完一个 ChatGPT 诞生的完整流水线——这是&quot;看 100 篇新闻&quot;都换不来的直觉。整个项目只有一个 <code>--depth</code> 参数控制模型大小,其余超参数按&quot;计算最优&quot;自动推导;代码专为可读性设计,没有巨型配置对象和 if-else 怪兽。下一步可探索:通读源码理解每个阶段、换自己的语料微调出独特风格,或对照上期 Ollama 教程体会&quot;训练&quot;与&quot;推理&quot;的完整闭环。</blockquote>
+<ul class="list"><li>🔗 教程/代码:<a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener noreferrer">GitHub:karpathy/nanochat</a></li><li>🏷️ 来源:Andrej Karpathy(nanoGPT 的正统继任项目) · 难度:入门(快速版) / 进阶(完整版)</li></ul>
+<hr>
+<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-07-30.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
