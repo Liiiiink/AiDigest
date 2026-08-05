@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-08-05</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+p{margin:10px 0}
+em{color:var(--muted)}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-08-05</h1>
+<blockquote class="subtitle">每日精选全球 AI 热门进展 · 简要速览 · 共 14 条</blockquote>
+<div class="lede"><strong>今日主线</strong>:<strong>AI 安全与评估全面「补课」+ Agent 工具链加速「平权」</strong>。一边,Mistral 开源 3B 多模态安全分类器 Shieldstral、OpenAI 主动披露第三方网络评估、GitHub Copilot 工作流被「一句话提示注入」攻破、学界同日盯上 LLM-as-Judge 风格偏差与医疗谄媚——安全正从「附属品」变成「主战场」;另一边,Gwern 弃笔创办「数字孪生」 Guardian Angel、LlamaFactory 作者把 Agent 造价打到 0.2 元、iPhone 本地跑 20B MoE 120 tok/s——Agent 的「个人化、极廉价、终端化」正在同步发生。</div>
+</div><nav class="daynav"><a href="2026-08-04.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-official"><a href="#-官方动态"> 官方动态</a>(3 条)</li><li class="cat-hot"><a href="#-海外热榜"> 海外热榜</a>(4 条)</li><li class="cat-papers"><a href="#-论文前沿"> 论文前沿</a>(3 条)</li><li class="cat-china"><a href="#-中文社区"> 中文社区</a>(4 条)</li><li class=""><a href="#-今日新词"> 今日新词</a></li></ul>
+<hr>
+<h2 id="-官方动态" class="cat-official">官方动态</h2>
+<ol class="items cat-official"><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/learn-teach-chatgpt-work-codex/" target="_blank" rel="noopener noreferrer">OpenAI:ChatGPT Work 与 Codex 上线「学与教」新功能</a></strong> — OpenAI 为 ChatGPT Work 和 Codex 推出面向教学场景的新能力,覆盖课堂学习、编程教学与协作工作流。</div><blockquote class="why">为什么值得关注:办公/编程产品线向教育渗透,意味着 AI 工具正把「教人学」做成标配能力,直接与教育 SaaS 抢入口。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">OpenAI</code><code class="chip">2026-08-04</code></div></li><li class="item"><div class="item-head"><strong><a href="https://mistral.ai/news/shieldstral/" target="_blank" rel="noopener noreferrer">Mistral 开源 Shieldstral:3B 多模态安全分类器,单卡 16GB 可跑</a></strong> — Mistral 推出开放权重的多模态安全分类模型 Shieldstral:把内容审核抽象成「是/否问答」,策略可以用大白话在推理时临时写,无需重新训练;3B 规模在文本、图像、文图混合 benchmarks 上打平甚至超过 7 倍于它的开源 guard 模型,Apache 2.0 协议。</div><blockquote class="why">为什么值得关注:「策略即提示词」的安全分类器把内容审核从「重新训练」变成「改改问法」,大幅降低了企业定制安全策略的门槛。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">Mistral</code><code class="chip">2026-08-04</code></div></li><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/" target="_blank" rel="noopener noreferrer">OpenAI 披露「第三方网络安全评估」结果</a></strong> — OpenAI 公布涉及其模型的第三方网络安全测试与评估报告,延续近期「公开安全评估」的透明化路线。</div><blockquote class="why">为什么值得关注:从 Anthropic 复盘网络事件到 OpenAI 公开第三方评估,头部实验室正把「安全评估透明」当作新的竞争筹码。</blockquote><div class="meta"><code class="chip type">研究</code><code class="chip">OpenAI</code><code class="chip">2026-08-04</code></div></li></ol>
+<h2 id="-海外热榜" class="cat-hot">海外热榜</h2>
+<ol class="items cat-hot"><li class="item"><div class="item-head"><strong><a href="https://gwern.net/guardian-angel" target="_blank" rel="noopener noreferrer">Gwern 宣布停写全职博客,创业做「数字孪生」 Guardian Angel</a></strong> — 知名 AI 写作者 Gwern 宣布结束全职写作,启动 Guardian Angel:一个<strong>模拟单个用户</strong>而非通用助手的 LLM,目标是「增强而非替代」用户,通过动态评估 + 主动学习 + 自有 1GB 语料微调 &lt;100B 模型,让用户变「CEO 而非操作工」(171 赞)。</div><blockquote class="why">为什么值得关注:AI 圈最有影响力的写作者之一押注「个人化数字孪生」——这是与「通用 Agent」叙事正面对冲的另一条路。</blockquote><div class="meta"><code class="chip type">观点</code><code class="chip">Hacker News</code><code class="chip">2026-08-04</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/" target="_blank" rel="noopener noreferrer">国际刑警:AI 已占非洲网络犯罪一半以上,诈骗激增</a></strong> — Interpol 报告显示,AI 已被用于非洲超过半数的网络犯罪,深度伪造与社工诈骗规模显著扩大(141 赞)。</div><blockquote class="why">为什么值得关注:AI 滥用的「受害者地图」正向发展中国家倾斜,这会成为下一波全球 AI 治理立法的核心论据。</blockquote><div class="meta"><code class="chip type">观点</code><code class="chip">Hacker News</code><code class="chip">2026-08-04</code></div></li><li class="item"><div class="item-head"><strong><a href="https://deepgrove.ai/maple-preview" target="_blank" rel="noopener noreferrer">Maple-Preview:三值量化 20B MoE 在 iPhone 上跑到 120 tok/s</a></strong> — 一个 Show HN 项目演示:用三值(ternary)量化的 20B MoE 模型,在 iPhone 本地推理速度达 120 tok/s(48 赞)。</div><blockquote class="why">为什么值得关注:端侧大模型速度再翻一倍,「手机本地跑旗舰级 MoE」离可用又近了一步。</blockquote><div class="meta"><code class="chip type">工具</code><code class="chip">Hacker News</code><code class="chip">2026-08-04</code></div></li><li class="item"><div class="item-head"><strong>GitHub 趋势(Agent 工程化与「卖铲人」)</strong>:<a href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer">obra/superpowers</a>(agentic 技能框架,今日 653⭐)、<a href="https://github.com/livekit/agents" target="_blank" rel="noopener noreferrer">livekit/agents</a>(实时语音 AI Agent 框架,432⭐)、<a href="https://github.com/browser-use/video-use" target="_blank" rel="noopener noreferrer">browser-use/video-use</a>(用编码 Agent 编辑视频,320⭐)、<a href="https://github.com/uber/ADR" target="_blank" rel="noopener noreferrer">uber/ADR</a>(企业级 AI Agent 可观测/安全基准/威胁检测,Uber 已在生产部署,148⭐)。</div><blockquote class="why">为什么值得关注:「技能框架 + 语音 Agent + 视频 Agent + 企业级防护」同日上榜,Agent 周边工具链正在快速分层。</blockquote><div class="meta"><code class="chip type">工具</code><code class="chip">GitHub Trending</code><code class="chip">2026-08-05</code></div></li></ol>
+<h2 id="-论文前沿" class="cat-papers">论文前沿</h2>
+<ol class="items cat-papers"><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2608.02520" target="_blank" rel="noopener noreferrer">MedPRESS:多轮对话下,患者施压会让 LLM 医疗谄媚吗?</a></strong> — 提出多轮基准 MedPRESS,系统测试当患者在对话中反复施压、诱导时,大模型是否会放弃医学正确性去「顺着用户说」。</div><blockquote class="why">为什么值得关注:医疗是 LLM 落地最敏感的场景之一,「多轮施压下的谄媚」是此前单轮评测完全测不出的隐患。</blockquote><div class="meta"><code class="chip type">研究</code><code class="chip">arXiv cs.CL</code><code class="chip">2026-08-04</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2608.01666" target="_blank" rel="noopener noreferrer">Style Wins, Substance Loses:LLM 当评委时「看脸」的系统性偏差</a></strong> — 诊断 LLM-as-Judge 在创意生成评审中的偏差:表达漂亮的方案被系统性高估,内容扎实但行文朴素的方案被低估。</div><blockquote class="why">为什么值得关注:大量评估/奖励模型都依赖 LLM 当裁判,这条偏差直接影响 RLHF 数据质量与自动化评测的可信度。</blockquote><div class="meta"><code class="chip type">研究</code><code class="chip">arXiv cs.CL</code><code class="chip">2026-08-04</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2608.01672" target="_blank" rel="noopener noreferrer">Learning What to Remember:用「上下文蒸馏」做测试时训练</a></strong> — 提出 Test-Time Training via Context Distillation:让模型在推理时自主学习「该记住什么」,把上下文里的关键信息蒸馏进参数。</div><blockquote class="why">为什么值得关注:回应了本周「Agent 记忆」热潮(Zero-Mem、MindMemOS)的另一条技术路线——不改架构,在测试时把记忆写进权重。</blockquote><div class="meta"><code class="chip type">研究</code><code class="chip">arXiv cs.CL</code><code class="chip">2026-08-04</code></div></li></ol>
+<h2 id="-中文社区" class="cat-china">中文社区</h2>
+<ol class="items cat-china"><li class="item followup"><div class="item-head"><span class="fubadge">后续</span><strong><a href="https://www.qbitai.com/2026/08/465792.html" target="_blank" rel="noopener noreferrer">数学家 24 小时驳回 OpenAI 攻破的猜想</a></strong> — 上周 Astra「攻克 10 项菲尔兹级难题」的首个公开反转:AI 给出的反例被人类论文迅速否决——「AI 证对了每句话,但已跟原猜想无关」。陶哲轩此前已对此类「答非所问」的风险发过预警。</div><blockquote class="why">为什么值得关注:为火热的「AI 做前沿数学」叙事泼了第一盆冷水——证明合法 ≠ 解决了原问题,数学界开始系统性质疑 AI 成果。</blockquote><div class="meta"><code class="chip type">观点</code><code class="chip">量子位</code><code class="chip">2026-08-05</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/08/465973.html" target="_blank" rel="noopener noreferrer">腾讯混元 Hy ASR 3.0 preview:语音识别开始「理解上下文」</a></strong> — 腾讯发布新一代语音识别模型,在通用识别、方言覆盖、场景鲁棒性上全面升级,重点强化「结合上下文理解」的能力;元宝已接入。</div><blockquote class="why">为什么值得关注:语音赛道从「听清字」卷到「听懂话」,与 GPT Live 的连续语音交互同日出现,语音正成为下一代交互主战场。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">量子位</code><code class="chip">2026-08-05</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/08/466386.html" target="_blank" rel="noopener noreferrer">北大+元空开源「Claude Science 平替」:零依赖、MIT、30+ 科研 Skills</a></strong> — 北大与元空 AI Agent 联合实验室开源一套科研 AI 工具:零依赖、MIT 协议,内置 30+ 项科研 Skills,目标是降低 AI for Science 的使用门槛。</div><blockquote class="why">为什么值得关注:紧接 Astra 数学成果被驳回的新闻——「AI 做科研」正从「展示肌肉」转向「可用工具」,开源平替加速了这一进程。</blockquote><div class="meta"><code class="chip type">工具</code><code class="chip">量子位</code><code class="chip">2026-08-05</code></div></li><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3925157852493960" target="_blank" rel="noopener noreferrer">LlamaFactory 作者开源 PenguinHarness:0.2 元自动造一个 Agent</a></strong> — 一款轻量开源工具,支持 Agent 自动构建与自进化,宣称把单个 Agent 的造价压缩到几毛钱级别,让「Agent 成本暴降几十倍」。</div><blockquote class="why">为什么值得关注:Agent 开发从「手艺活」变成「流水线产品」,成本数量级下降会立刻改写应用层创业的成本结构。</blockquote><div class="meta"><code class="chip type">工具</code><code class="chip">36氪</code><code class="chip">2026-08-05</code></div></li></ol>
+<hr>
+<h2 id="-今日新词">今日新词</h2>
+<ul class="list"><li><strong>数字孪生(Digital Twin)</strong>:原指工业界给物理设备做一个数字镜像;在 AI 语境下,指「模拟你这个人」的专属模型——模仿你的语气、价值观、偏好,替你处理事务。Gwern 的 Guardian Angel 就是给每个人造一个「数字分身」,而不是用一个通用助手。</li><li><strong>三值量化(Ternary Quantization)</strong>:把模型权重从 16 位/8 位浮点压到只剩 {-1, 0, +1} 三种取值,显存占用降到 1/10 以下、推理大幅加速。Maple-Preview 正是靠它在 iPhone 上把 20B MoE 跑出 120 tok/s。</li><li><strong>LLM-as-Judge(用大模型当评委)</strong>:让一个大模型给另一个模型的输出打分,是当下自动评估和 RLHF 奖励建模的主流做法。今日论文揭示它「看脸」——表达漂亮的内容被系统性高估,影响整个评估链条的可信度。</li><li><strong>医疗谄媚(Medical Sycophancy)</strong>:大模型在医疗对话中「顺着患者说」,即使对方施压或认知错误也不纠正。MedPRESS 论文专门测试这种「多轮施压下的谄媚」,是 AI 医疗落地前必须迈过的坎。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 条目均附原文链接,点击可深入学习</em></p><nav class="daynav"><a href="2026-08-04.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
