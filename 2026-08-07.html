@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-08-07</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+p{margin:10px 0}
+em{color:var(--muted)}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-08-07</h1>
+<blockquote class="subtitle">每日精选全球 AI 热门进展 · 简要速览 · 共 16 条</blockquote>
+<div class="lede"><strong>今日主线</strong>:<strong>编程 Agent 大战再添巨头 + 算力账单的「现实回归」</strong>。Meta 携 Muse Code 与 Muse Spark 1.2 正式杀入终端编程 Agent 战场,以「便宜十倍 + 用数据换算力」的打法直取 Claude Code 和 Codex;而另一边,DeepSeek 官宣 API「大幅涨价」终结补贴时代、AMD 收购 Taalas 把模型直接刻进硅片、百万卡级超级单体在乌兰察布投产——<strong>当 Agent 开始 7×24 小时跑在后台,谁来付这张算力账单成了行业新命题</strong>。附加剧情:Google 人才地震,Jeff Dean 离职创业、哈萨比斯让出日常指挥权。</div>
+</div><nav class="daynav"><a href="2026-08-05.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-official"><a href="#-官方动态"> 官方动态</a>(3 条)</li><li class="cat-hot"><a href="#-海外热榜"> 海外热榜</a>(4 条)</li><li class="cat-papers"><a href="#-论文前沿"> 论文前沿</a>(4 条)</li><li class="cat-china"><a href="#-中文社区"> 中文社区</a>(5 条)</li><li class=""><a href="#-今日新词"> 今日新词</a></li></ul>
+<hr>
+<h2 id="-官方动态" class="cat-official">官方动态</h2>
+<ol class="items cat-official"><li class="item"><div class="item-head"><strong><a href="https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/" target="_blank" rel="noopener noreferrer">Meta 首款编程 Agent Muse Code 发布,搭配 Muse Spark 1.2</a></strong> — 扎克伯格亲自官宣:Muse Code 是跑在 macOS/Linux 终端的命令行 Agent,能规划变更、写码、验证结果;任务够大时会拆给多个<strong>并行子 Agent 在隔离 worktree 里同时干活</strong>(测试中同时为一款游戏做了六个功能),还带本地事件日志支持崩溃恢复。背后模型 Muse Spark 1.2 与 Agent 联合训练,定价约 $1.25/$4.25 每百万 token,另有「贡献者层级」——愿意交出真实编程数据的开发者可再便宜十倍以上。</div><blockquote class="why">为什么值得关注:Meta 用「低价 + 数据换成本」正面撞击 Claude Code 与 Codex,而稀缺的真实编程轨迹数据恰恰是训练下一代模型最值钱的燃料。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">Meta / TechCrunch</code><code class="chip">2026-08-05</code></div></li><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/" target="_blank" rel="noopener noreferrer">OpenAI 升级 GPT-5.6 Sol,并把 Luna 免费无限量开放</a></strong> — Sol 改为「一个模型同时管快答与深思」,新增推理力度滑块,回答更聚焦、少废话;官方称事实性错误比 GPT-5.5 Instant 减少约 <strong>68%</strong>。免费与 Go 用户下周起默认用 GPT-5.6 Luna 且<strong>文本对话不限量</strong>,还多了一个 Think 按钮。</div><blockquote class="why">为什么值得关注:「免费无限量 + 免费可深度推理」是把付费墙往上抬的一步——前沿能力的下沉速度比价格战本身更凶。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">OpenAI</code><code class="chip">2026-08-06</code></div></li><li class="item"><div class="item-head"><strong><a href="https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/" target="_blank" rel="noopener noreferrer">DeepMind WeatherNext:AI 气旋预报取得突破</a></strong> — DeepMind 公布 WeatherNext 在热带气旋路径与强度预报上的突破性进展,把 AI 天气预报推进到高影响极端天气这一最难场景。</div><blockquote class="why">为什么值得关注:在一堆 Agent 与编程新闻里,这是少数「AI 直接救命」的方向——气旋预报每提前一小时,都是真实的疏散窗口。</blockquote><div class="meta"><code class="chip type">研究</code><code class="chip">Google DeepMind</code><code class="chip">2026-08</code></div></li></ol>
+<h2 id="-海外热榜" class="cat-hot">海外热榜</h2>
+<ol class="items cat-hot"><li class="item"><div class="item-head"><strong><a href="https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344" target="_blank" rel="noopener noreferrer">AMD 收购 Taalas:把 AI 模型直接「蚀刻」进芯片</a></strong> — AMD 宣布收购多伦多初创 Taalas(未披露金额,该公司累计融资 2.19 亿美元)。Taalas 的「Hardcore Models」不用 HBM 存权重,而是把某个特定模型的权重固化进硅片金属层,靠片上 SRAM 跑——演示芯片在 Llama 3.1-8B 上做到<strong>单用户 16000+ tok/s</strong>。代价是一颗芯片只能跑那一个模型,换模型就得重新流片(HN 356 赞)。</div><blockquote class="why">为什么值得关注:这是「推理专用硬件」的极端形态,对标英伟达去年 200 亿美元的 Groq 授权案——Agent 时代的算力竞赛,正从「更通用」转向「更专用、更便宜」。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">The Register</code><code class="chip">2026-08-06</code></div></li><li class="item followup"><div class="item-head"><span class="fubadge">后续</span><strong><a href="https://artificialanalysis.ai/?intelligence=agentic-index" target="_blank" rel="noopener noreferrer">Qwen3.8 Max 登顶 Artificial Analysis 智能体总榜第一</a></strong> — 上周发布的阿里旗舰有了第三方权威读数:在 Artificial Analysis 的 <strong>Agentic Index</strong>(智能体能力综合榜)上拿下全球第一,HN 讨论 423 赞、272 条评论。</div><blockquote class="why">为什么值得关注:发布时的「直逼 Claude」现在有了独立榜单背书,而且赢的恰好是当下最值钱的维度——干活能力,不是考试分数。</blockquote><div class="meta"><code class="chip type">资源</code><code class="chip">Artificial Analysis / Hacker News</code><code class="chip">2026-08-06</code></div></li><li class="item"><div class="item-head"><strong><a href="https://notashelf.dev/posts/taste-is-all-thats-left" target="_blank" rel="noopener noreferrer">Taste Is All That&#x27;s Left(只剩品味了)</a></strong> — 一篇 196 赞的热议长文:当生成代码与内容的边际成本趋近于零,工程师和创作者真正剩下的护城河是「判断什么是好的」——选择、取舍与品味。</div><blockquote class="why">为什么值得关注:与上周「LLM 奖励专家」的讨论一脉相承,共同勾勒出一个结论:AI 抹平的是执行力,放大的是判断力。</blockquote><div class="meta"><code class="chip type">观点</code><code class="chip">Hacker News</code><code class="chip">2026-08-06</code></div></li><li class="item"><div class="item-head"><strong>GitHub 趋势(Agent 基础设施全面霸榜)</strong>:<a href="https://github.com/cloudflare/computer" target="_blank" rel="noopener noreferrer">cloudflare/computer</a>(「给你的 Agent 一台电脑」,MIT 协议,今日 <strong>2802⭐</strong>)、<a href="https://github.com/TencentCloud/TencentDB-Agent-Memory" target="_blank" rel="noopener noreferrer">TencentCloud/TencentDB-Agent-Memory</a>(团队级 Agent 记忆中枢,把对话/文档/代码沉淀为聊天记忆、技能、LLM-Wiki、代码图谱四类可复用资产,今日 1057⭐)、<a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer">mattpocock/skills</a>(1873⭐)与 <a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener noreferrer">addyosmani/agent-skills</a>(593⭐)(两位知名前端布道者同日开源自己的 Agent 技能库)。</div><blockquote class="why">为什么值得关注:「沙箱电脑 + 长期记忆 + 技能库」三件套同日登榜,Agent 的基础设施层正在被快速标准化。</blockquote><div class="meta"><code class="chip type">工具</code><code class="chip">GitHub Trending</code><code class="chip">2026-08-07</code></div></li></ol>
+<h2 id="-论文前沿" class="cat-papers">论文前沿</h2>
+<ol class="items cat-papers"><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2608.05013" target="_blank" rel="noopener noreferrer">OneDayAgent:面向「跑一整天」的自主 Agent 评测框架</a></strong> — 提出长时程 harness 与基准,专门考察 Agent 在超长时间跨度下的规划、纠错与状态维持能力,而非几十步就结束的短任务。</div><blockquote class="why">为什么值得关注:正好呼应 Muse Code 的「持久化后台 Agent」——当 Agent 要连续工作数小时甚至一天,现有的短任务基准已经完全测不出差距。</blockquote><div class="meta"><code class="chip type">研究</code><code class="chip">arXiv cs.CL</code><code class="chip">2026-08-06</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2608.04828" target="_blank" rel="noopener noreferrer">Skill-Use:大模型在 Agent 框架里真的会用「技能」吗?</a></strong> — 系统评测 LLM 在 agentic harness 中调用、组合与选择预置技能(skills)的实际有效性,发现「给了技能」和「用对技能」之间存在明显落差。</div><blockquote class="why">为什么值得关注:今日 GitHub 榜上两大技能库刷屏,这篇论文正好泼了盆冷水:技能库堆得多不等于 Agent 变强。</blockquote><div class="meta"><code class="chip type">研究</code><code class="chip">arXiv cs.CL</code><code class="chip">2026-08-06</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2608.04570" target="_blank" rel="noopener noreferrer">The Personalization Mirage:大模型如何「编造」用户画像</a></strong> — 揭示模型在做个性化时会虚构用户属性与偏好,而且让模型「自我监控」这种幻觉反而会误导——自查的置信度与真实准确率不匹配。</div><blockquote class="why">为什么值得关注:个性化是所有 Agent 产品的默认卖点,这条结论说明「越懂你」很可能只是「越会编你」。</blockquote><div class="meta"><code class="chip type">研究</code><code class="chip">arXiv cs.CL</code><code class="chip">2026-08-06</code></div></li><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2608.04968" target="_blank" rel="noopener noreferrer">EvolveNet:让 Agent 通过协同进化自己的「工具骨架」实现自我改进</a></strong> — 不改模型权重,而是让多个 Agent 协作演化各自的 harness(工具集与调用流程),把「改造工作台」变成自我提升的主路径。</div><blockquote class="why">为什么值得关注:与「技能库」路线互补——一个靠人写技能,一个让 Agent 自己长出技能,后者的天花板可能更高。</blockquote><div class="meta"><code class="chip type">研究</code><code class="chip">arXiv cs.LG</code><code class="chip">2026-08-06</code></div></li></ol>
+<h2 id="-中文社区" class="cat-china">中文社区</h2>
+<ol class="items cat-china"><li class="item"><div class="item-head"><strong><a href="https://finance.sina.com.cn/tech/roll/2026-08-06/doc-inimkncm0641069.shtml" target="_blank" rel="noopener noreferrer">DeepSeek 官宣 API 将「大幅涨价」,国产低价时代或迎拐点</a></strong> — 8 月 6 日 DeepSeek 后台公告:「计划近期整体上调 API 定价,预计涨幅较大,请合理安排您的使用」,并提醒开发者控制充值金额,具体方案待正式通知。此前 DeepSeek 刚在 4-5 月多轮降价、7 月上线峰谷分时计费(高峰时段翻倍)。</div><blockquote class="why">为什么值得关注:一路降价的行业风向标突然转身,说明<strong>调用量暴增下的补贴式定价已难以为继</strong>——这可能是国产大模型价格战的拐点信号。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">新浪科技</code><code class="chip">2026-08-06</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/08/467274.html" target="_blank" rel="noopener noreferrer">Google 人才地震:哈萨比斯让出日常指挥权,Jeff Dean 离职创业</a></strong> — Koray Kavukcuoglu(DQN、WaveNet 核心贡献者,LeCun 门下)接掌 Google DeepMind 日常运营,哈萨比斯转任董事长兼 Alphabet 首席科学家。同期出走名单极长:Jeff Dean 与 Sanjay Ghemawat 创办 Discovery Loop、AlphaGo 负责人 David Silver 创办 Ineffable Intelligence、Noam Shazeer 转投 OpenAI、诺奖得主 John Jumper 亦已离开。叠加 Gemini 3.5 Pro 一再跳票,股价一度跌超 5%。</div><blockquote class="why">为什么值得关注:AI 时代最深的技术班底正在批量流向创业公司,「大厂养人、小厂用人」的循环在 Google 身上演到了极致。</blockquote><div class="meta"><code class="chip type">观点</code><code class="chip">量子位</code><code class="chip">2026-08-06</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/08/467663.html" target="_blank" rel="noopener noreferrer">Karpathy 推新基准:让模型读《指环王》搭 3D 中土世界</a></strong> — 继上周两小时手搓 3D 游戏后,Karpathy 正式把它提成新评测:给模型小说开头文本,要求用 Three.js 实时搭出可运行的三维场景。Opus 5 花了约 100 万 token、2 小时、5500 行代码。他认为流行的「鹈鹕骑自行车」SVG 测试已被攻克,只考单次出图,测不出<strong>长时程规划与反复调试</strong>能力。</div><blockquote class="why">为什么值得关注:与 OneDayAgent 论文同日呼应——评测正在从「一问一答」集体转向「能不能连续干几个小时活」。</blockquote><div class="meta"><code class="chip type">观点</code><code class="chip">量子位</code><code class="chip">2026-08-07</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/08/467262.html" target="_blank" rel="noopener noreferrer">全球最大 AI 算力超级单体投产:乌兰察布星河基地</a></strong> — 远景科技宣布内蒙古乌兰察布星河基地投产:建筑面积 12 万平米(约 20 个标准足球场),<strong>支持百万卡 GPU 并行</strong>、百万 P 级算力,园区规划容量超 2GW;高比例直连绿电(当地绿电占比 67%),是其「戈壁计划」(2030 年前在全球荒漠建 5GW 绿色 AI 算力)的首个旗舰项目。</div><blockquote class="why">为什么值得关注:「东数西算 + 绿电直连 + 国产芯片集群」的组合拳落地,算力竞赛正式进入拼能源与土地的重工业阶段。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">量子位</code><code class="chip">2026-08-06</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/08/467730.html" target="_blank" rel="noopener noreferrer">智元机器人首席科学家罗剑岚疑似离职,正值赴港 IPO 关口</a></strong> — 智元官网合伙人名单中已无罗剑岚,其个人主页与 X 简介也删除了智元相关信息,双方均未公开确认。罗剑岚 1993 年生,UC Berkeley 博士(导师 Pieter Abbeel),曾在 Google X 与 BAIR(Sergey Levine 组)工作,提出 SERL / HIL-SERL 真机强化学习方法,2025 年 4 月加入智元执掌具身智能研究中心,任期约 1 年 4 个月。智元已于 7 月 24 日启动赴港上市流程。</div><blockquote class="why">为什么值得关注:具身智能赛道人才流动之快超出想象,IPO 前夕核心技术负责人变动,会直接影响外界对其技术路线连续性的判断。</blockquote><div class="meta"><code class="chip type">观点</code><code class="chip">量子位</code><code class="chip">2026-08-07</code></div></li></ol>
+<hr>
+<h2 id="-今日新词">今日新词</h2>
+<ul class="list"><li><strong>硬连线模型 / Hardcore Model(把模型刻进芯片)</strong>:普通 AI 芯片像通用电脑,权重从显存(HBM)里读;Taalas 的做法是把某个模型的权重<strong>直接做成电路蚀刻在硅片上</strong>,省掉搬运数据的功夫,速度暴涨十几倍。代价是这颗芯片一辈子只会跑这一个模型,换模型就得重新造芯片。</li><li><strong>Harness(智能体骨架 / 工作台)</strong>:模型本身只会「输出文字」,真正让它能读文件、跑命令、调 API 的那套外围代码框架就叫 harness。今天 Muse Code、OneDayAgent、EvolveNet 说的都是同一件事——<strong>同样的模型,配不同的工作台,干活能力天差地别</strong>。</li><li><strong>Agentic Index(智能体能力指数)</strong>:第三方评测机构 Artificial Analysis 的综合榜单,不考「答题准不准」,而考模型作为 Agent <strong>能不能真把多步骤任务干完</strong>(用工具、写代码、纠错)。Qwen3.8 Max 今天登顶的就是这个榜。</li><li><strong>Worktree 并行子 Agent</strong>:worktree 是 Git 的功能,能把同一个代码仓库同时签出成多份独立副本。Muse Code 用它让好几个子 Agent 各占一份副本同时改代码,互不打架,最后再合并——相当于<strong>一个人指挥一支小队并行开发</strong>。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 条目均附原文链接,点击可深入学习</em></p><nav class="daynav"><a href="2026-08-05.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
