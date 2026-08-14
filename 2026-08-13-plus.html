@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-08-13(加更)</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+p{margin:10px 0}
+em{color:var(--muted)}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-08-13(加更)</h1>
+<blockquote class="subtitle">每日精选全球 AI 热门进展 · 简要速览 · 共 12 条 🆕 <strong>加更说明</strong>:今早已发一期(三大模型同日对轰),本期为<strong>新格式首刊</strong>——新增「🛠 开发者实战」板块、不再收录论文前沿;内容与早报不重复。</blockquote>
+<div class="lede"><strong>今日主线</strong>:<strong>AI 编程的下半场,是「协作与审查」而不是「生成」</strong>。Zed 发布 Delta——一个为「和 Agent 一起写代码、审代码」而生的多人协作环境,评论能锚定在随代码演进的位置上;GitHub 官方同一天连发三文:教维护者给 AI 贡献者设门控、讨论巨型 PR 治理、宣告开发者从 coder 转向 orchestrator。而当天 HN 点数最高的,是 Tailscale 一篇教科书级复盘——他们把一个 16 岁的 SQLite bug 从数据库损坏现场一路追到了根因。</div>
+</div><nav class="daynav"><a href="2026-08-12.html">← 前一天</a><a class="home" href="index.html">全部</a><a href="2026-08-13.html">后一天 →</a></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-official"><a href="#-官方动态"> 官方动态</a>(2 条)</li><li class="cat-hot"><a href="#-海外热榜"> 海外热榜</a>(3 条)</li><li class="cat-dev"><a href="#-开发者实战"> 开发者实战</a>(4 条)</li><li class="cat-china"><a href="#-中文社区"> 中文社区</a>(3 条)</li><li class=""><a href="#-今日新词"> 今日新词</a></li></ul>
+<hr>
+<h2 id="-官方动态" class="cat-official">官方动态</h2>
+<ol class="items cat-official"><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/" target="_blank" rel="noopener noreferrer">OpenAI 改进 GPT-5.6 Sol,并把 GPT-5.6 Luna 下放给免费用户</a></strong> — ChatGPT 内的 GPT-5.6 Sol 获得一轮质量改进,同时次旗舰 <strong>GPT-5.6 Luna 向免费用户开放</strong>。在旗舰涨价、次旗舰免费这个组合里,免费档的能力水位又被抬了一格。</div><blockquote class="why">为什么值得关注:「免费用户用什么模型」决定了大众对 AI 能力的基准认知——次旗舰下放免费档,等于整个行业的能力下限在抬升。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">OpenAI</code><code class="chip">2026-08</code><code class="chip">本周</code></div></li><li class="item followup"><div class="item-head"><span class="fubadge">后续</span><strong><a href="https://openai.com/index/daybreak-models-are-now-available-on-aws/" target="_blank" rel="noopener noreferrer">Daybreak 网安模型上线 AWS</a></strong> — 昨天报道过的 Daybreak 计划(GPT-5.6-Cyber 等给审核防御方「降低护栏」的模型)今天落地渠道:<strong>直接在 AWS 上可用</strong>。企业安全团队不用再单独申请通道,走现有云账号就能接。</div><blockquote class="why">为什么值得关注:从「申请制」到「云平台货架」,是这类受限能力分发放大的关键一步——防御方拿到强网安模型的门槛又低了一截。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">OpenAI / AWS</code><code class="chip">2026-08</code><code class="chip">本周</code></div></li></ol>
+<h2 id="-海外热榜" class="cat-hot">海外热榜</h2>
+<ol class="items cat-hot"><li class="item"><div class="item-head"><strong><a href="https://zed.dev/blog/introducing-delta" target="_blank" rel="noopener noreferrer">HN 热议(451 点):Zed 发布 Delta——为「和 Agent 一起写代码」而生的多人协作环境</a></strong> — 基于 DeltaDB,把代码工作树和对话线程<strong>实时同步复制</strong>:团队成员和 Agent 共享完整的代码上下文与决策历史;评论可以打在代码任意位置,并且<strong>随代码演进保持锚定</strong>;云端跑 Agent 时对话与代码持续同步,还兼容 Claude Code——终端会话能实时同步进协作线程。Rust + WebAssembly,全平台体验一致。</div><blockquote class="why">为什么值得关注:现在的协作工具(Git PR/评论)是为人-人设计的,人和 Agent 的协作一直靠截图和复制粘贴凑合。Delta 是第一个把「Agent 会话」当一等公民塞进协作流的尝试。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">Zed / Hacker News</code><code class="chip">2026-08-12</code></div></li><li class="item"><div class="item-head"><strong><a href="https://knownagents.com/insights" target="_blank" rel="noopener noreferrer">HN 热帖(245 点):有人在大规模伪装 ClaudeBot 等 AI 爬虫做漏洞扫描</a></strong> — 安全观测发现,有攻击者把漏洞扫描器的 User-Agent 伪装成 ClaudeBot 等 AI 爬虫,利用「AI 爬虫大家都在放行」的心理做大规模扫描。站点运营者开始重新审视对 AI 爬虫的放行策略。</div><blockquote class="why">为什么值得关注:AI 爬虫过去一年拿到了「事实上的白名单待遇」,这条新闻说明信任已经被套利——运维侧对 AI UA 的放行规则该收紧了。</blockquote><div class="meta"><code class="chip type">观点</code><code class="chip">Known Agents / Hacker News</code><code class="chip">2026-08-13</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/trending?since=daily" target="_blank" rel="noopener noreferrer">GitHub 今日趋势:Claude Code 图表技能包霸榜,JVM 也有自己的 Agent 框架了</a></strong> — 今日新面孔:<strong><a href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener noreferrer">cathrynlavery/diagram-design</a></strong>(+2855,29 种自包含 HTML+SVG 的编辑风图表,给 Claude Code 用);<strong><a href="https://github.com/embabel/embabel-agent" target="_blank" rel="noopener noreferrer">embabel/embabel-agent</a></strong>(Kotlin 写的 <strong>JVM Agent 框架</strong>,Java 生态终于有自己的 Agent 基建);<strong><a href="https://github.com/cactus-compute/needle" target="_blank" rel="noopener noreferrer">cactus-compute/needle</a></strong>(+315,14MB 的端侧基础模型,跑手机/穿戴/智能家居)。</div><blockquote class="why">为什么值得关注:embabel-agent 值得 Java 同学多看一眼——Agent 框架不再是 Python/TS 的专利,JVM 生态开始补位了。</blockquote><div class="meta"><code class="chip type">工具</code><code class="chip">GitHub Trending</code><code class="chip">2026-08-13</code></div></li></ol>
+<h2 id="-开发者实战" class="cat-dev">开发者实战</h2>
+<ol class="items cat-dev"><li class="item"><div class="item-head"><strong><a href="https://tailscale.com/blog/sqlite-wal-reset-bug" target="_blank" rel="noopener noreferrer">HN 头条(872 点)+ Lobste.rs 双榜:Tailscale 如何把数据库损坏追到一个 16 岁的 SQLite bug</a></strong> — 教科书级根因分析:从用户报库损坏开始,一路排除自身代码嫌疑,最终定位到 <strong>SQLite WAL 机制里一个存在 16 年的 WAL-reset bug</strong>。全程展示了「怎么给不可能的组合复现条件」「怎么用上游能接受的方式报 bug」。</div><blockquote class="why">为什么值得关注:这是「怀疑自己的代码之前,先证明自己没罪」的标准操作流程。排查思路、证据链组织、与上游协作的方式,每一步都能直接抄进日常调试。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">Tailscale Blog</code><code class="chip">2026-08-12</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.blog/open-source/maintainers/your-contributors-are-ai-first-now-is-your-project/" target="_blank" rel="noopener noreferrer">GitHub 官方:你的贡献者已经是 AI-first 了,你的项目准备好了吗?</a></strong> — AutoGPT 维护者的一线经验:如何用 <strong>repo 指令(AGENTS.md)、CI 门控和贡献边界</strong>来管理 AI 生成的大量 PR,既不被低质量贡献淹没,又不误杀有价值的提交——核心是「让维护者始终握有最终决定权」。</div><blockquote class="why">为什么值得关注:开源维护者是最早被「AI 生成洪流」冲击的群体,他们沉淀出的门控打法(指令文件 + 自动门禁 + 人工终审),对任何收 AI 代码的团队都适用。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">GitHub Blog</code><code class="chip">2026-08-12</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.blog/engineering/using-the-github-copilot-sdk-for-java/" target="_blank" rel="noopener noreferrer">GitHub Copilot SDK for Java:用注解和虚拟线程驱动 Copilot</a></strong> — 面向企业 Java 开发者的官方 SDK:用惯用的 Java 写法(注解、虚拟线程)把 Copilot 能力编进自己的应用和工具链,不用再绕道 Python/Node 生态。</div><blockquote class="why">为什么值得关注:Java 团队想把 AI 能力接进内部平台,过去的默认答案是「再起一个 Python 服务」。官方 Java SDK 意味着可以不换生态,直接在现有工程里做。</blockquote><div class="meta"><code class="chip type">工具</code><code class="chip">GitHub Blog</code><code class="chip">2026-08-10</code></div></li><li class="item"><div class="item-head"><strong><a href="https://dev.to/lovestaco/ayo-github-quietly-killed-the-unreviewable-mega-pr-3868" target="_blank" rel="noopener noreferrer">dev.to 周榜:GitHub 悄悄杀死了「没法 review 的巨型 PR」</a></strong> — AI 编码让几千行的 mega-PR 泛滥成灾,review 沦为形式。文章复盘 GitHub 近期的应对(更好的 diff 拆分与评审引导),并给出一套「AI 时代 PR 该多大」的实操约定。</div><blockquote class="why">为什么值得关注:「AI 一次生成 3000 行,同事看都不看就 approve」是很多团队的真实痛点。PR 粒度纪律可能是 AI 编码时代最便宜的质检手段。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">dev.to</code><code class="chip">2026-08</code><code class="chip">本周</code></div></li></ol>
+<h2 id="-中文社区" class="cat-china">中文社区</h2>
+<ol class="items cat-china"><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/08/470307.html" target="_blank" rel="noopener noreferrer">宇树会破发吗?王兴兴用 200 问回应上市质疑</a></strong> — 宇树上市引爆 A 股(近千万户疯抢、一签赚 35 万),王兴兴以 200 问形式集中回应估值、「遥控玩具公司」质疑与破发担忧。机构对其估值分歧巨大:从 610 亿到 4000 亿都有。</div><blockquote class="why">为什么值得关注:具身智能第一股的定价分歧,本质是整个赛道「该按制造业还是按 AI 公司估值」的分歧——这个答案会影响后面 11 家排队上市的机器人公司。</blockquote><div class="meta"><code class="chip type">观点</code><code class="chip">量子位</code><code class="chip">2026-08-13</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/08/471030.html" target="_blank" rel="noopener noreferrer">紫东太初 GMC 核心集剪枝:免训练、少 80% token,多模态能力不掉点</a></strong> — 中科院自动化所推出的多模态 token 剪枝方法:<strong>不用训练、开箱即用</strong>,砍掉 80% 视觉 token 仍保满血多模态能力。对做视觉应用的团队,这是直接能省推理成本的工程手段。</div><blockquote class="why">为什么值得关注:多模态应用的成本大头在视觉 token。免训练的 80% 剪枝意味着接入就能用、不用重训,是少见的「零工程门槛降本」。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">中科院自动化所 / 量子位</code><code class="chip">2026-08-13</code></div></li><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3936454072663429" target="_blank" rel="noopener noreferrer">OpenAI 支持一键搬家:Claude Code 的用户数据可以迁进 Codex 了</a></strong> — OpenAI 上线迁移工具,把 Claude Code 的配置、记忆等「家当」一键搬进 Codex——唯独模型带不走。编程工具之争从产品体验打到了<strong>用户数据资产</strong>层面。</div><blockquote class="why">为什么值得关注:你在编程工具里积累的配置和习惯正在成为「迁移成本护城河」。哪家先学会尊重这笔资产,哪家就能留住重度用户。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">OpenAI / 36氪</code><code class="chip">2026-08-13</code></div></li></ol>
+<h2 id="-今日新词">今日新词</h2>
+<ul class="list"><li><strong>WAL(Write-Ahead Log,预写日志)</strong>:数据库「先记账、后改账」的保险机制——任何修改先写进一份日志,再动真正的数据文件,崩溃后靠日志恢复。Tailscale 追了半天的那个 16 年 bug,就出在这本「账」被意外重置的环节上。</li><li><strong>Token 剪枝(Token Pruning)</strong>:给模型的输入「瘦身」——多模态场景里一张图会被切成成百上千个 token,但很多 token(比如大片纯色背景)对理解没贡献。剪枝就是把这些凑数的 token 挑出来扔掉,省钱省延迟,今天紫东太初的方法能扔掉 80% 还不掉点。</li><li><strong>User-Agent 伪装(UA Spoofing)</strong>:User-Agent 是程序访问网站时的「自报家门」。攻击者把自己伪装成 ClaudeBot 这类 AI 爬虫,是因为很多站点对 AI 爬虫一律放行——相当于穿上「记者证」混进会场。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 条目均附原文链接,点击可深入学习</em></p><nav class="daynav"><a href="2026-08-12.html">← 前一天</a><a class="home" href="index.html">全部</a><a href="2026-08-13.html">后一天 →</a></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
