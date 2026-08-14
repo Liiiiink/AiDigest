@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LangChain 全家桶学习指南</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>LangChain 全家桶学习指南</h1>
+<blockquote class="quote">一次性学习页 · 2026-08-14 按官方文档(docs.langchain.com)核对 · 面向有后端经验的程序员 本页不自动更新;官方大版本变化时再手动刷新。</blockquote>
+<div class="lede"><strong>一句话</strong>:2026 年的 LangChain 已经不是「链」,而是一套<strong>以 Agent 为中心的工程栈</strong>——LangChain(<code>create_agent</code>)写 Agent,LangGraph 编排复杂流程,LangSmith 管测试/部署/观测,Deep Agents 开箱即用。官方理念一句话:<strong>Agent = Model + Harness</strong>(Harness = 模型循环外的一切:prompt、工具、middleware)。</div>
+</div><nav class="daynav"><span></span><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class=""><a href="#-全景图全家桶各件是干什么的"> 全景图</a></li><li class=""><a href="#-核心概念速通后端视角对照"> 核心概念速通</a></li><li class=""><a href="#-30-分钟跑通最小上手"> 30 分钟跑通</a></li><li class=""><a href="#-四周学习路径"> 四周学习路径</a></li><li class=""><a href="#-常见坑"> 常见坑</a></li><li class=""><a href="#-延伸阅读读懂-langchain-是什么"> 延伸阅读</a></li><li class=""><a href="#-资源清单"> 资源清单</a></li></ul>
+<hr>
+<h2 id="-全景图全家桶各件是干什么的">全景图:全家桶各件是干什么的</h2>
+<pre class="codeblock"><code>┌───────────────────────────────────────────────────┐
+│ Deep Agents    开箱即用的完整 Agent(含 CLI dcode)  │
+│                规划 / 子 Agent / 上下文压缩 / 虚拟FS │
+├───────────────────────────────────────────────────┤
+│ LangChain v1   create_agent + middleware          │
+│                模型 / 工具 / 记忆 / 结构化输出        │
+├───────────────────────────────────────────────────┤
+│ LangGraph      底层编排运行时(可脱离 LangChain 单用) │
+│                状态图 / 断点恢复 / 人工介入           │
+├───────────────────────────────────────────────────┤
+│ LangSmith      平台:Trace 观测 / 评测 / 部署 / 网关  │
+└───────────────────────────────────────────────────┘</code></pre>
+<ul class="list"><li><strong>LangChain(v1)</strong>:写 Agent 的主框架。核心 API 是 <code>create_agent</code>——一个「最小但高度可配」的 harness;模型用字符串指定(如 <code>&quot;claude-sonnet-4-6&quot;</code>、<code>&quot;openai:gpt-5.5&quot;</code>),换模型只改一个字符串;能力靠 <strong>middleware</strong> 按需叠加。</li><li><strong>LangGraph</strong>:低层编排框架,把「确定性代码步骤」和「LLM 步骤」编进同一张状态图。提供持久化执行(崩了从断点续跑)、<code>interrupt</code>(任意节点暂停等人审)、短期/长期记忆。LangChain 的 Agent 底层就跑在它上面,但 LangGraph 可以独立使用。</li><li><strong>LangSmith</strong>:商业化平台,覆盖 Agent 全生命周期——<strong>Observability</strong>(trace/调试/线上观测)、<strong>Evaluation</strong>(数据集+评测器+prompt 管理)、<strong>Deployment</strong>(部署扩容,Cloud/BYOC/自托管)、<strong>LLM Gateway</strong>(跨厂商流量路由/管控)、<strong>Fleet</strong>(无代码搭 Agent)、<strong>Engine</strong>(自动发现 recurring 问题并建议修复)。</li><li><strong>Deep Agents</strong>:「batteries-included」的完整 Agent——自动上下文压缩、虚拟文件系统、能派生子 Agent,构建在 LangChain agents 之上;附开源 CLI <code>dcode</code>,终端里直接体验。</li><li><strong>已淡出的旧成员</strong>:<strong>LangServe</strong> 不再单独推荐(能力并入 LangSmith Deployment);<strong>LCEL/Chain</strong>(<code>|</code> 管道、<code>LLMChain</code>、<code>create_react_agent</code>)是 2024~2025 中教程的主角,底层还在,但已不是官方叙事中心——<strong>抄教程前先认年代</strong>。</li></ul>
+<h2 id="-核心概念速通后端视角对照">核心概念速通(后端视角对照)</h2>
+<ul class="list"><li><strong>Agent = Model + Harness</strong>:模型是可替换的引擎,harness 是围着它的循环(提示词、工具、中间件)。类比:模型 ≈ 数据库,harness ≈ Web 框架。</li><li><strong>tools = 普通函数</strong>:带类型注解 + docstring 即可注册,docstring 就是给模型看的工具说明——相当于「写 Javadoc 顺便发布了接口」。</li><li><strong>middleware ≈ Spring Interceptor / AOP</strong>:guardrails、重试、路由等横切能力,以列表形式挂进 <code>create_agent</code>,官方有预构建件也可自定义。</li><li><strong>messages / content_blocks</strong>:对话状态的标准结构;<code>invoke</code> 返回里取 <code>result[&quot;messages&quot;][-1].content_blocks</code> 拿到结构化输出。</li><li><strong>memory 两层</strong>:短期(thread 内对话状态,靠 checkpointer 持久化)与长期(跨会话记忆)。</li><li><strong>structured output / streaming / event streaming</strong>:结构化输出直接绑定 Pydantic 模型;流式分 token 流与事件流,前者给用户看,后者给程序消费。</li><li><strong>LangGraph ≈ 工作流引擎 + 状态机</strong>:<code>StateGraph</code> 定义状态,节点是确定性代码或 LLM 调用,边支持条件分支;<code>checkpointer</code> ≈ 流程实例表(断点恢复),<code>interrupt</code> ≈ 人工审批节点。</li><li><strong>LangSmith trace ≈ LLM 版 OpenTelemetry</strong>:每一次模型调用、工具调用、耗时、token、成本全留痕;dataset + evaluator ≈ 单测 + 回归测试。</li></ul>
+<h2 id="-30-分钟跑通最小上手">30 分钟跑通(最小上手)</h2>
+<p><strong>1) 安装与开关</strong>(顺手把追踪开了,后面调试全靠它):</p>
+<pre class="codeblock"><code>pip install -U langchain &quot;langchain[anthropic]&quot;   # 或 &quot;langchain[openai]&quot;
+export ANTHROPIC_API_KEY=sk-...
+export LANGSMITH_TRACING=true</code></pre>
+<p><strong>2) 最小 Agent(带一个工具)</strong>:</p>
+<pre class="codeblock"><code>from langchain.agents import create_agent
+
+def get_weather(city: str) -&gt; str:
+    &quot;&quot;&quot;查询指定城市的天气。&quot;&quot;&quot;
+    return f&quot;{city} 晴,26°C&quot;
+
+agent = create_agent(
+    model=&quot;claude-sonnet-4-6&quot;,      # 换模型只改这一个字符串
+    tools=[get_weather],
+    system_prompt=&quot;你是一个靠谱的助手&quot;,
+)
+result = agent.invoke({&quot;messages&quot;: [{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;新加坡今天天气?&quot;}]})
+print(result[&quot;messages&quot;][-1].content_blocks)</code></pre>
+<p><strong>3) 按需加 middleware</strong>:guardrails / 重试 / 模型路由等都是 middleware,以列表传入 <code>create_agent(middleware=[...])</code> 即可;先用预构建件,不够再自定义。</p>
+<p><strong>4) LangGraph hello world</strong>(需要显式编排时):</p>
+<pre class="codeblock"><code>from typing import TypedDict
+from langgraph.graph import StateGraph, START, END
+
+class State(TypedDict):
+    text: str
+
+def shout(state: State):
+    return {&quot;text&quot;: state[&quot;text&quot;].upper() + &quot;!&quot;}
+
+g = StateGraph(State)
+g.add_node(&quot;shout&quot;, shout)
+g.add_edge(START, &quot;shout&quot;)
+g.add_edge(&quot;shout&quot;, END)
+app = g.compile()
+print(app.invoke({&quot;text&quot;: &quot;hello langgraph&quot;}))</code></pre>
+<p><strong>5) 打开 <a href="https://smith.langchain.com/" target="_blank" rel="noopener noreferrer">smith.langchain.com</a> 看刚才每一次调用的完整 trace</strong>——输入输出、耗时、token、成本都在里面。</p>
+<h2 id="-四周学习路径">四周学习路径</h2>
+<ul class="list"><li><strong>W1 · 跑通</strong>:官方 quickstart 跑一遍 → 同一 Agent 换 3 家模型(改字符串)→ 写 3 个真实 tool(读数据库 / 调内部接口 / 查日志)。产出:一个能在公司内网干活的玩具 Agent。</li><li><strong>W2 · 工程化</strong>:structured output(绑 Pydantic)、streaming 两种流、thread 级短期记忆、给 Agent 组合 2~3 个 middleware。产出:一个带结构化返回和护栏的接口。</li><li><strong>W3 · 编排</strong>:LangGraph 状态图 + 条件分支 → 加 checkpointer 演示「杀掉进程再续跑」→ 加 <code>interrupt</code> 做人工审批节点。重点想清:<strong>什么时候才该从 create_agent 下到 LangGraph</strong>(需要确定性流程 / 持久化 / 人工介入时)。</li><li><strong>W4 · 上线</strong>:LangSmith 建评测数据集 + 写 evaluator → 跑回归 → 线上 trace 看板 + 成本/延迟监控 → 选部署方式(LangSmith Deployment / 自托管)。产出:一条「能持续交付」的 Agent 流水线。</li></ul>
+<h2 id="-常见坑">常见坑</h2>
+<ul class="list"><li><strong>版本割裂是第一坑</strong>:网上 2024~2025 年中的教程大多是 LCEL 时代写法(<code>|</code> 管道、<code>LLMChain</code>、<code>create_react_agent</code>),与 v1 的 <code>create_agent</code> 世界画风完全不同。看任何教程先确认写作年代。</li><li><strong>别上来就 LangGraph</strong>:<code>create_agent</code> 能搞定的不要画图;图是「需要精确控制时的逃生舱」,不是起点。</li><li><strong>先开 tracing 再调试</strong>:盲改 prompt 是最慢的调试方式;trace 里能直接看到模型每步「为什么这么决定」。</li><li><strong>LangSmith 免费档够个人学</strong>,团队再考虑 Cloud / BYOC / 自托管;trace 会带数据,涉敏感业务先评估数据边界。</li><li><strong>工具函数就是执行体</strong>:别把未校验的用户输入直接拼进 SQL / shell——和写后端同一个道理,只是调用方从人变成了模型。</li><li><strong>Deep Agents 适合「想要完整 Agent 但不想自己拼」</strong>;装个 CLI <code>dcode</code> 在终端里体验一圈,能直观理解上下文压缩和子 Agent 是怎么回事。</li></ul>
+<h2 id="-延伸阅读读懂-langchain-是什么">延伸阅读:读懂 LangChain 是什么</h2>
+<p><strong>先建立概念(半小时,两篇)</strong>:</p>
+<ul class="list"><li><a href="https://www.langchain.com/blog/what-is-an-agent" target="_blank" rel="noopener noreferrer">What is an AI agent?</a>(2026-08,Sydney Runkle)——官方定义:「Agent = 用 LLM 决定应用控制流的系统」。讲清四要素(Model / Tools / Memory / Loop)和「自主性光谱」:大多数生产系统其实介于工作流和全自主 Agent 之间。<strong>先读这篇建立正确心智模型</strong>,别急着写代码。</li><li><a href="https://www.langchain.com/blog/deep-agents-vs-langchain-vs-langgraph" target="_blank" rel="noopener noreferrer">Deep Agents vs LangChain vs LangGraph</a>(2026-08)——官方三层栈选型指南,配本页「全景图」看正好。经验法则:<strong>从 Deep Agents 开始;要定制工具/上下文,下 LangChain;要把领域知识编进流程拓扑,下 LangGraph</strong>。</li></ul>
+<p><strong>理解设计哲学(值得精读,三篇)</strong>:</p>
+<ul class="list"><li><a href="https://www.langchain.com/blog/how-to-think-about-agent-frameworks" target="_blank" rel="noopener noreferrer">How to think about agent frameworks</a>(CEO Harrison Chase 亲自写)——Agent 圈最有名的一篇檄文:大部分框架只是「抽象集合」而非编排框架;<strong>可靠性问题的本质是「每一步给 LLM 的上下文对不对」</strong>;框架的「地板要低、天花板要高」。读完能看懂 LangChain 全家的设计动机。</li><li><a href="https://www.langchain.com/blog/agent-frameworks-runtimes-and-harnesses-oh-my" target="_blank" rel="noopener noreferrer">Agent frameworks, runtimes, and harnesses—oh my!</a>——上篇的续集,把 framework / runtime / harness 三个词掰清,正好一一对应 LangChain / LangGraph / Deep Agents。</li><li><a href="https://www.blog.langchain.com/the-rise-of-context-engineering/" target="_blank" rel="noopener noreferrer">The rise of &quot;context engineering&quot;</a> + <a href="https://blog.langchain.com/context-engineering-for-agents/" target="_blank" rel="noopener noreferrer">Context Engineering for Agents</a>——「上下文工程」这个概念的发源地:Agent 不可靠,九成是上下文没喂对。后一篇给出四板斧:<strong>write / select / compress / isolate</strong>。</li></ul>
+<p><strong>配套本页概念看(一篇)</strong>:</p>
+<ul class="list"><li><a href="https://blog.langchain.com/agent-middleware/" target="_blank" rel="noopener noreferrer">Agent Middleware</a>——LangChain 1.0 middleware 抽象的官方讲解,配本页「核心概念速通」的 middleware 条目看。</li></ul>
+<p><strong>看别人怎么落地(一篇)</strong>:</p>
+<ul class="list"><li><a href="https://www.langchain.com/blog/agent-data-stack" target="_blank" rel="noopener noreferrer">How we built LangChain&#x27;s agent-first data stack</a>(2026-07)——LangChain 用 Agent 重构自家内部数据栈的复盘:从「仪表盘为中心」到「Agent 自助分析」。看他们怎么吃自己的狗粮。</li></ul>
+<p><strong>想系统学(官方免费课)</strong>:</p>
+<ul class="list"><li><a href="https://academy.langchain.com/courses/foundation-introduction-to-deep-agents" target="_blank" rel="noopener noreferrer">Introduction to Deep Agents</a>——用 Deep Agents 搭长任务复杂工作流,含 LangSmith 改进 Agent 的部分。</li><li><a href="https://academy.langchain.com/courses/quickstart-langsmith-essentials" target="_blank" rel="noopener noreferrer">LangSmith Essentials</a>——观测/评测平台快速上手。</li><li><a href="https://academy.langchain.com/courses/langsmith-deployment" target="_blank" rel="noopener noreferrer">LangSmith Deployment</a>——Agent 部署、管理与控制。更多课程见 <a href="https://academy.langchain.com/collections" target="_blank" rel="noopener noreferrer">Academy 全部课程</a>(分 Quickstart / Foundation / Project 三类)。</li></ul>
+<h2 id="-资源清单">资源清单</h2>
+<ul class="list"><li>官方文档总站:<a href="https://docs.langchain.com/" target="_blank" rel="noopener noreferrer">docs.langchain.com</a>(按 Build → Test → Deploy → Monitor 组织)</li><li>LangChain Academy 免费官方课:<a href="https://academy.langchain.com/" target="_blank" rel="noopener noreferrer">academy.langchain.com</a></li><li>Ask AI(对文档问答):<a href="https://chat.langchain.com/" target="_blank" rel="noopener noreferrer">chat.langchain.com</a></li><li>社区论坛:<a href="https://forum.langchain.com/" target="_blank" rel="noopener noreferrer">forum.langchain.com</a></li><li>GitHub 组织:<a href="https://github.com/langchain-ai" target="_blank" rel="noopener noreferrer">github.com/langchain-ai</a></li><li>站内相关页:<a href="./weekly/index.html" target="_blank" rel="noopener noreferrer">每周动手实操</a>(每周一篇精讲+教程)</li></ul>
+<hr>
+<p><em>一次性学习页 · 由 Claude 编写(2026-08-14 按官方文档核对) · 不自动更新</em></p><nav class="daynav"><span></span><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
