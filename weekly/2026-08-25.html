@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>每周动手实操 · 2026-08-25</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>每周动手实操 · 2026-08-25</h1>
+<blockquote class="quote">每周一篇模型精讲 + 一个动手小教程 · 数据截至 2026-08-25</blockquote>
+</div><nav class="daynav"><a href="2026-08-18.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-模型精讲scaling-laws缩放定律大模型为什么越大越强以及这句话错在哪">模型精讲:Scaling Laws(缩放定律)——大模型为什么&quot;越大越强&quot;,以及这句话错在哪</h2>
+<p><strong>同样的钱,是该训一个&quot;大块头&quot;还是&quot;多读书&quot;?这条定律给出了可计算的答案</strong></p>
+<blockquote class="why">核心看点:损失(loss)会随模型大小、数据量、算力<strong>按幂律可预测地下降</strong>——这意味着大厂能用小实验<strong>外推</strong>出千亿模型的效果。而 2022 年 Chinchilla 一篇论文推翻了前人结论,证明当时几乎所有主流大模型都<strong>训练不足</strong>。</blockquote>
+<h3 id="它是什么">它是什么</h3>
+<ul class="list"><li><strong>Scaling Laws(缩放定律)</strong> 是一条经验规律:训练损失随着<strong>模型参数量 N</strong>、<strong>数据量 D(token 数)</strong>、<strong>算力 C</strong> 的增长而<strong>平滑下降</strong>,且下降曲线遵循<strong>幂律(power law)</strong>——在对数坐标纸上画出来是<strong>一条直线</strong>。</li><li>三个关键符号要记住:<strong>N</strong> = 参数量,<strong>D</strong> = 训练 token 数,<strong>C ≈ 6ND</strong> = 训练所需算力(其中前向传播占 2ND,反向传播占 4ND)。</li><li>还有一项 <strong>E(不可约损失)</strong>:再怎么加钱也降不到 0,语言本身的随机性构成了地板。</li></ul>
+<h3 id="为什么重要">为什么重要</h3>
+<ul class="list"><li><strong>它把&quot;炼丹&quot;变成了&quot;工程预算&quot;</strong>。最实用的价值在于:可以先跑几个<strong>便宜的小实验</strong>拟合出曲线,再<strong>外推</strong>预测&quot;我花 1 亿美金训个千亿模型,效果大概到哪&quot;——不必真烧钱试错。</li><li><strong>它决定了钱怎么分</strong>。给定固定预算,参数和数据的配比不同,最终效果天差地别。这不是学术细节,而是每个大模型团队开工前的第一道计算题。</li><li><strong>它是&quot;大模型军备竞赛&quot;的理论依据</strong>:正因为效果可预测地随投入增长,资本才敢持续往里砸钱。</li></ul>
+<h3 id="它是怎么工作的一场著名的路线之争">它是怎么工作的:一场著名的&quot;路线之争&quot;</h3>
+<p><strong>第一回合 · Kaplan(2020)——&quot;模型要大&quot;</strong></p>
+<ul class="list"><li>OpenAI 的 Kaplan 等人首次把缩放定律带火。核心结论有几条:大模型<strong>样本效率更高</strong>(用更少数据就能达到同样损失);<strong>架构细节远不如规模重要</strong>。</li><li>最有影响、也最具争议的一条:<strong>算力固定时,应该训一个超大模型、不等收敛就停</strong>,而不是训小模型到收敛。</li><li>具体建议:算力增加 10 倍,模型规模应扩大 <strong>5.5 倍</strong>,而 token 只需增加 <strong>1.8 倍</strong>——<strong>重模型、轻数据</strong>。</li></ul>
+<p><strong>第二回合 · Chinchilla(2022)——&quot;数据要跟上&quot;</strong></p>
+<ul class="list"><li>DeepMind 扫了<strong>超过 400 个模型</strong>(70M~16B 参数,5B~500B token)重做实验,结论直接反转:<strong>模型每翻一倍,训练数据也该翻一倍</strong>——两者应<strong>等速增长</strong>。</li><li>教科书级的实锤对照:在与 Gopher(<strong>280B 参数 / 300B token</strong>)完全相同的算力预算下,他们训了 Chinchilla(<strong>70B 参数 / 1.4T token</strong>)——<strong>参数小 4 倍、数据多 4 倍</strong>——结果全面胜出。</li><li>这个实验证明了一件让整个行业尴尬的事:<strong>当时的主流大模型普遍&quot;训练不足&quot;</strong>——不是脑子不够大,是书读得太少。</li></ul>
+<p><strong>为什么两家结论会打架?</strong></p>
+<ul class="list"><li><strong>实验规模不同</strong>:Kaplan 主要在小模型上做实验,而 log-log 图上拟合线<strong>斜率的一点点误差,外推到大模型就是巨大偏差</strong>。</li><li><strong>参数怎么数</strong>:Kaplan <strong>不算</strong> embedding 参数,Chinchilla <strong>算</strong>。在小模型区间 embedding 占比不可忽略,两种口径下&quot;参数量&quot;甚至不再是一条干净的幂律。</li></ul>
+<blockquote class="quote"><strong>进阶点一(为什么偏偏是幂律?)</strong>:目前主要有两种解释。一是<strong>流形分割假说</strong>:语言数据其实分布在一个低维流形上,参数越多,对流形的切分越细,分辨率按 N^(-1/d) 提升。二是<strong>技能量子化假说</strong>:知识以离散&quot;技能块&quot;存在、其出现频率本身服从幂律,模型先学会高频技能、再学低频的,叠加起来就表现为平滑的幂律下降。</blockquote>
+<blockquote class="quote"><strong>进阶点二(数据墙:书快读完了怎么办?)</strong>:经典缩放定律假设<strong>数据无限且不重复</strong>,但高质量语料正在耗尽。Muennighoff 等人的研究给重复数据做&quot;<strong>指数折价</strong>&quot;,结论是:<strong>多余参数的贬值速度快于重复数据</strong>——所以数据不够时,该多跑几轮 epoch,而不是继续堆参数。2026 年 Lovelace 等人进一步发现:<strong>模型越大,对数据重复越敏感</strong>;而<strong>加大权重衰减(weight decay)可以缓解</strong>重复训练带来的过拟合惩罚。</blockquote>
+<blockquote class="quote"><strong>一个反直觉的提醒</strong>:缩放定律公式很漂亮,拟合过程却<strong>异常脆弱</strong>。有研究复查 Chinchilla 的拟合方法,发现优化器设置(Huber loss 取平均而非求和)导致<strong>过早终止优化</strong>,加上论文里系数只保留 2 位小数,让结果看起来比实际更矛盾。别把这条&quot;定律&quot;当物理定律用。</blockquote>
+<ul class="list"><li>🔗 原文:<a href="https://lilianweng.github.io/posts/2026-06-24-scaling-laws/" target="_blank" rel="noopener noreferrer">Scaling Laws — Lilian Weng</a></li><li>🏷️ 来源:Lilian Weng 博客(前 OpenAI 研究副总裁,深度综述型作者) · 难度:入门(含 2 个进阶注记)</li></ul>
+<h2 id="-动手教程写一个-mcp-服务器给-claude-装上你自己的外挂">动手教程:写一个 MCP 服务器,给 Claude 装上你自己的&quot;外挂&quot;</h2>
+<p><strong>MCP 是 AI 应用的&quot;USB-C 接口&quot;:30 行 Python,让 Claude 用上你私有的数据和工具</strong></p>
+<blockquote class="why">你将做出:一个跑在本地的 MCP 服务器。写完之后,Claude 桌面端里会多出你亲手做的工具——你问它问题,它会<strong>自己决定</strong>调用你写的那个 Python 函数。</blockquote>
+<p><strong>准备</strong>:</p>
+<ul class="list"><li><strong>Python 3.10+</strong>,以及包管理器 <strong>uv</strong>(下面第 1 步会装)。</li><li><strong>MCP Python SDK 2.0+</strong>(注意:v2 的 API 与网上大量 v1 老教程<strong>不兼容</strong>,详见下方提醒)。</li><li><strong>Claude 桌面端</strong>(免费版即可),装好并更新到最新。</li><li>无需 GPU、无需 API Key——服务器纯跑在你自己电脑上。</li></ul>
+<p><strong>跟着做</strong>:</p>
+<ol class="items "><li class="item"><div class="item-head"><strong>装 uv 并建项目</strong>(约 3 分钟):</div><p>```bash</p><p>curl -LsSf https://astral.sh/uv/install.sh | sh</p><p># 装完重启终端,然后:</p><p>uv init myserver &amp;&amp; cd myserver</p><p>uv venv &amp;&amp; source .venv/bin/activate</p><p>uv add &quot;mcp[cli]&quot;</p><p>touch server.py</p><p>```</p></li><li class="item"><div class="item-head"><strong>写服务器</strong>:把下面内容存进 <code>server.py</code>。整个服务器就这么长——<strong>注意没有一行 JSON Schema</strong>:</div><p>```python</p><p>from mcp.server import MCPServer</p></li></ol>
+<p>mcp = MCPServer(&quot;Demo&quot;)</p>
+<p>@mcp.tool() def add(a: int, b: int) -&gt; int: &quot;&quot;&quot;Add two numbers.&quot;&quot;&quot; return a + b</p>
+<p>@mcp.resource(&quot;greeting://{name}&quot;) def greeting(name: str) -&gt; str: &quot;&quot;&quot;Greet someone by name.&quot;&quot;&quot; return f&quot;Hello, {name}!&quot;</p>
+<p>if __name__ == &quot;__main__&quot;: mcp.run(transport=&quot;stdio&quot;) ``<code> 这里藏着 MCP 最妙的设计:**Python 的类型标注本身就是 Schema**(</code>a: int, b: int<code> 就够了),**docstring 就是给模型看的工具说明**。模型靠这两样&quot;读懂&quot;你的工具——和上上期 smolagents 的 </code>@tool` 是同一套哲学。</p>
+<ol class="items "><li class="item"><div class="item-head"><strong>先在调试器里跑通</strong>(强烈建议,别跳):</div><p>```bash</p><p>uv run mcp dev server.py</p><p>```</p><p>这会打开官方的 <strong>MCP Inspector</strong>,你可以在网页里手动点一下 <code>add</code> 工具、传参数、看返回值——<strong>先确认服务器本身没问题,再去接 Claude</strong>,能省掉一大半排错时间。</p></li><li class="item"><div class="item-head"><strong>接进 Claude 桌面端</strong>:打开配置文件(macOS 路径如下,Linux 是 <code>~/.config/Claude/claude_desktop_config.json</code>):</div><p>```bash</p><p>code ~/Library/Application\ Support/Claude/claude_desktop_config.json</p><p>```</p><p>填入(文件不存在就新建):</p><p>```json</p><p>{</p><p>&quot;mcpServers&quot;: {</p><p>&quot;demo&quot;: {</p><p>&quot;command&quot;: &quot;uv&quot;,</p><p>&quot;args&quot;: [&quot;--directory&quot;, &quot;/你的绝对路径/myserver&quot;, &quot;run&quot;, &quot;server.py&quot;]</p><p>}</p><p>}</p><p>}</p><p>```</p><p><strong>三个高频翻车点</strong>:① 路径必须是<strong>绝对路径</strong>(在项目目录跑 <code>pwd</code> 复制);② <code>command</code> 里的 <code>uv</code> 可能需要写全路径(用 <code>which uv</code> 查);③ Windows 的 JSON 路径要用 <code>\\</code> 或 <code>/</code>。改完<strong>重启 Claude 桌面端</strong>。</p></li><li class="item"><div class="item-head"><strong>验收</strong>:重启后点输入框旁的 <strong>&quot;+&quot;</strong>,在 <strong>Connectors</strong> 里应该能看到你的 <code>demo</code> 服务器。然后问它一句&quot;帮我算 3 加 5&quot;,观察它<strong>主动调用你写的 <code>add</code> 函数</strong>——那一刻你会真正理解 Agent 的工具调用是怎么回事。</div></li></ol>
+<blockquote class="quote"><strong>两个必须知道的坑</strong>: - <strong>别用 <code>print()</code></strong>。stdio 模式下,任何写进 stdout 的内容都会<strong>污染 JSON-RPC 消息、直接搞崩服务器</strong>。要打日志请用标准库 <code>logging</code>(它写 stderr,安全)。 - <strong>认准 v2 API</strong>。老教程里的 <code>FastMCP</code> 是 <strong>v1</strong> 的写法;当前 v2 SDK 用的是 <code>from mcp.server import MCPServer</code>。照抄老代码会直接 ImportError。</blockquote>
+<blockquote class="quote">做完你会:拥有一个可以无限扩展的模板——把 <code>add</code> 换成&quot;查我司数据库&quot;&quot;读我的笔记&quot;&quot;调我们内部 API&quot;,Claude 就接上了你的私有世界。这正是 MCP 被称为&quot;AI 应用的 USB-C 接口&quot;的原因:<strong>工具只写一遍,任何支持 MCP 的客户端都能用</strong>。下一步可探索:用 <code>uv run mcp run server.py --transport streamable-http</code> 把它跑成 HTTP 服务,让远程客户端也能连。</blockquote>
+<ul class="list"><li>🔗 教程/代码:<a href="https://modelcontextprotocol.io/docs/develop/build-server" target="_blank" rel="noopener noreferrer">MCP 官方教程:Build an MCP Server</a> · <a href="https://github.com/modelcontextprotocol/python-sdk" target="_blank" rel="noopener noreferrer">GitHub:modelcontextprotocol/python-sdk</a></li><li>🏷️ 来源:Model Context Protocol 官方文档 + 官方 Python SDK · 难度:入门</li></ul>
+<hr>
+<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-08-18.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
