@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-09-11</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-09-11</h1>
+<blockquote class="subtitle">每日精选全球 AI 热门进展 · 简要速览 · 共 17 条</blockquote>
+<div class="lede"><strong>今日主线</strong>:<strong>Agent 基础设施从「自己搭」变成了「调 API」</strong>——OpenAI 把 Codex 的 Agent 框架开放为 Agents API，NVIDIA 开源 SoL-Pi 帮你在 Harness 层省钱，LangChain 给出了多 Agent 上下文的 Fork 模式。另一条线是<strong>编码模型性价比战</strong>：Cognition SWE-2 基于 Kimi K3、以 Fable 5.1 1/3 的价格逼近其性能，DeepSeek V4.1 Flash 参数翻倍但推理更省——「最强」正在让位给「最划算」。第三条线是 <strong>AI 安全的极限拉扯</strong>：Anthropic 研究员辞职引发 4 天 7 位大牛警告文明级风险，同一天 Anthropic 发布威胁情报报告和 Claude 三层隔离工程文章——争论和工程实践在同时加速。</div>
+</div><nav class="daynav"><a href="2026-09-04.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-official"><a href="#-官方动态"> 官方动态</a>(4 条)</li><li class="cat-hot"><a href="#-海外热榜"> 海外热榜</a>(4 条)</li><li class="cat-dev"><a href="#-开发者实战"> 开发者实战</a>(5 条)</li><li class="cat-china"><a href="#-中文社区"> 中文社区</a>(4 条)</li><li class=""><a href="#-今日新词"> 今日新词</a></li></ul>
+<hr>
+<h2 id="-官方动态" class="cat-official">官方动态</h2>
+<ol class="items cat-official"><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener noreferrer">OpenAI Agents API 开放公测:把 Codex 的 Agent 框架变成一行 API</a></strong> — 开发者只需指定任务、模型、工具和运行环境，OpenAI 托管整个 Agent 循环。关键能力:①<strong>自动上下文压缩</strong>——接近上限时自动压缩早期上下文，Agent 可跨多个上下文窗口持续运行；②<strong>工具搜索</strong>——按需加载工具定义，省 token、保缓存；③<strong>多 Agent 子任务并行</strong>——主 Agent 协调、子 Agent 独立上下文并行工作；④<strong>灵活计算环境</strong>——可选 OpenAI 托管沙箱或自有基础设施。API 本身无额外费用，只付 token 和工具费。基于开源的 Codex 框架，已公测。</div><blockquote class="why">为什么值得关注:这标志着 Agent 从「自己搭循环」变成「调 API」——和当年 Stripe 把支付变成 API 一样，Agent 能力正在变成基础设施。自动上下文压缩和多 Agent 编排以前是每个团队都要自己写的胶水代码。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">OpenAI</code><code class="chip">2026-09-10</code></div></li><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/introducing-gpt-live-1-in-the-api/" target="_blank" rel="noopener noreferrer">OpenAI GPT-Live-1 语音模型 API 发布:全双工、可打断、打断率降 80%</a></strong> — 一个模型同时处理输入和输出音频，不再走 STT→LLM→TTS 的传统流水线。核心能力:<strong>全双工交互</strong>(双方可同时说话)、<strong>中断处理</strong>(打断率降 80%)、<strong>推理委托</strong>(复杂任务交给后端 GPT-6 Astra 等文本模型)、<strong>语气/节奏/风格可定制</strong>、<strong>支持电话部署</strong>。定价 $0.05/分钟(前端语音层)。Speak 实测打断率比上一代轮次系统降近 80%，Full Duplex Bench 提升 30 个百分点。</div><blockquote class="why">为什么值得关注:语音 AI 的产品体验瓶颈一直是「不能随时打断」——你会感觉在和一台机器说话而不是一个人。全双工 + 80% 打断率改善，对客服、点餐、语音助手场景是质变。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">OpenAI</code><code class="chip">2026-09-10</code></div></li><li class="item"><div class="item-head"><strong><a href="https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/" target="_blank" rel="noopener noreferrer">Mistral 完成 €30 亿 D 轮融资:欧洲科技公司史上最大股权融资，估值超 €210 亿</a></strong> — 三星电子领投，EQT、PSG Equity 跟投，新入局的还有贝莱德、Advent 和卢森堡大公国。a16z、ASML、NVIDIA、Salesforce Ventures 等老股东继续加码。资金用于扩展前沿研究、算力和国际布局。目前覆盖 20 个国家、125+ 企业客户(空客、ASML、汇丰)。定位「主权 AI」——强调数据控制、模型可定制、算力私有可控。</div><blockquote class="why">为什么值得关注:三星领投(上次 C 轮是 ASML 领投)说明制造业和工业技术巨头正在把 AI 主权视为战略基础设施。€30 亿这个数字放在欧洲科技史上没有先例——欧洲 AI「要有自己的模型」这件事，资本市场用真金白银投了赞成票。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">Mistral</code><code class="chip">2026-09-08</code></div></li><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/introducing-chatgpt-financial-services/" target="_blank" rel="noopener noreferrer">OpenAI 推出 ChatGPT for Financial Services:金融行业专用版</a></strong> — 面向金融服务行业的垂直产品，在通用 ChatGPT 基础上叠加金融合规和数据安全能力。继医疗(Epic EHR 集成)之后，OpenAI 连续切入受监管行业——路径一致:先做垂直合规层，再接入行业数据和工作流。</div><blockquote class="why">为什么值得关注:上周是医疗，这周是金融。OpenAI 的行业策略很清晰:不改造通用模型，而是在通用模型外面包一层行业合规壳。金融和医疗是受监管最严的两个行业，拿下它们意味着这套「合规外挂」模式可以复制到法律、政府等其他领域。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">OpenAI</code><code class="chip">2026-09-10</code></div></li></ol>
+<h2 id="-海外热榜" class="cat-hot">海外热榜</h2>
+<ol class="items cat-hot"><li class="item"><div class="item-head"><strong><a href="https://cognition.com/blog/swe-2" target="_blank" rel="noopener noreferrer">Cognition 发布 SWE-2 编码模型:基于 Kimi K3 后训练，1/3 价格逼近 Fable 5.1</a></strong> — HN 355 分登顶。基于 2.8 万亿参数 Kimi K3 后训练，核心成绩:<strong>FrontierCode 1.1 50.0%</strong>(Fable 5.1 50.9%、GPT-6 Astra 53.3%)、<strong>DeepSWE 1.1 73.0%</strong>(Fable 5.1 67.4%)、<strong>Terminal-Bench 2.1 92.8%</strong>(三项中最高)。相比 Fable 5.1 <strong>便宜 64%</strong>，相比 GPT-6 Astra 成本仅 1/4。技术亮点:①<strong>帕累托成本惩罚 RL</strong>——单次训练同时优化所有推理努力级别；②<strong>首次编辑前步数从 48 步降到 18 步</strong>——模型更聚焦、少绕弯；③RL 环境数增至 3 倍，加入指令遵循叠加层。可信度评估:政治敏感话题通过率 98.0%(英文 99.8%、简体中文 95.2%)。</div><blockquote class="why">为什么值得关注:SWE-2 的本质是一道算术题——<strong>Kimi K3(中国基座)+ Cognition 后训练 = 编码性能逼近最贵模型、价格只要 1/3~1/4</strong>。这对「用最贵模型写代码」的商业逻辑是直接挑战。另外注意:这轮后训练是在中国基座模型上做的，说明后训练能力正在成为比基座更关键的差异点。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">Cognition</code><code class="chip">2026-09-10</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/" target="_blank" rel="noopener noreferrer">OpenAI 发布 Navier-Stokes 方程证明，附带 Lean 4 形式化验证:166 页论文只花了 17 小时验证</a></strong> — HN 139 分。OpenAI 宣称在 Navier-Stokes(千禧年七大数学难题之一)上取得突破，并附带完整的 <strong>Lean 4 形式化证明</strong>。传统方法验证 166 页数学论文约需 <strong>13.3 万工时</strong>，OpenAI 用 Lean 只花了 <strong>17 小时</strong>——成本降低约 4 个数量级。不过 InfoQ 中文报道指出此事存在争议:有数学家指控 OpenAI「抄袭」，演变成 OpenAI 和 Anthropic 之间的大战。抛开争议，形式化验证成本断崖式下降这件事本身是真的。</div><blockquote class="why">为什么值得关注:不管证明本身有没有争议，<strong>「形式化验证成本降了四个数量级」比「解出 Navier-Stokes」对开发者更实用</strong>。安全策略一致性、智能合约上限、关键算法正确性——这些比数学定理简单得多，但以前因为形式化成本太高没人做。17 小时验证 166 页意味着这件事的 ROI 开始变正。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">OpenAI / John D. Cook</code><code class="chip">2026-09-09</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.anthropic.com/threat-intelligence-report-september-2026" target="_blank" rel="noopener noreferrer">Anthropic 发布 9 月威胁情报报告:AI 让「攻击复杂度」不再是判断攻击者身份的信号</a></strong> — HN 86 分。覆盖 2025.12-2026.08 的 7 个危害领域。核心发现:<strong>复杂攻击不再需要复杂攻击者</strong>——从黑客活动分子到国家级间谍，都能维持多受害者行动，AI 抹平了人力差距。具体案例:俄罗斯间谍组织用 AI 驱动全自动攻击流水线(开发→利用→窃取)，被安全产品检测到时自动重建工具包；法语单人黑客在 42 个目标中拿下至少 14 个的内部权限。另一个趋势:AI API 密钥已成为黑产专门目标——既当战利品又当算力来源又当掩护。</div><blockquote class="why">为什么值得关注:报告的标题本身就是在说结论——<strong>以前你可以根据攻击的复杂度判断对手是谁、有多危险，现在不行了</strong>。对做安全的团队，这意味着威胁建模要从「按能力分级」变成「假设所有人都能打高级攻击」。</blockquote><div class="meta"><code class="chip type">观点</code><code class="chip">Anthropic</code><code class="chip">2026-09-10</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/" target="_blank" rel="noopener noreferrer">GitHub Project HydraFusion:多模型编排，降本 67% 的同时某些基准反超 Opus 5</a></strong> — 三种执行模式自动切换:①<strong>Single</strong>(一个模型直接搞定)；②<strong>Cascade</strong>(便宜模型先来，质量不够再升级)；③<strong>Critique</strong>(一个写、另一个模型族的独立 Reviewer 审查再修订)。在 TerminalBench 2.1 上<strong>降本 67% 且质量反超 Opus 5 4.9 个百分点</strong>；DeepSWE 降本 36%、质量仅低 1.5 个百分点。路由策略用束搜索自动优化，非人工调阈值。Reviewer 在隔离的无工具环境运行，防止 Reviewer 顺手改代码。</div><blockquote class="why">为什么值得关注:上周 Armature 那篇「Agent 选工具」告诉我们 <strong>Agent 只看性价比</strong>，这周 HydraFusion 给了一个系统化的多模型编排方案。关键设计是 Critic 模式——让 Reviewer 只能看不能改，这避免了「评审过程中把代码搞乱」的问题。束搜索自动找最优路由的思路也值得抄。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">GitHub</code><code class="chip">2026-09-04</code></div></li></ol>
+<h2 id="-开发者实战" class="cat-dev">开发者实战</h2>
+<ol class="items cat-dev"><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3978268468525825" target="_blank" rel="noopener noreferrer">NVIDIA 开源 SoL-Pi Harness:Token 降 64%、成本降 50%，让 AI 自己优化自己</a></strong> — 韩松(Efficient AI 团队)掌舵，以 Pi 为底盘。四大机制:①<strong>动作融合</strong>——编辑+测试打包成一个本地执行序列，省掉中间决策轮次；②<strong>在线上下文压缩</strong>——只在「未来省的 &gt; 本次重写开销」时才压缩，不乱压；③<strong>输出归档与索引</strong>——大文件输出存本地磁盘，上下文只留句柄+摘要；④<strong>证据保留归约器</strong>——小模型初筛长日志，但必须给诊断回执，系统逐条比对原始日志后才交给大模型。背后是<strong>递归自我改进(RSI)</strong>飞轮:AI 从 152 个优化方向中自动实验筛出 4 个有效机制。</div><blockquote class="why">为什么值得关注:这套 Harness 的设计哲学值得每条都读——「压缩要算经济账」「摘要必须带证据回执」「编辑和测试不要分两次调模型」。它不是在模型层优化，而是<strong>在 Harness 层把浪费找出来并消除</strong>。而且它自己就是 AI 优化出来的——用 AI 降 AI 的成本，这是 Harness 效率的复利。</blockquote><div class="meta"><code class="chip type">工具</code><code class="chip">NVIDIA</code><code class="chip">2026-09-10</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.anthropic.com/engineering/how-we-contain-claude" target="_blank" rel="noopener noreferrer">Anthropic 工程博客:如何「contain」Claude——三层隔离的实战教训</a></strong> — 三种隔离模式:①<strong>临时容器</strong>(claude.ai，gVisor，会话结束即销毁，爆炸半径最小)；②<strong>人工审核沙箱</strong>(Claude Code，macOS Seatbelt / Linux bubblewrap，写入限工作区、网络默认拒绝，减少 84% 权限提示)；③<strong>本地虚拟机</strong>(Claude Cowork，完整 Linux 内核，凭据永不进入客户机)。五个血的教训:①<strong>自定义组件最脆弱</strong>——标准化的 hypervisor/seccomp/gVisor 稳定，自定义组件出事；②<strong>信任边界前的漏洞</strong>——Claude Code 在用户同意前就解析 <code>.claude/settings.json</code>，攻击者可借此执行代码；③<strong>用户是注入向量</strong>——钓鱼让员工执行恶意 prompt，25 次中 24 次成功外泄 AWS 凭据；④<strong>允许域照样泄密</strong>——沙箱正常工作，但攻击者通过 api.anthropic.com 的 Files API 把数据上传到自己账户；⑤<strong>VM 隔离阻挡了 EDR</strong>——安全团队看不到虚拟机内部。</div><blockquote class="why">为什么值得关注:这是目前公开可见的最诚实的 AI 安全工程文章之一——没有「我们的安全很棒」，而是逐条承认「这里出了问题」。第 ① 条(自定义组件最脆弱)和第 ④ 条(允许域照样泄密)对任何做 Agent 平台的团队都是直接警告:你的安全短板大概率在自己写的代码里，不在操作系统那层。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">Anthropic 工程博客</code><code class="chip">近期</code></div></li><li class="item"><div class="item-head"><strong><a href="https://mistral.ai/news/legacy-code-modernization/" target="_blank" rel="noopener noreferrer">Mistral:用 AI Agent 把 4 万行 Fortran 77 迁移到 C++——三条原则和三次翻车</a></strong> — 帮一家欧洲能源运营商迁移油藏模拟器。三条原则:①<strong>先建校验框架</strong>(数值一致性是唯一的可信证明)；②<strong>先整理文档</strong>(AI 解析 Fortran 调用树，从叶到根逐节点自动生成文档)；③<strong>结构化工作流优于全自主或纯手动</strong>(人操作 coder/tester/reviewer Agent 工作流)。三次翻车:①全自主——Agent 把 Fortran 逐行翻译成 C++ 语法，GOTO 全保留；②多角色协作——质量提升但 Agent 遇 bug 后卡住无人介入；③最终方案——结构化工作流 + 人工检查点。首次冲刺覆盖 30 万行中的 4 万行核心功能。</div><blockquote class="why">为什么值得关注:这篇文章的价值不在「AI 成功迁移了 Fortran」，而在<strong>它诚实地记录了前两次翻车</strong>——全自主 Agent 只会做语法翻译而非架构重构，多 Agent 协作会卡在 bug 上等死。最终收敛到的「结构化工作流 + 人工检查点」是务实的中间路线。第 ① 条原则也通用:做任何代码迁移，<strong>先建数值校验框架，这是唯一不会骗你的东西</strong>。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">Mistral</code><code class="chip">2026-09-09</code></div></li><li class="item"><div class="item-head"><strong><a href="https://blog.langchain.com/organizing-context-in-a-multi-agent-harness/" target="_blank" rel="noopener noreferrer">LangChain:多 Agent 上下文的 Fork 模式——让子 Agent 继承主 Agent 的对话历史</a></strong> — 传统多 Agent 架构中，子 Agent 从空白上下文启动，重复收集主 Agent 已经做过的工作。Fork 模式让子 Agent <strong>继承主 Agent 的完整对话历史</strong>，利用 prompt caching 反而更快更便宜。四种 Agent 类型的推荐模式:Worker(实现修复)→ Fork；Verifier(独立评估)→ Isolated(避免被主 Agent 的诊断锚定)；Researcher(自包含问题)→ Isolated(可并行)；Memory(提取记忆)→ Fork(需要全局视角)。已在 <code>deepagents</code> 框架实现，支持 Python/TypeScript。</div><blockquote class="why">为什么值得关注:多 Agent 上下文管理是当下 Agent 平台最脏的工程问题。Fork vs Isolated 这个二分法简洁且正确——<strong>需要独立的给空白、需要继承的给 Fork</strong>。那条「Verifier 必须隔离，避免被主 Agent 的诊断锚定」尤其重要:如果你让 Reviewer 看到你自认为「可能出问题的地方」，它就不会自己找了。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">LangChain</code><code class="chip">2026-09-08</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.infoq.cn/article/WlJkEfJxMgaK9o91ow2Z" target="_blank" rel="noopener noreferrer">Shopify Gisting:把 6000 token 系统提示词压缩到 1500，4:1 压缩比且不损质量</a></strong> — 通过「教师-学生」训练:教师侧用原始提示词、学生侧用 Gist token，最小化两者 KL 散度。训练完成后 Gist 嵌入写入模型嵌入矩阵，推理时无需额外编码器或特殊路径。实测:TTFT 从 438ms→354ms、端到端延迟 6.8s→4.2s、吞吐量 20.2→23.4 QPS。可与前缀缓存叠加使用——前缀缓存省 KV 重复计算，Gisting 缩短序列省解码开销。</div><blockquote class="why">为什么值得关注:系统提示词越长越贵是普遍痛点(GitHub Copilot 的系统提示词据说有几千字)。Gisting 的精妙之处在于<strong>它不是简单的文本摘要，而是学出来的压缩表征</strong>——模型「理解」的是压缩版而非原文摘要。而且跟前缀缓存可叠加，效果乘数级。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">Shopify / InfoQ</code><code class="chip">2026-09-09</code></div></li></ol>
+<h2 id="-中文社区" class="cat-china">中文社区</h2>
+<ol class="items cat-china"><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/09/483786.html" target="_blank" rel="noopener noreferrer">DeepSeek V4.1 Flash 正式上线:552B MoE，KV Cache 压缩让硬盘占用暴降 88%</a></strong> — <strong>552B 总参数、输入激活 8B、输出激活 16B</strong> 的 MoE 模型，原生多模态视觉。最大亮点是 <strong>KV Cache 压缩</strong>:显存需求降至上一代 1/4、SSD 降至 1/8。社区实测输出 300-500 tok/s。基准全面超越 V4 Pro(GPQA Diamond 90.9)。定价大幅下调:闲时缓存命中输入 ¥0.02/百万 token。DSH 负责人崔添翼宣布 V4 Pro 请求暂时路由至 Flash 并按 Flash 价格计费。</div><blockquote class="why">为什么值得关注:参数翻倍(从 V4 到 V4.1)但推理更省——这在 Transformer 时代是反常的。关键是 <strong>KV Cache 压缩</strong>:如果这套方法可以泛化，大模型「参数越多推理越贵」的铁律可能松动。另外 DSH 这种「新模型上线、老模型直接路由到新模型」的操作在业界很少见，说明他们对 V4.1 Flash 的成本结构有绝对信心。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">量子位</code><code class="chip">2026-09-10</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/09/486288.html" target="_blank" rel="noopener noreferrer">蚂蚁百灵开源金融增强模型 Ling-3.0-flash-Fin:让 AI 从「回答一个问题」走向「完成一项工作」</a></strong> — 124B 总参数、5.1B 激活、256K 上下文，Apache 2.0 开源。切入投研全链路:信息检索(优先官方/高可信源)→研究推理(多步交叉验证)→估值建模(公式切换、跨表依赖)→研报撰写。配套开源 <strong>FinFIRST 评测基准</strong>(中金公司投行团队支持、50+ 金融人士设计)，重点考察信源选择、口径判断和推导过程。综合表现超过部分大尺寸旗舰模型。</div><blockquote class="why">为什么值得关注:「从回答问题到完成工作」这个定位比「金融 LLM」准确得多——投研不是问答任务，是多步推理+计算+写报告的工作流。模型+工具+评测三件套一起开源的做法也很务实，金融机构不会只为一个模型权重买单。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">量子位</code><code class="chip">2026-09-10</code></div></li><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3977510746585863" target="_blank" rel="noopener noreferrer">Anthropic 研究员 Jacob Coxon 辞职:4 天内 7 位 AI 大牛发出文明级警告</a></strong> — Coxon(曾在 OpenAI 和 Anthropic 工作)在离职帖中称两家公司「正在追逐能自我改进的超级智能，拿人类未来冒险」，帖子不到一天浏览量过亿。他区分了两家:OpenAI「还没内化文明级风险」，Anthropic「知道风险但抱着『别人不负责、我们必须先做到』的心态参赛」。他在股权归属还差两个月时离开，主动放弃未归属权益。连锁反应:4 天内包括 Anthropic 可扩展监督负责人 Samuel Marks、对齐科学负责人 Evan Hubinger 在内的 7 位内部人士发声。Hubinger 表示「Coxon 说的是对的」。</div><blockquote class="why">为什么值得关注:这不是孤立的离职，而是 <strong>4 天内 7 个人</strong>——且 Hubinger 的「他说得对」把这件事从个人选择升级为机构内部共识的公开化。另一个细节:Anthropic 今年 2 月重写了负责任扩展政策，把公司可单独做的事和需全行业协作的事分开——那次改动现在看像是铺垫。</blockquote><div class="meta"><code class="chip type">观点</code><code class="chip">36氪</code><code class="chip">2026-09-10</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/09/486436.html" target="_blank" rel="noopener noreferrer">京东发布物理 AI 最新成果:10 万卡国产算力集群 + JoyAI 世界模型</a></strong> — 在 JDDiscovery-2026 大会上，京东公布 <strong>10 万卡国产算力集群</strong>和 <strong>JoyAI 世界模型</strong>。同场发布的还有开源世界模型 <strong>JoyAI-EchoWM</strong>(「会发声的可探索世界」)。京东物流同步展示了「狼族军团」具身机器人矩阵——不走人形路线，而是多形态机器人协同(机器之心同日报道称其为「破除人形崇拜」)。</div><blockquote class="why">为什么值得关注:10 万卡国产集群是一个信号——中国大厂正在从「用英伟达」转向「建自己的算力底座」。京东走「非人形多形态机器人」路线也和主流人形叙事不同，是否务实值得观察。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">量子位</code><code class="chip">2026-09-10</code></div></li></ol>
+<hr>
+<h2 id="-今日新词">今日新词</h2>
+<ul class="list"><li><strong>Lean 4 / 形式化证明</strong>:用编程语言写数学证明——每一步推理都是代码，计算机可以自动检查「你这个推导到底合不合法」。以前形式化一篇论文要几百个工时，OpenAI 今天用 Lean 验证 166 页只花了 17 小时。对开发者的实际意义:安全策略一致性、智能合约正确性这些「错了会死人」的东西，现在可以用形式化验证了。</li><li><strong>全双工 (Full Duplex)</strong>: 电话里「双方可以同时说话、随时打断」就是全双工。GPT-Live-1 今天把这件事做到了 AI 语音上——以前你和 AI 语音助手说话要等它讲完才能插嘴，现在可以像和人说话一样随时打断。这背后是一个模型同时处理输入和输出音频，不再走「听写→理解→朗读」的老路。</li><li><strong>Gisting</strong>: 把几千字的系统提示词压缩成几个「主旨 token」——不是做文本摘要，而是训练模型直接理解压缩后的数学表征。Shopify 今天把它用在了生产环境，6000 token 压到 1500。关键是它能和其他缓存优化叠加使用，效果乘数级。</li><li><strong>Harness</strong>: Agent 的「运行框架」——类似操作系统之于应用，负责管工具调用、上下文窗口、任务流程。今天的 SoL-Pi 就是在 Harness 层做优化(而非模型层):编辑和测试打包成一个本地序列、大文件存本地只留句柄、压缩前先算经济账。这些都不是模型能力问题，是 Harness 设计问题。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 条目均附原文链接，点击可深入学习</em></p><nav class="daynav"><a href="2026-09-04.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
