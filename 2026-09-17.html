@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-09-17</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-09-17</h1>
+<blockquote class="quote">面向程序员的 AI 进展速览 · 11 条 · 选你能用的</blockquote>
+<div class="lede"><strong>今日焦点</strong>:GitHub 用 Copilot 把 83 万行 TypeScript 重写成 Rust，人类工程师只投入约 3 周、总花费 12 万美元——AI 辅助大规模重写第一次有了完整公开的账本和踩坑清单。</div>
+</div><nav class="daynav"><a href="2026-09-16.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>(5 条)</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>(3 条)</li><li class="cat-brief"><a href="#-速览"> 速览</a>(3 条)</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
+<hr>
+<h2 id="-动手派" class="cat-tools">动手派</h2>
+<p><em>今天你能用的工具、技巧、实战经验</em></p>
+<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://harnesstax.github.io/" target="_blank" rel="noopener noreferrer">HarnessTax:同一个模型换个 harness，成本差 2 倍，成功率几乎不变</a></strong> — 伯克利实测 7 个模型 × 3 个 harness 共 21 组，Claude Code 比极简 harness Pi 贵 2.0 倍而成功率只差 1.1%，原因是初始上下文大了 10 倍——而且 12 组对比里有 9 组「别家 harness 跑自家模型」反而更强。 <code>实战</code></div></li><li class="item"><div class="item-head"><strong><a href="https://openspec.dev/" target="_blank" rel="noopener noreferrer">OpenSpec:给 AI Agent 一份可验证的需求说明书</a></strong> — 68.6K star 的轻量 Spec 框架，Explore→Propose→Apply→Verify→Archive 五步把「需求」变成 proposal.md / design.md / tasks.md，再回头校验实现是否真的对上了，已适配 Claude Code / Cursor / Copilot 等 37 个工具。 <code>工具</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer">Cloudflare 开源内部漏洞挖掘 Skill:找漏洞的和验漏洞的必须是两个 Agent</a></strong> — <code>npx skills add</code> 一行装，六阶段审计（侦察→分发子 Agent 按覆盖清单搜→新 Agent 反向证伪→JSON Schema 校验→独立复核→出报告），核心设计是「检查者永远不是发现者」，多次运行会基于上次的覆盖账本累加。 <code>工具</code></div></li><li class="item"><div class="item-head"><strong><a href="https://zed.dev/blog/delta-public-beta" target="_blank" rel="noopener noreferrer">Zed Delta 公测:用 Agent 会话线程取代 Pull Request</a></strong> — 底层 DeltaDB 扩展 Git 记录 commit 之间的每一次编辑和人/Agent 对话，评审者拿到线程 worktree 的隔离副本可以直接用 Agent 改；Zed 自己已关掉仓库 PR，33 人合了 570 次变更，兼容现有 GitHub 仓库。 <code>新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://rohanbansal.com/qorl" target="_blank" rel="noopener noreferrer">花 1200 美元训个 4B 模型，把 Postgres join 查询提速 44.7%</a></strong> — 不替换优化器，只让模型生成 <code>pg_hint_plan</code> 提示；SFT 用 420 条 Astra 轨迹蒸馏出 42.5MB LoRA，再用 anchored GRPO 强化学习，113 条 JOB 查询 best-of-3 全部有效、零回退。踩坑细节最值钱:<code>shared_buffers</code> 128MB 会制造 5% 的幽灵加速，调到 2GB 才测得准。 <code>实战</code></div></li></ol>
+<h2 id="-职业风向" class="cat-career">职业风向</h2>
+<p><em>影响你技能选择和职业方向的信号</em></p>
+<ol class="items cat-career"><li class="item"><div class="item-head"><strong><a href="https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/" target="_blank" rel="noopener noreferrer">GitHub 用 Copilot 把 Copilot 运行时从 TS 重写成 83 万行 Rust</a></strong> — 14.5 周、128 个 PR、1363 亿 token、12 万美元，人类工程师实际投入约 3 周；启动快 18 倍、内存降 91%。六条教训里最狠的两条:<strong>E2E 测试是不可谈判的底线</strong>，以及<strong>必须盯住 Agent 别偷偷把测试改松</strong>。 <code>实战</code></div></li><li class="item"><div class="item-head"><strong><a href="https://dev.to/p0rt/ai-generated-tests-can-make-coding-agents-worse-heres-how-to-check-yours-3jc9" target="_blank" rel="noopener noreferrer">AI 生成的测试会让 Coding Agent 变得更差</a></strong> — 用一个 Python filter 修复案例演示:当测试套件本身是 AI 写的，Agent 会把「测试通过」当成目标而不是把「功能正确」当成目标，文章给了审计自家 AI 测试的具体方法。 <code>实战</code></div></li><li class="item"><div class="item-head"><strong><a href="https://dev.to/deepu105/can-qwen-38-running-on-your-laptop-really-replace-claude-opus-for-agentic-coding-51gk" target="_blank" rel="noopener noreferrer">实测:笔记本上跑 Qwen 3.8 能替代 Claude Opus 做 Agentic 编程吗</a></strong> — dev.to 本周热门，本地开源模型 vs 云端旗舰的逐项对比——决定你要不要把「本地模型部署与调优」加进技能清单。 <code>观点</code></div></li></ol>
+<h2 id="-速览" class="cat-brief">速览</h2>
+<p><em>值得知道但不用细读的动态</em></p>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3986702306294536" target="_blank" rel="noopener noreferrer">Claude 合并 Cowork 和 Chat 为单一入口</a></strong> — Docs / Slides / Design 收进同一个会话，Claude 自己判断任务复杂度决定调用哪层能力，支持关上电脑后台继续跑和定时任务，未来几周向 Pro / Max 推送。 <code>新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/Tencent/WeKnora" target="_blank" rel="noopener noreferrer">腾讯 WeKnora:开源企业知识库，RAG + ReAct Agent + 自维护 Wiki</a></strong> — MIT 协议 Docker 一键起，支持 10+ 文档格式、BM25/dense/GraphRAG 多路检索、20+ 模型供应商和 pgvector/Milvus 等多种向量库，自带 MCP server（29 个工具）和 agent-first CLI。 <code>工具</code></div></li><li class="item followup"><div class="item-head"><span class="fubadge">后续</span><strong><a href="https://github.com/vinnylarouge/jevlike" target="_blank" rel="noopener noreferrer">有人把「不会幻觉」的 Jev 模型反向做了一个开源版</a></strong> — 昨天登顶 HN 的 Typesafe Jev 今天有了 MIT 开源仿制品:每个选项变成一个 query 向量去 attend 上下文，单次前向就输出所有选项的概率，比让小解码器生成 400 token 快约 100 倍，合成菜单任务准确率 ~98%。 <code>资源</code></div></li></ol>
+<hr>
+<h2 id="-今日术语">今日术语</h2>
+<ul class="list"><li><strong>Harness(智能体外壳)</strong>:包住模型的那层软件——管工具定义、上下文拼装和执行循环。今天伯克利证明了换 harness 能让同样的模型便宜一半。</li><li><strong>Pareto 前沿(Pareto Frontier)</strong>:在「又好又便宜」这两个互相拉扯的目标上，已经没法在不牺牲一个的前提下改进另一个的那批方案——极简 harness Pi 就站在这条线上。</li><li><strong>pg_hint_plan</strong>:PostgreSQL 的一个扩展，让你用 SQL 注释「建议」优化器该走哪种连接顺序和扫描方式，而不用改优化器本身。</li><li><strong>GRPO</strong>:一种强化学习算法，让模型对同一道题采样多个答案、互相比较好坏来学习；今天那篇把比较基准从「同组平均」改成了「Postgres 默认执行计划」。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-09-16.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
