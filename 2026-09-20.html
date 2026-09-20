@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-09-20</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-09-20</h1>
+<blockquote class="quote">面向程序员的 AI 进展速览 · 11 条 · 选你能用的</blockquote>
+<div class="lede"><strong>今日焦点</strong>:Claude Code 2.1.277 开始读 <code>AGENTS.md</code> 了——维护了一年的 CLAUDE.md 符号链接终于可以删掉，一份项目指令文件从此通吃 Claude Code / Codex / Copilot / Gemini CLI。</div>
+</div><nav class="daynav"><a href="2026-09-18.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>(5 条)</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>(3 条)</li><li class="cat-brief"><a href="#-速览"> 速览</a>(3 条)</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
+<hr>
+<h2 id="-动手派" class="cat-tools">动手派</h2>
+<p><em>今天你能用的工具、技巧、实战经验</em></p>
+<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://www.theregister.com/ai-and-ml/2026/09/18/anthropic-decides-to-support-openais-markdown-instructions-spec/" target="_blank" rel="noopener noreferrer">Claude Code 2.1.277 支持 AGENTS.md，符号链接可以删了</a></strong> — 目录里没有 <code>CLAUDE.md</code> 时自动回落读 <code>AGENTS.md</code>（这个标准已被 6 万多个仓库采用），<code>/config</code> 里的「Project instructions」可关；坑在于不覆盖 <code>.agents/skills</code>，且 Bedrock / Vertex / Foundry、首次升级后的第一次会话、关掉 hooks 的环境都读不到，这些情况仍要用 CLAUDE.md 把 AGENTS.md import 进来。 <code>新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://planetscale.com/blog/introducing-tin" target="_blank" rel="noopener noreferrer">Tin:PlanetScale 给 Postgres 做的全文索引，比 ParadeDB 快 25 倍</a></strong> — 用 Postgres 原生 <code>ctid</code> 当文档 ID 省掉了映射结构，页号/页内偏移两级位图正好塞进 AVX2/AVX-512 寄存器，交并集直接变成向量 AND/OR 指令；1.5 亿文档 85GB 语料上建索引 8 分 10 秒（GIN 要 2 小时 09 分），混合查询 199 QPS vs ParadeDB 7.9 QPS，每查询读盘量只有对手的 1/6。目前只在 PlanetScale Postgres 上可用，没开源。 <code>新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://duckdb.org/2026/09/18/opfs-wasm" target="_blank" rel="noopener noreferrer">DuckDB-Wasm 支持 OPFS 持久化:浏览器里终于有真正的本地数据库</a></strong> — <code>db.open({path: &#x27;opfs://analytics.duckdb&#x27;})</code> 一行，带 WAL 和 checkpoint 的 <code>.duckdb</code> 文件能扛住刷新和重启，导出来还能用 CLI/Python 直接读；两个必须知道的坑:npm <code>latest</code>(1.33.1-dev57.0) 有路径规范化 bug 存不进去，要锁 <code>1.32.0</code> 或 <code>next</code>；一个文件同时只能有一个句柄，且 OPFS 会被浏览器在磁盘紧张时清掉，只能当缓存不能当唯一副本。 <code>工具</code></div></li><li class="item"><div class="item-head"><strong><a href="https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/" target="_blank" rel="noopener noreferrer">Cloudflare 用数学省下 100TB 内存:一致性哈希的 160 个虚拟节点是浪费的</a></strong> — 两步:把 <code>Point</code> 结构体从 8 字节压到 6 字节（server index 用 u16、裸 <code>[u8; 6]</code> 数组绕过对齐规则）省 25%，再推导变异系数的精确公式证明每服务器 160 个哈希严重过量——收益随数量级递减，而且高哈希数下生日悖论碰撞反而会让误差变大，最终砍掉 90% 精度无感。已在 <code>pingora-ketama</code> crate 的未公开 <code>v2</code> feature 里。 <code>实战</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/cactus-compute/needle" target="_blank" rel="noopener noreferrer">Needle:8-29MB 的端侧工具调用模型，跑赢 10 倍大的模型</a></strong> — <code>pip install cactus-needle</code>，2-bit 量化单文件二进制，干三件事——从你的 API 里选函数并填参数（问题跑题就返回空列表而不是瞎猜）、按 schema 做结构化抽取（语法约束解码保证输出一定合法）、出句向量做本地检索；2 到 20 层的子网络各自都是可部署模型，最小 29M 参数，在 DroidCall 上微调后从 4 层起就超过 DeepSeek V4 Flash。 <code>工具</code></div></li></ol>
+<h2 id="-职业风向" class="cat-career">职业风向</h2>
+<p><em>影响你技能选择和职业方向的信号</em></p>
+<ol class="items cat-career"><li class="item"><div class="item-head"><strong><a href="https://github.blog/ai-and-ml/should-you-read-the-code-is-rag-dead-and-did-skills-kill-mcp/" target="_blank" rel="noopener noreferrer">GitHub 官方拆三个暴论:RAG 没死、Skills 没杀死 MCP、AI 写的代码你还是得读</a></strong> — 分工说得最清楚的一句是「MCP 负责提供访问，Skills 负责解释怎么用好这个访问」，四者本来就能共存在同一个工作流里；代码审查的标准不是每行都读，而是「读到你能解释并且愿意为结果负责为止」——生产环境的 auth 重构和 CSS 实验显然不该用同一个尺度。 <code>观点</code></div></li><li class="item"><div class="item-head"><strong><a href="https://jyn.dev/a-year-to-fix-security/" target="_blank" rel="noopener noreferrer">「我们只剩一年时间修完所有安全漏洞」</a></strong> — 触发点是开源权重的 GLM 5.3-flash 被「去审查」后 CyberGym（从源码找真实漏洞）84.5 分、ExploitBench（真的打通）54.4 分，而跑它只需要 5000~15000 美元的硬件——意味着漏洞挖掘可以塞进 <code>for</code> 循环里。作者的结论对招聘信号很直接:<strong>瓶颈已经不是找漏洞，而是分流、backport 和部署</strong>，该招的是这类安全工程师，而不是挖洞的。 <code>观点</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.infoq.cn/article/eluArohETBhwjjYZRoMG" target="_blank" rel="noopener noreferrer">微软单月修补 950+ 漏洞，全年 2750 个是 2020 年纪录的两倍多</a></strong> — 9 月这批里 113 个 Critical、258 个 RCE、438 个提权，2 个正被在野利用；业界普遍把这个暴涨归因于 AI 辅助的漏洞研究。留给运维和安全团队的新常态是:补丁量级变了，优先级判断、影响面评估和万台设备的灰度部署能力比以前值钱得多。 <code>观点</code></div></li></ol>
+<h2 id="-速览" class="cat-brief">速览</h2>
+<p><em>值得知道但不用细读的动态</em></p>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://www.infoq.cn/article/AXtfCFx09aNmpWgLkqhN" target="_blank" rel="noopener noreferrer">Docker Desktop 4.86:自研虚拟化层公测，容器启动和文件共享都更快</a></strong> — Docker 从零写了自己的 VMM 替掉第三方虚拟化层，首次启动/切项目/恢复都更快，编辑-编译-测试循环里的宿主机文件共享改善最明显，空闲容器会把内存还给宿主；macOS 上 4.86 默认开，Windows 要手动开，Linux 等 10 月底 GA。同一套引擎也驱动 Docker Sandboxes（Agent 隔离环境）。 <code>新发布</code></div></li><li class="item followup"><div class="item-head"><span class="fubadge">后续</span><strong><a href="https://laya.convaiinnovations.com/" target="_blank" rel="noopener noreferrer">Jev 的开源对手 Laya 放出来了，Apache 2.0 且快 6~8 倍</a></strong> — 322M~421M 参数的双向编码器，三个原语（choice/score/bool）一次前向出概率，结构上就不可能幻觉或输出非法 JSON；单问题 32.8ms、批处理摊到 7.2ms，校准误差 0.081 是 Jev 的 1/3，垃圾邮件识别 0.993。作者自己标了红线:选项超过 20 个性能崩（77 选项时 0.425 vs Jev 0.870），且零样本只有 ~0.35 分，必须微调才能用。 <code>新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/yejy53/Editable-Design" target="_blank" rel="noopener noreferrer">Editable-Design:让 AI 生成的图能改字、能拖图层</a></strong> — Apache 2.0，思路是把职责拆开——视觉模型只管构图配色的艺术指导，实际交付走语义 HTML（文字还是真文字、插图在独立图层），Agent 负责从需求理解到渲染自检再到修复的全流程；带 paper-fig（论文架构图直接出 PPTX）、editable-design、html-to-pptx 三个 Skill，在 Codex 里贴一条安装命令即可。 <code>工具</code></div></li></ol>
+<hr>
+<h2 id="-今日术语">今日术语</h2>
+<ul class="list"><li><strong>AGENTS.md</strong>:放在项目根目录、告诉 AI 编码 Agent「这个仓库怎么跑、有什么约定」的 Markdown 文件——原本是 OpenAI 那边的格式，今天 Claude Code 也认了。</li><li><strong>OPFS(源私有文件系统)</strong>:浏览器给每个网站单独划的一块沙盒磁盘，支持随机读写——所以数据库文件才能真正存在浏览器里而不是硬塞进 IndexedDB。</li><li><strong>一致性哈希的虚拟节点</strong>:为了让请求在服务器间分得均匀，给每台服务器在哈希环上放多个「分身」——Cloudflare 今天证明默认的 160 个分身里有 90% 是纯浪费。</li><li><strong>去审查(Abliteration)</strong>:用手术刀式的权重编辑把开源模型的拒绝行为直接摘掉，让它对任何请求都不说「不」——安全文章里那个漏洞挖掘模型就是这么来的。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-09-18.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
