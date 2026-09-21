@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-09-21</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-09-21</h1>
+<blockquote class="quote">面向程序员的 AI 进展速览 · 12 条 · 选你能用的</blockquote>
+<div class="lede"><strong>今日焦点</strong>:Shopify 用 6 个人 12 周把 600 页的 React Native 应用重写成原生——技术选型从「一次押注管五年」变成了随时可撤回的工程决定。</div>
+</div><nav class="daynav"><a href="2026-09-20.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>(5 条)</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>(3 条)</li><li class="cat-brief"><a href="#-速览"> 速览</a>(4 条)</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
+<hr>
+<h2 id="-动手派" class="cat-tools">动手派</h2>
+<p><em>今天你能用的工具、技巧、实战经验</em></p>
+<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://github.com/google/ax" target="_blank" rel="noopener noreferrer">Google 开源 AX:把 Agent 当成第三类工作负载来调度</a></strong> — Apache 2.0、<code>go install github.com/google/ax/cmd/ax@latest</code>，四个原语 Task / Workspace / Gateway / Model 全是 K8s 风格的声明式 YAML，核心论点是 Agent 既不是微服务也不是批处理——它算一会儿就卡在等外部响应上，传统编排器让沙箱空转的成本撑不住，AX 靠 checkpoint 把闲置任务挂起、亚秒级恢复。3.1k star，但 README 明确警告稳定版前会有破坏性变更。 <code>新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://thomasahle.com/blog/adversarial-examples-for-hashes/" target="_blank" rel="noopener noreferrer">很多快哈希函数有「万能碰撞输入」:CityHash64、FarmHash64 撞在种子生效之前</a></strong> — 作者用 AI 系统扫了 SMhasher 里 40 多个变体，找出一批不需要知道密钥就能撞的输入对——CityHash64/FarmHash64 的 8 字节对碰撞分数是 <strong>0 bit</strong>(即所有密钥都撞)，komihash 在 64~127 字节区间约 91% 碰撞率，wyhash / rapidhash / XXH3 / foldhash 全踩同一个「折叠乘法忘了补码」的坑。结论别急着换 SHA——有 Lean 机器验证过 63-bit 保证的 ChainHash 和 UMASH，速度一样快。 <code>实战</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.notion.com/blog/how-notion-handles-concurrent-editing-with-crdts" target="_blank" rel="noopener noreferrer">Notion 公开 CRDT 落地细节:每分钟数百万操作,块模型和文本 CRDT 怎么对齐</a></strong> — 原来的块级 last-write-wins 在离线模式下会直接吞掉编辑，于是基于 RGA 重做；难点不在文本而在「块」是独立数据库记录——用户按回车拆块时，一条在途操作可能指向一个当时还不存在的块。他们发明了 text instance + search label(<code>L</code>/<code>R</code>/<code>RR</code> 这种二进制串)把取块范围从 100 个压到少数几个，紧凑编码又把标签存储省了 5 倍。2025 年 7 月上生产。 <code>实战</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/openlayer-ai/jevals" target="_blank" rel="noopener noreferrer">jevals:用决策模型替掉 LLM-as-judge,一次请求几千分之一美分</a></strong> — <code>pip install jevals</code>，MIT。把一条 trace 的所有 eval(工具选择、grounding、prompt 注入、PII、faithfulness)打包进<strong>一个</strong> HTTP 请求，返回校准过的概率而不是文本，几百毫秒出结果、方差远低于前沿模型当裁判。同一套定义能直接当 guardrail 挂在请求路径上(allow / escalate / block)；后端可换本地 Qwen3 或 Apple Silicon 上 ~10ms 的 ModernBERT，也能退化成普通 chat LLM 先跑起来。 <code>工具</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/marciob/openmsg" target="_blank" rel="noopener noreferrer">openmsg:让 Claude Code 和 Codex 在各自跑着的时候互相发消息</a></strong> — <code>npx openmsg list</code>，MIT、<strong>零依赖</strong>(连 WebSocket 都是自己一个文件实现 RFC 6455)。每家 Agent 接收消息的入口都不一样，它统一抽象成 <code>send</code>/<code>list</code>/<code>inbox</code>/<code>whoami</code>，地址写成 <code>&lt;vendor&gt;:&lt;name&gt;</code>——Claude Code 走 session inbox socket、Codex 走 <code>codex queue</code>、其余回落到 hook 邮箱或 <code>tmux send-keys</code>。作者强调的设计底线是「没有程序去读另一个程序的屏幕」，回复也是一条新消息。 <code>工具</code></div></li></ol>
+<h2 id="-职业风向" class="cat-career">职业风向</h2>
+<p><em>影响你技能选择和职业方向的信号</em></p>
+<ol class="items cat-career"><li class="item"><div class="item-head"><strong><a href="https://www.infoq.cn/article/wKbZ8JlwJX26gTsW8r2o" target="_blank" rel="noopener noreferrer">React Native 的黄金时代结束了,而且是在它最成熟的时候</a></strong> — Shopify 2020 年把约 600 页迁到 RN，2025 年 1 月还公开表态继续投入，9 月 10 日宣布全面回归原生——理由是「LLM 改变了我们 2020 年做这个决定时依据的核心前提」:人贵所以代码只写一遍。6 人团队 12 周重写完成，但<strong>直接喂 RN 代码让 LLM 翻译产出的是「垃圾代码」</strong>,真正管用的是结构化规格 + 增量检查点 + 对抗式审查 Agent + 人工放行；瓶颈也从写代码挪到了验证,他们为此把业务逻辑和 UI 解耦好让测试脱离模拟器跑。RN 这边同期刚完成六年架构重写、周下载破千万、开发者满意度 88%。 <code>观点</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.infoq.cn/article/0U1ZEhoNPAP8pGMktGiy" target="_blank" rel="noopener noreferrer">Java 27 发布:G1 成全平台默认 GC、紧凑对象头默认开启,值类还要等到 28</a></strong> — 九个 JEP 里五个还在预览/孵化，真正转正的只有三个:G1 默认(JEP 523)、Compact Object Headers 默认开启(JEP 534)、JFR 进程内数据脱敏(JEP 536)。安全上的重头是 TLS 1.3 后量子混合密钥交换(JEP 527)，踩在 JDK 24 的 ML-KEM 上。等值类的可以看 JDK 28(预计 2027 年 3 月)——JEP 401 + JEP 539 双预览，Valhalla 落地了 Vector API 才有机会从孵化毕业(现在第 12 次孵化)。结构化并发已经第 7 次预览。 <code>新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3991436755057415" target="_blank" rel="noopener noreferrer">大模型在集体变小:Agent 把 100B~500B 的 Flash 档做成了主力</a></strong> — 数字很具体:DeepSeek V4 Flash 在 Requesty 上占实际 token 消耗约 1/3 排第一、同任务比 GPT-5.6 Luna 高推理版便宜约 60%；GLM-5.3-Flash 在 Cline 修 bug 基准上只用对家约 1/3 的输出 token；Qwen3.8-Flash-Next 训练算力约为 Qwen3.7-Plus 的 1/9。Lindy 换到 Flash 档后报告成本降约 90%。旗舰(Qwen3.8-Max 2.4T、Kimi K3 2.8T)继续探上限，但日常编码和办公的活正在往下沉——你调 API 的默认档位该重新选了。 <code>观点</code></div></li></ol>
+<h2 id="-速览" class="cat-brief">速览</h2>
+<p><em>值得知道但不用细读的动态</em></p>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://github.com/Azure/taugrid" target="_blank" rel="noopener noreferrer">微软开源 TauGrid:一条 Helm 命令装完 K8s 上的 AI 工作负载栈</a></strong> — MIT、Go 写的，把 Kueue(队列/配额)、KubeRay(编排)、GPU 节点健康检查和可观测性打包成一次 Helm 部署，省掉自己缝提交脚本、队列封装器和结果回取的活。写个 <code>tau.yaml</code> 后 <code>tau run</code> 会校验配置并生成 Job 或 RayJob，支持 checkpoint 恢复和实验证据留存，研究员不用学 K8s。要 Kubernetes 1.30+ 和 GPU 节点，端到端只在 AKS 上验过，目前仅 38 star。 <code>工具</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/vercel-labs/json-render" target="_blank" rel="noopener noreferrer">Vercel 开源 json-render:让模型只能从你的组件目录里拼 UI</a></strong> — Apache 2.0，思路是不让模型吐 markup——你用 Zod 定义 catalog(可用组件 + 可用 action)和 registry(映射到真实实现)，模型只能产出符合 schema 的 JSON spec，再交给 <code>&lt;Renderer&gt;</code> 渲染。支持流式渐进渲染(<code>SpecStream</code>)、<code>$state</code>/<code>$cond</code>/<code>$template</code> 这类动态表达式，一份 catalog 能跨 React / Vue / Svelte / Solid / React Native，另有 shadcn 预制包。 <code>工具</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/trycua/cua" target="_blank" rel="noopener noreferrer">Cua 推「Computer-Use 2.0」:同一个任务里在代码、API 和 GUI 之间来回切</a></strong> — MIT、25.1k star。Cua Driver 能跨 macOS/Windows/Linux 操作原生应用和浏览器，且支持<strong>后台投递</strong>——Agent 干活不抢你的鼠标和焦点；配套还有按需领取云桌面的 Fleets、Apple Silicon 上跑本地 macOS/Linux 虚机的 Lume，以及能导出轨迹当训练数据的 Cua Bench。另有一组叫 CUA-S1 的小模型专做「表单该填什么」这类快速有界决策。 <code>新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.blog/ai-and-ml/should-you-read-the-code-is-rag-dead-and-did-skills-kill-mcp/" target="_blank" rel="noopener noreferrer">GitHub 官方回答三个问题:Skills 没杀死 MCP,RAG 也没死</a></strong> — 分工说得很清楚——MCP 给的是「标准化的工具和数据访问」，Skills 是「打包好的专业知识」(Markdown、人能读、编码团队约定)，一句话总结是「MCP 提供访问，Skills 解释怎么用好这个访问」；RAG 只是不时髦了，没有好检索模型就只能靠训练数据或烧 token 到处翻。AI 代码要不要审的答案是「审到你能解释并且敢担责为止」，深度按风险分级——生产环境的 auth 重构和一次 CSS 实验不是一个标准。 <code>观点</code></div></li></ol>
+<hr>
+<h2 id="-今日术语">今日术语</h2>
+<ul class="list"><li><strong>CRDT(无冲突复制数据类型)</strong>:一种数据结构,让多人同时改同一份文档、各自离线再合并时不会丢东西——Notion 今天公开的就是它在块模型上怎么落地。</li><li><strong>通用哈希(Universal Hashing)</strong>:一个「有密钥的哈希对任意两个不同输入的碰撞概率都足够低」的可证明保证——今天那批快哈希被破的正是这条,而不是加密强度。</li><li><strong>Flash 档模型</strong>:各家在旗舰之下专门做的中等参数版本(约 100B~500B),为 Agent 那种高频并发调用而生,便宜快、日常编码够用。</li><li><strong>LLM-as-judge</strong>:拿一个大模型去给另一个模型的输出打分——今天 jevals 想替掉的就是它,因为它贵、慢、而且同一份输入打出的分会飘。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-09-20.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
