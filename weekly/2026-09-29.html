@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>每周动手实操 · 2026-09-29</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>每周动手实操 · 2026-09-29</h1>
+<blockquote class="quote">每周一篇模型精讲 + 一个动手小教程 · 数据截至 2026-09-29</blockquote>
+</div><nav class="daynav"><a href="2026-09-01.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-模型精讲moe混合专家万亿参数的模型为什么跑起来像个小模型">模型精讲:MoE(混合专家)——万亿参数的模型,为什么跑起来像个小模型</h2>
+<p><strong>DeepSeek V3 有 6710 亿参数,但每吐一个字只用掉 370 亿——省下的那 94%,是 MoE 干的</strong></p>
+<blockquote class="why">核心看点:与其让一个&quot;全才&quot;回答所有问题,不如养一屋子&quot;专才&quot;,每次只叫醒两个。参数量可以无限堆,计算量却几乎不涨。</blockquote>
+<h3 id="它是什么">它是什么</h3>
+<p>标准 Transformer 的每一层里都有一个<strong>前馈网络(FFN)</strong>,负责&quot;思考加工&quot;。它是模型里参数最多的部分,而且<strong>每个 token 经过时,整个 FFN 都要算一遍</strong>。</p>
+<p><strong>MoE(Mixture of Experts,混合专家)</strong> 做的事很直接:把这<strong>一个</strong>大 FFN,拆成<strong>很多个</strong>小 FFN——每一个叫一个<strong>专家(expert)</strong>。再配一个<strong>路由器(router,也叫门控网络 gating network)</strong>,由它决定&quot;这个 token 该交给谁处理&quot;。</p>
+<p>关键在于:路由器<strong>只挑少数几个</strong>专家激活,其余的这一步完全不参与计算。这就是所谓的<strong>稀疏(sparse)</strong>。</p>
+<p>于是模型出现了两个截然不同的参数量:</p>
+<ul class="list"><li><strong>总参数(total)</strong>:所有专家加起来,决定模型能&quot;装下多少知识&quot;</li><li><strong>激活参数(active)</strong>:每个 token 实际用到的,决定&quot;算得有多慢&quot;</li></ul>
+<h3 id="为什么重要">为什么重要</h3>
+<p>一句话:<strong>它把&quot;模型多大&quot;和&quot;跑得多慢&quot;这两件事解耦了。</strong></p>
+<p>在 MoE 之前,想让模型更聪明,唯一的办法是把它整个变大——变大 10 倍,推理就慢 10 倍。MoE 打破了这个绑定。看几组真实数字:</p>
+<p>| 模型 | 总参数 | 激活参数 | 激活占比 | |---|---|---|---| | DeepSeek V3 | 671B | 37B | 5.5% | | Qwen3-235B-A22B | 235B | 22B | 9.4% | | Llama 4 Maverick | ~400B | 17B | 4.3% | | MiniMax-M2 | ~230B | 10B | 4.4% |</p>
+<p>注意 Qwen3 的命名 <strong>&quot;A22B&quot;</strong>——那个 A 就是 <strong>Active</strong>,厂商已经把激活参数直接写进模型名里了。看懂这个命名,你就看懂了半个 2026 年开源模型圈。</p>
+<blockquote class="quote"><strong>顺手学一个常识</strong>:Mixtral 8x7B 这个名字很容易误导人。它<strong>不是</strong> 8×7B=56B,而是约 <strong>47B</strong>——因为只有 FFN 层被拆成了 8 份专家,注意力层等其余部分是<strong>所有专家共用</strong>的,不该重复计数。</blockquote>
+<h3 id="它是怎么工作的一家有-256-个科室的医院">它是怎么工作的:一家有 256 个科室的医院</h3>
+<p>把标准大模型想象成一个<strong>全科医生</strong>:不管你来看什么病,都是他接诊,他脑子里装着所有科室的知识。看一次病,他把整个知识库过一遍。</p>
+<p>MoE 则是一家<strong>分科医院</strong>:</p>
+<ol class="items "><li class="item"><div class="item-head"><strong>分诊台(路由器)</strong>:你一进门,分诊台看一眼你的症状,给每个科室打个分(其实就是一次线性变换 + softmax)</div></li><li class="item"><div class="item-head"><strong>挑出 Top-K</strong>:只挑分最高的 <strong>K 个</strong>科室(常见是 top-2,Switch Transformer 激进到 top-1),其余科室<strong>今天根本不上班</strong></div></li><li class="item"><div class="item-head"><strong>加权汇总</strong>:被选中的科室各自给出诊断,按分诊台给的权重加权合并,得到最终结果</div></li></ol>
+<p><strong>训练时这些&quot;科室&quot;分工是自己长出来的,没人预先指定。</strong> 研究者事后去看,发现编码器里确实会冒出&quot;标点符号专家&quot;&quot;专有名词专家&quot;这种。但也别浪漫化——在多语言场景下,<strong>并没有出现&quot;中文专家&quot;&quot;英文专家&quot;</strong>,分工比人的直觉抽象得多。</p>
+<blockquote class="quote"><strong>进阶点 1:路由器会&quot;偏心&quot;,得靠辅助损失掰回来。</strong> 训练早期某几个专家碰巧被多选中,就会被训得更好,于是更容易被选中——<strong>正反馈死循环</strong>,最后变成几个专家累死、其余闲置。解法是在训练目标里加一项 <strong>辅助损失(auxiliary loss / load balancing loss)</strong>,专门惩罚&quot;分配不均&quot;,逼路由器把 token 摊平。你在 TRL 里看到的 <code>router_aux_loss_coef</code>、训练日志里的 <code>aux_loss</code>,就是这个东西。ST-MoE 还加了 <strong>router z-loss</strong>,惩罚过大的路由 logits,让 softmax 数值更稳。 🔬 <strong>进阶点 2:还有一种&quot;永远上班&quot;的共享专家。</strong> DeepSeek V3 设了 <strong>shared expert(共享专家)</strong>——不管路由器怎么选,它对<strong>每个 token 都激活</strong>。思路是:标点、语法这类<strong>人人都要用</strong>的通用模式,不该让 256 个专家每个都单独学一遍;交给共享专家兜底,其他专家就能腾出容量去学更专门的东西。不过这不是定论——<strong>Qwen3 就明确去掉了共享专家</strong>,开发者给的理由是&quot;没看到足够显著的收益&quot;,还有推理优化上的顾虑。</blockquote>
+<h3 id="天下没有免费的午餐">天下没有免费的午餐</h3>
+<p>MoE 最该记住的一条代价:<strong>省的是算力,不是显存。</strong></p>
+<ul class="list"><li><strong>算力真的省了</strong>:Mixtral 8x7B 用 top-2 路由,每步只做 2 份 7B 的矩阵乘,推理速度<strong>接近一个 12B 的稠密模型</strong></li><li><strong>显存一点没省</strong>:所有专家的权重都得<strong>完整装进显存</strong>——Mixtral 需要能放下约 47B 模型的显存。你付的是大模型的内存钱,拿的是小模型的速度</li></ul>
+<p>另外两个实践中的坑:</p>
+<ul class="list"><li><strong>微调更容易过拟合</strong>。稀疏模型在小数据集上泛化明显更差,需要更强的正则化(比如给稀疏层单独设更高的 dropout)。有趣的是,2023 年 &quot;MoEs Meets Instruction Tuning&quot; 发现 <strong>MoE 从指令微调中的获益远大于稠密模型</strong>——Flan-MoE 相对 MoE 的提升,明显超过 Flan-T5 相对 T5</li><li><strong>能力分布不均</strong>。在同等预训练困惑度下,稀疏模型在<strong>知识密集型</strong>任务(如 TriviaQA)上表现格外好,但在<strong>推理密集型</strong>任务(如 SuperGLUE)上反而不如稠密模型</li></ul>
+<blockquote class="quote"><strong>别把&quot;专家越多越好&quot;当真</strong>。研究显示专家数增加确实提升样本效率,但<strong>超过 256~512 个之后收益急剧递减</strong>,而显存却是实打实地一路涨上去。</blockquote>
+<ul class="list"><li>🔗 原文:<a href="https://huggingface.co/blog/moe" target="_blank" rel="noopener noreferrer">Mixture of Experts Explained — Hugging Face Blog</a> · <a href="https://magazine.sebastianraschka.com/p/the-big-llm-architecture-comparison" target="_blank" rel="noopener noreferrer">The Big LLM Architecture Comparison — Sebastian Raschka</a></li><li>🏷️ 来源:Hugging Face 官方博客 + Sebastian Raschka《Ahead of AI》 · 难度:入门(含 2 个进阶注记)</li></ul>
+<h2 id="-动手教程用-lora-微调一个属于你自己的小模型">动手教程:用 LoRA 微调一个属于你自己的小模型</h2>
+<p><strong>只训练全模型 0.04% 的参数,产出一个 几 MB 的&quot;人格补丁&quot;——这就是 LoRA</strong></p>
+<blockquote class="why">你将做出:一个微调过的 Qwen3-0.6B。训练产物不是几个 G 的模型文件,而是一个<strong>几 MB 的 adapter</strong>,可以随时挂到原模型上、也可以随时摘下来。</blockquote>
+<p><strong>准备</strong>:</p>
+<ul class="list"><li><strong>Python 3.9+</strong>(PEFT 的最低要求)</li><li><strong>一张 GPU</strong>。0.6B + LoRA 门槛很低,<strong>免费的 Google Colab T4 就够跑</strong>;本地有 8GB 显存的卡也行。纯 CPU 能跑通流程但会非常慢</li><li>一个 <strong>Hugging Face 账号</strong>(下载模型用,免费)</li><li>装依赖:</li></ul>
+<pre class="codeblock"><code>  pip install trl peft transformers datasets</code></pre>
+<p><strong>跟着做</strong>:</p>
+<ol class="items "><li class="item"><div class="item-head"><strong>先搞懂 LoRA 到底改了什么(30 秒,但别跳)。</strong> 新建 <code>peek.py</code>,看一眼&quot;可训练参数&quot;这个数字:</div></li></ol>
+<pre class="codeblock"><code>   from transformers import AutoModelForCausalLM
+   from peft import LoraConfig, get_peft_model, TaskType
+
+   model = AutoModelForCausalLM.from_pretrained(&quot;Qwen/Qwen3-0.6B&quot;)
+
+   peft_config = LoraConfig(
+       task_type=TaskType.CAUSAL_LM,
+       r=8,                          # 秩:低秩矩阵有多&quot;薄&quot;,8/16/32 是常用值
+       lora_alpha=32,                # 缩放因子,实际缩放量 = lora_alpha / r
+       lora_dropout=0.1,
+       target_modules=[&quot;q_proj&quot;, &quot;v_proj&quot;],   # 只改注意力里的 Q 和 V 投影
+   )
+
+   peft_model = get_peft_model(model, peft_config)
+   peft_model.print_trainable_parameters()</code></pre>
+<p>输出里那个 <strong><code>trainable%</code></strong> 就是全部重点。官方文档在 Llama-3.2-1B 上的同类示例是:<strong>524,288 / 1,236,338,688 = 0.0424%</strong>——12 亿参数的模型,你只动了 52 万个。</p>
+<p>原理一句话:<strong>原权重 W 整个冻住不动</strong>,旁边挂两个又瘦又小的矩阵 <strong>A</strong> 和 <strong>B</strong>,只训练它们。前向变成 <code>h = Wx + BAx</code>。因为 <code>B×A</code> 是<strong>低秩分解</strong>,参数量断崖式下降。</p>
+<ol class="items "><li class="item"><div class="item-head"><strong>真正跑一次微调。</strong> 新建 <code>train.py</code>。TRL 的 <code>SFTTrainer</code> 直接吃 <code>peft_config</code>,不用自己写训练循环:</div></li></ol>
+<pre class="codeblock"><code>   from datasets import load_dataset
+   from trl import SFTTrainer, SFTConfig
+   from peft import LoraConfig, TaskType
+
+   dataset = load_dataset(&quot;trl-lib/Capybara&quot;, split=&quot;train[:2000]&quot;)   # 先切 2000 条跑通
+
+   trainer = SFTTrainer(
+       model=&quot;Qwen/Qwen3-0.6B&quot;,
+       train_dataset=dataset,
+       peft_config=LoraConfig(
+           task_type=TaskType.CAUSAL_LM,
+           r=8, lora_alpha=32, lora_dropout=0.1,
+           target_modules=[&quot;q_proj&quot;, &quot;v_proj&quot;],
+       ),
+       args=SFTConfig(
+           output_dir=&quot;qwen3-0.6b-my-lora&quot;,
+           learning_rate=1e-4,              # 注意!见下方提醒
+           num_train_epochs=1,
+           per_device_train_batch_size=2,
+           gradient_accumulation_steps=8,   # 显存不够就调大这个,别调大 batch_size
+       ),
+   )
+   trainer.train()
+   trainer.save_model()</code></pre>
+<p>跑起来后盯住日志里的 <strong><code>loss</code></strong> 和 <strong><code>mean_token_accuracy</code></strong>:loss 缓慢下降 = 正常;完全不动 = 学习率太小;突然变 NaN = 学习率太大。</p>
+<blockquote class="quote"><strong>最高频的一个坑:学习率</strong>。<code>SFTConfig</code> 的默认 <code>learning_rate</code> 是 <strong>2e-5</strong>,那是给<strong>全量微调</strong>用的。训 LoRA 时你只在学少量<strong>全新初始化</strong>的参数,TRL 官方文档明确建议用<strong>约 1e-4</strong>(高一个数量级)。照抄默认值的结果通常是&quot;跑完了,但模型好像什么都没学会&quot;。</blockquote>
+<ol class="items "><li class="item"><div class="item-head"><strong>看看产出物有多小。</strong> 训练完去 <code>qwen3-0.6b-my-lora/</code> 目录下看:</div></li></ol>
+<pre class="codeblock"><code>   ls -lh qwen3-0.6b-my-lora/</code></pre>
+<p>你会发现只有两个核心文件:<strong><code>adapter_config.json</code></strong>(记录你用了什么配置)和 <strong><code>adapter_model.safetensors</code></strong>(那两个小矩阵)。官方文档里那个 opt-350m 的 LoRA 例子,adapter 只有 <strong>6.3 MB</strong>——而完整模型约 <strong>700 MB</strong>。</p>
+<ol class="items "><li class="item"><div class="item-head"><strong>挂上去用一下。</strong> 新建 <code>infer.py</code>:</div></li></ol>
+<pre class="codeblock"><code>   from peft import AutoPeftModelForCausalLM
+   from transformers import AutoTokenizer
+
+   model = AutoPeftModelForCausalLM.from_pretrained(&quot;qwen3-0.6b-my-lora&quot;)
+   tok = AutoTokenizer.from_pretrained(&quot;Qwen/Qwen3-0.6B&quot;)
+
+   msgs = [{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;用一句话解释什么是低秩分解&quot;}]
+   ids = tok.apply_chat_template(msgs, add_generation_prompt=True, return_tensors=&quot;pt&quot;)
+   out = model.generate(ids.to(model.device), max_new_tokens=128)
+   print(tok.decode(out[0], skip_special_tokens=True))</code></pre>
+<p><code>AutoPeftModelForCausalLM</code> 会<strong>自动读 <code>adapter_config.json</code>,把基座模型拉下来再把 adapter 贴上去</strong>——你不用手动管这个拼装过程。</p>
+<ol class="items "><li class="item"><div class="item-head"><strong>(可选)把 adapter 焊死进模型。</strong> 推理时基座 + adapter 分开,会有一点点额外延迟。要上线的话可以合并:</div></li></ol>
+<pre class="codeblock"><code>   merged = model.merge_and_unload()
+   merged.save_pretrained(&quot;qwen3-0.6b-merged&quot;)</code></pre>
+<p>合并后 <code>W_new = W + (alpha/r) × B×A</code>,变回一个普通模型,<strong>推理零额外开销</strong>。代价是失去了&quot;随时换 adapter&quot;的灵活性。</p>
+<blockquote class="quote">做完你会:真正理解为什么现在满 Hugging Face 都是几 MB 的 LoRA 文件——<strong>一个基座 + N 个 adapter</strong>,就能服务 N 个不同场景,而不用存 N 份完整模型。 下一步可以探索三个方向: - <strong>扩大 target_modules</strong>:从 <code>[&quot;q_proj&quot;, &quot;v_proj&quot;]</code> 扩到包含 <code>k_proj</code>、<code>o_proj</code> 乃至 MLP 层的 <code>gate_proj</code>/<code>up_proj</code>/<code>down_proj</code>。可训练参数变多、效果通常更好,显存也涨——这是最值得你亲手做一次的 A/B 对比 - <strong>QLoRA</strong>:把基座模型量化成 4bit 再挂 LoRA,给 <code>SFTTrainer</code> 传一个 <code>quantization_config=BitsAndBytesConfig(...)</code> 即可。这是在消费级显卡上微调 7B~13B 模型的标准做法 - <strong>多 adapter 热切换</strong>:<code>peft_model.add_adapter(...)</code> + <code>peft_model.set_adapter(...)</code>,一个基座模型上挂多套 LoRA,按请求切换。这正是很多 LoRA 服务平台的底层玩法 顺带一提:本期精讲的 <strong>MoE</strong> 和这里的 <strong>LoRA</strong>,骨子里是同一种智慧——<strong>别让所有参数都参与每一次计算</strong>。MoE 在推理时做稀疏,LoRA 在训练时做稀疏。</blockquote>
+<ul class="list"><li>🔗 教程/代码:<a href="https://huggingface.co/docs/peft/quicktour" target="_blank" rel="noopener noreferrer">PEFT 官方 Quicktour</a> · <a href="https://huggingface.co/docs/peft/main/en/conceptual_guides/lora" target="_blank" rel="noopener noreferrer">PEFT LoRA 概念指南</a> · <a href="https://huggingface.co/docs/trl/sft_trainer" target="_blank" rel="noopener noreferrer">TRL SFTTrainer 文档(含 PEFT 集成)</a></li><li>🏷️ 来源:Hugging Face PEFT / TRL 官方文档 · 难度:入门</li></ul>
+<hr>
+<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-09-01.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
