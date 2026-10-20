@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>每周动手实操 · 2026-10-20</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>每周动手实操 · 2026-10-20</h1>
+<blockquote class="quote">每周一篇模型精讲 + 一个动手小教程 · 数据截至 2026-10-20</blockquote>
+</div><nav class="daynav"><a href="2026-09-29.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-模型精讲tokenizer-与-bpe大模型其实没见过字它只认编号">模型精讲:Tokenizer 与 BPE——大模型其实没见过「字」,它只认「编号」</h2>
+<p><strong>你给模型发的每一句话,进门前都先被剁成碎片、换成数字——这一步叫分词(Tokenization)</strong></p>
+<blockquote class="why">核心看点:理解 BPE,你就能同时想明白三件困扰新手的事:为什么 API 按 token 计费而不是按字数、为什么模型数不清「strawberry 里有几个 r」、为什么同样一段话中文比英文贵。</blockquote>
+<h3 id="它是什么">它是什么</h3>
+<p><strong>Tokenizer(分词器)</strong> 是大模型的「翻译前台」:你输入的文字在进入模型之前,会被切成一个个 <strong>token(词元)</strong>,每个 token 再换成一个整数编号。模型从头到尾操作的都是这些编号,它<strong>根本看不到原始字符</strong>。</p>
+<p>现在主流模型用的切法叫 <strong>BPE(Byte-Pair Encoding,字节对编码)</strong>。它切出来的既不是「字」也不是「词」,而是介于两者之间的<strong>子词(subword)</strong>:常见词整块保留,生僻词拆成碎片。</p>
+<p>比如 &quot;Hello world&quot; 在 GPT-2 的切法下是 <code>[&quot;Hello&quot;, &quot;Ġworld&quot;]</code>——那个 <code>Ġ</code> 是 GPT-2 用来表示「这里原本有个空格」的特殊符号。也就是说,<strong>空格也是 token 的一部分</strong>。</p>
+<h3 id="为什么重要">为什么重要</h3>
+<ul class="list"><li><strong>计费和上下文窗口都按 token 算</strong>。「128K 上下文」指的是 12.8 万个 token,不是 12.8 万个字。英文大约 1 个 token ≈ 0.75 个单词,中文通常 <strong>1 个汉字就要 1~2 个 token</strong>——同样信息量,中文往往更贵。</li><li><strong>它解释了模型的一类「智障时刻」</strong>。问「strawberry 里有几个 r」模型经常答错,因为在它眼里这个词可能就是 <code>straw</code> + <code>berry</code> 两个编号,字母层面的信息在进门时就被抹掉了。数字算术出错也常有同样的根源。</li><li><strong>它决定了模型在你领域里的「效率」</strong>。用英文语料训出来的分词器去处理日文或代码,会把东西切得特别碎,同样内容消耗的 token 翻几倍——这就是为什么从零预训练一个模型时,要先在自己的语料上重训分词器。</li></ul>
+<h3 id="它是怎么工作的">它是怎么工作的</h3>
+<p>BPE 的训练过程只有一个动作,<strong>不断重复</strong>:找出当前文本里<strong>出现次数最多的相邻一对</strong>,把它合并成一个新 token,记下这次合并。</p>
+<p>拿 <code>the cat in the hat</code> 举例:</p>
+<ol class="items "><li class="item"><div class="item-head"><code>th</code> 出现了 2 次(最频繁)→ 合并为新编号 256,文本变成 <code>&lt;256&gt;e cat in &lt;256&gt;e hat</code></div></li><li class="item"><div class="item-head"><code>&lt;256&gt;e</code>(也就是 <code>the</code>)出现 2 次 → 合并为 257,文本变成 <code>&lt;257&gt; cat in &lt;257&gt; hat</code></div></li><li class="item"><div class="item-head">继续重复……直到达到你设定的 <strong>词表大小(vocabulary size)</strong> 为止</div></li></ol>
+<p>这些合并记录就是 <strong>merges 表</strong>。以后遇到新文本,分词器会按<strong>学习时的先后顺序</strong>(先学的优先级高)把 merges 重新套用一遍——所以同一个分词器切同一句话,结果永远一致。</p>
+<blockquote class="quote"><strong>进阶点一:为什么叫「字节」对编码。</strong> 现代 BPE 是 <strong>byte-level</strong> 的:先把文字转成 UTF-8 字节,得到 0~255 的整数,这 256 个值就是初始词表。好处是<strong>任何字符都能表示,永远不会出现 UNK(未知词)</strong>——emoji、生僻字、乱码都能被拆成字节兜底。所以词表大小 = 256 + 合并次数 + 特殊 token。GPT-2 是 50,257,GPT-4 是 100,256,GPT-4o 涨到了 199,997。</blockquote>
+<blockquote class="quote"><strong>进阶点二:词表大小是个权衡。</strong> 词表越大,同样文本切出的 token 越少(推理更省、更快),但模型最后那层输出矩阵(要对每个 token 算概率)也越大、越占显存。GPT-4o 把词表翻倍,很大一部分收益是给中文、日文等非英语语言「提速降费」。</blockquote>
+<ul class="list"><li>🔗 原文(从零手写 BPE,含完整代码):<a href="https://sebastianraschka.com/blog/2025/bpe-from-scratch.html" target="_blank" rel="noopener noreferrer">Implementing A Byte Pair Encoding (BPE) Tokenizer From Scratch — Sebastian Raschka</a></li><li>🔗 配套课程(官方免费):<a href="https://huggingface.co/learn/llm-course/chapter6/5" target="_blank" rel="noopener noreferrer">Byte-Pair Encoding tokenization — Hugging Face LLM Course Ch.6</a></li><li>🏷️ 来源:Sebastian Raschka 博客 / Hugging Face LLM Course · 难度:入门(进阶点为进阶)</li></ul>
+<h2 id="-动手教程给你的-ai-编程助手写第一个skill让它学会你团队的规矩">动手教程:给你的 AI 编程助手写第一个「Skill」,让它学会你团队的规矩</h2>
+<p><strong>不用写代码、不用部署,一个 Markdown 文件就能给 Claude Code / Codex 装上一项长期技能</strong></p>
+<blockquote class="why">你将做出:一个符合 Agent Skills 开放规范的技能包。放进项目后,当你提出相关需求时,Agent 会<strong>自动</strong>加载它,按你写的流程办事——不用每次都复述一遍要求。</blockquote>
+<p>Hugging Face 在 2026 年新开了一门免费的 <strong>Context Course(上下文工程课)</strong>,第一单元就是 Agent Skills。它基于 <strong>Agent Skills Specification</strong> 这个开放规范(最初由 Anthropic 提出,现已被 30+ 个编程 Agent 采用),所以你写一次,Claude Code、Codex、OpenCode 都能用。</p>
+<p><strong>原理一句话</strong>:Agent 启动时<strong>只读取</strong>每个技能的 <code>name</code> 和 <code>description</code>(几乎不占上下文);当你的需求和某个 description 对上了,它才把整个 <code>SKILL.md</code> 读进来执行。这叫<strong>渐进式披露(progressive disclosure)</strong>——这就是为什么 description 怎么写,直接决定技能能不能被触发。</p>
+<p><strong>准备</strong>:</p>
+<ul class="list"><li>一个支持 Skills 的编程 Agent(Claude Code / Codex / OpenCode 任一)</li><li>一个终端,会用 <code>mkdir</code> / <code>ln -s</code> 就够</li><li><strong>不需要</strong> Python、不需要 API Key、不需要装任何依赖(本例是纯文档型技能)</li></ul>
+<p><strong>跟着做</strong>:</p>
+<ol class="items "><li class="item"><div class="item-head"><strong>建目录</strong>。技能名必须是小写加连字符,且<strong>目录名要和后面 frontmatter 里的 <code>name</code> 完全一致</strong>:</div><p>```bash</p><p>mkdir -p ~/my-skills/git-commit-style</p><p>cd ~/my-skills/git-commit-style</p><p>```</p></li><li class="item"><div class="item-head"><strong>写 <code>SKILL.md</code></strong>。这是唯一必需的文件。开头的 YAML frontmatter 里 <code>name</code> 和 <code>description</code> 是必填项:</div><p>```markdown</p><p>---</p><p>name: &quot;git-commit-style&quot;</p><p>description: &quot;Write git commit messages following our team convention. Use when committing code, writing commit messages, or reviewing commit history.&quot;</p><p>license: &quot;MIT&quot;</p><p>metadata:</p><p>author: &quot;your-name&quot;</p><p>version: &quot;1.0.0&quot;</p><p>---</p></li></ol>
+<h1 id="git-commit-规范">Git Commit 规范</h1>
+<h2 id="overview">Overview</h2>
+<p>本技能规定团队的 commit message 格式,在提交代码时使用。</p>
+<h2 id="格式要求">格式要求</h2>
+<ul class="list"><li>标题行:<code>&lt;type&gt;(&lt;scope&gt;): &lt;简述&gt;</code>,不超过 50 字符,结尾不加句号</li><li>type 只能是:feat / fix / docs / refactor / test / chore</li><li>正文:空一行后写「为什么改」,而不是「改了什么」</li><li>结尾:关联的 issue 编号,如 <code>Refs: #123</code></li></ul>
+<h2 id="step-by-step">Step-by-Step</h2>
+<ol class="items "><li class="item"><div class="item-head">先跑 <code>git diff --staged</code> 看清楚这次改了什么</div><p>2. 判断 type:修 bug 用 fix,加功能用 feat,只动格式用 chore</p><p>3. scope 填改动的模块名(如 auth、api、ui)</p><p>4. 正文解释动机,不要复述 diff</p></li></ol>
+<h2 id="正例">正例</h2>
+<pre class="codeblock"><code>   fix(auth): 修复 token 过期后未跳转登录页
+
+   原逻辑只在首次请求时校验 token,长时间停留页面后
+   再次操作会静默失败。改为每次请求前校验。
+
+   Refs: #412</code></pre>
+<h2 id="反例不要这样写">反例(不要这样写)</h2>
+<ul class="list"><li><code>update code</code>(没有 type,没说清改了啥)</li><li><code>fix: 修改了 AuthService.java 的第 45 行</code>(复述 diff,不是动机)</li></ul>
+<pre class="codeblock"><code>
+3. **装进项目**。用软链接而不是复制——这样你改源文件,技能立刻生效,不用重新安装。不同 Agent 的目录不一样:
+
+   | Agent | 技能目录 |
+   |---|---|
+   | Claude Code | `.claude/skills/` |
+   | Codex | `.agents/skills/` |
+   | OpenCode | `.opencode/skills/` |
+
+   以 Claude Code 为例:</code></pre>
+<p>cd /path/to/your-project mkdir -p .claude/skills ln -s ~/my-skills/git-commit-style .claude/skills/git-commit-style ``<code> (Windows 直接复制目录,或用 PowerShell 的 </code>New-Item -ItemType SymbolicLink`)</p>
+<ol class="items "><li class="item"><div class="item-head"><strong>测试触发</strong>。重启 Agent,然后<strong>不要提「用 git-commit-style 技能」</strong>,就自然地说:「帮我把暂存区的改动提交了」。如果技能生效,它会按你定的格式写 commit message。</div></li><li class="item"><div class="item-head"><strong>调试 description(最关键的一步)</strong>。换一个说法再试一次,比如「写个 commit message」。<strong>如果一种说法能触发、另一种不行,问题 99% 出在 <code>description</code> 写得太窄</strong>——它是 Agent 唯一用来做匹配的依据。把用户可能的说法都塞进去(本例里 &quot;committing code&quot;、&quot;writing commit messages&quot;、&quot;reviewing commit history&quot; 就是三个不同的触发入口),改完再测,直到两种说法都能稳定触发。</div></li></ol>
+<blockquote class="quote">做完你会:理解 Agent 的「技能」本质上就是一份<strong>按需加载的说明书</strong>,不是插件也不是代码。下一步可以给技能加 <code>scripts/</code> 目录放可执行脚本(Agent 会直接运行)、加 <code>references/</code> 放详细文档(正文只放索引,保持 <code>SKILL.md</code> 在 400~800 行以内)。想看真实例子,可以读 Hugging Face 官方开源的技能库。</blockquote>
+<ul class="list"><li>🔗 教程:<a href="https://huggingface.co/learn/context-course/unit1/building-skills" target="_blank" rel="noopener noreferrer">Building Your First Skill — HF Context Course Unit 1</a></li><li>🔗 格式规范详解:<a href="https://huggingface.co/learn/context-course/unit1/skill-format" target="_blank" rel="noopener noreferrer">The SKILL.md Format — HF Context Course</a></li><li>🔗 开放规范原文:<a href="https://agentskills.io/" target="_blank" rel="noopener noreferrer">Agent Skills Specification</a></li><li>🔗 官方技能示例代码:<a href="https://github.com/huggingface/skills" target="_blank" rel="noopener noreferrer">huggingface/skills on GitHub</a></li><li>🏷️ 来源:Hugging Face Context Course(2026 新课,官方免费) · 难度:入门</li></ul>
+<hr>
+<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-09-29.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
