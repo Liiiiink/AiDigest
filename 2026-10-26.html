@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-10-26</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题(精讲/教程拆段用) */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-10-26</h1>
+<blockquote class="quote">面向程序员的 AI 进展速览 · 12 条 · 选你能用的</blockquote>
+<div class="lede"><strong>今日焦点</strong>：四个月里 OpenAI 和 Anthropic 把推理价格砍掉最多 80%，而拆解下来这不是赔本赚吆喝——开放权重模型把价格地板焊死了、切换成本接近零、Opus 5.5 服务成本本来就比 Opus 5 低，所以你可以放心按新价重做成本模型，但别把代码跟任何一个模型绑死。</div>
+</div><nav class="daynav"><a href="2026-10-25.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>（6 条）</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>（3 条）</li><li class="cat-brief"><a href="#-速览"> 速览</a>（3 条）</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
+<hr>
+<h2 id="-动手派" class="cat-tools">动手派</h2>
+<p><em>今天你能用的工具、技巧、实战经验</em></p>
+<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://arxiv.org/abs/2610.31642" target="_blank" rel="noopener noreferrer">PyTorch、JAX、教科书里的 softmax 全都有两个 bug，DeepMind 给了十几行的修法</a></strong> — 「Softmax Collapse」是某个 logit 远大于其他时它的梯度被悄悄舍入成 0、导致梯度不再求和为零（fp32 下 Adam 默认 <code>eps=1e-8</code> 恰好就卡在出问题的边界上），「Softmax Cancellation」是 student 和 teacher logits 相等时仍产生非零梯度、蒸馏时学生会慢慢漂离老师；作者 Jonathan Barron 给的是代数等价的 log-softmax / softmax / cross-entropy 重写，直接替换、几乎不掉速，顺手消掉了 grokking 时的 Slingshot loss 尖刺，而且这 bug 是 Gemini Flash 3.7 先找出来并修好的。 <code>实战</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html" target="_blank" rel="noopener noreferrer">上下文工程年度盘点：六个技巧、四种失效模式，和一条「先重置上下文再说」的经验法则</a></strong> — 失效模式分中毒（错误事实进来就甩不掉）、分心（上下文一长就压过模型自身知识）、混淆、冲突，对应六招是检索增强、<strong>tool loadout</strong>（有团队开场灌 600 个 skill，性能直接崩）、子 Agent 隔离、历史裁剪、落盘卸载、压缩；今年新增两种——「跟权重对着干」（模型过拟合训练时见过的工具，征兆是系统提示里全大写加重复七遍）和「上下文惯性」（长任务里死咬一个假设，改动越做越小），作者给的阈值是约 20 万 token 就该重开，用 DSPy 实现这四个修复一共只加了 16 行。 <code>实战</code></div></li><li class="item"><div class="item-head"><strong><a href="https://yossarian.net/til/post/posix-wordexp-3-is-dangerous/" target="_blank" rel="noopener noreferrer"><code>wordexp(3)</code> 就是个藏在 libc 里的 shell 注入，加了 <code>WRDE_NOCMD</code> 也救不了</a></strong> — 这个 POSIX 函数做 shell 式展开（<code>~/foo</code> → <code>/home/user/foo</code>），但<strong>默认 flags 为 0 时命令替换是开着的</strong>，传进去一个 <code>$(whoami)</code> 就是任意命令执行；想靠 <code>WRDE_NOCMD</code> 兜底也不行——musl 的实现是直接甩给系统 shell、只做表面模式扫描，漏掉 Bash 认的那些命令替换写法，macOS libc 走 helper 程序、2023 年还有同款绕过；真需要 <code>~</code> 展开就自己判断首字符再读 <code>$HOME</code>，别为了一个波浪号引一整套 shell 展开引擎。 <code>实战</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/secorvia/frontdoor" target="_blank" rel="noopener noreferrer">frontdoor：扫的不是云账号里有什么，而是谁能从外面走进来</a></strong> — Go 写的单二进制、只读、不要数据库不要配置文件，直接用你现成的 <code>~/.aws</code> / <code>gcloud</code> / <code>az</code> 凭证，把 OIDC、SAML、跨账号信任这些「门」全列出来——<strong>一个信任 GitHub 的 role，在普通资产清单里看不出它是钉死到某个仓库某个分支还是对全 GitHub 敞开</strong>；杀手锏是跨云链路（FD031），能顺着 AWS assumed-role ARN 嵌在 GCP workload identity provider 里的痕迹拼出 GitHub → AWS → GCP → BigQuery 的完整路径，输出支持终端报告 / JSON / SARIF（传 GitHub Security 标签页）/ Mermaid 图，<code>--fail-on</code> 接 CI，Apache-2.0。 <code>工具</code></div></li><li class="item"><div class="item-head"><strong><a href="https://machinefabric.com/quickrust/" target="_blank" rel="noopener noreferrer">QuickRust：<code>cargo</code> 的直接替身，把所有项目的 <code>target/</code> 收进一个有淘汰策略的中央缓存</a></strong> — 零配置，提速靠四件事——更轻的 debug 信息、rustc 并行前端、共享产物缓存、early cut-off，示例构建里 140 个 fresh、37 个从缓存恢复、只真编了 12 个，4.21 秒完事；<strong>最实在的是磁盘</strong>：缓存有大小上限、满了按 LRU 淘汰，不再每个 checkout 都养一个几 GB 的 <code>target/</code>；它自带工具链（独立于 rustup，但 <code>rust-toolchain.toml</code> 和 <code>+toolchain</code> 照常生效），还记录每次构建供事后用 <code>qrust analyze</code> 查耗时、重编原因和依赖重复。 <code>工具</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/trevorah/simdown" target="_blank" rel="noopener noreferrer">simdown：Go 写的 Markdown 解析器，M4 上 960 MB/s</a></strong> — 两阶段设计抄的是 simdjson 那套思路——先用 SIMD 一次吃 64 字节，把转义反斜杠、行首非空白位置、<code>*</code> `<code> </code> `<code> </code>_<code> </code>[<code> </code>]<code> </code>&lt;<code> 这些内联标记全扫成一个索引，第二阶段只在索引条目上分支而不是逐字符判断；对比下 ox-content（Rust）789、pulldown-cmark 531、md4c（C）465、goldmark 126、markdown-it 59 MB/s，**关掉 SIMD 的纯 Go 版本 300 MB/s 也还是比 cmark 和 goldmark 快**；需要 Go 1.27+ 和 </code>GOEXPERIMENT=simd<code>，SIMD 路径目前只有 arm64，注意它按 CommonMark 原样透传裸 HTML，用户输入得自己消毒。 </code>工具`</div></li></ol>
+<h2 id="-职业风向" class="cat-career">职业风向</h2>
+<p><em>影响你技能选择和职业方向的信号</em></p>
+<ol class="items cat-career"><li class="item"><div class="item-head"><strong><a href="https://minimaxir.com/2026/10/cheap-llms/" target="_blank" rel="noopener noreferrer">四个月砍到八折以下：LLM 价格为什么崩，以及为什么它崩得住</a></strong> — GPT-5.6 Luna 从 <code>$1/$6/$0.10</code> 一路降到 <code>$0.20/$1.20/$0.02</code>（-80%），GPT-6 Sol 对半砍再砍缓存读取，Claude Sonnet 5 的「临时」发布价变成永久价，Opus 5.5 比 Opus 5 总成本降 40~60%，Fable 5.1 缓存读取直接降 75%；<strong>对 agentic coding 来说缓存读取占总 token 开销的 96~99%，所以缓存降 75% 约等于总成本降 70~75%</strong>；作者不认为这是 Uber 式的先亏后涨——推理市场进入门槛低、切换成本近乎为零、光 DeepSeek V4.1 Flash 在 OpenRouter 上就有 29 家在托管，谁都不会长期托管一个亏钱的模型，真正要防的是<strong>订阅档位先缩水</strong>（OpenAI 已经把 Codex $200 档用量砍半）和模型快速过期（Opus 5.5 一出，Fable 5.1 和 GPT-6 Astra 几周内就没人用了）。 <code>观点</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2026/p4433r0.pdf" target="_blank" rel="noopener noreferrer">C++26 的 DIS 投票被否决了，接下来四条路都不好走</a></strong> — 10 月 22 日投票结束，非官方口径是 20 个 P-member 里 12 个、22 票里 9 票，没过三分之二赞成也没压住四分之一反对，争议焦点是 Contracts；11 月 Búzios 会议要逐条处理各国的技术意见，摆在桌面上的选项是重投一次 DIS（八周）、退回 CD 再征求意见、降级成 TS、或者干脆取消 C++26——<strong>对正在排 C++ 升级路线的团队，意思是把「2026 年能用上标准版 Contracts」从计划里先拿掉</strong>。 <code>观点</code></div></li><li class="item"><div class="item-head"><strong><a href="https://fishbowl.pastiche.org/2026/10/26/ai-skills" target="_blank" rel="noopener noreferrer">「AI 技能」在 2026 年不值钱——但作者的理由不是你以为的那个</a></strong> — 论点是任何真正好用的提示技巧几个月内就会被厂商做成产品默认行为，花几周学、几个月作废的东西「在当下之外没有价值」，类比当年程序员坚信 <code>i++</code> 比 <code>++i</code> 慢、而编译器早就把差别优化没了；他并不反对跟进（「你还是得能干今天的活」），反对的是 FOMO 式的紧迫感——历史奖励做对的人而不是最先到的人，策略是<strong>跟住大部队、把投入放在耐用的工程基本功上</strong>，等别人踩坑时再接盘。 <code>观点</code></div></li></ol>
+<h2 id="-速览" class="cat-brief">速览</h2>
+<p><em>值得知道但不用细读的动态</em></p>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/scaling-storage-one-billion-users-part-two/" target="_blank" rel="noopener noreferrer">OpenAI 讲 10 亿用户的存储怎么扛：全球读 p50 从 120 毫秒降到 10 毫秒</a></strong> — Habitat 平台跑在 Cosmos DB 上，40 个区域、500+ PB，最大的单账号几十 PB、2000 万+ QPS，读占九成以上；踩的坑很典型——逻辑分区键的 10K RU/s 文档指标<strong>实际达不到</strong>（限流在物理分区层），数据长大了物理分区分裂但总吞吐不变于是人均吞吐被稀释，单租户容器又逼着每个产品团队自己做容量规划、新功能上线日直接 SEV；解法是热键优先限流 + QoS 分级 + 新 serverless 模式（按 RU 用量而非存储大小分裂），加上用 Cosmos 的 change feed 驱动缓存失效（而不是只靠 TTL）做全球秒级传播，并把 Habitat 代理从 Python 重写成 Rust。 <code>实战</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/JetBrains/thinkrail" target="_blank" rel="noopener noreferrer">JetBrains 开源 Thinkrail：Apache-2.0 的 agentic IDE，用 git worktree 给每个 Agent 一个隔离分支</a></strong> — 内核是 <code>pi</code> coding agent（npm <code>@earendil-works/pi-coding-agent</code>），<strong>分工写得很明白：pi 管模型、skill、压缩、成本和会话状态，应用层只管工作区、编辑器和传输，「绝不在你背后偷偷拼提示词」</strong>；界面是 Monaco 编辑器 + 文件树 + 终端 + diff，多路并发会话各自记 token 和花费，项目意图靠一张 <code>SPEC.md</code> 的图谱跨会话保留，已有的 agent skill 原地直接读，带 MCP 和 GitHub PR/CI 状态集成，桌面端有 macOS / Windows / Linux 安装包，模型可以走 JetBrains AI 也可以自带 provider。 <code>新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://ziglang.org/devlog/2026/#2026-10-24" target="_blank" rel="noopener noreferrer">Zig 改运算符优先级：看不懂的组合直接编译报错，让你自己加括号</a></strong> — 关掉的是「全序优先级」，改成偏序——算术、比较、<code>and</code>/<code>or</code> 这些直觉清楚的照旧不用括号，但 <code>x orelse y == z</code> 这种会直接报错要求消歧；这是 2016 年 2 月提的 issue #114、Zig 第二老的开放提案，理由是<strong>读写代码时要记的规则越少越好</strong>，百万行的 Zig 代码库里只有 353 行需要改；升级可以 <code>zig fmt --upgrade</code> 自动按旧语义补括号，但作者建议手动逐个改，因为重新想一遍求值顺序「偶尔能挖出 bug」。 <code>新发布</code></div></li></ol>
+<hr>
+<h2 id="-今日术语">今日术语</h2>
+<ul class="list"><li><strong>交叉熵（Cross-Entropy）</strong>：分类和语言模型训练里最常用的损失函数，衡量模型给出的概率分布和正确答案差多远——今天 DeepMind 修的两个 bug 就藏在它和 softmax 的数值实现里。</li><li><strong>命令替换（Command Substitution）</strong>：shell 里 <code>$(...)</code> 这种写法，会先执行里面的命令再把输出塞回原处；任何「帮你展开字符串」的库只要没关掉它，等于给不可信输入开了执行任意命令的口子。</li><li><strong>缓存读取（Cache Read）</strong>：把重复的提示词前缀缓存在服务端，后续请求按远低于普通输入的价格复用——agent 类应用每轮都重发几万 token 上下文，所以这一项常常占到总花费的 96% 以上。</li><li><strong>OIDC 联合身份（Federated Identity）</strong>：外部系统（比如 GitHub Actions）不存长期密钥，而是拿一个短期令牌去云上换临时凭证；方便，但信任条件写松一点就等于把门对全世界敞开。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-10-25.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
