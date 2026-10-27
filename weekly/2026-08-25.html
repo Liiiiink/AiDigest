@@ -36,8 +36,9 @@ a:hover{text-decoration:underline}
 /* 分区标题:serif + 发丝线,无彩色 */
 h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
  border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
-/* 小标题(精讲/教程拆段用) */
-h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
 h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
 /* 目录:简洁文本索引 */
 ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
@@ -50,7 +51,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 /* 条目:发丝分隔的列表,无卡片无阴影 */
 ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
 li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
- padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
 li.item:first-child{border-top:0}
 li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
  font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
@@ -71,6 +72,20 @@ code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size
 code.chip + code.chip::before{content:" · "}
 code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
 code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
 p{margin:10px 0}
 em{color:var(--muted)}
 /* 代码块(学习页用):暖底细边,等宽,横向滚动 */
@@ -119,7 +134,7 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 @media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
 </style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>每周动手实操 · 2026-08-25</h1>
 <blockquote class="quote">每周一篇模型精讲 + 一个动手小教程 · 数据截至 2026-08-25</blockquote>
-</div><nav class="daynav"><a href="2026-08-18.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-模型精讲scaling-laws缩放定律大模型为什么越大越强以及这句话错在哪">模型精讲:Scaling Laws(缩放定律)——大模型为什么&quot;越大越强&quot;,以及这句话错在哪</h2>
+</div><nav class="daynav"><a href="2026-08-18.html">← 上一期</a><a class="home" href="index.html">全部</a><a href="2026-09-01.html">下一期 →</a></nav><h2 id="-模型精讲scaling-laws缩放定律大模型为什么越大越强以及这句话错在哪">模型精讲:Scaling Laws(缩放定律)——大模型为什么&quot;越大越强&quot;,以及这句话错在哪</h2>
 <p><strong>同样的钱,是该训一个&quot;大块头&quot;还是&quot;多读书&quot;?这条定律给出了可计算的答案</strong></p>
 <blockquote class="why">核心看点:损失(loss)会随模型大小、数据量、算力<strong>按幂律可预测地下降</strong>——这意味着大厂能用小实验<strong>外推</strong>出千亿模型的效果。而 2022 年 Chinchilla 一篇论文推翻了前人结论,证明当时几乎所有主流大模型都<strong>训练不足</strong>。</blockquote>
 <h3 id="它是什么">它是什么</h3>
@@ -143,17 +158,17 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 <p><strong>准备</strong>:</p>
 <ul class="list"><li><strong>Python 3.10+</strong>,以及包管理器 <strong>uv</strong>(下面第 1 步会装)。</li><li><strong>MCP Python SDK 2.0+</strong>(注意:v2 的 API 与网上大量 v1 老教程<strong>不兼容</strong>,详见下方提醒)。</li><li><strong>Claude 桌面端</strong>(免费版即可),装好并更新到最新。</li><li>无需 GPU、无需 API Key——服务器纯跑在你自己电脑上。</li></ul>
 <p><strong>跟着做</strong>:</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>装 uv 并建项目</strong>(约 3 分钟):</div><p>```bash</p><p>curl -LsSf https://astral.sh/uv/install.sh | sh</p><p># 装完重启终端,然后:</p><p>uv init myserver &amp;&amp; cd myserver</p><p>uv venv &amp;&amp; source .venv/bin/activate</p><p>uv add &quot;mcp[cli]&quot;</p><p>touch server.py</p><p>```</p></li><li class="item"><div class="item-head"><strong>写服务器</strong>:把下面内容存进 <code>server.py</code>。整个服务器就这么长——<strong>注意没有一行 JSON Schema</strong>:</div><p>```python</p><p>from mcp.server import MCPServer</p></li></ol>
+<ol class="steps"><li><strong>装 uv 并建项目</strong>(约 3 分钟):<br>```bash<br>curl -LsSf https://astral.sh/uv/install.sh | sh<br># 装完重启终端,然后:<br>uv init myserver &amp;&amp; cd myserver<br>uv venv &amp;&amp; source .venv/bin/activate<br>uv add &quot;mcp[cli]&quot;<br>touch server.py<br>```</li><li><strong>写服务器</strong>:把下面内容存进 <code>server.py</code>。整个服务器就这么长——<strong>注意没有一行 JSON Schema</strong>:<br>```python<br>from mcp.server import MCPServer</li></ol>
 <p>mcp = MCPServer(&quot;Demo&quot;)</p>
 <p>@mcp.tool() def add(a: int, b: int) -&gt; int: &quot;&quot;&quot;Add two numbers.&quot;&quot;&quot; return a + b</p>
 <p>@mcp.resource(&quot;greeting://{name}&quot;) def greeting(name: str) -&gt; str: &quot;&quot;&quot;Greet someone by name.&quot;&quot;&quot; return f&quot;Hello, {name}!&quot;</p>
 <p>if __name__ == &quot;__main__&quot;: mcp.run(transport=&quot;stdio&quot;) ``<code> 这里藏着 MCP 最妙的设计:**Python 的类型标注本身就是 Schema**(</code>a: int, b: int<code> 就够了),**docstring 就是给模型看的工具说明**。模型靠这两样&quot;读懂&quot;你的工具——和上上期 smolagents 的 </code>@tool` 是同一套哲学。</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>先在调试器里跑通</strong>(强烈建议,别跳):</div><p>```bash</p><p>uv run mcp dev server.py</p><p>```</p><p>这会打开官方的 <strong>MCP Inspector</strong>,你可以在网页里手动点一下 <code>add</code> 工具、传参数、看返回值——<strong>先确认服务器本身没问题,再去接 Claude</strong>,能省掉一大半排错时间。</p></li><li class="item"><div class="item-head"><strong>接进 Claude 桌面端</strong>:打开配置文件(macOS 路径如下,Linux 是 <code>~/.config/Claude/claude_desktop_config.json</code>):</div><p>```bash</p><p>code ~/Library/Application\ Support/Claude/claude_desktop_config.json</p><p>```</p><p>填入(文件不存在就新建):</p><p>```json</p><p>{</p><p>&quot;mcpServers&quot;: {</p><p>&quot;demo&quot;: {</p><p>&quot;command&quot;: &quot;uv&quot;,</p><p>&quot;args&quot;: [&quot;--directory&quot;, &quot;/你的绝对路径/myserver&quot;, &quot;run&quot;, &quot;server.py&quot;]</p><p>}</p><p>}</p><p>}</p><p>```</p><p><strong>三个高频翻车点</strong>:① 路径必须是<strong>绝对路径</strong>(在项目目录跑 <code>pwd</code> 复制);② <code>command</code> 里的 <code>uv</code> 可能需要写全路径(用 <code>which uv</code> 查);③ Windows 的 JSON 路径要用 <code>\\</code> 或 <code>/</code>。改完<strong>重启 Claude 桌面端</strong>。</p></li><li class="item"><div class="item-head"><strong>验收</strong>:重启后点输入框旁的 <strong>&quot;+&quot;</strong>,在 <strong>Connectors</strong> 里应该能看到你的 <code>demo</code> 服务器。然后问它一句&quot;帮我算 3 加 5&quot;,观察它<strong>主动调用你写的 <code>add</code> 函数</strong>——那一刻你会真正理解 Agent 的工具调用是怎么回事。</div></li></ol>
+<ol class="steps"><li><strong>先在调试器里跑通</strong>(强烈建议,别跳):<br>```bash<br>uv run mcp dev server.py<br>```<br>这会打开官方的 <strong>MCP Inspector</strong>,你可以在网页里手动点一下 <code>add</code> 工具、传参数、看返回值——<strong>先确认服务器本身没问题,再去接 Claude</strong>,能省掉一大半排错时间。</li><li><strong>接进 Claude 桌面端</strong>:打开配置文件(macOS 路径如下,Linux 是 <code>~/.config/Claude/claude_desktop_config.json</code>):<br>```bash<br>code ~/Library/Application\ Support/Claude/claude_desktop_config.json<br>```<br>填入(文件不存在就新建):<br>```json<br>{<br>&quot;mcpServers&quot;: {<br>&quot;demo&quot;: {<br>&quot;command&quot;: &quot;uv&quot;,<br>&quot;args&quot;: [&quot;--directory&quot;, &quot;/你的绝对路径/myserver&quot;, &quot;run&quot;, &quot;server.py&quot;]<br>}<br>}<br>}<br>```<br><strong>三个高频翻车点</strong>:① 路径必须是<strong>绝对路径</strong>(在项目目录跑 <code>pwd</code> 复制);② <code>command</code> 里的 <code>uv</code> 可能需要写全路径(用 <code>which uv</code> 查);③ Windows 的 JSON 路径要用 <code>\\</code> 或 <code>/</code>。改完<strong>重启 Claude 桌面端</strong>。</li><li><strong>验收</strong>:重启后点输入框旁的 <strong>&quot;+&quot;</strong>,在 <strong>Connectors</strong> 里应该能看到你的 <code>demo</code> 服务器。然后问它一句&quot;帮我算 3 加 5&quot;,观察它<strong>主动调用你写的 <code>add</code> 函数</strong>——那一刻你会真正理解 Agent 的工具调用是怎么回事。</li></ol>
 <blockquote class="quote"><strong>两个必须知道的坑</strong>: - <strong>别用 <code>print()</code></strong>。stdio 模式下,任何写进 stdout 的内容都会<strong>污染 JSON-RPC 消息、直接搞崩服务器</strong>。要打日志请用标准库 <code>logging</code>(它写 stderr,安全)。 - <strong>认准 v2 API</strong>。老教程里的 <code>FastMCP</code> 是 <strong>v1</strong> 的写法;当前 v2 SDK 用的是 <code>from mcp.server import MCPServer</code>。照抄老代码会直接 ImportError。</blockquote>
 <blockquote class="quote">做完你会:拥有一个可以无限扩展的模板——把 <code>add</code> 换成&quot;查我司数据库&quot;&quot;读我的笔记&quot;&quot;调我们内部 API&quot;,Claude 就接上了你的私有世界。这正是 MCP 被称为&quot;AI 应用的 USB-C 接口&quot;的原因:<strong>工具只写一遍,任何支持 MCP 的客户端都能用</strong>。下一步可探索:用 <code>uv run mcp run server.py --transport streamable-http</code> 把它跑成 HTTP 服务,让远程客户端也能连。</blockquote>
 <ul class="list"><li>🔗 教程/代码:<a href="https://modelcontextprotocol.io/docs/develop/build-server" target="_blank" rel="noopener noreferrer">MCP 官方教程:Build an MCP Server</a> · <a href="https://github.com/modelcontextprotocol/python-sdk" target="_blank" rel="noopener noreferrer">GitHub:modelcontextprotocol/python-sdk</a></li><li>🏷️ 来源:Model Context Protocol 官方文档 + 官方 Python SDK · 难度:入门</li></ul>
 <hr>
-<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-08-18.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-08-18.html">← 上一期</a><a class="home" href="index.html">全部</a><a href="2026-09-01.html">下一期 →</a></nav><div class="footer">由 Claude 每周筛选 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
 (function(){
   var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
   function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }

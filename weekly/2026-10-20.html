@@ -36,8 +36,9 @@ a:hover{text-decoration:underline}
 /* 分区标题:serif + 发丝线,无彩色 */
 h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
  border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
-/* 小标题(精讲/教程拆段用) */
-h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
 h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
 /* 目录:简洁文本索引 */
 ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
@@ -50,7 +51,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 /* 条目:发丝分隔的列表,无卡片无阴影 */
 ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
 li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
- padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
 li.item:first-child{border-top:0}
 li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
  font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
@@ -71,6 +72,20 @@ code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size
 code.chip + code.chip::before{content:" · "}
 code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
 code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
 p{margin:10px 0}
 em{color:var(--muted)}
 /* 代码块(学习页用):暖底细边,等宽,横向滚动 */
@@ -119,7 +134,7 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 @media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
 </style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>每周动手实操 · 2026-10-20</h1>
 <blockquote class="quote">每周一篇模型精讲 + 一个动手小教程 · 数据截至 2026-10-20</blockquote>
-</div><nav class="daynav"><a href="2026-09-29.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-模型精讲tokenizer-与-bpe大模型其实没见过字它只认编号">模型精讲:Tokenizer 与 BPE——大模型其实没见过「字」,它只认「编号」</h2>
+</div><nav class="daynav"><a href="2026-09-29.html">← 上一期</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-模型精讲tokenizer-与-bpe大模型其实没见过字它只认编号">模型精讲:Tokenizer 与 BPE——大模型其实没见过「字」,它只认「编号」</h2>
 <p><strong>你给模型发的每一句话,进门前都先被剁成碎片、换成数字——这一步叫分词(Tokenization)</strong></p>
 <blockquote class="why">核心看点:理解 BPE,你就能同时想明白三件困扰新手的事:为什么 API 按 token 计费而不是按字数、为什么模型数不清「strawberry 里有几个 r」、为什么同样一段话中文比英文贵。</blockquote>
 <h3 id="它是什么">它是什么</h3>
@@ -131,7 +146,7 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 <h3 id="它是怎么工作的">它是怎么工作的</h3>
 <p>BPE 的训练过程只有一个动作,<strong>不断重复</strong>:找出当前文本里<strong>出现次数最多的相邻一对</strong>,把它合并成一个新 token,记下这次合并。</p>
 <p>拿 <code>the cat in the hat</code> 举例:</p>
-<ol class="items "><li class="item"><div class="item-head"><code>th</code> 出现了 2 次(最频繁)→ 合并为新编号 256,文本变成 <code>&lt;256&gt;e cat in &lt;256&gt;e hat</code></div></li><li class="item"><div class="item-head"><code>&lt;256&gt;e</code>(也就是 <code>the</code>)出现 2 次 → 合并为 257,文本变成 <code>&lt;257&gt; cat in &lt;257&gt; hat</code></div></li><li class="item"><div class="item-head">继续重复……直到达到你设定的 <strong>词表大小(vocabulary size)</strong> 为止</div></li></ol>
+<ol class="steps"><li><code>th</code> 出现了 2 次(最频繁)→ 合并为新编号 256,文本变成 <code>&lt;256&gt;e cat in &lt;256&gt;e hat</code></li><li><code>&lt;256&gt;e</code>(也就是 <code>the</code>)出现 2 次 → 合并为 257,文本变成 <code>&lt;257&gt; cat in &lt;257&gt; hat</code></li><li>继续重复……直到达到你设定的 <strong>词表大小(vocabulary size)</strong> 为止</li></ol>
 <p>这些合并记录就是 <strong>merges 表</strong>。以后遇到新文本,分词器会按<strong>学习时的先后顺序</strong>(先学的优先级高)把 merges 重新套用一遍——所以同一个分词器切同一句话,结果永远一致。</p>
 <blockquote class="quote"><strong>进阶点一:为什么叫「字节」对编码。</strong> 现代 BPE 是 <strong>byte-level</strong> 的:先把文字转成 UTF-8 字节,得到 0~255 的整数,这 256 个值就是初始词表。好处是<strong>任何字符都能表示,永远不会出现 UNK(未知词)</strong>——emoji、生僻字、乱码都能被拆成字节兜底。所以词表大小 = 256 + 合并次数 + 特殊 token。GPT-2 是 50,257,GPT-4 是 100,256,GPT-4o 涨到了 199,997。</blockquote>
 <blockquote class="quote"><strong>进阶点二:词表大小是个权衡。</strong> 词表越大,同样文本切出的 token 越少(推理更省、更快),但模型最后那层输出矩阵(要对每个 token 算概率)也越大、越占显存。GPT-4o 把词表翻倍,很大一部分收益是给中文、日文等非英语语言「提速降费」。</blockquote>
@@ -144,14 +159,14 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 <p><strong>准备</strong>:</p>
 <ul class="list"><li>一个支持 Skills 的编程 Agent(Claude Code / Codex / OpenCode 任一)</li><li>一个终端,会用 <code>mkdir</code> / <code>ln -s</code> 就够</li><li><strong>不需要</strong> Python、不需要 API Key、不需要装任何依赖(本例是纯文档型技能)</li></ul>
 <p><strong>跟着做</strong>:</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>建目录</strong>。技能名必须是小写加连字符,且<strong>目录名要和后面 frontmatter 里的 <code>name</code> 完全一致</strong>:</div><p>```bash</p><p>mkdir -p ~/my-skills/git-commit-style</p><p>cd ~/my-skills/git-commit-style</p><p>```</p></li><li class="item"><div class="item-head"><strong>写 <code>SKILL.md</code></strong>。这是唯一必需的文件。开头的 YAML frontmatter 里 <code>name</code> 和 <code>description</code> 是必填项:</div><p>```markdown</p><p>---</p><p>name: &quot;git-commit-style&quot;</p><p>description: &quot;Write git commit messages following our team convention. Use when committing code, writing commit messages, or reviewing commit history.&quot;</p><p>license: &quot;MIT&quot;</p><p>metadata:</p><p>author: &quot;your-name&quot;</p><p>version: &quot;1.0.0&quot;</p><p>---</p></li></ol>
+<ol class="steps"><li><strong>建目录</strong>。技能名必须是小写加连字符,且<strong>目录名要和后面 frontmatter 里的 <code>name</code> 完全一致</strong>:<br>```bash<br>mkdir -p ~/my-skills/git-commit-style<br>cd ~/my-skills/git-commit-style<br>```</li><li><strong>写 <code>SKILL.md</code></strong>。这是唯一必需的文件。开头的 YAML frontmatter 里 <code>name</code> 和 <code>description</code> 是必填项:<br>```markdown<br>---<br>name: &quot;git-commit-style&quot;<br>description: &quot;Write git commit messages following our team convention. Use when committing code, writing commit messages, or reviewing commit history.&quot;<br>license: &quot;MIT&quot;<br>metadata:<br>author: &quot;your-name&quot;<br>version: &quot;1.0.0&quot;<br>---</li></ol>
 <h1 id="git-commit-规范">Git Commit 规范</h1>
 <h2 id="overview">Overview</h2>
 <p>本技能规定团队的 commit message 格式,在提交代码时使用。</p>
 <h2 id="格式要求">格式要求</h2>
 <ul class="list"><li>标题行:<code>&lt;type&gt;(&lt;scope&gt;): &lt;简述&gt;</code>,不超过 50 字符,结尾不加句号</li><li>type 只能是:feat / fix / docs / refactor / test / chore</li><li>正文:空一行后写「为什么改」,而不是「改了什么」</li><li>结尾:关联的 issue 编号,如 <code>Refs: #123</code></li></ul>
 <h2 id="step-by-step">Step-by-Step</h2>
-<ol class="items "><li class="item"><div class="item-head">先跑 <code>git diff --staged</code> 看清楚这次改了什么</div><p>2. 判断 type:修 bug 用 fix,加功能用 feat,只动格式用 chore</p><p>3. scope 填改动的模块名(如 auth、api、ui)</p><p>4. 正文解释动机,不要复述 diff</p></li></ol>
+<ol class="steps"><li>先跑 <code>git diff --staged</code> 看清楚这次改了什么<br>2. 判断 type:修 bug 用 fix,加功能用 feat,只动格式用 chore<br>3. scope 填改动的模块名(如 auth、api、ui)<br>4. 正文解释动机,不要复述 diff</li></ol>
 <h2 id="正例">正例</h2>
 <pre class="codeblock"><code>   fix(auth): 修复 token 过期后未跳转登录页
 
@@ -172,11 +187,11 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 
    以 Claude Code 为例:</code></pre>
 <p>cd /path/to/your-project mkdir -p .claude/skills ln -s ~/my-skills/git-commit-style .claude/skills/git-commit-style ``<code> (Windows 直接复制目录,或用 PowerShell 的 </code>New-Item -ItemType SymbolicLink`)</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>测试触发</strong>。重启 Agent,然后<strong>不要提「用 git-commit-style 技能」</strong>,就自然地说:「帮我把暂存区的改动提交了」。如果技能生效,它会按你定的格式写 commit message。</div></li><li class="item"><div class="item-head"><strong>调试 description(最关键的一步)</strong>。换一个说法再试一次,比如「写个 commit message」。<strong>如果一种说法能触发、另一种不行,问题 99% 出在 <code>description</code> 写得太窄</strong>——它是 Agent 唯一用来做匹配的依据。把用户可能的说法都塞进去(本例里 &quot;committing code&quot;、&quot;writing commit messages&quot;、&quot;reviewing commit history&quot; 就是三个不同的触发入口),改完再测,直到两种说法都能稳定触发。</div></li></ol>
+<ol class="steps"><li><strong>测试触发</strong>。重启 Agent,然后<strong>不要提「用 git-commit-style 技能」</strong>,就自然地说:「帮我把暂存区的改动提交了」。如果技能生效,它会按你定的格式写 commit message。</li><li><strong>调试 description(最关键的一步)</strong>。换一个说法再试一次,比如「写个 commit message」。<strong>如果一种说法能触发、另一种不行,问题 99% 出在 <code>description</code> 写得太窄</strong>——它是 Agent 唯一用来做匹配的依据。把用户可能的说法都塞进去(本例里 &quot;committing code&quot;、&quot;writing commit messages&quot;、&quot;reviewing commit history&quot; 就是三个不同的触发入口),改完再测,直到两种说法都能稳定触发。</li></ol>
 <blockquote class="quote">做完你会:理解 Agent 的「技能」本质上就是一份<strong>按需加载的说明书</strong>,不是插件也不是代码。下一步可以给技能加 <code>scripts/</code> 目录放可执行脚本(Agent 会直接运行)、加 <code>references/</code> 放详细文档(正文只放索引,保持 <code>SKILL.md</code> 在 400~800 行以内)。想看真实例子,可以读 Hugging Face 官方开源的技能库。</blockquote>
 <ul class="list"><li>🔗 教程:<a href="https://huggingface.co/learn/context-course/unit1/building-skills" target="_blank" rel="noopener noreferrer">Building Your First Skill — HF Context Course Unit 1</a></li><li>🔗 格式规范详解:<a href="https://huggingface.co/learn/context-course/unit1/skill-format" target="_blank" rel="noopener noreferrer">The SKILL.md Format — HF Context Course</a></li><li>🔗 开放规范原文:<a href="https://agentskills.io/" target="_blank" rel="noopener noreferrer">Agent Skills Specification</a></li><li>🔗 官方技能示例代码:<a href="https://github.com/huggingface/skills" target="_blank" rel="noopener noreferrer">huggingface/skills on GitHub</a></li><li>🏷️ 来源:Hugging Face Context Course(2026 新课,官方免费) · 难度:入门</li></ul>
 <hr>
-<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-09-29.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-09-29.html">← 上一期</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每周筛选 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
 (function(){
   var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
   function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }

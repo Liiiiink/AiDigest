@@ -36,8 +36,9 @@ a:hover{text-decoration:underline}
 /* 分区标题:serif + 发丝线,无彩色 */
 h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
  border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
-/* 小标题(精讲/教程拆段用) */
-h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
 h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
 /* 目录:简洁文本索引 */
 ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
@@ -50,7 +51,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 /* 条目:发丝分隔的列表,无卡片无阴影 */
 ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
 li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
- padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
 li.item:first-child{border-top:0}
 li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
  font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
@@ -71,6 +72,20 @@ code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size
 code.chip + code.chip::before{content:" · "}
 code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
 code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
 p{margin:10px 0}
 em{color:var(--muted)}
 /* 代码块(学习页用):暖底细边,等宽,横向滚动 */
@@ -119,7 +134,7 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 @media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
 </style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>每周动手实操 · 2026-09-29</h1>
 <blockquote class="quote">每周一篇模型精讲 + 一个动手小教程 · 数据截至 2026-09-29</blockquote>
-</div><nav class="daynav"><a href="2026-09-01.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-模型精讲moe混合专家万亿参数的模型为什么跑起来像个小模型">模型精讲:MoE(混合专家)——万亿参数的模型,为什么跑起来像个小模型</h2>
+</div><nav class="daynav"><a href="2026-09-01.html">← 上一期</a><a class="home" href="index.html">全部</a><a href="2026-10-20.html">下一期 →</a></nav><h2 id="-模型精讲moe混合专家万亿参数的模型为什么跑起来像个小模型">模型精讲:MoE(混合专家)——万亿参数的模型,为什么跑起来像个小模型</h2>
 <p><strong>DeepSeek V3 有 6710 亿参数,但每吐一个字只用掉 370 亿——省下的那 94%,是 MoE 干的</strong></p>
 <blockquote class="why">核心看点:与其让一个&quot;全才&quot;回答所有问题,不如养一屋子&quot;专才&quot;,每次只叫醒两个。参数量可以无限堆,计算量却几乎不涨。</blockquote>
 <h3 id="它是什么">它是什么</h3>
@@ -137,7 +152,7 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 <h3 id="它是怎么工作的一家有-256-个科室的医院">它是怎么工作的:一家有 256 个科室的医院</h3>
 <p>把标准大模型想象成一个<strong>全科医生</strong>:不管你来看什么病,都是他接诊,他脑子里装着所有科室的知识。看一次病,他把整个知识库过一遍。</p>
 <p>MoE 则是一家<strong>分科医院</strong>:</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>分诊台(路由器)</strong>:你一进门,分诊台看一眼你的症状,给每个科室打个分(其实就是一次线性变换 + softmax)</div></li><li class="item"><div class="item-head"><strong>挑出 Top-K</strong>:只挑分最高的 <strong>K 个</strong>科室(常见是 top-2,Switch Transformer 激进到 top-1),其余科室<strong>今天根本不上班</strong></div></li><li class="item"><div class="item-head"><strong>加权汇总</strong>:被选中的科室各自给出诊断,按分诊台给的权重加权合并,得到最终结果</div></li></ol>
+<ol class="steps"><li><strong>分诊台(路由器)</strong>:你一进门,分诊台看一眼你的症状,给每个科室打个分(其实就是一次线性变换 + softmax)</li><li><strong>挑出 Top-K</strong>:只挑分最高的 <strong>K 个</strong>科室(常见是 top-2,Switch Transformer 激进到 top-1),其余科室<strong>今天根本不上班</strong></li><li><strong>加权汇总</strong>:被选中的科室各自给出诊断,按分诊台给的权重加权合并,得到最终结果</li></ol>
 <p><strong>训练时这些&quot;科室&quot;分工是自己长出来的,没人预先指定。</strong> 研究者事后去看,发现编码器里确实会冒出&quot;标点符号专家&quot;&quot;专有名词专家&quot;这种。但也别浪漫化——在多语言场景下,<strong>并没有出现&quot;中文专家&quot;&quot;英文专家&quot;</strong>,分工比人的直觉抽象得多。</p>
 <blockquote class="quote"><strong>进阶点 1:路由器会&quot;偏心&quot;,得靠辅助损失掰回来。</strong> 训练早期某几个专家碰巧被多选中,就会被训得更好,于是更容易被选中——<strong>正反馈死循环</strong>,最后变成几个专家累死、其余闲置。解法是在训练目标里加一项 <strong>辅助损失(auxiliary loss / load balancing loss)</strong>,专门惩罚&quot;分配不均&quot;,逼路由器把 token 摊平。你在 TRL 里看到的 <code>router_aux_loss_coef</code>、训练日志里的 <code>aux_loss</code>,就是这个东西。ST-MoE 还加了 <strong>router z-loss</strong>,惩罚过大的路由 logits,让 softmax 数值更稳。 🔬 <strong>进阶点 2:还有一种&quot;永远上班&quot;的共享专家。</strong> DeepSeek V3 设了 <strong>shared expert(共享专家)</strong>——不管路由器怎么选,它对<strong>每个 token 都激活</strong>。思路是:标点、语法这类<strong>人人都要用</strong>的通用模式,不该让 256 个专家每个都单独学一遍;交给共享专家兜底,其他专家就能腾出容量去学更专门的东西。不过这不是定论——<strong>Qwen3 就明确去掉了共享专家</strong>,开发者给的理由是&quot;没看到足够显著的收益&quot;,还有推理优化上的顾虑。</blockquote>
 <h3 id="天下没有免费的午餐">天下没有免费的午餐</h3>
@@ -154,7 +169,7 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 <ul class="list"><li><strong>Python 3.9+</strong>(PEFT 的最低要求)</li><li><strong>一张 GPU</strong>。0.6B + LoRA 门槛很低,<strong>免费的 Google Colab T4 就够跑</strong>;本地有 8GB 显存的卡也行。纯 CPU 能跑通流程但会非常慢</li><li>一个 <strong>Hugging Face 账号</strong>(下载模型用,免费)</li><li>装依赖:</li></ul>
 <pre class="codeblock"><code>  pip install trl peft transformers datasets</code></pre>
 <p><strong>跟着做</strong>:</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>先搞懂 LoRA 到底改了什么(30 秒,但别跳)。</strong> 新建 <code>peek.py</code>,看一眼&quot;可训练参数&quot;这个数字:</div></li></ol>
+<ol class="steps"><li><strong>先搞懂 LoRA 到底改了什么(30 秒,但别跳)。</strong> 新建 <code>peek.py</code>,看一眼&quot;可训练参数&quot;这个数字:</li></ol>
 <pre class="codeblock"><code>   from transformers import AutoModelForCausalLM
    from peft import LoraConfig, get_peft_model, TaskType
 
@@ -172,7 +187,7 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
    peft_model.print_trainable_parameters()</code></pre>
 <p>输出里那个 <strong><code>trainable%</code></strong> 就是全部重点。官方文档在 Llama-3.2-1B 上的同类示例是:<strong>524,288 / 1,236,338,688 = 0.0424%</strong>——12 亿参数的模型,你只动了 52 万个。</p>
 <p>原理一句话:<strong>原权重 W 整个冻住不动</strong>,旁边挂两个又瘦又小的矩阵 <strong>A</strong> 和 <strong>B</strong>,只训练它们。前向变成 <code>h = Wx + BAx</code>。因为 <code>B×A</code> 是<strong>低秩分解</strong>,参数量断崖式下降。</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>真正跑一次微调。</strong> 新建 <code>train.py</code>。TRL 的 <code>SFTTrainer</code> 直接吃 <code>peft_config</code>,不用自己写训练循环:</div></li></ol>
+<ol class="steps"><li><strong>真正跑一次微调。</strong> 新建 <code>train.py</code>。TRL 的 <code>SFTTrainer</code> 直接吃 <code>peft_config</code>,不用自己写训练循环:</li></ol>
 <pre class="codeblock"><code>   from datasets import load_dataset
    from trl import SFTTrainer, SFTConfig
    from peft import LoraConfig, TaskType
@@ -199,10 +214,10 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
    trainer.save_model()</code></pre>
 <p>跑起来后盯住日志里的 <strong><code>loss</code></strong> 和 <strong><code>mean_token_accuracy</code></strong>:loss 缓慢下降 = 正常;完全不动 = 学习率太小;突然变 NaN = 学习率太大。</p>
 <blockquote class="quote"><strong>最高频的一个坑:学习率</strong>。<code>SFTConfig</code> 的默认 <code>learning_rate</code> 是 <strong>2e-5</strong>,那是给<strong>全量微调</strong>用的。训 LoRA 时你只在学少量<strong>全新初始化</strong>的参数,TRL 官方文档明确建议用<strong>约 1e-4</strong>(高一个数量级)。照抄默认值的结果通常是&quot;跑完了,但模型好像什么都没学会&quot;。</blockquote>
-<ol class="items "><li class="item"><div class="item-head"><strong>看看产出物有多小。</strong> 训练完去 <code>qwen3-0.6b-my-lora/</code> 目录下看:</div></li></ol>
+<ol class="steps"><li><strong>看看产出物有多小。</strong> 训练完去 <code>qwen3-0.6b-my-lora/</code> 目录下看:</li></ol>
 <pre class="codeblock"><code>   ls -lh qwen3-0.6b-my-lora/</code></pre>
 <p>你会发现只有两个核心文件:<strong><code>adapter_config.json</code></strong>(记录你用了什么配置)和 <strong><code>adapter_model.safetensors</code></strong>(那两个小矩阵)。官方文档里那个 opt-350m 的 LoRA 例子,adapter 只有 <strong>6.3 MB</strong>——而完整模型约 <strong>700 MB</strong>。</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>挂上去用一下。</strong> 新建 <code>infer.py</code>:</div></li></ol>
+<ol class="steps"><li><strong>挂上去用一下。</strong> 新建 <code>infer.py</code>:</li></ol>
 <pre class="codeblock"><code>   from peft import AutoPeftModelForCausalLM
    from transformers import AutoTokenizer
 
@@ -214,14 +229,14 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
    out = model.generate(ids.to(model.device), max_new_tokens=128)
    print(tok.decode(out[0], skip_special_tokens=True))</code></pre>
 <p><code>AutoPeftModelForCausalLM</code> 会<strong>自动读 <code>adapter_config.json</code>,把基座模型拉下来再把 adapter 贴上去</strong>——你不用手动管这个拼装过程。</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>(可选)把 adapter 焊死进模型。</strong> 推理时基座 + adapter 分开,会有一点点额外延迟。要上线的话可以合并:</div></li></ol>
+<ol class="steps"><li><strong>(可选)把 adapter 焊死进模型。</strong> 推理时基座 + adapter 分开,会有一点点额外延迟。要上线的话可以合并:</li></ol>
 <pre class="codeblock"><code>   merged = model.merge_and_unload()
    merged.save_pretrained(&quot;qwen3-0.6b-merged&quot;)</code></pre>
 <p>合并后 <code>W_new = W + (alpha/r) × B×A</code>,变回一个普通模型,<strong>推理零额外开销</strong>。代价是失去了&quot;随时换 adapter&quot;的灵活性。</p>
 <blockquote class="quote">做完你会:真正理解为什么现在满 Hugging Face 都是几 MB 的 LoRA 文件——<strong>一个基座 + N 个 adapter</strong>,就能服务 N 个不同场景,而不用存 N 份完整模型。 下一步可以探索三个方向: - <strong>扩大 target_modules</strong>:从 <code>[&quot;q_proj&quot;, &quot;v_proj&quot;]</code> 扩到包含 <code>k_proj</code>、<code>o_proj</code> 乃至 MLP 层的 <code>gate_proj</code>/<code>up_proj</code>/<code>down_proj</code>。可训练参数变多、效果通常更好,显存也涨——这是最值得你亲手做一次的 A/B 对比 - <strong>QLoRA</strong>:把基座模型量化成 4bit 再挂 LoRA,给 <code>SFTTrainer</code> 传一个 <code>quantization_config=BitsAndBytesConfig(...)</code> 即可。这是在消费级显卡上微调 7B~13B 模型的标准做法 - <strong>多 adapter 热切换</strong>:<code>peft_model.add_adapter(...)</code> + <code>peft_model.set_adapter(...)</code>,一个基座模型上挂多套 LoRA,按请求切换。这正是很多 LoRA 服务平台的底层玩法 顺带一提:本期精讲的 <strong>MoE</strong> 和这里的 <strong>LoRA</strong>,骨子里是同一种智慧——<strong>别让所有参数都参与每一次计算</strong>。MoE 在推理时做稀疏,LoRA 在训练时做稀疏。</blockquote>
 <ul class="list"><li>🔗 教程/代码:<a href="https://huggingface.co/docs/peft/quicktour" target="_blank" rel="noopener noreferrer">PEFT 官方 Quicktour</a> · <a href="https://huggingface.co/docs/peft/main/en/conceptual_guides/lora" target="_blank" rel="noopener noreferrer">PEFT LoRA 概念指南</a> · <a href="https://huggingface.co/docs/trl/sft_trainer" target="_blank" rel="noopener noreferrer">TRL SFTTrainer 文档(含 PEFT 集成)</a></li><li>🏷️ 来源:Hugging Face PEFT / TRL 官方文档 · 难度:入门</li></ul>
 <hr>
-<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-09-01.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-09-01.html">← 上一期</a><a class="home" href="index.html">全部</a><a href="2026-10-20.html">下一期 →</a></nav><div class="footer">由 Claude 每周筛选 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
 (function(){
   var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
   function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }

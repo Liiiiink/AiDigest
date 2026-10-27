@@ -36,8 +36,9 @@ a:hover{text-decoration:underline}
 /* 分区标题:serif + 发丝线,无彩色 */
 h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
  border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
-/* 小标题(精讲/教程拆段用) */
-h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
 h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
 /* 目录:简洁文本索引 */
 ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
@@ -50,7 +51,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 /* 条目:发丝分隔的列表,无卡片无阴影 */
 ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
 li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
- padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
 li.item:first-child{border-top:0}
 li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
  font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
@@ -71,8 +72,27 @@ code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size
 code.chip + code.chip::before{content:" · "}
 code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
 code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
 p{margin:10px 0}
 em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
 .footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
  font-size:12.5px;text-align:left;font-family:var(--sans)}
 .toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
@@ -114,7 +134,7 @@ em{color:var(--muted)}
 @media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
 </style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>每周动手实操 · 2026-08-04</h1>
 <blockquote class="quote">每周一篇模型精讲 + 一个动手小教程 · 数据截至 2026-08-04</blockquote>
-</div><nav class="daynav"><a href="2026-07-30.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-模型精讲coding-agent-是怎么工作的工具记忆与-agent-loop">模型精讲:Coding Agent 是怎么工作的(工具、记忆与 Agent Loop)</h2>
+</div><nav class="daynav"><a href="2026-07-30.html">← 上一期</a><a class="home" href="index.html">全部</a><a href="2026-08-18.html">下一期 →</a></nav><h2 id="-模型精讲coding-agent-是怎么工作的工具记忆与-agent-loop">模型精讲:Coding Agent 是怎么工作的(工具、记忆与 Agent Loop)</h2>
 <p><strong>你天天用的 Claude Code / Codex,核心不是&quot;更聪明的模型&quot;,而是模型外面那层&quot;会干活的壳&quot;</strong></p>
 <blockquote class="why">核心看点:Agent = <strong>模型 + 工具 + 记忆 + 环境反馈</strong>组成的一个循环;很多看似&quot;模型变聪明&quot;的体验,其实是这层壳(Harness)在替模型管理上下文。</blockquote>
 <h3 id="它是什么">它是什么</h3>
@@ -126,7 +146,7 @@ em{color:var(--muted)}
 <h3 id="它是怎么工作的一个循环--六个零件">它是怎么工作的:一个循环 + 六个零件</h3>
 <p><strong>Agent Loop(智能体循环)</strong>:Observe(观察环境)→ Inspect(分析)→ Choose(选下一步/调哪个工具)→ Act(执行)→ 结果回到观察,如此往复,直到任务完成。</p>
 <p>围绕这个循环,Harness 有六个核心组件:</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>实时仓库上下文</strong>:开工前先收集&quot;稳定事实&quot;(git 分支、目录结构、README / AGENTS.md),避免模型每次都从零瞎猜。</div></li><li class="item"><div class="item-head"><strong>稳定提示词前缀 + 缓存复用</strong>:系统指令、工具说明等几乎不变的部分放在提示词最前面,配合 <strong>Prompt Caching</strong> 复用——又快又省钱。</div></li><li class="item"><div class="item-head"><strong>结构化工具 + 校验 + 权限</strong>:不让模型&quot;即兴写命令&quot;,而是给一份<strong>带输入 Schema 的命名工具清单</strong>(读文件 / 搜索 / 跑命令 / 改文件 / 派生子 Agent);执行前先程序化检查:是已知工具吗?参数合法吗?需要用户批准吗?路径在工作区内吗?</div></li><li class="item"><div class="item-head"><strong>上下文压缩</strong>:反复读文件、日志刷屏会让上下文爆炸。手段包括<strong>裁剪</strong>(Clipping)超长输出、<strong>总结</strong>旧对话、<strong>去重</strong>重复读过的内容。</div></li><li class="item"><div class="item-head"><strong>转录 + 记忆 + 断点续传</strong>:完整 Transcript 以 JSON 落盘(可恢复会话);另维护一份精炼的<strong>工作记忆</strong>(当前任务、关键文件、笔记),随对话不断更新压缩。</div></li><li class="item"><div class="item-head"><strong>有边界的子 Agent</strong>:主 Agent 可派生子 Agent 干杂活(找符号定义、查配置),但子 Agent 上下文更紧、权限更小(只读、限制递归深度),防止多个 Agent 乱改同一批文件。</div></li></ol>
+<ol class="steps"><li><strong>实时仓库上下文</strong>:开工前先收集&quot;稳定事实&quot;(git 分支、目录结构、README / AGENTS.md),避免模型每次都从零瞎猜。</li><li><strong>稳定提示词前缀 + 缓存复用</strong>:系统指令、工具说明等几乎不变的部分放在提示词最前面,配合 <strong>Prompt Caching</strong> 复用——又快又省钱。</li><li><strong>结构化工具 + 校验 + 权限</strong>:不让模型&quot;即兴写命令&quot;,而是给一份<strong>带输入 Schema 的命名工具清单</strong>(读文件 / 搜索 / 跑命令 / 改文件 / 派生子 Agent);执行前先程序化检查:是已知工具吗?参数合法吗?需要用户批准吗?路径在工作区内吗?</li><li><strong>上下文压缩</strong>:反复读文件、日志刷屏会让上下文爆炸。手段包括<strong>裁剪</strong>(Clipping)超长输出、<strong>总结</strong>旧对话、<strong>去重</strong>重复读过的内容。</li><li><strong>转录 + 记忆 + 断点续传</strong>:完整 Transcript 以 JSON 落盘(可恢复会话);另维护一份精炼的<strong>工作记忆</strong>(当前任务、关键文件、笔记),随对话不断更新压缩。</li><li><strong>有边界的子 Agent</strong>:主 Agent 可派生子 Agent 干杂活(找符号定义、查配置),但子 Agent 上下文更紧、权限更小(只读、限制递归深度),防止多个 Agent 乱改同一批文件。</li></ol>
 <blockquote class="quote"><strong>进阶点一(省钱原理)</strong>:&quot;稳定前缀&quot;为什么能省钱?因为推理时的 <strong>KV Cache / Prompt Caching</strong> 机制——前缀不变,之前算过的 Key/Value 可以直接复用,不必重算。这正是上一期讲的注意力机制在工程上的延伸。</blockquote>
 <blockquote class="quote"><strong>进阶点二(设计哲学)</strong>:约束带来能力。命名工具、参数校验、权限闸门、沙箱,看似&quot;限制了模型自由&quot;,实则是可靠性的大半来源——自由聊天的模型很强,但被圈好边界的模型才<strong>有用</strong>。</blockquote>
 <ul class="list"><li>🔗 原文:<a href="https://magazine.sebastianraschka.com/p/components-of-a-coding-agent" target="_blank" rel="noopener noreferrer">Components of A Coding Agent — Sebastian Raschka</a></li><li>🏷️ 来源:Sebastian Raschka《Ahead of AI》 · 难度:入门(含 2 个进阶注记)</li></ul>
@@ -137,11 +157,11 @@ em{color:var(--muted)}
 <p><strong>准备</strong>:</p>
 <ul class="list"><li>一台电脑(Mac / Linux / Windows 配 WSL),装没装 Python 都行——依赖由 <strong>uv</strong> 自动管理。</li><li><strong>免费路线</strong>:纯 CPU 或苹果芯片,跑缩小版模型,几十分钟走完流程(效果弱,但全流程一步不少)。</li><li><strong>完整路线(可选,要花钱)</strong>:租云 GPU。8×H100 约 1.5~2 小时,按需约 $48、竞价实例约 $15;单卡 GPU 也能跑,时间约 8 倍。对照:2019 年原版 GPT-2 训练要 168 小时、约 $43,000。</li></ul>
 <p><strong>跟着做</strong>:</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>装环境</strong>(约 5 分钟):</div><p>```bash</p><p>git clone https://github.com/karpathy/nanochat.git</p><p>cd nanochat</p><p>uv sync --extra cpu        # 有 NVIDIA 显卡则用:uv sync --extra gpu</p><p>source .venv/bin/activate</p><p>```</p></li><li class="item"><div class="item-head"><strong>快速跑通全流程</strong>(免费,几十分钟):</div><p>```bash</p><p>bash runs/runcpu.sh</p><p>```</p><p>一个脚本自动完成:训练分词器 → 预训练 → 微调 → 评测。建议放在 <code>screen</code> / <code>tmux</code> 里跑,防止断线。</p></li><li class="item"><div class="item-head"><strong>跟它聊天</strong>:</div><p>```bash</p><p>python -m scripts.chat_cli</p><p>```</p><p>用你亲手训出的权重对话——作者形容&quot;有点像跟幼儿园小朋友聊天&quot;,会答话、会写诗,也会一本正经地胡说八道。</p></li><li class="item"><div class="item-head"><strong>(可选,进阶)完整版 speedrun</strong>:在租来的 8×H100 上跑</div><p>```bash</p><p>bash runs/speedrun.sh</p><p>```</p><p>约 1.5~2 小时得到 GPT-2 级别模型。想快速试验可加 <code>--depth=12</code>,几分钟训一个 GPT-1 大小的小模型;显存不足就调小 <code>--device-batch-size</code>(32 → 16/8/4/2/1)。</p></li></ol>
+<ol class="steps"><li><strong>装环境</strong>(约 5 分钟):<br>```bash<br>git clone https://github.com/karpathy/nanochat.git<br>cd nanochat<br>uv sync --extra cpu        # 有 NVIDIA 显卡则用:uv sync --extra gpu<br>source .venv/bin/activate<br>```</li><li><strong>快速跑通全流程</strong>(免费,几十分钟):<br>```bash<br>bash runs/runcpu.sh<br>```<br>一个脚本自动完成:训练分词器 → 预训练 → 微调 → 评测。建议放在 <code>screen</code> / <code>tmux</code> 里跑,防止断线。</li><li><strong>跟它聊天</strong>:<br>```bash<br>python -m scripts.chat_cli<br>```<br>用你亲手训出的权重对话——作者形容&quot;有点像跟幼儿园小朋友聊天&quot;,会答话、会写诗,也会一本正经地胡说八道。</li><li><strong>(可选,进阶)完整版 speedrun</strong>:在租来的 8×H100 上跑<br>```bash<br>bash runs/speedrun.sh<br>```<br>约 1.5~2 小时得到 GPT-2 级别模型。想快速试验可加 <code>--depth=12</code>,几分钟训一个 GPT-1 大小的小模型;显存不足就调小 <code>--device-batch-size</code>(32 → 16/8/4/2/1)。</li></ol>
 <blockquote class="quote">做完你会:亲手走完一个 ChatGPT 诞生的完整流水线——这是&quot;看 100 篇新闻&quot;都换不来的直觉。整个项目只有一个 <code>--depth</code> 参数控制模型大小,其余超参数按&quot;计算最优&quot;自动推导;代码专为可读性设计,没有巨型配置对象和 if-else 怪兽。下一步可探索:通读源码理解每个阶段、换自己的语料微调出独特风格,或对照上期 Ollama 教程体会&quot;训练&quot;与&quot;推理&quot;的完整闭环。</blockquote>
 <ul class="list"><li>🔗 教程/代码:<a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener noreferrer">GitHub:karpathy/nanochat</a></li><li>🏷️ 来源:Andrej Karpathy(nanoGPT 的正统继任项目) · 难度:入门(快速版) / 进阶(完整版)</li></ul>
 <hr>
-<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-07-30.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-07-30.html">← 上一期</a><a class="home" href="index.html">全部</a><a href="2026-08-18.html">下一期 →</a></nav><div class="footer">由 Claude 每周筛选 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
 (function(){
   var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
   function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }

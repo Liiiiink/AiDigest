@@ -36,8 +36,9 @@ a:hover{text-decoration:underline}
 /* 分区标题:serif + 发丝线,无彩色 */
 h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
  border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
-/* 小标题(精讲/教程拆段用) */
-h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
 h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
 /* 目录:简洁文本索引 */
 ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
@@ -50,7 +51,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 /* 条目:发丝分隔的列表,无卡片无阴影 */
 ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
 li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
- padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
 li.item:first-child{border-top:0}
 li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
  font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
@@ -71,6 +72,20 @@ code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size
 code.chip + code.chip::before{content:" · "}
 code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
 code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
 p{margin:10px 0}
 em{color:var(--muted)}
 /* 代码块(学习页用):暖底细边,等宽,横向滚动 */
@@ -119,7 +134,7 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 @media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
 </style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>每周动手实操 · 2026-09-01</h1>
 <blockquote class="quote">每周一篇模型精讲 + 一个动手小教程 · 数据截至 2026-09-01</blockquote>
-</div><nav class="daynav"><a href="2026-08-25.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-模型精讲kv-cache键值缓存大模型吐字快慢的头号功臣">模型精讲:KV Cache(键值缓存)——大模型吐字快慢的头号功臣</h2>
+</div><nav class="daynav"><a href="2026-08-25.html">← 上一期</a><a class="home" href="index.html">全部</a><a href="2026-09-29.html">下一期 →</a></nav><h2 id="-模型精讲kv-cache键值缓存大模型吐字快慢的头号功臣">模型精讲:KV Cache(键值缓存)——大模型吐字快慢的头号功臣</h2>
 <p><strong>同样的模型、同样的显卡,开不开 KV Cache 速度能差 5 倍——它是推理优化里性价比最高的一招</strong></p>
 <blockquote class="why">核心看点:大模型每吐一个字都要&quot;重读&quot;一遍前文,KV Cache 就是那本记好的笔记,让它不用从头再读。</blockquote>
 <h3 id="它是什么">它是什么</h3>
@@ -136,7 +151,7 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 <p>想象你在读一本长篇小说,每读到新一页都要回答&quot;这页跟前文什么关系&quot;。</p>
 <ul class="list"><li><strong>笨办法</strong>:每翻一页,把前面所有页<strong>从头再读一遍</strong>——这就是不开缓存</li><li><strong>聪明办法</strong>:边读边在旁边<strong>记笔记</strong>(每页的要点)。翻到新一页时,只需要读这一页 + 瞄一眼笔记本</li></ul>
 <p>KV Cache 就是那本笔记本。具体三步:</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>首次填充</strong>:模型把输入的所有 token 的 K/V 向量算出来,存进缓存</div></li><li class="item"><div class="item-head"><strong>增量计算</strong>:每来一个新 token,<strong>只算它自己</strong>的 K/V 向量</div></li><li class="item"><div class="item-head"><strong>拼接复用</strong>:把新算的 K/V 接到缓存后面(代码里就是一次 <code>torch.cat</code>),拿完整的 K/V 去做注意力</div></li></ol>
+<ol class="steps"><li><strong>首次填充</strong>:模型把输入的所有 token 的 K/V 向量算出来,存进缓存</li><li><strong>增量计算</strong>:每来一个新 token,<strong>只算它自己</strong>的 K/V 向量</li><li><strong>拼接复用</strong>:把新算的 K/V 接到缓存后面(代码里就是一次 <code>torch.cat</code>),拿完整的 K/V 去做注意力</li></ol>
 <p>代码层面,改动集中在三个类:<code>MultiHeadAttention</code> 里注册 <code>cache_k</code> / <code>cache_v</code> 两个缓冲区;<code>TransformerBlock</code> 把 <code>use_cache</code> 开关往下传;<code>GPTModel</code> 加一个位置计数器 <code>current_pos</code>。</p>
 <blockquote class="quote"><strong>进阶点 1:位置计数器不能省。</strong> 新 token 只有知道自己排第几,位置编码才算得对。少了 <code>current_pos</code>,新 token 会被当成&quot;覆盖了之前某个位置&quot;,位置信息直接错乱,输出变成乱码。 🔍 <strong>进阶点 2:速度是拿显存换的。</strong> 缓存<strong>随 token 数线性增长</strong>,长上下文 + 大模型时会吃掉惊人的显存。所以业界又衍生出一堆省显存的招:<strong>预分配张量</strong>(按最大长度一次性开好,避免反复 <code>torch.cat</code> 造成内存碎片)、<strong>滑动窗口缓存</strong>(只保留最近 N 个 token)。Raschka 提到,给 Qwen3 0.6B 这类模型按 131k 上下文预分配,光缓存就要多吃 <strong>约 8 GB</strong> 显存——所以他反而退回用 <code>torch.cat</code>。</blockquote>
 <h3 id="什么时候它反而没用">什么时候它反而没用</h3>
@@ -149,7 +164,7 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 <p><strong>准备</strong>:</p>
 <ul class="list"><li>Python <strong>3.10+</strong>、PyTorch <strong>2.2+</strong>(官方推荐版本)</li><li>一条能访问 Hugging Face 的网络(首次会下载模型,<code>all-MiniLM-L6-v2</code> 只有几十 MB,<strong>CPU 就能跑,不需要显卡</strong>)</li><li>装依赖:<code>pip install -U sentence-transformers</code></li></ul>
 <p><strong>跟着做</strong>:</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>先跑通&quot;相似度&quot;这个概念。</strong> 新建 <code>demo.py</code>,把三句话变成向量,看看模型觉得谁跟谁像:</div></li></ol>
+<ol class="steps"><li><strong>先跑通&quot;相似度&quot;这个概念。</strong> 新建 <code>demo.py</code>,把三句话变成向量,看看模型觉得谁跟谁像:</li></ol>
 <pre class="codeblock"><code>   from sentence_transformers import SentenceTransformer
 
    model = SentenceTransformer(&quot;sentence-transformers/all-MiniLM-L6-v2&quot;)
@@ -164,7 +179,7 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 
    print(model.similarity(embeddings, embeddings))</code></pre>
 <p>跑完看输出:前两句(都在说天气好)相似度约 <strong>0.66</strong>,第三句(开车去球场)跟它们只有约 <strong>0.10</strong>。<strong>模型没做任何关键词匹配</strong>——&quot;lovely&quot; 和 &quot;sunny&quot; 一个字都不重合,但它知道这俩是一个意思。</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>换成你自己的文档库,做真正的搜索。</strong> 把 <code>corpus</code> 换成你的笔记、FAQ、产品文档,每条一句话或一小段:</div></li></ol>
+<ol class="steps"><li><strong>换成你自己的文档库,做真正的搜索。</strong> 把 <code>corpus</code> 换成你的笔记、FAQ、产品文档,每条一句话或一小段:</li></ol>
 <pre class="codeblock"><code>   import torch
    from sentence_transformers import SentenceTransformer
 
@@ -187,7 +202,7 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
    for score, idx in zip(top_scores, top_ids):
        print(f&quot;{score:.4f}\t{corpus[idx]}&quot;)</code></pre>
 <p>查询里没有 &quot;deep learning&quot; 这个词,但讲深度学习那条会排到前面。</p>
-<ol class="items "><li class="item"><div class="item-head"><strong>文档变多了,换成官方的 <code>semantic_search</code>。</strong> 上面那种手写 topk 在几千条时还行,再多就该用官方封装了——它会自动分块、并行:</div></li></ol>
+<ol class="steps"><li><strong>文档变多了,换成官方的 <code>semantic_search</code>。</strong> 上面那种手写 topk 在几千条时还行,再多就该用官方封装了——它会自动分块、并行:</li></ol>
 <pre class="codeblock"><code>   from sentence_transformers.util import semantic_search
 
    hits = semantic_search(query_embedding, corpus_embeddings, top_k=5)[0]
@@ -197,7 +212,7 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 <blockquote class="quote">做完你会:亲手体会到<strong>「向量 = 语义的坐标」</strong>这件事——这正是当下所有 RAG、知识库问答系统的地基。 下一步可以探索三个方向: - <strong>加一层重排(rerank)</strong>:先用当前的双塔模型(Bi-Encoder)快速捞出 top 50,再用 <strong>Cross-Encoder</strong>(如 <code>cross-encoder/stsb-distilroberta-base</code>)精排前几名。慢一些,但准得多,这是工业级 RAG 的标准两段式做法 - <strong>上百万级文档</strong>:精确检索会变慢,该换 <strong>FAISS / hnswlib</strong> 这类近似最近邻(ANN)索引,拿一点点召回率换几十倍速度 - <strong>搜图片</strong>:换成 <code>Qwen/Qwen3-VL-Embedding-2B</code>,图和文字会被编码进<strong>同一个向量空间</strong>,可以直接用文字搜图</blockquote>
 <ul class="list"><li>🔗 教程/代码:<a href="https://sbert.net/docs/quickstart.html" target="_blank" rel="noopener noreferrer">Sentence Transformers 官方 Quickstart</a> · <a href="https://sbert.net/examples/sentence_transformer/applications/semantic-search/README.html" target="_blank" rel="noopener noreferrer">Semantic Search 完整示例</a> · <a href="https://sbert.net/docs/installation.html" target="_blank" rel="noopener noreferrer">安装说明</a></li><li>🏷️ 来源:Sentence Transformers 官方文档(UKP Lab / Hugging Face 维护) · 难度:入门</li></ul>
 <hr>
-<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-08-25.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+<p><em>每周二更新 · 来源:官方教程 / 顶级博客 / GitHub / 中文社区,链接见文中</em></p><nav class="daynav"><a href="2026-08-25.html">← 上一期</a><a class="home" href="index.html">全部</a><a href="2026-09-29.html">下一期 →</a></nav><div class="footer">由 Claude 每周筛选 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
 (function(){
   var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
   function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }

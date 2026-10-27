@@ -36,8 +36,9 @@ a:hover{text-decoration:underline}
 /* 分区标题:serif + 发丝线,无彩色 */
 h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
  border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
-/* 小标题(精讲/教程拆段用) */
-h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:22px 0 6px;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
 h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
 /* 目录:简洁文本索引 */
 ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
@@ -50,7 +51,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 /* 条目:发丝分隔的列表,无卡片无阴影 */
 ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
 li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
- padding:16px 0 14px;margin:0;box-shadow:none;position:relative}
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
 li.item:first-child{border-top:0}
 li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
  font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
@@ -71,6 +72,20 @@ code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size
 code.chip + code.chip::before{content:" · "}
 code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
 code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
 p{margin:10px 0}
 em{color:var(--muted)}
 /* 代码块(学习页用):暖底细边,等宽,横向滚动 */
@@ -120,23 +135,23 @@ pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:in
 </style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-09-16</h1>
 <blockquote class="quote">面向程序员的 AI 进展速览 · 11 条 · 选你能用的</blockquote>
 <div class="lede"><strong>今日焦点</strong>:AI 辅助开发的最大瓶颈已从「AI 能不能写」变成「人能不能审」——Microsoft 内部被 AI 代码淹没、Copilot 按 token 计费、1Password 安全基准被推翻，三条线指向同一件事：验证层才是新瓶颈。</div>
-</div><nav class="daynav"><a href="2026-09-15.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+</div><nav class="daynav"><a href="2026-09-15.html">← 前一天</a><a class="home" href="index.html">全部</a><a href="2026-09-17.html">后一天 →</a></nav><h2 id="-目录">目录</h2>
 <ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>(4 条)</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>(4 条)</li><li class="cat-brief"><a href="#-速览"> 速览</a>(3 条)</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
 <hr>
 <h2 id="-动手派" class="cat-tools">动手派</h2>
 <p><em>今天你能用的工具、技巧、实战经验</em></p>
-<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev" target="_blank" rel="noopener noreferrer">Typesafe Jev:一种不会幻觉的 AI 模型</a></strong> — HN 766 分登顶。输出结构化类型值而非自然语言，用于决策比前沿 LLM 快 100 倍且成本极低——把「函数调用」直接做进了模型架构里，没有字符串生成也就没有幻觉。 <code>新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener noreferrer">OpenAI Agents API 公测:一行调用部署生产级 Agent</a></strong> — 和 Codex / ChatGPT for Work 同款基础设施，指定任务+模型+工具即可，OpenAI 托管 harness，支持多 Agent 并行编排和自动上下文压缩，无额外费用仅按 token 计。 <code>新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/pizza-bot-app/pizza-bot" target="_blank" rel="noopener noreferrer">Pizza Bot:给 AI Agent 装一个收件箱</a></strong> — Mac/Win/Linux 桌面应用，让 Agent 在后台异步跑任务，完成后自动进入「未读」队列等你验收。原 Amazon 内部项目、2000+ 人用过，Apache 2.0 开源。 <code>工具</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/memora-x/memorax-code" target="_blank" rel="noopener noreferrer">MemoraX Code:AI 编程助手的记忆插件</a></strong> — npm 安装，自动记录架构变更、失败尝试、仓库规则和编码偏好，新会话只召回相关记忆而非从零开始。支持 Codex / Claude Code / DeepSeek Harness 等多客户端，90 天免注册试用。 <code>工具</code></div></li></ol>
+<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev" target="_blank" rel="noopener noreferrer">Typesafe Jev:一种不会幻觉的 AI 模型</a></strong> — HN 766 分登顶。输出结构化类型值而非自然语言，用于决策比前沿 LLM 快 100 倍且成本极低——把「函数调用」直接做进了模型架构里，没有字符串生成也就没有幻觉。 <code class="chip type">新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener noreferrer">OpenAI Agents API 公测:一行调用部署生产级 Agent</a></strong> — 和 Codex / ChatGPT for Work 同款基础设施，指定任务+模型+工具即可，OpenAI 托管 harness，支持多 Agent 并行编排和自动上下文压缩，无额外费用仅按 token 计。 <code class="chip type">新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/pizza-bot-app/pizza-bot" target="_blank" rel="noopener noreferrer">Pizza Bot:给 AI Agent 装一个收件箱</a></strong> — Mac/Win/Linux 桌面应用，让 Agent 在后台异步跑任务，完成后自动进入「未读」队列等你验收。原 Amazon 内部项目、2000+ 人用过，Apache 2.0 开源。 <code class="chip type">工具</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/memora-x/memorax-code" target="_blank" rel="noopener noreferrer">MemoraX Code:AI 编程助手的记忆插件</a></strong> — npm 安装，自动记录架构变更、失败尝试、仓库规则和编码偏好，新会话只召回相关记忆而非从零开始。支持 Codex / Claude Code / DeepSeek Harness 等多客户端，90 天免注册试用。 <code class="chip type">工具</code></div></li></ol>
 <h2 id="-职业风向" class="cat-career">职业风向</h2>
 <p><em>影响你技能选择和职业方向的信号</em></p>
-<ol class="items cat-career"><li class="item followup"><div class="item-head"><span class="fubadge">后续</span><strong><a href="https://36kr.com/p/3985293994949633" target="_blank" rel="noopener noreferrer">GPT-6 Sol 泄露，OpenAI 的「性价比」武器</a></strong> — API 测试中被发现模型已静默路由到 GPT-6-Sol，编程和前端生成超越 Astra 但成本大幅降低。信号：模型竞争的焦点正从「谁最强」转向「强且便宜」，极致性价比模型才是大众开发者的日常工具。 <code>新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3984227046374403" target="_blank" rel="noopener noreferrer">不到一个月，微软两个团队公开承认被 AI 代码「淹没」</a></strong> — Exchange 团队因 AI 暴露海量 bug 推迟更新，Edge 团队因 AI 生成扩展激增收官审核被撑爆。核心矛盾：AI 把上游生产效率拉起来了，但下游的审查、测试、安全校验仍然是人力瓶颈。 <code>观点</code></div></li><li class="item"><div class="item-head"><strong><a href="https://blog.trailofbits.com/2026/09/15/1passwords-ai-patching-benchmark-is-misleading/" target="_blank" rel="noopener noreferrer">1Password 的 AI 补丁基准被推翻:实际修复率从 26% 飙到 86%</a></strong> — Trail of Bits 指出原报告的四个方法缺陷——精选难题、故意给错误指令、禁止编译测试、模型设置不一致。当 Agent 能真正跑代码时，86% 的补丁有效。附带开源了两个 Agent Skill 用于补丁验证和代码审查。 <code>实战</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/" target="_blank" rel="noopener noreferrer">GitHub Copilot 6 月 1 日起按 token 用量计费</a></strong> — 套餐基础价不变，但实际消耗按 token 算——一次简短提问和一次多步自主编程的成本不再一样。5 月初出预览账单，企业有信用池和预算上限控制。信号：理解 AI 工具的 token 经济学正在变成和「会用 Git」一样基础的成本意识。 <code>新发布</code></div></li></ol>
+<ol class="items cat-career"><li class="item followup"><div class="item-head"><span class="fubadge">后续</span><strong><a href="https://36kr.com/p/3985293994949633" target="_blank" rel="noopener noreferrer">GPT-6 Sol 泄露，OpenAI 的「性价比」武器</a></strong> — API 测试中被发现模型已静默路由到 GPT-6-Sol，编程和前端生成超越 Astra 但成本大幅降低。信号：模型竞争的焦点正从「谁最强」转向「强且便宜」，极致性价比模型才是大众开发者的日常工具。 <code class="chip type">新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3984227046374403" target="_blank" rel="noopener noreferrer">不到一个月，微软两个团队公开承认被 AI 代码「淹没」</a></strong> — Exchange 团队因 AI 暴露海量 bug 推迟更新，Edge 团队因 AI 生成扩展激增收官审核被撑爆。核心矛盾：AI 把上游生产效率拉起来了，但下游的审查、测试、安全校验仍然是人力瓶颈。 <code class="chip type">观点</code></div></li><li class="item"><div class="item-head"><strong><a href="https://blog.trailofbits.com/2026/09/15/1passwords-ai-patching-benchmark-is-misleading/" target="_blank" rel="noopener noreferrer">1Password 的 AI 补丁基准被推翻:实际修复率从 26% 飙到 86%</a></strong> — Trail of Bits 指出原报告的四个方法缺陷——精选难题、故意给错误指令、禁止编译测试、模型设置不一致。当 Agent 能真正跑代码时，86% 的补丁有效。附带开源了两个 Agent Skill 用于补丁验证和代码审查。 <code class="chip type">实战</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/" target="_blank" rel="noopener noreferrer">GitHub Copilot 6 月 1 日起按 token 用量计费</a></strong> — 套餐基础价不变，但实际消耗按 token 算——一次简短提问和一次多步自主编程的成本不再一样。5 月初出预览账单，企业有信用池和预算上限控制。信号：理解 AI 工具的 token 经济学正在变成和「会用 Git」一样基础的成本意识。 <code class="chip type">新发布</code></div></li></ol>
 <h2 id="-速览" class="cat-brief">速览</h2>
 <p><em>值得知道但不用细读的动态</em></p>
-<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" target="_blank" rel="noopener noreferrer">Gemini 3.8 Live 发布:边说边想、后台调 API 的语音模型</a></strong> — Extended Thinking 版支持并行推理+自然语音提示，语音质量基准 #1，97 种语言自动检测，API 已可用。 <code>新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/09/489227.html" target="_blank" rel="noopener noreferrer">7 个博士生 3 个月从零训出 7B 模型，代码数据日志全公开</a></strong> — ZGCM-1 用数百个 AI Agent 管理数据、实验和调试流水线，训练效率优化 4.2 倍，性能可比 Qwen3-8B。含 2503 个探针的评测系统也一并开源，正在扩展到 500B。 <code>资源</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.infoq.cn/article/AcvXqsA1IGC3ACxJSgP6" target="_blank" rel="noopener noreferrer">Token 账单异常不只是成本问题，它可能是攻击信号</a></strong> — 77% 的企业缺乏逐 token 成本追踪，Denial of Wallet 攻击通过海量请求、盗用 API Key、AI 爬虫触发多轮推理来烧钱。需要从月末对账升级到实时可观测。 <code>实战</code></div></li></ol>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" target="_blank" rel="noopener noreferrer">Gemini 3.8 Live 发布:边说边想、后台调 API 的语音模型</a></strong> — Extended Thinking 版支持并行推理+自然语音提示，语音质量基准 #1，97 种语言自动检测，API 已可用。 <code class="chip type">新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/09/489227.html" target="_blank" rel="noopener noreferrer">7 个博士生 3 个月从零训出 7B 模型，代码数据日志全公开</a></strong> — ZGCM-1 用数百个 AI Agent 管理数据、实验和调试流水线，训练效率优化 4.2 倍，性能可比 Qwen3-8B。含 2503 个探针的评测系统也一并开源，正在扩展到 500B。 <code class="chip type">资源</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.infoq.cn/article/AcvXqsA1IGC3ACxJSgP6" target="_blank" rel="noopener noreferrer">Token 账单异常不只是成本问题，它可能是攻击信号</a></strong> — 77% 的企业缺乏逐 token 成本追踪，Denial of Wallet 攻击通过海量请求、盗用 API Key、AI 爬虫触发多轮推理来烧钱。需要从月末对账升级到实时可观测。 <code class="chip type">实战</code></div></li></ol>
 <hr>
 <h2 id="-今日术语">今日术语</h2>
 <ul class="list"><li><strong>System One Model</strong>:一种输出结构化决策值（而非自然语言文本）的 AI 模型——把模型直接当成函数调用来用，不能生成字符串所以不会「幻觉」。</li><li><strong>Denial of Wallet (DoW)</strong>:不搞崩你的服务，但通过海量 AI API 调用让你的账单爆掉的攻击方式——比 DDoS 更难察觉，因为它看起来就像正常用量增长。</li><li><strong>Harness</strong>:AI Agent 的运行框架，管理模型调用、工具选择、上下文和任务流程——可以理解为 Agent 的「操作系统」。</li><li><strong>Token 经济学</strong>:理解每次 AI API 调用消耗多少 token、花多少钱、值不值——正在变成和「会用 Git」一样基础的开发者成本意识。</li></ul>
 <hr>
-<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-09-15.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-09-15.html">← 前一天</a><a class="home" href="index.html">全部</a><a href="2026-09-17.html">后一天 →</a></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
 (function(){
   var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
   function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }

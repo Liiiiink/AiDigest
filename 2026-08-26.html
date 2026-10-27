@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-08-26</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-08-26</h1>
+<blockquote class="subtitle">每日精选全球 AI 热门进展 · 简要速览 · 共 19 条</blockquote>
+<div class="lede"><strong>今日主线</strong>:今天有两条互不相干却指向同一件事的线。一条是<strong>硬件</strong>——OpenAI 自研推理芯片 Jalapeño 交出首批公开成绩,最刺眼的不是「比 GB200 快多少」,而是它同时拿到了<strong>更高吞吐和更低延迟</strong>,打破了推理系统里那个人人默认的 throughput/latency 权衡;更值得程序员留意的一句话藏在正文里:<strong>给 GPT-OSS 的 attention 和 MoE 块,AI 自动生成的算子实现比人类专家手写版快 1.5~1.8 倍</strong>。另一条是<strong>软件工程的「减法」</strong>:GitHub 公开了 secret scanning 上线前的 LLM 评测方法论——<strong>误报砍掉 95%,靠的是把 recall 设成不可谈判的硬门禁、一次只动一个变量</strong>;GitHub Trending 上单日近千 star 的 <code>ponytail</code> 干的事正好相反又相同——给 Agent 塞一把「懒惰阶梯」,让它先问「这段代码有必要存在吗」,结果<strong>平均少写 54% 代码、便宜 20%、快 27%,安全检查一个没丢</strong>;而 Lobste.rs 那篇实测则是这条线的反例警告:<strong>让 Opus 5 对自己的代码做三轮「review→修」循环,缺陷数是逐轮上升的</strong>。合起来是同一个判断:<strong>模型能力已经不是瓶颈,约束才是</strong>——不管约束的是芯片的功耗预算、评测的 recall 下限,还是 Agent 该不该动手写这一行。</div>
+</div><nav class="daynav"><a href="2026-08-25.html">← 前一天</a><a class="home" href="index.html">全部</a><a href="2026-08-27.html">后一天 →</a></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class=""><a href="#-官方动态"> 官方动态</a>(4 条)</li><li class=""><a href="#-海外热榜"> 海外热榜</a>(5 条)</li><li class=""><a href="#-开发者实战"> 开发者实战</a>(6 条)</li><li class=""><a href="#-中文社区"> 中文社区</a>(4 条)</li><li class=""><a href="#-今日新词"> 今日新词</a></li></ul>
+<hr>
+<h2 id="-官方动态">官方动态</h2>
+<ol class="items "><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/jalapeno-first-results/" target="_blank" rel="noopener noreferrer">OpenAI 自研推理芯片 Jalapeño 首批结果:吞吐和延迟一起赢,不再二选一</a></strong> — 在 SemiAnalysis InferenceX 基准上对比 GB200/GB300,跑三个开源权重模型:<strong>每瓦峰值吞吐高 1.5~1.9 倍,端到端延迟低 1.7~3.6 倍,最小 token 间隔低 2.7~4.1 倍</strong>;在「同等 TBT」这个更贴近交互式 Agent 的口径下,吞吐差距被放大到 53~104 倍。芯片标称 700W,实测持续功耗压在 550W 以内,<strong>从设计到流片只用了 9 个月</strong>。同日发布的<a href="https://openai.com/index/the-full-stack-behind-abundant-intelligence/" target="_blank" rel="noopener noreferrer">全栈文章</a>里还有一个对开发者更直接的数字:GPT-5.6 Sol 在编码 Agent 榜上创新高时,<strong>输出 token 比另一个头部模型少 54%</strong>。</div><blockquote class="why">为什么值得关注:最该记住的细节是那句「<strong>AI 生成的 attention / MoE 算子实现比人类专家手写快 1.5~1.8 倍</strong>」——底层性能工程正在变成 AI 真正跑赢人的第一个领域。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">OpenAI</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/introducing-admin-plugin/" target="_blank" rel="noopener noreferrer">ChatGPT Work 和 Codex 上线 Admin 插件:工作区管理变成对话</a></strong> — 把成员进出、权限排查、用量与额度审批、模型/功能访问控制全部搬进对话框,并且能把待审请求路由到 Slack / Teams、按预设规则自动批准。关键设计是<strong>插件严格运行在当前用户已有的角色权限内,不额外提权</strong>。OpenAI 自己的 IT 团队用它把<strong>约 45% 的工单量自动化解决掉</strong>。</div><blockquote class="why">为什么值得关注:Agent 接管内部运维的第一个正经落地形态——不是「更聪明」,而是「把提问和下一步动作接在一起」。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">OpenAI</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.anthropic.com/news/wellbeing-research-grants" target="_blank" rel="noopener noreferrer">Anthropic 出钱做「AI 对人的福祉影响」评测</a></strong> — 新一轮研究资助,方向是给「AI 到底让人变好还是变坏」建可测量的评测方法,而不是停在观点层面。</div><blockquote class="why">为什么值得关注:模型能力评测已经卷到底了,下一个被工程化的对象是「影响」——这类基准最终会变成产品侧的合规指标。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">Anthropic</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://huggingface.co/blog/ibm-granite/granite-speech-5-0-470m-turboctc" target="_blank" rel="noopener noreferrer">Granite Speech 5.0 Turbo CTC:又快又准的开源转录模型</a></strong> — IBM 放出 470M 参数的 CTC 版语音转录模型,主打「极快 + 高准确率」的组合,体积小到可以塞进边缘设备和批处理流水线。</div><blockquote class="why">为什么值得关注:会议纪要、字幕、语音日志这类活儿,470M 的 CTC 模型往往比调大模型 API 更省钱也更可控。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">Hugging Face</code><code class="chip">2026-08-25</code></div></li></ol>
+<hr>
+<h2 id="-海外热榜">海外热榜</h2>
+<ol class="items "><li class="item"><div class="item-head"><strong><a href="https://sethmlarson.dev/when-str-lower-is-a-security-vulnerability" target="_blank" rel="noopener noreferrer">HN 67 分:<code>str.lower()</code> 也能是安全漏洞——CVE-2026-17084</a></strong> — Python 的 <code>str.lower()</code> 跟着解释器自带的 Unicode 版本走(比如 17.0.0),但 StringPrep(RFC 3454)和 IDNA 2003 <strong>必须按 Unicode 3.2.0 的折叠规则</strong>才能保持一致。<code>stringprep.map_table_b3</code> 对表里查不到的码点会 fallback 到 <code>str.lower()</code>,于是切罗基字母 <code>Ꭰ</code>(U+13A0)编出来的域名从规范的 <code>xn--58da</code> 变成了 <code>xn--kz9aa</code>——<strong>同一个域名在不同地方解析成两个东西</strong>。修法是逐个码点审计差异,把例外补进映射表(Python 本来就带 <code>unicodedata.ucd_3_2_0</code>)。</div><blockquote class="why">为什么值得关注:一个教科书级的「标准冻结版本 vs 运行时版本」陷阱,凡是做域名、邮箱、用户名规范化的都该看一眼。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">Hacker News</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/jeffhajewski/latticedb" target="_blank" rel="noopener noreferrer">HN 110 分:LatticeDB——图数据库界的 SQLite,顺手把向量和全文搜索也装进去了</a></strong> — Zig 写的零依赖嵌入式属性图数据库,单文件、无服务、WAL 崩溃恢复,一套 Cypher 方言里同时支持<strong>图遍历 + HNSW 向量近邻(<code>&lt;=&gt;</code>)+ BM25 全文(<code>@@</code>)</strong>。对标 SQLite 的图遍历基准上快 13~75 倍,深度 50 时最高 2819 倍;100 万条 128 维向量的余弦检索平均 0.83ms、recall@10 达 100%。作者也很坦白地列了限制:单写者、无分片、<code>OPTIONAL MATCH</code> 和 <code>CALL</code> 还没有。</div><blockquote class="why">为什么值得关注:Graph RAG 和 Agent 记忆现在通常要拼 Neo4j + 向量库 + ES 三件套,这个项目把它们塞进一个文件里——本地开发和原型阶段省一整套基础设施。</blockquote><div class="meta"><code class="chip type">工具</code><code class="chip">Hacker News</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener noreferrer">GitHub Trending:<code>ponytail</code>——让你的 Agent 像「屋里最懒的资深工程师」那样思考</a></strong> — 一套给各家 Coding Agent(Claude Code / Codex / Gemini CLI / Copilot CLI)通用的规则插件,核心是一把<strong>「懒惰阶梯」</strong>:动手前依次自问——这东西有必要存在吗(YAGNI)→ 代码库里已经有了吗 → 标准库能干吗 → 平台原生特性能干吗 → 已装的依赖能干吗 → 能一行写完吗 → 才轮到写最小实现。经典反例是你要个日期选择器,Agent 装了 flatpickr、写了包装组件、加了样式表、开始讨论时区,而浏览器本来就有 <code>&lt;input type=&quot;date&quot;&gt;</code>。作者强调<strong>「懒的是方案不是理解」,也「懒而不失职」</strong>——校验、错误处理、安全、无障碍一个不省。实测:<strong>平均少写 54% 代码(过度设计场景最高 94%)、成本降约 20%、快约 27%,且是唯一一个所有指标同降却保住全部安全检查的方案</strong>(对照组「就写一行」的裸提示丢了一项安全检查)。单日近千 star。</div><blockquote class="why">为什么值得关注:今天最值得直接抄进自己 <code>CLAUDE.md</code> 的一条——它把「别过度设计」从一句空话变成了可执行的判定顺序。</blockquote><div class="meta"><code class="chip type">工具</code><code class="chip">GitHub Trending</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/apache/maka" target="_blank" rel="noopener noreferrer">GitHub Trending:Apache Maka 进孵化器——本地优先的 Agent 工作台,把「发生过什么」写成 append-only 日志</a></strong> — 会话、设置、运行记录默认全留在本机(<code>runtime.sqlite</code>),模型自带(云 API / 本地模型 / 网关都行)。三个入口共用一个 Runtime Host:Electron 桌面端、TUI/CLI、以及可复现的 Eval 基准跑批。架构核心是<strong>把模型消息、工具调用、工具结果、以及这一轮是怎么结束的全部落盘</strong>,UI 和后续的模型调用都只是这份记录的视图。最实用的一个副产品:<strong>下一轮 prompt 里可以省掉旧的工具输出,但证据没被丢掉</strong>——压上下文不再等于删历史。</div><blockquote class="why">为什么值得关注:「可追加事件日志」正在成为 Agent 运行时的事实标准。它同时解决了崩溃恢复、上下文瘦身、权限审计和评测可复现四件事。</blockquote><div class="meta"><code class="chip type">工具</code><code class="chip">GitHub Trending</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/runetes/maiao" target="_blank" rel="noopener noreferrer">HN + Lobste.rs 双榜:<code>maiao</code>——把 Gerrit 的堆叠 diff 搬到 GitHub/GitLab 上</a></strong> — 一个 <code>git review</code> 命令,把分支上的每个 commit 各开一个 PR 并自动串成依赖链(PR#3 → PR#2 → PR#1 → main)。用 Gerrit 的 commit-msg hook 生成 Change-ID,<strong>rebase 和 force-push 之后 PR 仍然认得出对应的逻辑改动</strong>;改评审意见用 <code>git commit --fixup &lt;sha&gt;</code>,链上某个 PR 合并后自动 rebase 剩下的。支持 GitHub 原生 Stacks(探测不到就静默降级成分支堆叠),也支持 GitLab、Gitea、Forgejo、Bitbucket。</div><blockquote class="why">为什么值得关注:Agent 一口气生成的巨型 PR 现在是评审的头号痛点,而堆叠 diff 正是把它拆回「一个逻辑改动一个 PR」的成熟答案。</blockquote><div class="meta"><code class="chip type">工具</code><code class="chip">Hacker News / Lobste.rs</code><code class="chip">2026-08-25</code></div></li></ol>
+<hr>
+<h2 id="-开发者实战">开发者实战</h2>
+<ol class="items "><li class="item"><div class="item-head"><strong><a href="https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/" target="_blank" rel="noopener noreferrer">GitHub:上线前到底该怎么评测 LLM——误报砍掉 95%,靠的是把 recall 设成不可谈判的门禁</a></strong> — 用 LLM 给 secret scanning 降误报的完整方法论。几条可以直接抄的做法:<strong>指标分三层</strong>——主结果(误报率/精确率)、安全约束(recall,降幅超出预设范围就一票否决)、运营护栏(延迟/成本/可靠性);<strong>把离线评测当集成测试跑</strong>,prompt、模型、输入构造、流水线逻辑每动一次就重跑一遍,并记录 prompt 版本 + 模型 + 数据集版本 + 系统配置;<strong>一次只改一个变量</strong>,prompt 改动和模型升级分开评;<strong>评测数据必须保留生产的脏</strong>(周围的真实代码、附近的干扰值、残缺上下文、奇怪格式)——干净数据集会掩盖真实失败;<strong>生产标签当噪声信号而非 ground truth</strong>(开发者关掉告警的原因五花八门:轮换了、接受风险了、只是想解阻塞);失败案例人工归因到「模型/prompt/输入/流水线/数据集/标签」六类。最终结果:<strong>离线数据集上误报降 95%,recall 守在护栏内</strong>。</div><blockquote class="why">为什么值得关注:今天最有含金量的一篇工程复盘。「recall 当硬门禁 + 一次一个变量 + 保留生产的脏」这三条,基本就是把 LLM 从 demo 推上线的全部难点。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">GitHub Blog</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://kevinmahoney.co.uk/articles/ai-review-loops/" target="_blank" rel="noopener noreferrer">Lobste.rs:AI 的「review → 修」循环并不收敛,缺陷数是逐轮上升的</a></strong> — 作者让 Opus 5 先写一段「自认为完美」的非平凡代码,然后跑三轮 AI 评审 + AI 修复。结果<strong>缺陷数每一轮都在涨</strong>。三个结构性原因:<strong>意见不稳定</strong>(模型对「什么叫好代码」的判断在两次运行之间会翻脸,最坏情况下陷入死循环)、<strong>范围蔓延</strong>(从「缺测试」一路涨到「你该有 CI/CD」甚至「给这个做个 Android app」)、<strong>幻觉和误报会在修复阶段真的注入新 bug</strong>。</div><blockquote class="why">为什么值得关注:正好和上面 GitHub 那篇构成一组对照——<strong>没有固定判据的自动化循环不会收敛,它只会漂移</strong>。想让 AI 自审自修,先把「什么算通过」写死。</blockquote><div class="meta"><code class="chip type">观点</code><code class="chip">Lobste.rs</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://sigma-star.at/blog/2026/08/go-runtime-netpoll-bug/" target="_blank" rel="noopener noreferrer">潜伏六年的 Go 运行时 bug:32 位系统上 netpoll 会把 socket 认成 eventfd</a></strong> — 32 位 ARM / i386 上长时间运行的 Go 程序会崩在 <code>runtime: netpoll: eventfd ready for something unexpected</code>。根因很精妙:Go 在 <code>epoll_event</code> 那 8 字节的 <code>ev.Data</code> 里塞了<strong>两种不同的东西</strong>——eventfd 用的是裸指针,socket 用的是「高 4 字节存地址、低 4 字节存 <code>fdseq</code> 标签」的 tagged pointer。<strong>32 位小端机器上裸指针只占低 4 字节</strong>,而比较代码把 <code>ev.Data</code> 转成 <code>uintptr</code>(32 位下就 4 字节)只看低半部分——于是裸指针地址和 <code>fdseq</code> 标签撞在了同一片位上。等 <code>fdseq</code> 涨到约 300 万(正好是 <code>netpollEventFd</code> 落在地址空间头 3MiB 的地址范围),netpoll 就开始把 socket 当成 eventfd。排查用了 <code>pmap</code> 查地址、LLM 辅助扫 32 位下的整数转换坑、最后写出几分钟必现的复现器。修法:eventfd 也改存「打了标签的 nil pollDesc」,让 <code>ev.Data</code> <strong>永远</strong>是 tagged pointer。<strong>这个 bug 从 Go 1.14(2020)就在,活了六年</strong>。</div><blockquote class="why">为什么值得关注:嵌入式和跨位宽移植的经典雷区——「指针里偷低位存标签」这个技巧在 64 位上天经地义,换到 32 位就直接失效。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">Lobste.rs</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://pointersgonewild.com/2026-08-25-replacing-a-rust-enum-with-a-64-bit-word/" target="_blank" rel="noopener noreferrer">把 Rust enum 换成一个 64 位字,解释器全线快了 17%</a></strong> — Plush 解释器原本用 Rust tagged enum 表示动态值:payload 64 位 + tag 8 位,但<strong>对齐之后每个值实打实占 16 字节</strong>。作者改成经典的低位打标签方案:整数左移 2 位(低位 <code>00</code>,62 位范围,<strong>加减和比较可以直接在带标签的字上做,不用拆包</strong>);浮点用 2024 年 Melançon/Serrano/Feeley 论文的<strong>自标签旋转</strong>技巧(加偏置再旋转,让低两位变成 <code>10</code>,只损失两位指数、尾数精度全保);<code>nil</code>/<code>true</code>/<code>false</code> 等立即数用 5 位子标签;堆对象 8 字节对齐所以低 3 位天然是 0,正好拿来当标签位。结果<strong>每个 benchmark 都变快,平均约 17%</strong>,而作者原本预期打包/拆包的开销会拖慢它。两个原因:一是值从 16 字节缩到 8 字节,指针密集的 <code>binary_tree</code>/<code>linked_list</code> 内存流量直接减半;二是<strong>旧 enum 让 LLVM 生成的机器码非常烂</strong>——值被拆到多个寄存器和内存位置,频繁溢出到栈。<code>Int64 + Int64</code> 的快路径从 <strong>52 条指令 / 24 次访存 / 4 个分支</strong> 降到 <strong>36 / 9 / 1</strong>,因为现在一个值就是一个寄存器。LLVM 甚至自己发现了「把两个 tag 或起来一次分支测完」的优化。</div><blockquote class="why">为什么值得关注:一个反直觉但可复用的性能教训——<strong>数据表示决定编译器能生成什么代码</strong>,而不只是决定占多少内存。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">Lobste.rs</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://infosec.exchange/@david_chisnall/117156204452541109" target="_blank" rel="noopener noreferrer">24 核构建机加了 CPU 亲和性,构建反而更慢了——因为热</a></strong> — 常识说把任务钉在固定核上能靠缓存局部性提速,这里被完整推翻了。现代机器上<strong>snoop 邻居的 L1 缓存非常快</strong>,所以进程在核间迁移的代价极低;而每个构建 job 都在热循环里烤特定的那几个核,<strong>钉住 = 单核迅速升温 = 热节流提前触发</strong>。不设亲和性时,操作系统那套半随机的任务乱窜反而<strong>把热量摊匀到整片芯片上,让节流来得更晚</strong>;构建里并行度低的阶段,迁移还顺便让每个核轮流空闲了一会儿,散热更好。</div><blockquote class="why">为什么值得关注:缓存未命中的代价已经小到打不过热节流了。凡是在长时间满载的机器上调度密集任务(构建、批量推理),先量热,再谈亲和性。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">Lobste.rs</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://jdagostino.github.io/ai-pt2-multi-gpu-drifting/index.html" target="_blank" rel="noopener noreferrer">家里四张卡跑本地大模型的完整踩坑记:先修 PCIe P2P,再谈并行策略</a></strong> — 四张 AMD Radeon Pro V620(各 32GB),PCIe 3.0、大多只跑到 x8,没有 NVLink / Infinity Fabric。最大的发现是<strong>卡间 DMA 压根没工作</strong>,所有 GPU→GPU 传输都在绕 CPU 内存(~7GB/s)。两个根因:<strong>BIOS 的 MMIO High Base 设太高(56T)</strong>,而有些 GPU 只有 44 位寻址、需要地址落在 16T 以下——改成 4T / 1024G 粒度;<strong>内核参数加 <code>iommu=pt</code></strong>——修之前卡间带宽只有 0.46GB/s 且推理输出乱码后内核 panic,修完稳定在 5~7GB/s。修复前后的对比很吓人:Gemma4-31B 双卡张量并行从 ~20 tok/s 跳到 <strong>47 tok/s</strong>,四卡从坏掉的 0.5 tok/s 恢复到 37 tok/s。其余结论:<strong>推测解码是最大的一笔收益</strong>(草稿模型让生成速度大约翻倍,但草稿模型必须完整放在单张卡上,而且它和主模型共享的层落在不同 GPU 时 llama.cpp 会出问题,需要 PR #26636);<strong>batch size 调到 4096 明显有用</strong>,microbatch、n-gram、flash attention 开关、线程数、NUMA 都没用;<strong>「共享张量放显存 + 路由专家放内存」这套跑大 MoE 的常见建议被作者直接否掉了</strong>——四通道 DDR4 下只要溢出到系统内存就掉到 8 tok/s 以下。</div><blockquote class="why">为什么值得关注:本地部署最贵的时间往往浪费在「以为是模型/框架问题,其实是 BIOS 和 IOMMU」。这篇把排查顺序摆明白了:<strong>先验 P2P 带宽,再选并行策略,最后才调参</strong>。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">Lobste.rs</code><code class="chip">2026-08-25</code></div></li></ol>
+<hr>
+<h2 id="-中文社区">中文社区</h2>
+<ol class="items "><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3954806530440580" target="_blank" rel="noopener noreferrer">Harvey 拿 Kimi K3 当底座训自研法律模型——OpenAI 投的公司,选了中国开源权重</a></strong> — 法律 AI 公司 Harvey(OpenAI 创业基金早期投过)训第一个自研模型 Tenet 时,底座选了 Kimi K3。理由很工程:<strong>每月处理 13 万亿 token,按 API 计费的定价权完全在供应商手上</strong>,而 OpenAI 挖了 Ironclad 创始人做法律业务、Anthropic 也上了律师工具——供应商正在变成竞争对手。开源权重意味着可以在 <strong>50 万个专家张量上用 LoRA 做「外科手术」</strong>,闭源模型只能改 prompt。K3 在 Harvey 自家法律基准上拿了最高分(26.7%,接近第二名两倍),<strong>100 万 token 上下文</strong>适配大案卷,推理成本不到头部前沿模型的四分之一。训练只用了<strong>约 150 张 B300、两个月</strong>,方法是异步强化学习——真实律师出模拟案件并按通过/不通过打分。post-training 后完整通过率比 K3 基座<strong>提升 82%</strong>。</div><blockquote class="why">为什么值得关注:「开源权重 vs 闭源 API」的争论今天有了最具体的一个答案——<strong>争的不是分数,是你能不能对模型动手术,以及续约时谁有筹码</strong>。</blockquote><div class="meta"><code class="chip type">观点</code><code class="chip">36氪 / 新智元</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://36kr.com/p/3955003612173961" target="_blank" rel="noopener noreferrer">资深安全研究员硬测半年 AI 做漏洞研究:没那么神,但绝不是花架子</a></strong> — PortSwigger 的 James Kettle 从 2025 年 9 月开始用 Anthropic 和 OpenAI 的最新模型做 web 安全研究。第一个教训是<strong>放开手让 AI 自由产出「原创研究」行不通——AI 太会「装原创」</strong>,专挑冷门题目下手,人根本没法验证。改法是把范围收窄到自己最懂的 web 安全,再<strong>把自己积累的方法论喂进去</strong>。之后效果开始滚起来:<strong>过去手工要花好几年才找到的某类漏洞实例,AI 几个月就确认了</strong>;离开系统两天回来,线索多到他焦虑会漏掉有价值的方向,只好继续自动化分析流程。AI 确实撬出了一个全新的漏洞类别(极其罕见,唯一命中的目标实际打不动),也启发他发现了一个大面积攻击面:<strong>网站用同一套代码同时处理不可信的用户请求和「可信」的服务端响应</strong>。</div><blockquote class="why">为什么值得关注:一篇少见的、有半年跨度的诚实复盘。结论对所有想让 AI 干专业活的人都成立——<strong>把 AI 放进你最懂的领域并喂给它你的方法论,它才产出可验证的东西;放到你验证不了的地方,它只会产出看起来很像研究的东西</strong>。</blockquote><div class="meta"><code class="chip type">实战</code><code class="chip">36氪 / 雷科技</code><code class="chip">2026-08-26</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.qbitai.com/2026/08/479192.html" target="_blank" rel="noopener noreferrer">商汤开源 8B 图像模型 SenseNova U1.5 Lite:核心场景对标闭源 GPT-Image-2</a></strong> — 基于 NEO-unify 架构,在<strong>同一个 8B 模型里统一视觉理解、图像生成和编辑</strong>,原生 4K 输出,支持 3~4k 字符的复杂指令、多图参考输入和 bbox/标记这类细粒度控制。技术路线值得记:<strong>先分头训练文字渲染、美学、编辑三个专家模型,再用 MOPD(多教师在线策略蒸馏)融回一个 8B</strong>——<strong>不需要外挂 router,用户拿到的仍然只有一个模型</strong>,调用链更短、部署更轻、跨任务表现也一致。GitHub / Hugging Face / 在线 studio 都已上线。</div><blockquote class="why">为什么值得关注:「多专家训练 + 蒸馏回单模型」这条路,比 MoE 或外挂路由对部署方友好得多——8B 的体积能塞进的场景,和一个需要调度的专家集群完全不是一个量级。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">量子位</code><code class="chip">2026-08-25</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.jiqizhixin.com/" target="_blank" rel="noopener noreferrer">英伟达 Vera Rubin 首秀,DeepSeek V4 Pro 跑出 30 倍 Agent 吞吐</a></strong> — 英伟达新一代平台 Vera Rubin 公开首秀,给出的旗舰数字是在 DeepSeek V4 Pro 上把 Agent 场景吞吐拉到 30 倍。同日另一条相关消息是<strong>英伟达 AI 服务器涨价超过 15%</strong>,背后是内存成本。</div><blockquote class="why">为什么值得关注:和今天头条的 Jalapeño 正好对上——<strong>推理侧的竞争已经从「谁的芯片快」变成「谁能在 Agent 那种长上下文、多轮工具调用的负载下更便宜」</strong>,而这两家给的都是 Agent 口径的数字,不再是纯 FLOPS。</blockquote><div class="meta"><code class="chip type">新发布</code><code class="chip">机器之心</code><code class="chip">2026-08-25</code></div></li></ol>
+<hr>
+<h2 id="-今日新词">今日新词</h2>
+<ul class="list"><li><strong>TBT(Time Between Tokens,token 间隔)</strong>:模型吐出相邻两个字之间的间隔时间。它决定了你「看着它打字」时的流畅感——今天 OpenAI 用「同等 TBT 下的吞吐」来比较芯片,意思是:<strong>在保证同样打字流畅度的前提下,我能同时伺候多少人</strong>。这比单纯比峰值吞吐更贴近真实服务。</li><li><strong>tagged pointer(打标签的指针)</strong>:一个省内存的老技巧。因为内存里的对象通常按 8 字节对齐,指针的最低 3 位永远是 0——白白浪费了,不如拿来存「这个值到底是什么类型」。今天两条新闻都栽在或受益于它:Go 的 netpoll bug 是 32 位下标签位和地址撞车,Plush 解释器则靠它把每个值从 16 字节压到 8 字节、白赚 17% 速度。</li><li><strong>speculative decoding(推测解码)</strong>:让一个又小又快的「草稿模型」先一口气猜出后面好几个 token,再让大模型一次性批量验证——猜对了就白赚,猜错了才回退。它是本地部署里性价比最高的提速手段,今天那篇四卡实测里<strong>直接把生成速度翻了一倍</strong>。</li><li><strong>recall / precision(召回率 / 精确率)</strong>:评测里最常被搞混的一对。<strong>召回率 = 该抓的漏了多少</strong>(密钥扫描漏报一个真密钥就是事故),<strong>精确率 = 抓来的里面有多少是冤枉的</strong>(误报太多没人愿意看告警)。GitHub 那篇的核心方法就是:<strong>只允许优化精确率,召回率一旦跌破护栏就一票否决</strong>——因为这两件事的代价根本不对等。</li><li><strong>YAGNI(You Aren&#x27;t Gonna Need It)</strong>:极限编程的老口号,「你不会需要它的」。意思是别为想象中的未来需求提前写代码。今天火起来的 <code>ponytail</code> 把它放在了「懒惰阶梯」的第一级——让 Agent 动手前先问一句:<strong>这段代码有必要存在吗?</strong></li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 条目均附原文链接,点击可深入学习</em></p><nav class="daynav"><a href="2026-08-25.html">← 前一天</a><a class="home" href="index.html">全部</a><a href="2026-08-27.html">后一天 →</a></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>

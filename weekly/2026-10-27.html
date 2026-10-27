@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>本周 AI · 2026-10-27(第 8 期)</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>本周 AI · 2026-10-27(第 8 期)</h1>
+<blockquote class="quote">覆盖 10-21 ~ 10-27 · 读了 5 份日报共 60 条(10-24、10-27 两天漏跑) · 够格的 5 条进来了</blockquote>
+<div class="lede"><strong>这周真正的那件事</strong>:AI 找洞的产能真的上来了——PHP 那两个 CVSS 9.2 是 OpenAI 用 GPT-5.6 Sol 挖了两个月挖出来的,Brotli 那个 9.2 也是 OpenAI 今年 2 月发现的——但<strong>接住的那头没跟上</strong>:Brotli 的 CVE 到 10 月 23 日都还没被映射到 PyPI 包,一个两个月下载 8280 万次的包,Dependabot 和 pip-audit 对着它一声不吭。这周的教训不是「要扫描」,是「扫描器绿了不代表你没事」。</div>
+</div><nav class="daynav"><a href="2026-10-20.html">← 上一期</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-本周热点">本周热点</h2>
+<h3 id="找洞的速度上来了接住的那头没跟上">找洞的速度上来了,接住的那头没跟上</h3>
+<p><strong><a href="https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497" target="_blank" rel="noopener noreferrer">Brotli 越界写 CVE-2026-111497:所有解 <code>Content-Encoding: br</code> 的东西一锅端</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:<code>DecodeBlockTypeAndLength()</code> 只返回一个 bool,调用方分不清「流坏了」和「数据还没来」,快路径干脆把返回值丢了——构造一次失败的 block switch 就能带着陈旧状态继续解码并越界写。Brotli 1.0.3~1.2.0 全中,Node、Python、Bun、Envoy、Istio、curl 全在射程内。最阴的是 Python:只要装了 <code>Brotli</code> 包,requests / httpx / aiohttp / Scrapy <strong>不用你 import 就会自动解</strong>。</li><li><strong>凭什么算热点</strong>:CVSS 9.2,属于「不处理会出事」那一类;修复版本横跨六个生态同步发布(Node 22.23.4 / 24.22.1 / 26.12.1、Bun 1.4.4、Python <code>Brotli</code> 和 <code>brotlicffi</code> 1.2.1、Envoy 1.40.0 系、Istio 1.29.9 系、上游 1.2.1),这个铺开面本身就是证据;而受影响的 PyPI 包两个月下载 8280 万次,截至 10 月 23 日 advisory 库还没收录——<strong>工具查不出来,只能人工查</strong>。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>。具体就两条命令:<code>pip show Brotli brotlicffi</code> 看版本,<code>node -v</code> 对一下修复版本。升不动就直接卸载 Brotli 包(会优雅退回 gzip),或在反代上拒掉 <code>br</code>。这是本周唯一一件「今天不做,明天可能真出事」的事。</li></ul>
+<p><strong><a href="https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/" target="_blank" rel="noopener noreferrer">LiteLLM 1.107.0 被投毒:专偷 Claude Code / Cursor / Copilot / Gemini CLI 的 token</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:攻击者只在 <code>pyproject.toml</code> 的 maturin 段加了一行 <code>data = &quot;cook&quot;</code>(sdist 里看不到这个目录,拿 rc2 做依赖 diff 完全看不出异常),装完往 site-packages 塞 <code>cook.pth</code> / <code>cook.py</code> / <code>sitecustomize.py</code>——于是<strong>这台机器上任何 Python 进程启动都会执行它</strong>,哪怕你从没 import 过 litellm。偷的东西按名单来:SSH 私钥、AWS/Azure/GCP 凭证、K8s token、CI 密钥、浏览器密码、shell history,以及 Claude Code、Cursor、Copilot、Gemini CLI、HF 的 token,外加一个每小时从 GitHub 读新 C2 地址的常驻后门。只有 1.107.0 正式版中招(1.106.2 和两个 rc 干净),已下架。</li><li><strong>凭什么算热点</strong>:<strong>这条线三天里被三份日报接力提到</strong>——10-21 GitHub 上线 Package Firewall(npm 装包要先过闸、可配冷静期)、10-22 投毒爆发、同日 gh CLI 上线会过期自动刷新的 OAuth token,10-22 的日报条目自己就把后两件串了起来。而且这是攻击目标的一次明确转向:<strong>AI 编码工具的 token 已经被写进窃取清单</strong>,和 SSH 私钥并列。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>。查那三个文件 + 杀掉 PPID 为 1 的游离 Python 进程,中招了就全量轮换凭证。没中招也别放过这次——把 gh CLI 换成会过期的 token、给依赖装上冷静期,这两件事做完之后,下一次投毒你大概率能躺过去(投毒包的生命周期通常只有几十小时)。教程在本期末尾。</li></ul>
+<h3 id="省-token这周有了两个新打法拆判断和让工具自己闭嘴">「省 token」这周有了两个新打法:拆判断,和让工具自己闭嘴</h3>
+<blockquote class="quote">先说一个我<strong>没单独收</strong>的背景事实:四个月里 OpenAI 和 Anthropic 把推理价格砍掉最多 80%,GPT-5.6 Luna 从 <code>$1/$6/$0.10</code> 降到 <code>$0.20/$1.20/$0.02</code>;而对 agentic coding 来说<strong>缓存读取占总 token 开销的 96~99%</strong>,所以 Fable 5.1 缓存读取降 75% 约等于总成本降 70~75%(<a href="https://minimaxir.com/2026/10/cheap-llms/" target="_blank" rel="noopener noreferrer">minimaxir 的拆解</a>)。这个数字值得你今天就拿去重做成本模型,但它只有一篇分析支撑、一天出现,按本周报的标准还不够格单列。真正<strong>结构性</strong>的变化是下面两条——省钱的办法从「换个便宜模型」变成了「这段活儿根本不该交给通用模型」。</blockquote>
+<p><strong><a href="https://openai.com/index/decisions-api/" target="_blank" rel="noopener noreferrer">OpenAI Decisions API:输出一分钱不收的专用决策端点</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:基于 GPT-6 Luna,你给一个问题 + 允许的答案集 + 上下文,它只返回三类结果之一——predicate(条件成立的概率)、choice(选项 + 概率和置信度)、score(按有序 rubric 打分)。因为<strong>不生成自由文本</strong>,所以 $0.10/百万输入 token、缓存后 $0.01、<strong>输出不收钱</strong>,比同一个模型走 Responses API 快 10 倍,一次能问 400 个问题,已 GA。</li><li><strong>凭什么算热点</strong>:<strong>48 小时内 OpenAI、Cloudflare、微软、蚂蚁各发了一个决策模型</strong>——四家独立动作撞在一起,这是典型的「这类东西的玩法变了」而不是「又一个同类工具」。Cloudflare 的 <a href="https://huggingface.co/Cloudflare/clef" target="_blank" rel="noopener noreferrer">Clef</a> 直接开了权重:27B 中位延迟 209.3ms、9B 的 Clef-Flash 38.8ms,一次前向吐各选项概率,不生成文本也就不用解析输出。HN 上的主流评价是「这颗果子低垂了好多年」——注意这是<strong>嫌它来得太晚</strong>,不是嫌它没用。</li><li><strong>你该不该动手</strong>:<span class="verdict soon">排进这个月</span>。先去翻你代码里那些「让 GPT 判断一下这条工单该转给谁 / 这段内容违不违规 / 要不要转人工」的调用——凡是答案集有限的,都是候选。这类调用通常跑在热路径上、量大、而且你现在为它付的是完整的输出 token 钱。想自己托管就拿 Clef 的权重,不想折腾就走 Decisions API。</li></ul>
+<p><strong><a href="https://duckdb.org/2026/10/21/announcing-duckdb-200" target="_blank" rel="noopener noreferrer">DuckDB 2.0.0 LTS:专门给 coding agent 加了个输出模式,模型要读的输出少 59%</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:支持到 2027 年 10 月的 LTS 版。新的 Quack 协议让 DuckDB 能跑成客户端-服务端(<code>CONNECT</code> 一条语句连远端,也支持 Postgres/MySQL),Parquet/CSV/原生存储改成后台异步读,新增一等公民 <code>VARIANT</code> 类型、触发器、带精确位置报错的 PEG 解析器。最对味的是 <strong>Agent Mode</strong>——CLI 检测到自己被 coding agent 驱动,就自动切紧凑输出和 JSON 报错,实测让模型要读的输出少 59%。</li><li><strong>凭什么算热点</strong>:两条。一是<strong>结构性</strong>——这是第一个主流数据库把「我的输出是给模型读的」当成一个一等公民场景来做,省 token 的责任第一次落到了工具那一侧,而不是让你在 Agent 里写「请简洁输出」。二是<strong>强制性</strong>:存储格式<strong>不向下兼容</strong>,2.0 写的文件旧版本读不了,这是个你必须排期的破坏性变更。</li><li><strong>你该不该动手</strong>:<span class="verdict soon">排进这个月</span>,但分两步。Agent Mode 现在就可以在本地试,成本几乎为零、收益直接可测(让 Agent 跑同一组查询,对比上下文消耗)。生产库的升级<strong>官方自己建议等 11 月第一个补丁版</strong>——存储格式不可逆,别急这两周。更值得带走的是那个思路:<strong>你自家的 CLI 工具,是不是也该有个 Agent Mode?</strong></li></ul>
+<h3 id="审查这件事正在从让模型看看变成跑规则">审查这件事,正在从「让模型看看」变成「跑规则」</h3>
+<p><strong><a href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer">Cloudflare 开源自家漏洞挖掘 harness 的底座:一个六阶段的安全审计 skill</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:<code>npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit</code> 装好,对着代码库说「security audit this codebase」即可。设计上最值得抄的是三点:<strong>查证的 Agent 绝不是发现问题的那个 Agent</strong>;结论强制分三档——confirmed(有完整源码链路)/ needs_validation(<strong>必须写明到底哪个事实没查实,且不许给严重性</strong>)/ rejected;还会区分「主防御已拦住」和「纵深防御有缺口」来避免刷噪音。多次运行会基于上次的 ledger 补盲区,MIT。</li><li><strong>凭什么算热点</strong>:GitHub 上 48,867 star(10-27 实测)。但更硬的证据是<strong>同一周出现了至少四个把「判断」写死成规则的东西</strong>:这个 skill 的三档结论、impeccable 的 62 条确定性检测规则、hallmark 的确定性 lint、以及 Anthropic 那套形式化验证流水线(123 个库、239 个入口点)。四件事都在做同一个动作——<strong>把「我觉得这里有问题」换成「这条规则命中了,证据在这」</strong>。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>,但重点不在跑它。它对你最大的价值是那套<strong>结论分级</strong>:你现在的 AI code review,大概率是把「确定的 bug」和「模型觉得可疑」混在一张列表里发给人看,于是 reviewer 很快就学会了全部忽略。把 needs_validation 这一档单独拎出来、强制写明缺哪个事实、并且不许标严重性——这条规则今天就能抄进你自己的 review 流程,不需要装任何东西。</li></ul>
+<p><strong><a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener noreferrer">impeccable 冲到 8.95 万星:「AI 写的前端像模板」被当成一个可测的缺陷</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:1 个 skill、24 条命令、<strong>62 条确定性检测规则</strong>,专盯 Inter 字体、紫蓝渐变、卡片套卡片、彩色底上的灰字、过时的弹性缓动这些模型因为吃同一批 SaaS 模板而反复吐出来的东西。<code>npx impeccable install</code> 自动识别 Claude Code / Cursor / Codex / Copilot / Grok,<code>npx impeccable detect</code> 不挂 Agent 也能单独扫。同周还有 Together AI 的 <a href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener noreferrer">hallmark</a>,思路几乎一样:从 48 套主题里挑,然后拿确定性规则在 8 个视口宽度下逐个 lint 那些 AI 惯犯(标题上方多余的 eyebrow 标签、大标题里染色的那一个词、纯装饰空框、点了没反应的表单),最后由一个<strong>全新上下文的子 Agent</strong> 复看渲染结果做终审。</li><li><strong>凭什么算热点</strong>:日报 10-25 记的是 8.69 万星,我 10-27 实测 89,505 星、5,325 fork——<strong>两天涨了约 2,600 星</strong>。同日 GitHub trending 上还有另外几个同类 design skill。这是本周采用度数字最硬的一条。</li><li><strong>你该不该动手</strong>:<strong>做前端就立刻试,不做前端就只抄做法</strong>。抄的是两点:一,你领域里那些「AI 的惯犯」是可以穷举成规则的,写下来比每次在提示词里喊「不要千篇一律」有用得多;二,<strong>让一个全新上下文的子 Agent 做终审</strong>——写代码的那个 Agent 已经被自己的上下文说服了,它复查不出自己的问题。这两点和上面那条 security-audit skill 是同一个道理。</li></ul>
+<h2 id="-上周跟踪">上周跟踪</h2>
+<ul class="list"><li><strong>本期无跟踪</strong> — 上期(10-20)及之前几期是「模型精讲 + 动手教程」格式,没有热点栏目,本期是热点综述的第一期。下周起正常跟踪。</li></ul>
+<h2 id="-本周没收的">本周没收的</h2>
+<ul class="list"><li><strong><a href="https://github.com/deepseek-ai/DeepInfer" target="_blank" rel="noopener noreferrer">DeepInfer</a>(DeepSeek 开源生产推理引擎,单集群每天 155 万亿 token)</strong> — 结构性足够强(第一次有前沿实验室把真正在线上跑的推理栈原样交出来),但<strong>只开了离线推理,KV 缓存管理和负载均衡因为和自家基建耦合太深没放</strong>——而那 96% 的缓存命中率正是所有漂亮数字的来源。你拿现在这份复现不出来。等 KV 缓存那部分开源,或者等第三方跑出可对照的数字。</li><li><strong>Kimi K3.1 Pro / MiniMax M3.1 Flash / LFM2.5-24B-A2B 三连发</strong> — 跑分发布,明确不收。K3.1 Terminal-Bench 65.7% 离 Opus 5.5 不到 1 个点确实好看,但<strong>权重没放、你现在动不了手</strong>;MiniMax 开了权重,可 DeepSWE 73.7% vs Opus 5 的 74.0% 属于追平而非改变量级。等 K3.1 开权重——Artificial Analysis 说那会把开放权重和闭源头部的差距从 12 分压到 3 分,<strong>那才是量级变化</strong>。</li><li><strong><a href="https://claude.com/product/claude-duet" target="_blank" rel="noopener noreferrer">Claude Duet</a>(Agent 从「你问它答」转成「它找你」)</strong> — 产品形态的转向是真的,但 research preview、仅美国、Team/Enterprise 还没有,而且<strong>没有单独的 API 或 SDK</strong>——开发者现在唯一的切口是写 connector 和 skill。等出 API,或者等它开放到 Team 档。</li><li><strong><a href="https://www.infoq.cn/article/zGqDWHF8tHDtlYcImAJS" target="_blank" rel="noopener noreferrer">GitHub 用 AI 把 Copilot 运行时 80 万行从 TS 重写成 Rust</a>(14.5 周,启动从 5.25 秒降到 292 毫秒)</strong> — 读起来最精彩的一篇,但它是一次性的工程叙事,<strong>你没有那 14.5 周也没有那个团队</strong>。真正可复用的只有一句:不做并行重写一把切换,而是逐个组件替换 + 中间架一层临时互操作层(峰值 2019 个导出,最后整层拆掉)。等看到中小团队用同样方法做完并复盘,再把它当方法论收。</li><li><strong><a href="https://www.anthropic.com/research/formal-verification" target="_blank" rel="noopener noreferrer">Anthropic 的形式化验证流水线</a>(123 个库、239 个入口点、约 1.8 亿行证明)</strong> — 「证完的 fuzz 入口点可以不用再 fuzz 了」是个真结论,证明过程也确实捞出了多年 fuzzing 没发现的 bug。但适用面是 C 解析库这类<strong>输入驱动、无状态、可穷尽</strong>的代码,<strong>你的业务代码不在这个范围里</strong>(Copilot 那篇复盘的原话:取消、重试、背压这类场景编译器根本验不了)。等有人把它用在非解析器类代码上并给出成本数字。</li></ul>
+<h2 id="-动手教程给你这台机器做一次ai-工具凭证体检再给依赖装上冷静期">动手教程:给你这台机器做一次「AI 工具凭证」体检,再给依赖装上冷静期</h2>
+<p><strong>本周两条安全热点的直接应对——30 分钟,查完一次,以后自动躺过大半投毒</strong></p>
+<blockquote class="why">你将做出:一份确认过的「我没中招」结论,外加一道让下次投毒自动失效的闸门。</blockquote>
+<p><strong>准备</strong>:</p>
+<ul class="list"><li>一个终端;装过 Python 包的机器(有 Node 项目就再多做一步)</li><li>不需要 API Key、不需要装任何新工具</li><li>如果你用过 Claude Code / Cursor / Copilot / Gemini CLI,<strong>这一步对你尤其不可跳过</strong>——本周那次投毒的窃取清单上点名了它们</li></ul>
+<p><strong>跟着做</strong>:</p>
+<ol class="steps"><li><strong>查 LiteLLM 投毒的残留</strong>。先问出你的 site-packages 在哪,再看里面有没有那三个文件:<br>```bash<br>python3 -c &quot;import site; [print(p) for p in site.getsitepackages()]&quot;<br># 对上面打印出的每个目录 D,执行:<br>ls -la D/cook.pth D/cook.py D/sitecustomize.py 2&gt;/dev/null<br>```<br><strong>什么都没打印出来 = 干净</strong>。打印出任何一个文件,就按「中招」处理:全量轮换凭证(SSH key、云凭证、CI 密钥、以及所有 AI 工具的 token),别只删文件。<br>顺手确认一下版本:<code>pip show litellm</code>——只有 <strong>1.107.0 正式版</strong>中招,1.106.2 和两个 rc 是干净的。</li><li><strong>揪出游离的后门进程</strong>。那个后门会常驻并每小时去取新的 C2 地址,特征是父进程已经没了(PPID 为 1):<br>```bash<br>ps -axo pid,ppid,command | awk &#x27;$2==1 &amp;&amp; /[p]ython/&#x27;<br>```<br>列出来的每一条都要能说清楚它是什么(很多是正常的后台服务),说不清的就杀掉并回到第 1 步重查。</li><li><strong>查 Brotli</strong>。这是本周那个 CVSS 9.2,而且 <strong>Dependabot 和 pip-audit 当下查不出来</strong>,只能手查:<br>```bash<br>pip show Brotli brotlicffi    # 要 &gt;= 1.2.1<br>node -v                       # 要 &gt;= 22.23.4 / 24.22.1 / 26.12.1<br>```<br>版本低了又一时升不动,最快的止损是<strong>直接卸载 Brotli 包</strong>——requests / httpx / aiohttp 会优雅退回 gzip,不会炸。服务端的话,在反代上拒掉 <code>Content-Encoding: br</code> 也行。</li><li><strong>装上冷静期,让下一次投毒自动失效</strong>。投毒包的生命周期通常只有几十小时,晾一下就躲过大半。pnpm 已经内置了这个开关,在 <code>pnpm-workspace.yaml</code> 里:<br>```yaml<br>minimumReleaseAge: 4320          # 单位是分钟;默认 1440(24 小时),这里调到 3 天<br>minimumReleaseAgeExclude:        # 需要立刻拿到新版的包单独放行<br>- &quot;@myorg/*&quot;<br>```<br>先确认你没把它关掉(默认值就是 1440,很多人不知道),再按你的发布节奏决定要不要调高。企业版用户可以同时开 <a href="https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview" target="_blank" rel="noopener noreferrer">GitHub Package Firewall</a>(npm,公测期免费),它横在 CI runner / 编码 Agent 和上游仓库之间,下载前先查 Advisory 数据库和 attestation 降级。</li><li><strong>把 gh CLI 的长期 token 换成会过期的</strong>。默认那个永不过期的 OAuth token 一旦被捞走就是永久通行证——本周那次投毒正好演示了它怎么被捞走。按 <a href="https://github.blog/changelog/2026-10-21-github-cli-opt-in-to-expiring-auto-refreshing-oauth-tokens" target="_blank" rel="noopener noreferrer">changelog</a> 里的 opt-in 步骤切成短期 + 自动续期,被偷的那份很快自己失效。</li></ol>
+<blockquote class="quote">做完你会:有一条可以写进团队 wiki 的检查清单,以及一个认识——<strong>依赖准入正在从个人自觉变成一个有配置项、有预算、有岗位的平台能力</strong>。下一步可以把第 1~3 步写成一个脚本挂进 CI,或者直接包成一个 skill 让 Agent 自己定期跑。</blockquote>
+<ul class="list"><li>🔗 投毒分析(含完整 IoC):<a href="https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/" target="_blank" rel="noopener noreferrer">LiteLLM PyPI Compromise — SafeDep</a></li><li>🔗 Brotli 漏洞分析(含各生态修复版本):<a href="https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497" target="_blank" rel="noopener noreferrer">node2shell / HTTP2Shell — Aikido</a></li><li>🔗 冷静期配置文档:<a href="https://pnpm.io/settings/dependency-resolution" target="_blank" rel="noopener noreferrer">pnpm settings — minimumReleaseAge</a></li><li>🏷️ 来源:SafeDep / Aikido / pnpm 官方文档 · 难度:入门</li></ul>
+<hr>
+<p><em>每周二更新 · 热点从本周日报筛出,证据见各条 · 链接指向原文</em></p><nav class="daynav"><a href="2026-10-20.html">← 上一期</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每周筛选 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
