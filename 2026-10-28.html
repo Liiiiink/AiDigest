@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-10-28</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-10-28</h1>
+<blockquote class="quote">面向程序员的 AI 进展速览 · 8 条 · 选你能用的</blockquote>
+<div class="lede"><strong>今日焦点</strong>：Google Project Zero 把自家 AI agent 和世界顶级 fuzzer 放在 V8 上正面比了半年——AI 找到 45 个、fuzzer 找到 37 个，但两边只有约 25% 重叠，结论是「两个都得跑」而不是「AI 取代 fuzzer」。</div>
+</div><nav class="daynav"><a href="2026-10-27.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>（5 条）</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>（1 条）</li><li class="cat-brief"><a href="#-速览"> 速览</a>（2 条）</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
+<hr>
+<h2 id="-动手派" class="cat-tools">动手派</h2>
+<p><em>今天你能用的工具、技巧、实战经验</em></p>
+<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://projectzero.google/2026/10/fuzzing-v-AI.html" target="_blank" rel="noopener noreferrer">Project Zero 实测：AI agent 挖洞数量已经追平顶级 fuzzer，但找到的是完全不同的两批 bug</a></strong> — 六个月 V8 实战数据，BigSleep 45 个 vs Fuzzilli 37 个，重叠只有 25%。 <code class="chip type">实战</code></div><p>分工很清楚：AI 赢在需要多步推理和「魔法值」的洞（比如 bytecode handler 表在 &gt;256MB 时的整数截断）、以及 fuzzer 语法还不支持的新特性（<code>await using</code>、带标签的 break）；fuzzer 赢在跨优化 pass 交互产生的非局部 bug、以及 C++ 编译器优化导致的问题——这类「看源码推不出来」的洞 AI 也看不出来。</p><p>回溯实验更有参考价值：让 BigSleep 从单个起始 commit 去重找 2023–2026 年 112 个历史 Fuzzilli bug，复现率约 62%；换提示词和起点后升到约 70%，至少找到点什么的起点占 84%。且没检测到对训练截止前 bug 的记忆效应。</p><p>一条反直觉结论：<strong>fuzzer 难找的 bug，AI agent 大概率也难找</strong>——难度是 bug 本身的属性，不是方法的属性。JIT 编译器这块重叠度最低，fuzzer 优势最大。</p><div class="meta"><code class="chip">信号</code><code class="chip">Lobsters 当日上榜</code><code class="chip">实验用 Gemini 3.6 Flash，每 commit 25 次尝试</code></div></li><li class="item"><div class="item-head"><strong><a href="https://tailscale.com/ssh-investigation-update" target="_blank" rel="noopener noreferrer">Tailscale SSH 爆提权漏洞，今天就该去关 forwarding</a></strong> — 已授权用户可越权、甚至拿到更高权限，补丁客户端目标是 10 月 27 日当天发布。 <code class="chip type">实战</code></div><p>立刻能做的缓解：在 <code>tailscaled</code> 环境里设 <code>TS_SSH_DISABLE_FORWARDING=1</code> 然后重启服务——官方说这能挡住「几个较严重的发现」。</p><p>同时收紧 SSH 访问策略，只留必要的用户和设备；敏感系统可以临时再收一道。</p><p>官方明确<strong>不建议全面停用 Tailscale SSH</strong>，是否受影响取决于你的配置和权限分配。根因的技术复盘要等补丁发完才写。</p><div class="meta"><code class="chip">信号</code><code class="chip">HN 191 分 / 101 评论</code></div></li><li class="item"><div class="item-head"><strong><a href="https://ghostty.org/docs/install/release-notes/1-4-0" target="_blank" rel="noopener noreferrer">Ghostty 1.4：滚动缓冲压掉 70~90% 内存，VT 解析 ASCII 从 128 MB/s 提到 725 MB/s</a></strong> — 这一版基本全是性能和协议补全，升级前先看破坏性变更。 <code class="chip type">新发布</code></div><p>性能：macOS I/O 吞吐提升 25~55%（pty 读取和解析并发化）、大滚动缓冲下 resize 快约 6 倍、渲染器每帧持锁时间少 2.7~11 倍、macOS 启动快约 15%。默认滚动上限因为压缩从 10MB 提到 50MB。</p><p>新能力里对开发者最实用的是 <code>ghostty +ssh</code>——一个 ssh 包装器，自动往远端装 Ghostty 的 terminfo 并按 host+port 缓存，<code>alias ssh=&#x27;ghostty +ssh --&#x27;</code> 即可；还有 <code>+explain-config</code> 直接在命令行查任意配置项文档，和 <code>GHOSTTY_SURFACE_ID</code> 环境变量让程序区分每个终端面板。</p><p><strong>破坏性变更</strong>：<code>copy-on-select</code> 语义变了（<code>clipboard</code> 现在只进系统剪贴板，要旧行为用 <code>both</code>），macOS 下默认值改成 <code>none</code>；<code>scrollback-limit</code> 更名 <code>scrollback-limit-bytes</code>；GTK 下 <code>ctrl+shift+page_up/down</code> 改成移动标签页。</p><div class="meta"><code class="chip">信号</code><code class="chip">HN 762 分 / 227 评论（当日第二）</code><code class="chip">Lobsters 同日上榜</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener noreferrer">hallmark：专治「AI 生成的页面一眼就能看出是 AI 做的」</a></strong> — Together AI 出的 design skill，MIT 协议，Claude Code / Cursor / Codex CLI / OpenCode 通用。 <code class="chip type">工具</code></div><p>思路是把设计约束变成流程：先读项目现有字体/配色/框架，然后从 50 种材质里发三套主题让你选，按页面的「职责」定结构（订票页就该能订票），hero 部分先单独做完审一遍再往下；最后用自带的 <code>sloplint</code> 在真实浏览器里跑 8 种视口宽度检查。</p><p>它明确列出了要消灭的 AI 痕迹：每个标题上面都有的小标签（eyebrow）、字距拉开的全大写标签、标题里挑一个词染色。质量门禁分三层——Floor（对比度、焦点、可访问性，不过不让发）、Reflex（模型的惯性默认值，给理由可以覆盖）、Finish（细节，不阻断）。</p><p>装法 <code>npx skills add nutlope/hallmark -g</code>（Node 18+，要完整 lint 还需 <code>npm i -g puppeteer-core</code> 和 Chrome）；除了新建还支持 <code>/hallmark redesign &lt;path&gt;</code> 保内容重做、<code>/hallmark audit &lt;path&gt;</code> 只报不改。</p><div class="meta"><code class="chip">信号</code><code class="chip">GitHub Trending 今日 +2,830 star（当日第一）</code><code class="chip">同期榜上还有 impeccable +1,449、ai-design-skills +1,395 三个同类项目</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/baidu/Unlimited-OCR" target="_blank" rel="noopener noreferrer">百度开源 Unlimited-OCR 2：3600 页的书一次读完，KV 缓存峰值从 47GB 压到 1.77GB</a></strong> — 不用按页切分，跨页内容自动合并。 <code class="chip type">新发布</code></div><p>两个机制：SR-SWA 用 Page Gate + Token Sieve 两层筛选，每步解码只看相关页和视觉 token，计算量跟文档长度无关；Unlimited-Horizon Decoding 按块解码，做完的块释放视觉 KV、只留重叠部分保连续性。</p><p>数字：MPDocBench 84.59、MarathonDocBench（100 份 103~300 页文档）77.06，均为测评中最高；单步解码比全注意力快 7 倍、比上一代 R-SWA 快 5.6 倍；16 路并发吞吐 1,315 tok/s。</p><p>实测 884 页《指环王》约 43 分钟（2.9 秒/页），检出 466 处跨页合并，第 750 页文本与原文完全一致。权重在 <code>huggingface.co/baidu/Unlimited-OCR-2</code>。</p></li></ol>
+<h2 id="-职业风向" class="cat-career">职业风向</h2>
+<p><em>影响你技能选择和职业方向的信号</em></p>
+<ol class="items cat-career"><li class="item"><div class="item-head"><strong><a href="https://blog.adrq.dev/here-be-monsters-what-do-you-still-need-to-know-when-agents-do-the-work" target="_blank" rel="noopener noreferrer">Agent 替你写代码之后，你还需要懂什么</a></strong> — 作者的答案不是「每行都读」也不是「完全不看」，而是「知道该在哪儿扎进去」。 <code class="chip type">观点</code></div><p>三根支柱：<strong>基础</strong>（数据结构、算法、网络、并发、分布式）——用来识别「这里不对劲」，比如从耗时曲线认出这是个平方复杂度，前提是你知道世上有这么回事；<strong>广度</strong>——跨领域的粗略地图，告诉你哪片水域更危险，这个教不了，只能靠好奇心和经验慢慢攒；<strong>即时深潜</strong>——愿意且能够一头扎进完全陌生的代码里把问题搞清楚。</p><p>他给的理想画像不是 T 型人才，而是「宽基础 + 很多条深浅不一的竖井」；所有权的定义也变了——不是「我写的」，而是「出事会打给我」。</p><div class="meta"><code class="chip">信号</code><code class="chip">HN 156 分 / 85 评论</code></div></li></ol>
+<h2 id="-速览" class="cat-brief">速览</h2>
+<p><em>值得知道但不用细读的动态</em></p>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/" target="_blank" rel="noopener noreferrer">DeepMind Genie 4：第一个原生生成音频的实时世界模型</a></strong> — 可以用自然语言在运行中改天气、镜头、往场景里塞东西，角色能实时对话和被引导；底座是 Gemini Omni 负责外观和行为、Gemini 3.8 Flash 当循环里的引导 agent 拆解目标并看帧纠偏，还在拿 Gemini 4 Argon 试机器人任务仿真。目前只有可信测试者的研究预览，Google AI Ultra 订阅者可排队（Project Genie），Gemini API 和 AI Studio 合作伙伴有早期访问——<strong>暂时没有公开 API</strong>；已知局限是跑久了画面漂移、物体不守恒、文字渲染不清。输出带 SynthID 水印。 <code class="chip type">新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/" target="_blank" rel="noopener noreferrer">CPython 的实验性 JIT 要被移除了，3.16 开发周期动手</a></strong> — 2024 年初随 3.13 进主干时只有一份信息性 PEP 744，指导委员会后来要求补一份标准轨 PEP 并给了六个月期限；PEP 836「JIT Go Brrr」7 月发布、10 月 19 日被作者自己撤回（没精力推进），委员会的十条意见里包括内存与安全（称安全是「被忽视的领域」）、不该依赖平台特定知识、以及把兼容性评审排到 2028 年 8 月「太晚太晚了」。<strong>对排 Python 性能路线的团队，意思是把「等官方 JIT」从计划里拿掉</strong>；代码可能在主仓之外继续活。 <code class="chip type">观点</code></div></li></ol>
+<hr>
+<h2 id="-今日术语">今日术语</h2>
+<ul class="list"><li><strong>模糊测试（Fuzzing）</strong>：自动往程序里灌海量畸形输入看它崩不崩，崩了就是一个潜在漏洞；Fuzzilli 是专门针对 JS 引擎的那种，还会看代码覆盖率来指导下一步变异。</li><li><strong>提权（Privilege Escalation）</strong>：本来只有低权限的用户，利用漏洞拿到更高权限——今天 Tailscale SSH 的问题就属于这类，攻击者得先是「已授权用户」，但之后能越界。</li><li><strong>解析器差异（Parser Differential）</strong>：同一份数据被两个程序解读成不同内容。攻击者可以造一个包，让安全扫描看到的是干净文件、安装器解出来的却是恶意文件——uv 最近重写 tar 解析器就是为了堵这类口子。</li><li><strong>世界模型（World Model）</strong>：不是预测下一个词，而是预测「如果我这么做，世界会变成什么样」的模型；Genie 这类能实时生成可交互的环境画面，主要用在游戏、机器人训练和仿真。</li><li><strong>JIT（即时编译）</strong>：程序跑起来之后才把热点代码编译成机器码，兼顾解释器的灵活和编译的速度——CPython 从 3.13 起试了两年多，现在要撤回去。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-10-27.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
