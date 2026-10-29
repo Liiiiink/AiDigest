@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-10-29</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-10-29</h1>
+<blockquote class="quote">面向程序员的 AI 进展速览 · 7 条 · 选你能用的</blockquote>
+<div class="lede"><strong>今日焦点</strong>：48 小时内落地了两个新的高难度编码基准（Cognition FrontierCode 2.0 和 Artificial Analysis Index v5），口径一致——最强的 Opus 5.5 也只拿下 45.5% 的「维护者愿意合并」级任务，agent 写代码的瓶颈已经从「写不写得出」变成「周不周全」。</div>
+</div><nav class="daynav"><a href="2026-10-28.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>（4 条）</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>（2 条）</li><li class="cat-brief"><a href="#-速览"> 速览</a>（1 条）</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
+<hr>
+<h2 id="-动手派" class="cat-tools">动手派</h2>
+<p><em>今天你能用的工具、技巧、实战经验</em></p>
+<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://cognition.com/blog/frontier-code-2.0" target="_blank" rel="noopener noreferrer">FrontierCode 2.0：按「维护者愿不愿意合这个 PR」打分，最强模型只得 45.5%</a></strong> — Cognition（Devin 团队）出的 132 道题，判定标准是开源维护者的合入意愿。 <code class="chip type">新发布</code></div><p>榜单：Opus 5.5 45.5%、GPT-6 Astra 42.8%、Sonnet 5.5 41.0%、GPT-6.1 Sol 39.0%、GPT-6 Sol 34.3%、Fable 5.1 32.4%、Grok 4.7 28.6%；每题成本 Opus 5.5 $12.82、GPT-6 Astra $6.68、GPT-6.1 Sol $1.03。中国开源模型约 17%，美国开源模型（Beam、Inkling）约 3%。</p><p>比 1.1 难在哪：题目来自多 55% 的仓库、多 43% 的阻断性判定项，参考解法改动文件多 67%、行数多 89%，代码库大 25%；「周全性」阻断检查从 168 条涨到 501 条，每道题由维护者花 40 小时以上构造。</p><p>对调参最有用的一条：把推理 effort 拉满，周全性检查失败率从 26.0% 降到 15.3%，但越界改动（scope check）失败率从 3.8% 升到 4.9%——<strong>effort 不是单调变好，它在「做全」和「少动」之间换挡</strong>。</p><p>注意 45.5% 不是「任务通过率」，是按阻断项加权的分，漏一项即零分。</p></li><li class="item"><div class="item-head"><strong><a href="https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5" target="_blank" rel="noopener noreferrer">Artificial Analysis Index v5：六成测试集转私有，开源模型和闭源的差距一夜拉到 12 分</a></strong> — 首次把 60% 的评测换成私有题库或不公开答案。 <code class="chip type">新发布</code></div><p>榜首 Opus 5.5（max）58、GPT-6 Astra（max）57、GPT-6.1 Sol（max）55、Gemini 4 Argon（high）50；<strong>九项子测试没有任何一个模型全部领先</strong>——Opus 5.5 拿下三项，GPT-6 Astra 两项，Sonnet 5.5 / Kimi K3.1 Pro / Gemini 4 Argon / Muse Wonder 各一项。</p><p>选型该看的是这张成本表：Opus 5.5 低 effort 得 35 分、每题 $0.98，拉满得 58 分、每题 $10.04——<strong>十倍价钱买 23 分</strong>；GPT-6.1 Sol 拉满每题 $1.27。能接受 35 分的活就别开 max。</p><p>口径变动：新进 FrontierCode 2.0、Terminal-Bench-Science、HLE-Diamond，升级 AA-Omniscience 和 CritPt，砍掉 GDPval-AA v2.1、SciCode、AA-LCR v1.1——<strong>跨版本分数不可直接对比</strong>。Kimi K3.1 Pro 从 55 掉到 46，开源最高分与榜首差 12 分，一般认为是私有题库挤掉了泄题红利。</p></li><li class="item"><div class="item-head"><strong><a href="https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html" target="_blank" rel="noopener noreferrer">16 年的 UEFI 老洞：一个 ICMP 包就能在 Secure Boot 之前拿到 ring-0</a></strong> — CVE-2026-97631，CVSS v4 9.5，影响所有走 PXE 网络引导的机器。 <code class="chip type">实战</code></div><p>根因在 EDK II 的 <code>NetworkPkg/UefiPxeBcDxe</code>：把 ICMP 错误数据拷进固定 504 字节的 <code>Mode.IcmpError</code> 字段时边界算错了，IPv4 和 IPv6 两个处理函数都错。攻击者只要在同一网段，趁机器 PXE 引导时发一个单播 ICMP 错误包，不需要任何凭证，就能在 DXE 阶段执行代码——这发生在 Secure Boot 和 TPM 介入之前。</p><p>今天就能做的：不用网络引导就在固件里关掉 PXE 和 UEFI 网络栈；必须用就把引导流量隔到独立网段。下游受影响的固件供应商包括 AMI、Insyde、Phoenix，微软的 Project Mu 分支也用了这个组件。</p><p>时间线要注意：修复 10 月 15 日已合进 EDK II 主干（PR #13302，加边界检查、改偏移计算、截断超长消息并清零字段），TianoCore 10 月 22 日发公告，但公告正文一度仍写着「尚未修复」；公开 PoC（QEMU/OVMF）已经有了。</p><div class="meta"><code class="chip">信号</code><code class="chip">HN 约 302 分</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.akamai.com/newsroom/press-release/akamai-launches-ai-inference-service-and-agent-execution-environment" target="_blank" rel="noopener noreferrer">Akamai Agent Sandbox：给 agent 写出来的代码一个默认断网的 WASM 笼子</a></strong> — agent 的运行时和它生成的代码彻底分开跑，beta 开放。 <code class="chip type">工具</code></div><p>隔离用 WebAssembly，对算力、内存、出站连接、系统能力分别设限；<strong>出站网络默认关闭，但工具调用和 MCP server 调用照常放行</strong>——正好堵住「agent 写的脚本偷偷往外发数据」这类场景。</p><p>它是 Spin 框架的开源组件（Spin 来自 Akamai 收购的 Fermyon），通过 Spin SDK 就能用，不一定非得上 Akamai Functions。</p><p>同批还有 Akamai Inference：OpenAI 兼容 API 托管 12 个开源权重模型，按量付费或独占部署二选一；另加了 NVIDIA Blackwell Ultra（B300）集群，需申请。</p><p>Akamai 自己也承认 agent 隔离目前有三条路线并存——microVM 快照/fork、策略容器、WASM 函数，它的选择是让你自己挑。</p></li></ol>
+<h2 id="-职业风向" class="cat-career">职业风向</h2>
+<p><em>影响你技能选择和职业方向的信号</em></p>
+<ol class="items cat-career"><li class="item"><div class="item-head"><strong><a href="https://www.theregister.com/ai-and-ml/2026/10/28/anthropic-engineer-declares-the-coding-interview-dead/5306115" target="_blank" rel="noopener noreferrer">Anthropic 的一位工程经理取消了团队的编码面试：「它已经不提供信号了」</a></strong> — Felix Rieseberg（也是 Electron 的共同维护者）10 月 27 日发文，标题叫「Hunger beats tenure」。 <code class="chip type">观点</code></div><p>他的论证很直接：现在出一道小 React 题，和考汇编没有本质区别，因为「Claude 两样都比候选人强」；他以前认为在真实代码上出小题是个弱但有用的预测指标，现在连这个也不认了，并说不指望编码面试会回来。</p><p>替代方案他自己也说「还没完全想明白」：看简历和作品集里的小原型，找的是品味、同理心和有原则的思考。</p><p><strong>重要前提</strong>：这是一个经理对自己团队的决定，不是 Anthropic 的公司政策——官方招聘页据报仍列着 Colab、CodeSignal 这类在线编码工具。</p><p>给初级工程师的三条建议值得单独记：选有业务影响的活而不是 backlog 里的活；与其写 PRD 不如周末直接做个能跑的原型；专注一个好点子。这篇发在 Anthropic 公布「现在招多少初级工程师」数据之后约 11 天。</p><div class="meta"><code class="chip">信号</code><code class="chip">The Register / Slashdot / InfoQ / 36氪 同日跟进</code></div></li><li class="item"><div class="item-head"><strong><a href="https://oioannou.com/blog/ai-promised-less-work/" target="_blank" rel="noopener noreferrer">「AI 承诺让我少干活，结果我从没这么忙过」</a></strong> — 作者全部工程工作都交给 agent，能做两年前根本不值得开始的项目，但 GitHub 记录显示 2026 是他 2020 年以来最忙的一年。 <code class="chip type">观点</code></div><p>核心观察：<strong>变快的只有「写」，而审查、验证、对齐 AI 输出这部分的工作量暴涨</strong>——总时间并没有变少，只是换了形态。</p><p>评论区分歧很有意思：有人说 AI 把那种「琐碎但有成就感」的活给贬值了（1% 的时间拿到 80% 的质量）；独立开发者多说工作量增加但「是好的那种增加」；也有人指出效率收益最后多半被雇主吃掉，而不是落到个人身上。</p><p>被点赞最多的实操建议：在一天开始之前就把自己的前瞻性任务计划/TODO 准备好，否则很容易被 agent 的产出牵着走。</p><div class="meta"><code class="chip">信号</code><code class="chip">HN 当日热帖（600+ 分）</code><code class="chip">同日还有《The Mythical Man-Month in the Age of AI》312 分</code></div></li></ol>
+<h2 id="-速览" class="cat-brief">速览</h2>
+<p><em>值得知道但不用细读的动态</em></p>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://github.com/nightly-labs/openbot" target="_blank" rel="noopener noreferrer">本地 agent 工作台开始卷了：cindy 和 openbot 同日上 GitHub Trending</a></strong> — 两个都是把 Claude Code / Codex / Grok 这些 harness 包进一个桌面壳子、共享记忆和工作区的思路。openbot 是 Electron + SolidJS，状态存在 SQLite 命令日志里，通过 Codex App Server（stdio JSONL）、Claude Agent SDK（stream JSON）和 ACP 协议接各家 agent，支持任务队列、文件共享和 agent 之间互相协作；<strong>但 README 明说 agent 以完全权限运行、每个动作都不审批</strong>，而且许可证从 v0.1.11 之后由 Apache-2.0 换成了 PolyForm Noncommercial 1.0.0——商用的先看清楚。<a href="https://github.com/makecindy/cindy" target="_blank" rel="noopener noreferrer">cindy</a> 走 Apache-2.0，TypeScript，跨 macOS/Windows/Linux/iOS/Android，主打在多个 harness 之间带着记忆、skills 和工作区走。 <code class="chip type">工具</code></div><div class="meta"><code class="chip">信号</code><code class="chip">GitHub Trending 当日 cindy +1,446 star（连续 4 天）</code><code class="chip">openbot +794 star</code></div></li></ol>
+<hr>
+<h2 id="-今日术语">今日术语</h2>
+<ul class="list"><li><strong>PXE 网络引导（Preboot Execution Environment）</strong>：机器开机时不从本地硬盘读系统，而是从网络上拉一份引导镜像下来跑——数据中心批量装机的标准做法，今天那个 UEFI 洞就发生在这个阶段。</li><li><strong>DXE 阶段（Driver Execution Environment）</strong>：UEFI 固件启动过程中加载各种驱动的那一段，排在 Secure Boot 验签之前；在这里执行代码等于绕开了后面所有的安全检查。</li><li><strong>私有测试集 / 不公开答案（Held-out）</strong>：评测方自己留着题目或答案不发布，防止模型厂商拿去训练；一旦换成私有题库，靠「见过题」刷上来的分数就会掉——今天 Kimi K3.1 Pro 从 55 掉到 46 大概就是这个原因。</li><li><strong>ACP（Agent Client Protocol）</strong>：让编辑器/桌面壳子用一套统一接口去驱动不同家 agent 的协议，类似 LSP 之于语言服务器；openbot 就是靠它同时接上 Grok、OpenCode、Gemini、Cursor 和 Cline。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-10-28.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
