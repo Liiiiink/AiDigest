@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>本周 AI · 2026-11-02(第 9 期)</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>本周 AI · 2026-11-02(第 9 期)</h1>
+<blockquote class="quote">覆盖 10-27 ~ 11-02 · 读了 6 份日报共 41 条(11-01 漏跑) · 够格的 6 条进来了</blockquote>
+<div class="lede"><strong>这周真正的那件事</strong>:攻击面整个搬家了——本周三起互相独立的事件(Cursor 扩展市场代理被投毒、五个 AI 编码工具的内置浏览器被成套攻破、Wiz 把九家 AI 开发平台的 10 月汇总成「Black October」),打的都不是你的代码、也不是你的依赖,而是<strong>你用来写代码的那套 AI 工具本身,以及它替你保管的那些 key</strong>。上周的教训是「扫描器绿了不代表你没事」,这周是「你根本没在扫这一块」——<code>pip-audit</code> 不看 Cursor 的扩展目录,Dependabot 不看你的内置浏览器。</div>
+</div><nav class="daynav"><a href="2026-10-27.html">← 上一期</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-本周热点">本周热点</h2>
+<h3 id="打的不再是你的依赖是你写代码用的那套工具">打的不再是你的依赖,是你写代码用的那套工具</h3>
+<p><strong><a href="https://www.wiz.io/blog/black-october-for-ai-developer-platforms" target="_blank" rel="noopener noreferrer">Wiz「Black October」:九家 AI 开发平台一个月内接连失守,全冲着环境变量来</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:Fireworks AI(10-06)、Andromeda(10-09)、Zeabur(10-14)、Lightning AI(10-15)、OpenCode(10-16~17)、Railway(10-20)、Warp(10-23)、CommandCode(10-28)、Northflank(10-30)——九起事件根因各不相同(凭据泄露、构建基础设施提权、第三方供应商、遗留系统),但所有公开报告的共同点只有一个:<strong>攻击者精准地翻存储的环境变量,尤其是能调 AI 的那些</strong>。Zeabur 因为这次直接宣布关停。</li><li><strong>凭什么算热点</strong>:持续性和多源都有——10-30 日报记 LiteLLM、10-31 记 Cursor 扩展投毒、11-02 Wiz 把它们并进同一张名单,<strong>同一条线被本周三份日报接力提到</strong>;Wiz 原文由 BleepingComputer / Axios 同步报道。可验证的量级:Wiz 跟踪的两起 Bedrock 滥用,A 案 30 小时约 80 万次调用、B 案 13 小时约 170 万次,两起合计按标价算超过 10 万美元。<strong>从凭据被拿到到第一次非授权调用只隔约 30 分钟</strong>——一个住宅 IP 在一分钟内横扫多个组织试 key。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>,而且今天就有两件具体的事。一是对名单——这九家里你用过哪家,去<strong>签发方</strong>轮换该平台上存过的 key(只改平台上那一份没用)。二是抄那条配置:给 Bedrock key 的 IAM 策略限定区域推理配置,B 案正是因为策略只允许 <code>us.*</code>、被区域配额挡下了大半损失,而 A 案走 <code>global.*</code> 只有约 6% 被限流——<strong>在这里限流是止损器,不是性能问题</strong>。</li></ul>
+<p><strong><a href="https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/" target="_blank" rel="noopener noreferrer">Cursor 扩展市场里的 Claude Code 扩展被投毒,卸载扩展清不掉后门</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:10 月 29 日太平洋时间约 02:27~13:35,一个顶着<strong>合法</strong> <code>anthropic.claude-code</code> 标识、版本号 2.1.313 的恶意构建挂在 Cursor 扩展市场上,约 11 小时,最多 5000 名开发者受影响。<strong>这不是仿冒包</strong>——Cursor 说问题出在自己的市场代理环节,不是 Anthropic 的构建发布系统。恶意代码 66 行,往 <code>authorized_keys</code> 塞攻击者公钥、起本地 SSH 服务打反向隧道、写持久化。</li><li><strong>凭什么算热点</strong>:多源够硬——Cursor 官方安全通告 + 微软安全响应中心 10-30 的深度分析 + Sophos / StepSecurity / OX Security 同步跟进,HN 10-31 在榜;而且 11-02 的 Black October 汇总把它收进了同一条线,持续性成立。强制性更直接:<strong>卸载扩展不等于清除</strong>,SSH key、LaunchAgent、隧道进程都得手工删。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>——只要你这台机器装过 Cursor,这是五分钟的事。IoC 照着查:扩展目录 <code>anthropic.claude-code-2.1.313-darwin-arm64</code>(或 <code>-win32-x64</code>),里面的 <code>extension.js</code> 含 IP <code>134.209.82.225</code> 和字符串 <code>svc-telemetry</code>;macOS 上另查 LaunchAgent <code>com.apple.sysmond.plist</code> 和隐藏脚本 <code>~/.config/.smt</code>。命中了就手工清三处再轮换这台机器能摸到的全部凭据。<strong>没中招的范围也记清楚</strong>:微软官方 VS Code 市场、终端版 Claude Code、npm 上的 <code>@anthropic-ai/claude-code</code> 都不受影响——别过度反应。</li></ul>
+<p><strong><a href="https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers" target="_blank" rel="noopener noreferrer">EMBRACE:五个 AI 编码工具的内置浏览器被成套攻破</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:10 月 29 日公开,覆盖 Cursor、GitHub Copilot、OpenAI Codex、VS Code、Claude Desktop。根因是同一个:这些内置浏览器由 AI 驱动而不是人在点,厂商为了让 AI 能预览项目、读标签页内容,<strong>普遍放松了独立浏览器该有的沙箱边界</strong>,于是内置浏览器继承了宿主级别的文件访问权限。后果分三种:Cursor 是代码执行(恶意页面往命令编排框注入隐藏指令,实测把助手骗着弹了计算器)、Copilot 是地址栏欺骗(显示 github.com/login,渲染的是攻击者页面)、Codex / VS Code / Claude Desktop 是一个本地文件读全盘。</li><li><strong>凭什么算热点</strong>:结构性——研究者 Gal Weizman 给这类问题起了名(EMbedded BRowser, trusted like a real one),这不是某家的 bug,是「为了让 AI 用浏览器而拆掉沙箱」这个做法的系统性后果,五家同时中招本身就是证据。多源:Forever Security 原文 + Help Net Security / Hackread / daily.dev 同日跟进。强制性:<strong>截至 10 月 29 日,微软和 OpenAI 都还没发修复</strong>(Cursor 10-01 已静默修,Copilot 的欺骗修复在 build 1.1.29)。我这边这周没能拿到更新的补丁状态,按未修处理。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>,但「动手」只有一个动作,一秒钟:<strong>别点 agent 丢给你的本地 HTML 预览链接</strong>。整条利用链的前提就是开发者点了助手生成的指向本地恶意 HTML 的那个链接。另外记住边界:<strong>终端里的 Claude Code 没有内置浏览器,不在测试范围内</strong>——这周值得你把浏览器预览这类活从桌面壳子挪回终端。顺带记一条:既然不点 Trust 根本用不了这些工具,那个信任提示在实践中等于不存在,别拿它当防线。</li></ul>
+<h3 id="agent-写得越来越多瓶颈整个压到了审查侧">agent 写得越来越多,瓶颈整个压到了审查侧</h3>
+<p><strong><a href="https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/" target="_blank" rel="noopener noreferrer">GitHub Octoverse 2026:9 月 40% 以上的 PR 由 agent 起草,合入率已经反超人类</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:统计区间 2025-10-01 至 2026-09-30。agent 起草的 PR 占比从 3 月的 17% 涨到 9 月的 40% 以上,9 月单月 1.1 亿个 agent PR,约是 3 月的六倍。质量线更关键:agent 参与的 PR 两周内合入率从 2 月的 83% 升到 9 月的 90%,<strong>已经高于无 agent 参与的 86%</strong>;但 agent 起草的 PR 平均触及更多文件(约 87% vs 79%)。</li><li><strong>凭什么算热点</strong>:GitHub 官方报告,Visual Studio Magazine / developer-tech / GitGuardian 同日跟进,多源成立。结构性也成立:这是第一次有平台级数据把「瓶颈挪到审查侧」从感觉变成数字——<strong>写的量涨了六倍,每个 PR 还摸更多文件,而评审人数没变</strong>。本周 GitHub 自己在同一天上线多模型深度 code review,不是巧合。</li><li><strong>你该不该动手</strong>:<span class="verdict soon">排进这个月</span>,要动的不是工具是指标。去看你团队的两个数:agent 参与的 PR 占比、以及 PR 平均触及文件数的同比。如果第二个数在涨而你的评审流程一个字没改,你现在就在亏——不是亏质量,是亏 reviewer 的注意力。另外有条选型信号值得单独记:9 月手动选模型的 Copilot 用户里 61% 用了不止一个模型(四个月前 50%),付费套餐里被用到的模型有 47 个,<strong>没有任何单一模型超过请求量的 25%</strong>——「只精通一家模型」正在变成劣势。口径提醒:这个数只统计「起草」不代表质量,且 GitHub 用新定义重算了往年数据,<strong>和旧版 Octoverse 不能直接对比</strong>。</li></ul>
+<p><strong><a href="https://github.blog/changelog/2026-10-28-copilot-code-review-merge-with-confidence-with-max-and-approvals/" target="_blank" rel="noopener noreferrer">GitHub Copilot code review 加 Max 档:多家模型各自独审,再由聚合 agent 合成一份</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:10-28 进 public preview,Lite / Balanced 之上多了第三档。Max 跑多个<strong>互相独立</strong>的 review agent、<strong>分别用不同厂商的模型</strong>,再用一个聚合 agent 把各家发现对账合并。代价明说了:更慢、更费 credits。配置粒度到单个 PR / 仓库 / 组织 / 企业,管理员能设上限防止有人全开烧光额度。</li><li><strong>凭什么算热点</strong>:不是「又一个 review 工具」,是上周那条线的续章并且换了形态——上期我收的是 Cloudflare security-audit skill(「查证的 Agent 绝不是发现问题的那个 Agent」)和 impeccable 的确定性规则,当时的结论是「抄做法,不用装东西」;<strong>一周之后厂商直接把多模型独审 + 聚合做成了产品档位</strong>。配合 Octoverse 同日发布的 40% 数字,这是「社区做法 → 平台能力」的完整一跳。</li><li><strong>你该不该动手</strong>:<strong>排进这个月,但先别开 Max</strong>。GitHub 宣称 Max 在 ReviewBench 高危问题上拿到最高 F1,<strong>但没公布这个分数本身——当营销看待</strong>。真正该做的是自己标定一次:在你自己的仓库上手搓一遍多模型独审 + 聚合(本期末尾的教程就是这个,不花 Copilot credits),量出两个模型的发现重叠率。重叠率高就说明第二个模型是白花钱。顺带两件同批上线的事:Copilot approvals 转正式可用——<strong>要不要让它算进分支保护规则,这个自己权衡,别默认开</strong>;Copilot Fusion(自动模型路由)GA,但 GitHub 不公开池子里有哪些模型。</li></ul>
+<p><strong><a href="https://projectzero.google/2026/10/fuzzing-v-AI.html" target="_blank" rel="noopener noreferrer">Project Zero 实测:AI agent 挖洞已追平顶级 fuzzer,但找到的是完全不同的两批 bug</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:六个月 V8 实战,BigSleep 找到 45 个、Fuzzilli 找到 37 个,<strong>重叠只有约 25%</strong>。分工清楚:AI 赢在需要多步推理和「魔法值」的洞(比如 bytecode handler 表在 &gt;256MB 时的整数截断)、以及 fuzzer 语法还不支持的新特性;fuzzer 赢在跨优化 pass 交互产生的非局部 bug、和 C++ 编译器优化导致的问题——这类「看源码推不出来」的洞 AI 也看不出来。</li><li><strong>凭什么算热点</strong>:这是本周「真人用过」证据最硬的一条——不是博客感想,是 Google Project Zero 自己拿半年和两套真实工具在 V8 上跑出来的对照数据,Lobsters 当日上榜。还有一个回溯实验:让 BigSleep 从单个起始 commit 去找 2023–2026 年的 112 个历史 Fuzzilli bug,复现率约 62%,换提示词和起点后升到约 70%,且<strong>没检测到对训练截止前 bug 的记忆效应</strong>。结构性在于它给出了一条反直觉结论:<strong>fuzzer 难找的 bug,AI 大概率也难找——难度是 bug 本身的属性,不是方法的属性</strong>。</li><li><strong>你该不该动手</strong>:<strong>不关你事,但那个 25% 要记住</strong>。除非你在做引擎级安全研究,否则这篇没有你能装的东西。它的价值是给上面两条当尺子:25% 这个重叠率就是「多模型/多方法并跑」的收益上限参照——如果你跑两个审查器出来的发现几乎完全重合,那不是两个审查器,是一个审查器跑了两遍。别把「AI 取代 fuzzer」或「多开几个 agent 就更安全」当成默认假设。</li></ul>
+<h3 id="effort-这个旋钮今年最该被标定一次">effort 这个旋钮,今年最该被标定一次</h3>
+<p><strong><a href="https://cognition.com/blog/frontier-code-2.0" target="_blank" rel="noopener noreferrer">FrontierCode 2.0:按「维护者愿不愿意合这个 PR」打分,最强模型只得 45.5%</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:Cognition(Devin 团队)出的 132 道题,判定标准是开源维护者的合入意愿,每题由维护者花 40 小时以上构造。榜单:Opus 5.5 45.5%、GPT-6 Astra 42.8%、Sonnet 5.5 41.0%、GPT-6.1 Sol 39.0%、Fable 5.1 32.4%;每题成本 Opus 5.5 $12.82、GPT-6 Astra $6.68、GPT-6.1 Sol $1.03。比 1.1 难在「周全性」阻断检查从 168 条涨到 501 条。</li><li><strong>凭什么算热点</strong>:<strong>我收的不是这个榜单,是榜单里那一个调参结论</strong>——把推理 effort 拉满,周全性检查失败率从 26.0% 降到 15.3%,<strong>但越界改动(scope check)失败率从 3.8% 升到 4.9%</strong>。也就是说 effort 不是单调变好,它在「做全」和「少动」之间换挡。这条有两份日报的交叉佐证:10-29 同日的 Artificial Analysis Index v5 给了成本那一侧的同一个权衡——Opus 5.5 低 effort 得 35 分、每题 $0.98,拉满得 58 分、每题 $10.04,<strong>十倍价钱买 23 分</strong>;10-27 的 GPT-6.1 Terra 则把便宜档整体抬了一级(Terminal-Bench 4.0 从 21.5% 到 50.3%,$1/$5/$0.05,比上一代便宜一半,HN 567 分 / 353 评论)。三条独立来源指向同一个动作。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>,而且这是本周最省钱的半小时。拿你自己流水线上跑量最大的那类任务,分别用低 / 中 / 高 effort 各跑十次,记两个数:成本,和你实际要返工的比例。大概率你会发现其中一档之后收益就平了——AA 的数字是十倍价钱买 23 分,你自己那条曲线的拐点在哪,只有你量得出来。两条具体的调法:<strong>改动范围敏感的活(重构、线上热修)别无脑拉满 effort</strong>,越界风险是真的在涨;跑量大的日常活去试 GPT-6.1 Terra 这一档,但官方自己说最复杂的编码活还是该用 Sol 或 Astra,<strong>别全局切换</strong>。另外记住 FrontierCode 的 45.5% 不是通过率,是按阻断项加权、漏一项即零分的分。</li></ul>
+<h2 id="-上周跟踪">上周跟踪</h2>
+<ul class="list"><li><strong>Brotli CVE-2026-111497(CVSS 9.2)</strong> — 没下文,本周 6 份日报零提及。上周给的「立刻试」不改——这类事就该一次做完、然后没有新闻。</li><li><strong>LiteLLM 1.107.0 投毒</strong> — <strong>涨了,而且我上周低估了它</strong>。10-30 The Register 放出根因复盘:一把 2026-05-27 误提交的 master key,开发者删了 commit 但<strong>没吊销 key</strong>,活了 136 天 → 10-10 攻击者用它捞到范围过宽的 GitHub OAuth token → 10-21 劫持 CI/CD 发布流水线。11-02 它被 Wiz 并入 Black October。上周我把它当一起孤立的投毒事件收,实际它是一波打法里的一起。</li><li><strong>OpenAI Decisions API / Cloudflare Clef(省 token 的新打法)</strong> — 没下文,本周零提及。「排进这个月」的判断不改,但热度没有延续,<strong>别指望社区帮你趟坑,自己试要自己兜 bug</strong>。</li><li><strong>DuckDB 2.0.0 LTS 的 Agent Mode</strong> — 没下文。上周说生产库升级等 11 月第一个补丁版,现在正好到点,自己去看版本号。</li><li><strong>Cloudflare security-audit skill + impeccable(把审查写成规则)</strong> — <strong>涨了,并且换了形态</strong>:本周 GitHub 把「多个独立 review agent + 一个聚合 agent 对账」做成了 Copilot code review 的 Max 档。上周我说「抄它的结论分级就够,不用装东西」,这句现在要补一条——厂商已经把它产品化了,你可以直接买,但先标定再买。</li></ul>
+<h2 id="-本周没收的">本周没收的</h2>
+<ul class="list"><li><strong><a href="https://go.dev/blog/emudhra-incident" target="_blank" rel="noopener noreferrer">Go 史上第一次 URGENT 安全发布</a>(eMudhra 中间 CA 私钥能在微秒级算出来)</strong> — 强制性是本周最硬的,但<strong>周报在这条上加不了任何判断</strong>:日报已经把处置写完整了(升到 Go 1.27.3 / 1.26.10,然后<strong>重新编译所有用 TLS 的二进制</strong>,只升工具链不重编没用;用 <code>go version -m &lt;binary&gt;</code> 或 <code>govulncheck -mode=binary</code> 排查现有二进制)。这不是一件要「等信号」的事,是一件该在上周五做完的事——没做就现在去做,别等我分析。</li><li><strong><a href="https://mistral.ai/news/mistral-large-4-oss/" target="_blank" rel="noopener noreferrer">Mistral Large 4 放出权重</a>(1.05T 总参 / 52B 活跃,HN 1677 分 435 评论,本周热度第一)</strong> — 热度最高的一条,明确不收。三个理由:性能全是厂商自报(Terminal-Bench 4.0 从 28% 提到 41%),<strong>独立复现还没出来</strong>;HF 上约 1.06 TB,量化版也要四张 B200/B300,<strong>绝大多数人动不了手</strong>;许可证是改过的 MIT 加了 Model-as-a-Service 条款,<strong>是「开放权重」不是「开源」</strong>,做托管服务前得看条款。等独立复现的 Terminal-Bench 数字,或者等有人跑出单卡/双卡能用的部署方案。</li><li><strong><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/" target="_blank" rel="noopener noreferrer">Gemini 4 Carbon 抢走 AA Index v5 头名</a>(59 分 &gt; Opus 5.5 的 58)</strong> — <strong>调不到就不算事</strong>。截至 10-29 Gemini API 定价页上只有 gemini-4-argon,没有 Carbon 的 model ID 和端点,目前只向一小批安全防御方开放。而且写代码的更没必要急:单独的 Coding Agent Index 上 Carbon 配 Antigravity CLI 是 59 分,仍落后 Claude Code 配 Opus 5.5 的 62 分。等 model ID 出现在定价页上再说。</li><li><strong><a href="https://www.anthropic.com/news/2026-usage-policy-update" target="_blank" rel="noopener noreferrer">Anthropic 新版使用政策 11-12 生效</a></strong> — 不收是因为它<strong>只命中一小部分人</strong>,但如果你恰好在这部分人里,这条比本期任何一条都紧急(还剩 10 天)。命中条件:你的产品涉及健康、法律权利、财务、生计或基础服务——那你必须有合格的人类在回路里<strong>并且必须向用户披露 AI 参与</strong>;做面向消费者的 chatbot/agent 一律要声明自己是 AI;监控类用途收紧。另外 CNN 11-01 那篇刷屏的「不许虐待模型」<strong>不是你该花时间的地方</strong>,它只管极端持续的恶意行为。</li><li><strong>本地 agent 工作台 / IDE 扎堆四连发</strong> — <a href="https://github.com/makecindy/cindy" target="_blank" rel="noopener noreferrer">cindy</a>(GitHub Trending +1,446 star 连续 4 天)、<a href="https://github.com/nightly-labs/openbot" target="_blank" rel="noopener noreferrer">openbot</a>(+794)、<a href="https://github.com/JetBrains/thinkrail" target="_blank" rel="noopener noreferrer">JetBrains ThinkRail</a>(约 6k star,Trending TypeScript 榜首)、<a href="https://github.com/l0ng-ai/openidea" target="_blank" rel="noopener noreferrer">OpenIDEA</a>(Rust 重写 IDEA)。采用度够了,但全是「又一个同类」加上各自的硬伤:openbot 的 README 明说 agent 以完全权限运行、每个动作都不审批,且许可证 v0.1.11 后从 Apache-2.0 换成 PolyForm Noncommercial;ThinkRail 的 worktree <strong>不是沙箱</strong>(同一用户下的另一个目录,同级路径和共享凭据照样够得着),而且 JetBrains 现在同时有 Air / Fleet / ThinkRail 三套 agent 产品;OpenIDEA 还在 0.1.x、82 个 open issue,changelog 在修「Java classpath」这类基础问题。<strong>在本周第一组热点的背景下,这类「全权限、无审批、新发布」的本地壳子正好是最不该在这个月往机器上装的东西。</strong> 等其中一个活过半年并且加上动作审批。</li><li><strong>本周的三篇高热观点文</strong> — <a href="https://martinfowler.com/bliki/LLM-Voice.html" target="_blank" rel="noopener noreferrer">Fowler「别让 LLM 写第一稿」</a>(HN 约 588 分 / 327 评论)、<a href="https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling" target="_blank" rel="noopener noreferrer">AI 不是取代 SRE 是让 SRE 退化</a>(491 分 / 369 评论)、Anthropic 一位工程经理取消团队编码面试。热度都够,但三篇都没有任何可动手的东西,而且各有口径问题(SigNoz 那篇是内容营销、结尾落在自家产品;取消面试是一个经理对自己团队的决定,<strong>不是 Anthropic 公司政策</strong>)。如果只读一篇,读 Fowler 那篇,拿走一句话:<strong>写作外包出去的同时也把思考外包了</strong>——这句对写设计文档的人成立,不需要任何工具。</li></ul>
+<h2 id="-动手教程在你自己的仓库上标定一次多模型独立审查到底值不值">动手教程:在你自己的仓库上标定一次「多模型独立审查」到底值不值</h2>
+<p><strong>手搓一遍 Copilot Max 的做法,不花一分 Copilot credits,量出重叠率再决定要不要买</strong></p>
+<blockquote class="why">你将做出:一组可复用的审查脚本,和一个只属于你这个仓库的数字——两个不同厂商的模型审同一份 diff,发现的重叠率是多少。重叠率告诉你第二个模型是在捞新东西,还是在重复第一个。</blockquote>
+<p><strong>准备</strong>:</p>
+<ul class="list"><li>一个有真实改动的分支(<strong>用真实改动,别用玩具代码</strong>——玩具代码上两个模型会给出几乎一样的结果,量不出差异)</li><li>两个<strong>不同厂商</strong>的 CLI:Claude Code / Codex CLI / Gemini CLI 里任选两个。同厂商的两个模型不算,独立性是这件事的全部价值</li><li>不需要 Copilot Max、不需要新装任何东西</li></ul>
+<p><strong>跟着做</strong>:</p>
+<ol class="steps"><li><strong>先把被审对象钉死</strong>。两个审查器必须看<strong>同一份</strong>输入,否则它们各自在仓库里乱逛,看到的东西都不一样,后面的对账就没有意义:<br>```bash<br>mkdir -p /tmp/review &amp;&amp; cd /tmp/review<br>git -C /path/to/repo diff main...HEAD &gt; diff.patch<br>wc -l diff.patch   # 几百行最合适;上千行先拆<br>```</li><li><strong>写一份共用提示词,强制分级输出</strong>。这里抄的是 Cloudflare security-audit skill 的三档结论,也正是 Copilot Max 的聚合 agent 要对账的东西。把下面这段存成 <code>prompt.md</code>:<br>```<br>审查附带的 diff。只输出 JSON 数组,每项:<br>{ &quot;file&quot;: &quot;&quot;, &quot;line&quot;: 0, &quot;claim&quot;: &quot;一句话说明缺陷&quot;,<br>&quot;level&quot;: &quot;confirmed | needs_validation&quot;,<br>&quot;missing_fact&quot;: &quot;仅当 level=needs_validation:写明到底哪个事实你没查实&quot;,<br>&quot;severity&quot;: &quot;仅当 level=confirmed 时才填&quot; }<br>规则:没有完整源码链路支撑的,一律 needs_validation,且不许给 severity。<br>风格问题、命名问题不要报。<br>```<br>最后两条规则是重点:<strong>不许给未查实的问题标严重性</strong>,否则两份结果没法对账——你分不清「A 说高危」和「A 猜高危」。</li><li><strong>两个厂商各跑一遍,互相看不见对方</strong>。这是 Max 档的核心,也是最容易做错的一步——<strong>千万别把 A 的结果喂给 B 让它「补充」</strong>,B 会被 A 说服,你拿到的就是一份结果的两个副本:<br>```bash<br># 各自开全新会话,只给 prompt.md + diff.patch<br># 输出分别存 a.json / b.json<br>```</li><li><strong>第三次调用做聚合</strong>。开第三个全新会话,只给它 <code>a.json</code>、<code>b.json</code> 和 <code>diff.patch</code>,任务是<strong>对账而不是重审</strong>:两边都报的升一级;只有一边报的降到 needs_validation 并写明「另一边为什么没报」;互相矛盾的单独列出来给人看。</li><li><strong>算那三个数,然后做决定</strong>:<br>```bash<br># 两边都报的(交集)、只有一边报的、总 token 花费<br>```<br>参照系是本期 Project Zero 那个 <strong>25%</strong>:AI agent 和顶级 fuzzer 在 V8 上跑半年,重叠只有约四分之一。你的两个模型如果重叠率接近 100%,<strong>第二个模型就是在白花钱</strong>,换一个差异更大的厂商再测一次;如果落在 20~50% 区间,说明它们确实在捞不同的东西,这笔钱花得值,可以考虑直接上 Copilot Max 省掉手工聚合。</li></ol>
+<blockquote class="quote">做完你会:手上有一个数字,而不是一个感觉——下次有人问「要不要开多模型审查」,你答得出来。下一步有两条:把第 2 步那份提示词包成一个 skill 让 agent 自己跑;或者把重叠率作为常规指标,每月量一次——模型在变,这个数也会变。</blockquote>
+<ul class="list"><li>🔗 本周原文(Max 档的设计说明):<a href="https://github.blog/changelog/2026-10-28-copilot-code-review-merge-with-confidence-with-max-and-approvals/" target="_blank" rel="noopener noreferrer">Copilot code review: merge with confidence with Max and approvals</a></li><li>🔗 25% 重叠率的出处:<a href="https://projectzero.google/2026/10/fuzzing-v-AI.html" target="_blank" rel="noopener noreferrer">Project Zero — Fuzzing vs AI</a></li><li>🔗 三档结论分级的来源:<a href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener noreferrer">cloudflare/security-audit-skill</a></li><li>🏷️ 来源:GitHub changelog / Google Project Zero / Cloudflare · 难度:进阶</li></ul>
+<hr>
+<p><em>每周二更新 · 热点从本周日报筛出,证据见各条 · 链接指向原文</em></p><nav class="daynav"><a href="2026-10-27.html">← 上一期</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每周筛选 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
