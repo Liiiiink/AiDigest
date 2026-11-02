@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-11-02</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-11-02</h1>
+<blockquote class="quote">面向程序员的 AI 进展速览 · 6 条 · 选你能用的</blockquote>
+<div class="lede"><strong>今日焦点</strong>：周末本身没什么大事，但 Wiz 把整个 10 月串起来命名为「Black October」——九家 AI 开发平台一个月内接连被攻陷，全都冲着你存在平台上的环境变量去的，今天该做的是把这九家里你用过的那几家的 key 全轮换一遍。</div>
+</div><nav class="daynav"><a href="2026-10-31.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>（3 条）</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>（1 条）</li><li class="cat-brief"><a href="#-速览"> 速览</a>（2 条）</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
+<hr>
+<h2 id="-动手派" class="cat-tools">动手派</h2>
+<p><em>今天你能用的工具、技巧、实战经验</em></p>
+<ol class="items cat-tools"><li class="item followup"><div class="item-head"><span class="fubadge">后续</span><strong><a href="https://www.wiz.io/blog/black-october-for-ai-developer-platforms" target="_blank" rel="noopener noreferrer">Wiz 把 10 月命名为「Black October」——九家 AI 开发平台接连失守，全冲着环境变量来</a></strong> — 10 月 30 日发布，这是之前单点报道的汇总视角：不是九起孤立事件，是同一套打法。 <code class="chip type">实战</code></div><p><strong>先对名单</strong>：Fireworks AI（10-06）、Andromeda（10-09）、Zeabur（10-14）、Lightning AI（10-15）、OpenCode（10-16~17）、Railway（10-20）、Warp（10-23）、CommandCode（10-28）、Northflank（10-30）。<strong>Zeabur 因为这次事件直接宣布关停。</strong> 这九家里你用过哪家，今天就去轮换哪家上存过的 key。</p><p>根因各不相同（Fireworks / Zeabur / Lightning 是凭据泄露，Railway 是构建基础设施提权，Warp 是第三方供应商，OpenCode 说是「遗留系统」），<strong>但所有公开报告的共同点只有一个：攻击者精准地翻存储的环境变量，尤其是能调 AI 的那些。</strong> Fireworks、OpenCode、Warp 三家还报告了 agent swarm 式攻击的迹象。</p><p><strong>速度数字值得记住</strong>：从凭据被拿到到第一次非授权调用，只隔了约 30 分钟——一个住宅 IP 在一分钟内横扫多个组织试 key。Wiz 跟踪的两起 Bedrock 滥用：A 案 30 小时内约 80 万次调用，走 <code>global.*</code> 跨区域推理配置，所以只有约 6% 被限流；B 案因为策略只允许 <code>us.*</code>，13 小时打了约 170 万次、百万次成功、其余被区域配额挡下。两起合计按标价算超过 10 万美元。</p><p><strong>可直接抄的两条配置</strong>：一是给 Bedrock key 的策略限定区域推理配置（B 案正是因为限了 <code>us.*</code> 才被配额兜住大半），二是别把长期 AI key 明文放在任何托管平台的环境变量里。轮换时记得去<strong>签发方</strong>轮换，不是只改平台上那一份。</p><div class="meta"><code class="chip">信号</code><code class="chip">承接 10-30 LiteLLM 事件 / 10-31 Cursor 扩展投毒</code><code class="chip">本周第 3 次</code><code class="chip">Wiz 10-30 发布</code><code class="chip">BleepingComputer / Axios 同步报道</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.anthropic.com/news/2026-usage-policy-update" target="_blank" rel="noopener noreferrer">Anthropic 新版使用政策 11 月 12 日生效，建 agent 的要提前对几条硬要求</a></strong> — 10 月 8 日公布、11 月 12 日生效，距今 10 天。 <code class="chip type">实战</code></div><p>CNN 11 月 1 日报道里刷屏的是「不许虐待模型」那条，<strong>但那条明确只管极端持续的恶意行为，日常吐槽、对抗性测试、黑暗题材创作都不受影响——它不是你该花时间的地方。</strong> 真正要改代码的是下面三条。</p><p><strong>高风险场景多了两条强制要求</strong>：涉及健康、法律权利、财务、生计、基础服务的产品，必须有合格的人类在回路里，<strong>并且必须向用户披露 AI 参与</strong>。面向消费者的 chatbot / agent 也一律要声明自己是 AI。</p><p><strong>监控类用途收紧</strong>：禁止非自愿的实时或回溯追踪，禁止让 Claude 决定或建议该调查、逮捕、起诉谁，禁止拿它搭监控工具；但经同意的追踪（如风控反欺诈）、内容审核、新闻调查、法律检索仍然可以。另外明确禁止用输出去训练其他模型（蒸馏）、未授权的漏洞利用与 prompt injection。</p><p>还有一条容易踩的：<strong>支持区域政策</strong>同步更新，不只看人在哪，还看公司注册地、总部所在地，以及是否被不支持区域的主体多数控股。跨境团队值得对一眼。</p><div class="meta"><code class="chip">信号</code><code class="chip">11-12 生效</code><code class="chip">CNN 11-01 报道引发讨论</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/l0ng-ai/openidea" target="_blank" rel="noopener noreferrer">OpenIDEA：用 Rust 重写一个 IntelliJ IDEA，打开 770 文件项目 0.9 秒 vs 3.1 秒</a></strong> — Apache-2.0，最新版 v0.1.24（10 月 29 日），11 月 2 日上 HN。 <code class="chip type">工具</code></div><p>定位很直白：<strong>保留 IDEA 的肌肉记忆</strong>（keymap、tool window 布局、search everywhere），底下换成 Rust 原生实现。编辑器、code insight、调试器、Git、终端、数据库客户端、HTTP 客户端都有，号称覆盖 60+ 语言，macOS / Windows / Linux 三平台都有构建。</p><p>那个性能数字的完整条件要看清楚：Windows 11、32 核 AMD、62 GB 内存，打开 freqtrade（Python，约 770 文件）、缓存已热、5 次取中位数，OpenIDEA 0.9 秒 vs IntelliJ IDEA 2026.2.3 的 3.1 秒。<strong>这是项目自测，而且项目自己也注明了 IDEA 对 Python 的分析更深，所以两边的「就绪」不是同一件事。</strong></p><p>成熟度要有预期：版本号还在 0.1.x，仓库挂着 82 个 open issue、19 个 PR，近期 changelog 还在修「rust-analyzer 不装 rustup 也能用」「Java classpath」这类基础问题。<strong>当日常主力还早，当打开大仓库快速看代码的轻量工具合适。</strong></p><div class="meta"><code class="chip">信号</code><code class="chip">HN 11-02 约 37 分 / 53 评论</code></div></li></ol>
+<h2 id="-职业风向" class="cat-career">职业风向</h2>
+<p><em>影响你技能选择和职业方向的信号</em></p>
+<ol class="items cat-career"><li class="item"><div class="item-head"><strong><a href="https://martinfowler.com/bliki/LLM-Voice.html" target="_blank" rel="noopener noreferrer">Martin Fowler：别让模型起草稿——「LLM 腔」一旦进去，人改也改不干净</a></strong> — 10 月 29 日发表，10 月 31 日成为 HN 上讨论最密集的文章之一。 <code class="chip type">观点</code></div><p>Fowler 先承认这东西说不清：读到疑似 LLM 产出的文字会有生理性的不想读下去，但他给不出判据——「不是破折号的问题，是那些<strong>承重的『织锦』</strong>」（指 LLM 爱用的那类空洞比喻）。他把这种感觉叫<strong>散文的恐怖谷</strong>。</p><p><strong>对检测工具他是双重怀疑</strong>：一是不信准确率，二是觉得用工具这个动作本身就晚了——读者的反应是人的反应，等你掏出检测器，那篇东西已经失败了。</p><p>核心建议对写文档、写设计稿、写周报的人都适用：<strong>不要让 LLM 写第一稿。</strong> 他的经验是草稿一旦是 LLM 写的，人再怎么编辑也很难把那股腔调赶出去，连接受它的改写建议都有风险（他只见过一个反例，是被大刊的专业编辑彻底重洗过的稿子）。更根本的理由是——<strong>把写作外包出去，同时也把思考外包了</strong>，因为写作本身是逼你把自己的困惑想清楚的过程。</p><p>他给了明确的例外：因帕金森病而依赖 LLM 写作的 Jim Highsmith，以及用翻译工具的非英语母语者。文末他自己做了披露：这篇写作过程完全没用 AI。</p><div class="meta"><code class="chip">信号</code><code class="chip">HN 10-31 约 588 分 / 327 评论</code></div></li></ol>
+<h2 id="-速览" class="cat-brief">速览</h2>
+<p><em>值得知道但不用细读的动态</em></p>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://www.getreadyforagents.com/news/mythos-class-claude-checkpoint-leak/" target="_blank" rel="noopener noreferrer">所谓 14T 参数的 Anthropic「Mythos」权重泄露是假的，鉴伪方法值得记一下</a></strong> — 11 月 1 日有人在 Hugging Face 上以 <code>burner22/numbat</code> 放出约 7.72 TB 文件，模型卡自称是 Anthropic 下一代 Mythos 训练中途的 checkpoint，114 层、1224 个 expert。社区在该仓库的 community 页做了审计，<strong>发现其中 43 个张量可以用它们自己的名字做种子、用随机数生成器精确复现出来</strong>——也就是说内容是带种子的噪声，不是权重。时间线也对不上：仓库 10 月 23 日创建、10 月 24 日最后改动，11 月 1 日才被包装成「泄露」发到 X 上。另据 testingcatalog，Anthropic 官网源码里确实出现过 Mythos 5.5 的字样，但那是另一回事。<strong>拿到来路不明的权重时，先试试「能不能用张量名当种子复现出来」，这是成本最低的一道筛子。</strong> <code class="chip type">观点</code></div></li><li class="item"><div class="item-head"><strong><a href="https://thenextweb.com/news/apple-intelligence-china-ios-27-3-alibaba-qwen" target="_blank" rel="noopener noreferrer">苹果中国版 Apple Intelligence 接入阿里 Qwen，11 月 4 日开发者测试版可试</a></strong> — 10 月 31 日官宣，12 月随 iOS 27.3 正式上线。Qwen 进的是 Siri、写作工具和视觉智能，<strong>WWDC 2026 上演示的那个重做版 Siri 不在中国首发范围内</strong>；本次只覆盖 iPhone，iPad / Mac / visionOS 还在等审批。可用条件是在中国买的支持机型，或设备定位与 Apple 账号国家/地区同时为中国。做国内 iOS 产品的注意一个工程事实：<strong>中国区的云端 AI 请求走的是阿里的基础设施，Private Cloud Compute 在中国不适用</strong>，合规评估按这个口径做。 <code class="chip type">新发布</code></div></li></ol>
+<hr>
+<h2 id="-今日术语">今日术语</h2>
+<ul class="list"><li><strong>LLMjacking</strong>：攻击者偷到你的 AI API key 之后，拿去跑自己的推理、甚至转手倒卖算力，账单算在你头上。Black October 这一波九家平台被打，目标全是这个。</li><li><strong>跨区域推理配置（Cross-region inference profile）</strong>：AWS Bedrock 里的一种调用方式，<code>global.*</code> 会把请求分散到全球多个区域、不容易触发单区限流；<code>us.*</code> 只限美国区。这次事故里恰恰是限得更死的那把 key 损失更小——<strong>限流在这里反而成了止损器</strong>。</li><li><strong>散文的恐怖谷（Uncanny valley of prose）</strong>：Fowler 用来描述读 LLM 文字的感受——哪里都挑不出错，但读着就是不对劲，于是不想往下读。</li><li><strong>张量种子复现（Seeded tensor reproduction）</strong>：鉴别假权重的一招。真训练出来的权重不可能从一个短字符串推导出来；如果用张量名当随机数种子就能逐位复现，说明文件里装的是噪声。</li><li><strong>人类在回路（Human in the loop）</strong>：关键决策必须经过一个有资质的人确认，AI 只做建议。Anthropic 11-12 生效的新政策把它从「最佳实践」变成了医疗、法律、金融等高风险场景的硬性要求。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-10-31.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
