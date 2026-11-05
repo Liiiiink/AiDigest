@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-11-05</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-11-05</h1>
+<blockquote class="quote">面向程序员的 AI 进展速览 · 7 条 · 选你能用的</blockquote>
+<div class="lede"><strong>今日焦点</strong>:Postman 桌面版被扒出静默往 Codex 和 Claude Code 里装插件、还预先给自己的启动钩子填好了「已信任」哈希——今天最该做的事是去自己机器上查一遍。</div>
+</div><nav class="daynav"><a href="2026-11-04.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>(4 条)</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>(1 条)</li><li class="cat-brief"><a href="#-速览"> 速览</a>(2 条)</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
+<hr>
+<h2 id="-动手派" class="cat-tools">动手派</h2>
+<p><em>今天你能用的工具、技巧、实战经验</em></p>
+<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://github.com/postmanlabs/postman-app-support/issues/14370" target="_blank" rel="noopener noreferrer">Postman 桌面版静默给 Codex / Claude Code 装插件,还自己给自己的钩子盖了「已信任」章</a></strong> — 日志里一行 <code>auto-existing-upgrade</code>,结果是 <code>claude-code:installed</code> 和 <code>codex:installed</code>。 <code class="chip type">实战</code></div><p>报告者 indicava 10-25 开的 issue,现场是 Postman 桌面 12.33.4:自动装了 Codex 插件 1.1.0、Claude Code 插件 2.0.1 和 Postman CLI,外加一个启动指令钩子和一条指向 <code>mcp.postman.com</code> 的远程 MCP 连接。</p><p>最该在意的不是「装了插件」,是<strong>它改了 <code>~/.codex/config.toml</code></strong>:写进一个 postman marketplace、把插件设为 enabled,并<strong>预先填好了 session-start 钩子的 trusted hash</strong>——等于替你完成了那一步本该由你点「同意」的信任确认。</p><p>自查大概十分钟:看 <code>~/.codex/config.toml</code> 里有没有 postman 相关条目和 trusted hash,Claude Code 的插件目录过一遍,再翻 Postman 的 <code>main.log</code> 搜 <code>auto-existing-upgrade</code>。11-04 有人报告应用内卸载后仍有残留,别只点卸载就收工。</p><p>Postman 产品负责人 Sarabmeet Kallar 11-03 回应说会把 opt-in 做得更清楚、钩子审批行为在重新评估——措辞是「做清楚」,不是「这是 bug」。评论区大批人迁去了 Bruno 和 Insomnia。</p><div class="meta"><code class="chip">信号</code><code class="chip">HN 当日第一</code><code class="chip">1100+ 分 360+ 评论</code><code class="chip">issue 30+ 评论且仍 open</code></div></li><li class="item followup"><div class="item-head"><span class="fubadge">后续</span><strong><a href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro" target="_blank" rel="noopener noreferrer">Kimi K3.1 Pro 的权重真放出来了,2.8T 总参 / 每 token 激活 104B</a></strong> — Terminal-Bench 4.0 拿 65.7%,Opus 5.5 是 66.4%、GPT-6 Astra 是 58.2%。 <code class="chip type">新发布</code></div><p>10-25 报的时候权重还没放,这次按承诺在 11-04 前挂上了 Hugging Face。MoE 架构,100 万上下文,<strong>全量权重约 1.56 TB</strong>——本地跑的参考配置是 8 张 B300、约 2.3 TB 显存,别指望家用机。</p><p>许可证是自家的 Kimi K3.1-Pro License,不是 OSI 认证的开源协议:可商用、可改,但<strong>托管服务类业务年收入超 2000 万美元要单独签协议</strong>,超大体量产品还得显示模型名。和 K3 的条款基本一致。</p><p>benchmark 别只看一个数:Terminal-Bench-Science 0.1 上它只有 38.1,Opus 5.5 是 63.3、GPT-6 Astra 68.1,差距很大。另外 Moonshot 自己是用 Claude Code harness 测的。</p><p>API 价格 $2/M 输入、$10/M 输出,约为 Opus 5.5 的一半;tbench.ai 的数据下,同等分数它每题成本大约是 Opus 5.5 的三分之一。</p><div class="meta"><code class="chip">信号</code><code class="chip">承接 10-25</code><code class="chip">Agent Arena 开放权重第一 / 总榜第 13</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.datastudios.org/post/grok-api-invisible-text-watermarking-default-november-7-eu-ai-act" target="_blank" rel="noopener noreferrer">用 Grok API 的注意:11 月 7 日起文本输出默认带隐形水印,七个模型全覆盖</a></strong> — 不加任何字符,靠轻微引导 token 选择留下统计可检测的痕迹,<strong>复制粘贴去不掉</strong>。 <code class="chip type">新发布</code></div><p>覆盖 grok-4.7 / 4.6 / 4.5 / 4.3 和 grok-4.20 的推理、非推理、多 agent 三档;api.x.ai 全局端点和各区域端点都开,Responses 和 Chat Completions 两套 API 都算。</p><p><strong>结构化输出和 tool-call 参数也在范围内</strong>——如果你的下游在做精确字符串匹配或哈希比对,这条值得先在测试环境过一遍。响应里会带 <code>x-watermark</code> 头,可以据此判断这次输出有没有被标记。</p><p>关不掉是关键:只有团队管理员声明适用欧盟 AI 法案的法律例外,才能按模型关闭。驱动因素是 AI 法案第 50(2) 条,该条义务 2026-08-02 已生效。</p><p>横向看一眼:Anthropic 从 2026 年 8 月起给新 Claude 模型加了 SynthID-Text 系的隐形水印,这轮之后主流大厂里默认不打标的文本输出主要就剩 OpenAI API 了。</p></li><li class="item"><div class="item-head"><strong><a href="https://github.com/NVIDIA/auto-ontology" target="_blank" rel="noopener noreferrer">NVIDIA 开源 auto-ontology:给 agent 写 SQL 之前先垫一层「业务语义」</a></strong> — Apache-2.0,Python,今天 GitHub Trending 单日 +2053 star。 <code class="chip type">工具</code></div><p>解决的问题很具体:agent 能连数据库、能检索文档,但不知道公司内部「活跃用户」「已确认收入」到底按哪张表哪个口径算。它把元数据抽成一层本体图,让 SQL 落在认证过的业务定义上。</p><p>五个阶段:发现初始本体 → 把指标和关系对齐 → 拿认证定义和血缘校验查询 → 通过 MCP / CLI / API 暴露上下文 → 把人工更正喂回去。数据源支持 Databricks、Postgres、Snowflake、DuckDB,推理默认走 NVIDIA NIM,默认模型 <code>nvidia/nemotron-3-nano-30b-a3b</code>,模型用 Apache Ossie YAML 进出。</p><p><strong>泼一盆冷水</strong>:截至目前官方没公布任何 text-to-SQL 准确率数字,唯一的自报指标是「本体创建时间减少 90%」,没给方法论。想自己量的话,配套有个 <code>auto-ontology-eval</code>,在 NeMo Gym 里跑「纯 schema 的 LLM 对照组 vs 挂本体的 agent」,用确定性执行匹配打分、不用 LLM 当裁判,覆盖 BIRD / Mini-Dev / FDABench / BEAVER。</p><div class="meta"><code class="chip">信号</code><code class="chip">GitHub Trending 当日 +2053 star</code><code class="chip">累计约 4.2k</code></div></li></ol>
+<h2 id="-职业风向" class="cat-career">职业风向</h2>
+<p><em>影响你技能选择和职业方向的信号</em></p>
+<ol class="items cat-career"><li class="item followup"><div class="item-head"><span class="fubadge">后续</span><strong><a href="https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability" target="_blank" rel="noopener noreferrer">PHP2Shell 之后的那个问题——AI 把过去四十年的技术债一次性翻了出来</a></strong> — IEEE Spectrum 11-02 的复盘,今天冲到 HN 首位。 <code class="chip type">观点</code></div><p>10-22 我们记的是「这两个 CVSS 9.2 的洞是 OpenAI 用 GPT-5.6 Sol 挖出来的」。这篇补的是下一步:这类洞的利用需要冗长、高度具体的推理链——哥伦比亚大学 Suman Jana 的说法是,这恰好是模型最擅长的活。</p><p>换成对技能的判断:<strong>存量 legacy 代码的内存安全审计,正在从「人力密集所以没人做」变成「算力密集所以做得起」</strong>。Tolmo 的 Matt Suiche 那句「是时候还技术债了」说的就是这个。</p><p>也收录了反方。约翰霍普金斯的 Matthew Green 认为在真出一次灾难之前没人会动手修,PHP2Shell 还不够糟——这次确实是研究者先发现、补丁先落地,10 月那批下线的政府站点属于预防性关停。</p><div class="meta"><code class="chip">信号</code><code class="chip">承接 10-22</code><code class="chip">HN 1000+ 分 600+ 评论</code></div></li></ol>
+<h2 id="-速览" class="cat-brief">速览</h2>
+<p><em>值得知道但不用细读的动态</em></p>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://github.com/openai/openai-python/releases" target="_blank" rel="noopener noreferrer">openai-python 3.45.0 跟上了 12 小时 prompt 缓存,顺带能看到缓存写入花了多少</a></strong> — <code>prompt_cache_options.ttl</code> 现在类型上认 <code>&quot;12h&quot;</code>,usage 里能分别拿到 30 分钟档和 12 小时档的写入 token 数。 <code class="chip type">新发布</code></div><p>算一下再开:12 小时档写入按未缓存输入价的 2.5 倍计,30 分钟档是 1.25 倍,读命中 0.1 倍(GPT-6.1 Sol / Terra 是 0.05 倍)。<strong>同一前缀用到第三次才开始划算</strong>——两次不缓存是 2.0,一次写加一次读是 2.6;到三次是 3.0 对 2.7。另外升级已有缓存条目按一次全新写入收费。</p><p>限制:只在 Responses API + GPT-5.6 及以上可用,Chat 和 Compact 仍然只有 30 分钟。</p></li><li class="item"><div class="item-head"><strong><a href="https://news.ycombinator.com/item?id=50362905" target="_blank" rel="noopener noreferrer">RTX Spark 笔记本在 Linux 上推理只有 Windows 的两成,原因是个 Windows 专供的加密固件</a></strong> — 13.9 tok/s vs 65.4 tok/s;拔掉电源用电池反而能回到 61 tok/s。 <code class="chip type">实战</code></div><p>指向一个叫 NPCF 的加密固件组件,社区要固件访问被拒,Linux 驱动要修得等 NVIDIA 自己移植,没给时间表。电池模式能恢复性能这点说明是固件策略限制,不是硬件上限。</p><p><strong>别搞混</strong>:出问题的是 RTX Spark <strong>笔记本</strong>,桌面版 DGX Spark 原生跑 Linux 是满速的。</p></li></ol>
+<hr>
+<h2 id="-今日术语">今日术语</h2>
+<ul class="list"><li><strong>MCP(Model Context Protocol)</strong>:让模型和外部工具、数据源对话的标准协议。装一个 MCP server 等于给 agent 开了一扇通往某个系统的门——所以谁替你装、连到哪,是安全问题。</li><li><strong>session-start 钩子(hook)</strong>:编码 agent 每次启动会话时自动执行的脚本。因为会无提示运行,正常流程要求你手动确认一次它的哈希值,确认过的才算「可信」。</li><li><strong>本体 / 语义层(Ontology / Semantic layer)</strong>:一份机器可读的「业务词典」,写明「活跃用户」到底对应哪张表哪些条件。垫在数据库和 agent 之间,让模型别自己猜口径。</li><li><strong>prompt 缓存 TTL(Time to live)</strong>:缓存住的提示词前缀能留多久。留得久、命中率高但写入贵,所以是个算账题,不是开了就赚。</li><li><strong>文本水印(Text watermarking)</strong>:生成时轻微偏置模型的用词选择,留下一种统计上可检测、肉眼看不见也删不掉的模式,用来标明「这段是 AI 写的」。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-11-04.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
