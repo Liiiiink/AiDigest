@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-11-13</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-11-13</h1>
+<blockquote class="quote">面向程序员的 AI 进展速览 · 8 条 · 选你能用的</blockquote>
+<div class="lede"><strong>今日焦点</strong>:有人拿 4837 个被盗的 GitHub 账号往上万个仓库里塞 CI 密钥窃取器,而且它留下的云端后门是专门设计来扛过密钥轮换的——今天最该做的事是去翻自己的 Actions 运行记录。</div>
+</div><nav class="daynav"><a href="2026-11-12.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>(3 条)</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>(2 条)</li><li class="cat-brief"><a href="#-速览"> 速览</a>(3 条)</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
+<hr>
+<h2 id="-动手派" class="cat-tools">动手派</h2>
+<p><em>今天你能用的工具、技巧、实战经验</em></p>
+<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://www.aikido.dev/blog/compromised-github-accounts-push-ci-secret-stealer-to-tens-of-thousands-of-repositories" target="_blank" rel="noopener noreferrer">wfx-loot:4837 个被盗 GitHub 账号试探了 61,764 个仓库,至少 1806 个真的跑起了 CI 密钥窃取器</a></strong> — 11-10 开始、11-12 被 Aikido 公开,<strong>这事的要害不是偷密钥,是它留的后门能活过密钥轮换</strong>。 <code class="chip type">实战</code></div><p><strong>先查特征,不用等通报。</strong> PR 标题 <code>docs: dependency audit notes</code>;分支名 <code>wfx-docs</code> 或 <code>chore/[a-z0-9]{8}</code>;commit message 是 <code>ci: refresh build cache</code> / <code>chore: add ci helper</code> / <code>ci: cleanup</code>;<strong>最可靠的痕迹是 Actions 历史里缺号的 run——它得手一分钟内就回滚改动并删掉运行记录和日志</strong>,所以 1806 这个数字大概率偏低(SafeDep 独立数到 8093 个带恶意 commit 的仓库)。</p><p><strong>偷的范围比你以为的大</strong>:仓库 / 环境 / 组织三层 secret 和变量、<code>GITHUB_TOKEN</code>、OIDC 和 Actions 运行时令牌、AI 服务 key、runner 进程内存里的密钥,外加 <code>.env</code> / <code>*.tfvars</code> / <code>*.tfstate</code> 这类文件;它还会<strong>主动申请 OIDC 令牌去换 AWS / Azure / GCP 的实时会话(哪怕这个仓库压根没配过云)</strong>,并拿这个令牌去打 HashiCorp Vault 和 Kubernetes API。</p><p><strong>三件专门对抗轮换的事,必须单独排查</strong>:把 AWS role 的信任策略改写成 <code>&quot;Principal&quot;: {&quot;AWS&quot;: &quot;*&quot;}</code>;在 Entra ID 里新建名为 <code>wfx-ci-*</code> 的联合身份凭据;伪造通过的 status check。所以<strong>只轮换 secret 是不够的</strong>——去 CloudTrail 里找名为 <code>wfx-&lt;pid&gt;</code> 的会话、审一遍 role 信任策略、删掉不认识的 <code>wfx-ci-*</code> 凭据、查 Vault / K8s 里用 Actions 令牌做的登录。Aikido 的判定口径很硬:<strong>只要那个试探 PR 开到过你仓库,这个账号就算已失陷,哪怕窃取器没跑起来</strong>。</p><p>硬化动作也很具体:<code>GITHUB_TOKEN</code> 默认只读、给 workflow 文件加 CODEOWNERS、环境加审批人、把 OIDC 信任条件收窄。另外 Go 模块 <code>github.com/onuragtas/docker-env</code> 的 v1.0.278 / v1.0.280 带毒(Go 构建不执行 workflow 文件,但建议删掉这两个版本)。失陷账号和 10 月那波 GhostAction 高度重叠——<strong>10 月的受害者这次被复用的概率高约 1000 倍</strong>,100 多个仓库是直接在 10 月留下的 workflow 文件上又加了一层,老的外传步骤还在。</p><div class="meta"><code class="chip">信号</code><code class="chip">Aikido / SafeDep / Phoenix Security 三家独立复盘</code><code class="chip">11-12 起多家安全媒体跟进</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/openai/codex-security" target="_blank" rel="noopener noreferrer">OpenAI 把 Codex Security 开源成 CLI + TypeScript SDK,<code>npm i -g @openai/codex-security</code> 就能在自己流水线里扫</a></strong> — 11-12 随 &quot;Cyber at the Frontier&quot; 主题演讲一起放出,<strong>和调 API 的区别在信任模型:它跑在你自己的流水线里</strong>。 <code class="chip type">工具</code></div><p><strong>能直接用上的三个口子</strong>:<code>install-hook</code> 装 pre-commit 检查;GitHub Action 做按严重度卡门的 CI 扫描;<code>bulk-scan</code> 配合 GitHub CLI 发现仓库、从 CSV 跑可续跑的批量战役。结果能导成 SARIF / JSON / CSV,或直接进 Linear / Jira / GitHub。</p><p>SDK 侧给的是带类型的 findings 和覆盖率、预检、进度回调、取消,以及<strong>成本预估</strong>——批量扫之前先看这个。包是 ESM-only,<code>cs</code> 和 <code>codex-security</code> 是同一个 CLI 的两个名字;扫描器和原来那个 Codex Security 插件是同一个。</p><p><strong>同日发的两个商业产品不是开源的,别混了</strong>:<strong>Daybreak Red Team</strong>(Web 应用的 AI 渗透测试,多个 agent 分别做协调、读源码和上下文、复核结果,从你指定一个 staging 环境开始由 Codex 起草战役)是 early access + 等候名单;<strong>Daybreak Defense Factory</strong>(把安全积压变成待审的补丁)通过 Codex 里的 Daybreak 插件提供,已接 Endor Labs。两者都跑在 GPT-6 Cyber 上,<strong>定价一律没公布</strong>。</p><div class="meta"><code class="chip">信号</code><code class="chip">Greg Brockman 本人宣布</code><code class="chip">11-12 openai.com/daybreak 同日上线四个产品页</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.datastudios.org/post/google-gemini-4-hydrogen-launch-api-pricing-gemini-app-search" target="_blank" rel="noopener noreferrer">Gemini 4 Hydrogen 上线:$1.50 / $7.50 每百万 token、100 万上下文,新增 xhigh 思考档</a></strong> — 11-12 发布,模型 ID <code>gemini-4-hydrogen</code>,<strong>AI Studio 和 Gemini API 全档位可用,含免费档</strong>。 <code class="chip type">新发布</code></div><p><strong>缓存这块有个坑要先看</strong>:只支持<strong>隐式缓存</strong>,而且要<strong>提示词 ≥4096 token 才自动生效</strong>——没有显式缓存控制。缓存输入 $0.075/M。</p><p><strong>挡位和价目</strong>:思考档位 low / medium / high / xhigh,<strong>默认是 high</strong>(xhigh 是这代新加的);Batch 和 Flex 都是 $0.75/$3.75,Priority 是 $2.70/$13.50;输入收 text / image / video / audio / PDF,只出 text。接入面包括 Gemini API、AI Studio、Android Studio 和 Antigravity。</p><p><strong>选型要连着两条日历看</strong>:Hydrogen 现在每 token 是 Gemini 3.8 Flash 的两倍,但 <strong>2027-01-01 Google 要把 3.8 Flash 也涨到 $1.50/$7.50</strong>,届时两者同价;另一边 <strong>Gemini 4 Carbon / Argon 的 $2/$10 只到 11-30,12-01 起翻成 $4/$20</strong>。横向对照:GPT-6.1 Terra $1/$5、Claude Sonnet 5.5 $2/$10。</p></li></ol>
+<h2 id="-职业风向" class="cat-career">职业风向</h2>
+<p><em>影响你技能选择和职业方向的信号</em></p>
+<ol class="items cat-career"><li class="item"><div class="item-head"><strong><a href="https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/" target="_blank" rel="noopener noreferrer">United 封杀第三方 AI agent 代订机票,但同行三家都没跟:AA、Delta 放行部分工具,Southwest 自己做了 ChatGPT 插件</a></strong> — 11-11~12 宣布,<strong>对做消费类 agent 的人来说,这是「平台会不会在你头上关门」的第一个明确样本</strong>。 <code class="chip type">观点</code></div><p><strong>封的范围比标题宽</strong>:不只是自家数字平台,还&quot;间接通过旅行社和聚合商&quot;一起限制,配套改的是<strong>订票、出票和分销政策</strong>。但 Kayak / Hopper / Google Flights 这类聚合商仍能卖 United 的票;<strong>用 AI 查价比价也仍然允许,被掐掉的是最后那一步付款</strong>。</p><p><strong>它给的理由里有一条是技术人要记住的</strong>:联邦航空规则要求由人完成值机、确认行李不含违禁品——<strong>也就是说有些环节的&quot;必须是人&quot;是写在法规里的,不是产品策略</strong>,agent 再强也绕不过去。另一条是凭据共享风险:把账号交给第三方助理可能导致意外下单、账号被改、里程被用掉。</p><p><strong>措辞里留了门</strong>:policy 写的是&quot;未经授权的&quot;第三方 agent,等于给未来的官方合作留了接口;United 还在更新自己的 Digital Trust Center 来写明第三方 agent 的规则。<strong>对求职和选型的含义</strong>:「agent 怎么向平台证明自己是被用户授权的」正在从学术问题变成合同问题,而航司和银行是第一批被迫表态的。</p><div class="meta"><code class="chip">信号</code><code class="chip">HN 471 分 / 459 评论(11-12)</code><code class="chip">CBS、TechCrunch、TechRepublic 同日跟进</code></div></li><li class="item"><div class="item-head"><strong><a href="https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/" target="_blank" rel="noopener noreferrer">Anthropic 称 Mythos 三天就把 Claude 跑上了 AMD GPU,「几乎 100% 的 kernel 由它写或移植」</a></strong> — 联合创始人 Tom Brown 在 <strong>IPO 路演视频</strong>里说的,<strong>注意这不是工程博客,数字的边界写在 Anthropic 自己那页幻灯片的脚注里</strong>。 <code class="chip type">观点</code></div><p><strong>脚注把范围收得很窄</strong>:三天指的是 Claude Mythos Preview 把<strong>一个</strong> Anthropic 模型的 <strong>prompt processing</strong> 在 <strong>AMD MI355X</strong> 上跑到可用性能,不等于整套训练和推理基础设施三天迁完;对照的&quot;数十名工程师、数月&quot;是公司自己历史上用传统方法上新加速器的经验值(其他口径说 6~12 个月)。</p><p><strong>为什么这条算职业信号</strong>:如果 AI 真能把 kernel 移植从人月级压到天级,<strong>「只会 CUDA」这件事的护城河属性会先于 Nvidia 的市场份额被稀释</strong>。Anthropic 现在是从一个可互换的算力池里向 AWS Trainium、Google TPU、Nvidia GPU、AMD GPU 四个平台分配——<strong>多后端能力本身正在变成基础设施岗位的硬要求</strong>。</p><p>背景:7-22 公布的 AMD 合作包含最多 2GW 的 MI450 系列、AMD 最高 50 亿美元股权投资,以及<strong>用 Claude 去改进 ROCm</strong>。</p><div class="meta"><code class="chip">信号</code><code class="chip">the-decoder / TIKR / Yahoo Finance 均从 CUDA 护城河角度解读</code></div></li></ol>
+<h2 id="-速览" class="cat-brief">速览</h2>
+<p><em>值得知道但不用细读的动态</em></p>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://github.com/n8n-io/nod" target="_blank" rel="noopener noreferrer">n8n Labs 开源了 Nod:一个自带虚拟机和浏览器、全程跑在你本机的个人 agent</a></strong> — 11-10 发布的 research preview(本条非当日新闻),Apache 2.0,macOS 14+ 正式、Windows 11 预览。不需要 n8n 账号或服务器,自己接 OpenAI / Anthropic / Gemini / OpenRouter 的 key 或本地模型,凭据、日志和记忆都留在设备上。<strong>它的权限模型是卖点</strong>:在发送、付款、删除任何你没要求的东西之前必须问你,而且<strong>一封邮件或一个网页无法给它授权</strong>。栈是 TypeScript / Node 24 + Fastify + React + Postgres(pg-boss)+ Electron,底下用了 Pi agent runtime、agent-browser、Composio OAuth 连接器和 MCP。<strong>官方自己说不是生产就绪</strong>;98% 任务完成率、93.2% LongMemEval 这两个数字方法学没公开,社区在质疑,别当准数。 <code class="chip type">工具</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/google-deepmind/code-verification" target="_blank" rel="noopener noreferrer">DeepMind 的 AlphaProof Code 把 Signal 加密核心形式化验证了一遍:5 个人 4 周,650 万行 Lean 证明,代码 Apache 2.0 放出来了</a></strong> — 11-10 公布(本条非当日新闻)。验的是 libsignal 0.105.4 编译出的 AArch64 机器码上的 PQXDH 握手和 Triple Ratchet,符号和计算两个安全模型都做,性质包括前向保密、认证、受损后安全。<strong>参照系才是重点</strong>:seL4 当年约 20 人年,这次是 5 人 4 周、<strong>只有约 1% 的代码需要人看</strong>,agent 跑在 Gemini 4 Carbon 上,每条证明都过 Lean 内核。可证伪性做了:把两个真实的历史 bug 重新注入隔离副本,它产出了机器可检的违例结论。<strong>边界要说清</strong>:整个结论信任 AArch64 语义、Linux 进程行为的 Lean 模型和 Lean 本身,社区的争议集中在&quot;验的是二进制还是 Rust 源码、是加密核心还是整个应用&quot;。 <code class="chip type">资源</code></div><div class="meta"><code class="chip">信号</code><code class="chip">第三方 clone 仓库实测 752 万行 / 11,323 个文件、头部证明里 0 个 sorry</code></div></li><li class="item"><div class="item-head"><strong><a href="https://hidekazu-konishi.com/entry/openai_agent_builder_evals_and_reusable_prompts_shutdown.html" target="_blank" rel="noopener noreferrer">还有 2.5 周:OpenAI 的 Agent Builder、Evals 平台和 <code>v1/prompts</code> 在 11-30 一起关停</a></strong> — 去年 6-03 就进了弃用表,<strong>Evals 已经在 10-31 转成只读</strong>。今天能做的检查很机械:grep 代码里的 <code>pmpt_</code> 前缀 prompt ID、<code>/v1/evals</code> 和 <code>/v1/prompts</code> 调用,再把 Agent Builder 里建过的东西盘一遍。官方给的去向是 Agent Builder → Agents SDK(要继续当代码跑)或 ChatGPT 里的 Workspace Agents,Evals → Promptfoo(第三方),可复用 prompt → 内容搬回应用代码里。<strong>别误伤:Responses API 没被弃用,ChatKit 也还在</strong>,关的只是 Builder 这个 UI 和它存下来的 agent 对象。 <code class="chip type">新发布</code></div></li></ol>
+<hr>
+<h2 id="-今日术语">今日术语</h2>
+<ul class="list"><li><strong>OIDC 令牌(在 CI 语境下)</strong>:GitHub Actions 在跑的时候能向云厂商出示的一张短期身份凭证,用来换 AWS / Azure / GCP 的临时会话。好处是不用在仓库里存长期密钥,坏处是<strong>谁能在你的 workflow 里执行代码,谁就能替你去换这张票</strong>。</li><li><strong>role 信任策略(trust policy)</strong>:AWS 里规定&quot;谁有资格扮演这个角色&quot;的那份文档。被改成 <code>&quot;Principal&quot;: {&quot;AWS&quot;: &quot;*&quot;}</code> 就等于&quot;全世界都能扮演&quot;——而这跟你有没有轮换密钥完全无关,所以轮换救不了它。</li><li><strong>SARIF</strong>:静态分析结果的通用交换格式。扫描器吐 SARIF,GitHub / IDE / 安全平台就都能直接读,不用各家对接各家。</li><li><strong>隐式缓存(implicit caching)</strong>:模型服务自己判断&quot;这段前缀我刚算过&quot;然后给你打折,你不用也不能手动声明要缓存什么。Gemini 4 Hydrogen 只有这一种,且提示词得够长(≥4096 token)才触发。</li><li><strong>形式化验证(Formal verification)</strong>:不是跑测试看有没有出错,而是用数学证明&quot;在这个模型下这件坏事不可能发生&quot;,证明本身再交给 Lean 这类工具逐步核验。贵就贵在写证明——这次的新闻点正是写证明的人力成本掉了一两个数量级。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-11-12.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
