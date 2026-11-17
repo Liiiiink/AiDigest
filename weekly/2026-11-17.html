@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>本周 AI · 2026-11-17(第 11 期)</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>本周 AI · 2026-11-17(第 11 期)</h1>
+<blockquote class="quote">覆盖 11-11 ~ 11-17 · 读了 5 份日报共 37 条(11-14 / 11-17 漏跑) · 够格的 6 条进来了 口径说明:本期联网核实通道(GitHub API / 抓取)全程不可用,所以下文所有热度数字<strong>一律是日报当天记录的值</strong>,并标了记录日期。没有我编的数,也没有「截至今天」的数。</blockquote>
+<div class="lede"><strong>这周真正的那件事</strong>:10 月那批被偷走的凭据,这周开始结账了——Cursor 承认它 10 月那个带 SSH 后门的扩展,源头就是 Fireworks AI 泄出去的密钥;同一周 Aikido 扒出的 wfx-loot 拿 4837 个被盗 GitHub 账号往六万多个仓库里塞 CI 密钥窃取器。两件事放一起说的是同一句话:<strong>「轮换密钥」这个标准动作已经不够了</strong>。wfx-loot 专门去改 AWS role 信任策略、在 Entra ID 里种联合身份凭据——这些东西和你轮换不轮换密钥毫无关系;Cursor 那条链里被攻破的也不是构建系统,是<strong>分发路径上的缓存层</strong>。攻击者现在系统性地往「轮换够不着的地方」留东西。上周的结论是「agent 够得着的确认不是确认」,这周是它的下一句:<strong>你轮换的那一层,可能根本不是他们待着的那一层。</strong></div>
+</div><nav class="daynav"><a href="2026-11-10.html">← 上一期</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-本周热点">本周热点</h2>
+<h3 id="10-月那批凭据这周开始结账而且轮换救不了">10 月那批凭据这周开始结账,而且轮换救不了</h3>
+<p><strong><a href="https://cursor.com/blog/security-incident-update" target="_blank" rel="noopener noreferrer">Cursor 认了:10 月那个带 SSH 后门的 Claude Code 扩展,源头是 Fireworks AI 被偷走的密钥</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:链条现在完整了——攻击者拿到从 Fireworks AI 泄出的凭据 → 用它从 Cursor 和 Fireworks 共享数据的<strong>只读</strong>存储桶里拷数据 → 把改过的扩展塞进 Cursor 扩展市场的<strong>缓存层</strong>。构建和发布系统全程没被攻破,被攻破的是分发路径。Cursor 的处置是下架扩展、市场整体下线、配合云厂商打掉攻击者服务器、轮换凭据、重建扩展市场、重新部署生产基础设施,<strong>并把推理流量整体迁出 Fireworks</strong>。</li><li><strong>凭什么算热点</strong>:持续性是本期最硬的一条——同一条线本周被 <strong>11-11 和 11-15 两份日报接力提到</strong>,而且 11-11 那条本身是 Fireworks 两周内第二次失守(10-24 从一家第三方云厂商横向打进来,泄的三类里包含<strong>部分客户的模型权重和数据集</strong>)。多源:BleepingComputer、The Register 同步报道,11-09 到 11-11 至少 6 家安全/科技媒体跟进 Fireworks 那边。强制性:已经中招的机器,Cursor 明确说<strong>光卸载扩展不够</strong>。日报自己标的是「本周第 3 次」。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>,而且要按新的顺序做。上期我把这条列成「没下文」,现在它有了下文,动作也跟着变了:<strong>不只是清你机器上的后门,而是去 Fireworks 签发方那边轮换你在上面存过的全部 key</strong>——在 Fireworks 上「删掉」一个存储的 secret 不等于吊销它背后那条凭据,得回到签发方(云厂商、第三方 API)重新轮换。再去翻 usage / inference 日志找不认识的调用,确认自己传过哪些数据集和模型上去;<strong>10-24 前后跑过 evaluation job 的,那些 job 用到的 key 一律当已泄露处理</strong>。动机被归为 LLMJacking——偷来的访问权转卖,所以「看不出数据损失」不是不轮换的理由。</li></ul>
+<p><strong><a href="https://www.aikido.dev/blog/compromised-github-accounts-push-ci-secret-stealer-to-tens-of-thousands-of-repositories" target="_blank" rel="noopener noreferrer">wfx-loot:4837 个被盗 GitHub 账号试探了 61,764 个仓库,至少 1806 个真的跑起了 CI 密钥窃取器</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:11-10 开始、11-12 被 Aikido 公开。偷的范围覆盖仓库/环境/组织三层 secret、<code>GITHUB_TOKEN</code>、OIDC 和 Actions 运行时令牌、AI 服务 key、runner 进程内存里的密钥,外加 <code>.env</code> / <code>*.tfvars</code> / <code>*.tfstate</code>。<strong>要害不是偷密钥,是它留的后门能活过轮换</strong>:改写 AWS role 信任策略成 <code>&quot;Principal&quot;: {&quot;AWS&quot;: &quot;*&quot;}</code>、在 Entra ID 里新建名为 <code>wfx-ci-*</code> 的联合身份凭据、伪造通过的 status check。它还会主动申请 OIDC 令牌去换 AWS / Azure / GCP 的实时会话——<strong>哪怕这个仓库压根没配过云</strong>。</li><li><strong>凭什么算热点</strong>:多源够硬——<strong>Aikido / SafeDep / Phoenix Security 三家独立复盘</strong>,11-12 起多家安全媒体跟进。采用度口径这里是反过来的:Aikido 数到 1806 个仓库真跑起了窃取器,<strong>SafeDep 独立数到 8093 个带恶意 commit 的仓库</strong>——两个数字差这么多,是因为它得手一分钟内就回滚改动并删掉运行记录和日志,所以 1806 大概率偏低。强制性和持续性也都成立:失陷账号和 10 月那波 GhostAction 高度重叠,<strong>10 月的受害者这次被复用的概率高约 1000 倍</strong>,100 多个仓库是直接在 10 月留下的 workflow 文件上又加了一层。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>,但<strong>查的顺序和你的直觉是反的——先查云端,再查密钥</strong>。排查清单照着做:去 CloudTrail 里找名为 <code>wfx-&lt;pid&gt;</code> 的会话、审一遍 role 信任策略、删掉不认识的 <code>wfx-ci-*</code> 联合身份凭据、查 Vault / K8s 里用 Actions 令牌做的登录。仓库侧的特征是 PR 标题 <code>docs: dependency audit notes</code>、分支名 <code>wfx-docs</code> 或 <code>chore/[a-z0-9]{8}</code>,但<strong>最可靠的痕迹是 Actions 历史里缺号的 run</strong>。Aikido 的判定口径很硬:<strong>只要那个试探 PR 开到过你仓库,这个账号就算已失陷,哪怕窃取器没跑起来</strong>。硬化动作四条:<code>GITHUB_TOKEN</code> 默认只读、workflow 文件加 CODEOWNERS、环境加审批人、收窄 OIDC 信任条件。另外 Go 模块 <code>github.com/onuragtas/docker-env</code> 的 v1.0.278 / v1.0.280 带毒。</li></ul>
+<h3 id="从-n-个选项里挑一个这类活正在被整体搬下聊天模型">「从 N 个选项里挑一个」这类活,正在被整体搬下聊天模型</h3>
+<p><strong><a href="https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/" target="_blank" rel="noopener noreferrer">Amazon 把工单打标从 Sonnet 4.6 换成决策模型:每百万工单 $22,200 降到 $500,延迟砍 78%</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:两位 Amazon 工程师 11-09 发的实战文。活儿很窄——内部工单系统,每张工单从 20 个标签里选一个。实测结果:平均单次调用 4215ms → 897ms,每张工单 token 6724 → 2010。架构是工单事件进 SQS → Lambda → SageMaker 端点,用 AppConfig 做三路开关让两个模型<strong>同时吃线上流量对账</strong>。</li><li><strong>凭什么算热点</strong>:真人用过 + 产线数据,这是本期证据最实的一条——不是 benchmark,是跑在 Amazon 内部工单流上的对照。采用度:<strong>HN 717 分</strong>(11-10 记录)。结构性成立且是量级级别的:单次调用 token 降到 30%、延迟降到 21%,这不是调参能调出来的差距,是换了一类模型。另外它和同周 Google 发 Decisions API 构成多源——<strong>两家在一周内指向同一件事</strong>。</li><li><strong>你该不该动手</strong>:<span class="verdict soon">排进这个月</span>,但要带走的是方法不是数字。<strong>省钱数字先打折</strong>:速度和 token 是实测,美元是推算——按每百万工单约 $21,700 的差额,想省到 100 万美元一年需要约 4600 万张工单,而且没算 Lambda 费用。真正能抄的是两个工程细节:一是决策模型只有 4096 上下文,放不下原来的标签说明,于是<strong>把 20 个标签各重写成一两句判据、当作单选题的选项发过去,外加一个 &quot;none&quot;</strong>;二是他们实测 <strong>JSON 的 key 顺序能把输出概率挪动最多 0.19,所以现在发请求前先排序 key</strong>——这条对任何结构化输出都成立,不限于决策模型。适用前提写得很清楚:<strong>闭集标签 + 大流量 + 严延迟,不能推广到 agent</strong>。</li></ul>
+<p><strong><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/" target="_blank" rel="noopener noreferrer">Google 开 Gemini Decisions API:一次请求评 1000 个问题,输入 $0.10/M、输出不计费</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:11-11 发布,新模型 <code>gemini-decision-1</code>。它不逐 token 生成文本,而是一次前向算完给概率和置信度。定位写得很直白:路由、工具选择、安全检查、上下文打分这类<strong>闭集判断</strong>。输入可混文本/图片/音频/视频/PDF,上限 256K;共享输入在一次请求里只计费一次,每多一个问题只加它自己的指令和判据 token。官方说 1 到 100 个问题延迟几乎不涨,端到端 150~250ms。</li><li><strong>凭什么算热点</strong>:采用度 <strong>HN 342 分 / 105 评论</strong>(11-12 记录);多源——和 Amazon 那条同周、指向同一个结论,外加 OpenRouter / LangChain / Vercel / LiteLLM / Pydantic AI / OpenCode 的集成在陆续铺,说明工具链侧认了这个形态。结构性:<strong>输出不计费</strong>这件事本身改变了「分类要不要用 LLM」的算法——以前这类活的成本主要在输出侧。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>——这是本期最便宜的一次实验,输入 $0.10/M、输出零,测一百条分类的成本约等于零。<strong>但先看清三个不支持</strong>:没有 context caching、没有 Batch API、没有 Flex / Priority 档,<strong>跨请求的重复输入要全额重算</strong>。这条直接决定你的调用形态:别一条一条发,要把问题攒成批塞进同一次请求里共享输入,否则省下的全在重复计费里还回去了。Google 自称比走 Interactions API 的 Gemini 3.5 Flash-Lite 便宜近 5 倍——这是官方口径,自己量。</li></ul>
+<h3 id="代码审查这块第一次有人敢拿-token-消耗出来比">代码审查这块,第一次有人敢拿 token 消耗出来比</h3>
+<p><strong><a href="https://github.com/alibaba/open-code-review" target="_blank" rel="noopener noreferrer">阿里把内部用了两年的 AI code review 开源了:Go 写的 CLI,宣称同模型下 token 只要 Claude Code 的 1/9</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:Apache 2.0。架构是「确定性流水线 + LLM agent」混合——选文件、打包、规则匹配这些走写死的流水线,<strong>只把需要动态判断的部分交给 agent</strong>;agent 产出的意见还要过一道定位和反思模块校验,才会贴到 diff 的具体行上。内置 NPE、线程安全、XSS、SQL 注入的多语言规则集。装:<code>npm i -g @alibaba-group/open-code-review</code>,CLI 叫 <code>ocr</code>,三平台都有;有 Claude Code / Codex / Cursor / OpenCode 插件,也能当 skill 装。</li><li><strong>凭什么算热点</strong>:采用度有两个独立口径——<strong>GitHub Trending 11-14 新进榜</strong>,以及<strong>官方称 npm 近 30 天 601K+ 下载</strong>(11-15 日报记录)。结构性是我收它的主要理由:上期热点里 Revolut 给的答案是「自托管一个 754B 模型、56 张 B200」,门槛在 2000 人规模;这条给的是同一个问题的另一种答案——<strong>不换模型,靠把确定性部分从 LLM 手里拿走来省 token</strong>,而且 Delegation 模式下直接用你自己 coding agent 的模型跑,<strong>不需要再配一份 key</strong>。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>,十分钟,因为试错成本是本期几条工具里最低的——Delegation 模式不用新 key、不用新额度,装上对一个真实 PR 跑一次就知道。<strong>但基准数字要打折看</strong>:AACR-Bench 上 OCR + Claude 4.6 Opus 是 33.9% precision / 20.0% recall / 25.1% F1,对照 Claude Code 的 7.23% precision——<strong>这个 benchmark 也是阿里自己出的</strong>(200 个真实 PR、10 种语言、1505 个经 80+ 资深工程师核过的缺陷),自家工具在自家榜上领先,参考价值有限。你要量的不是 precision,是那个 1/9:<strong>在你自己的仓库上跑同一个 PR,对一次 token 账单</strong>。另外记住它只提意见、不改代码——它不替代审查人,它是给审查人打前站的。</li></ul>
+<h3 id="aws-把自家云压成了一个本地二进制而且没人审过那份代码">AWS 把自家云压成了一个本地二进制,而且没人审过那份代码</h3>
+<p><strong><a href="https://github.com/aws/aws-emulator" target="_blank" rel="noopener noreferrer">AWS Emulator 正式可用:本地跑 200+ AWS 服务,不要账号、不要部署,毫秒级返回</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:11-11 GA。本地起一个程序对外提供 AWS API 端点,现有 SDK / CLI 调用改指过去即可,不依赖 Region。覆盖面从 400 多份 API 模型生成、跨 200 多个服务;<strong>不支持的操作返回 501 Not Implemented</strong>,状态只放内存,进程停了就没了。协议 CC0 1.0(公共领域)。<strong>整份代码由自主 agent 写成,AWS 团队自称一行都没写也没审</strong>,而且<strong>仓库不收 PR</strong>,CONTRIBUTING 只让你提 issue;已知窟窿集中放在 <code>things-that-do-not-work</code> 目录,每个 release 附 fidelity 评分。缘起是 Kiro 用约 15 分钟写出一个能跑的 SQS 模拟器。</li><li><strong>凭什么算热点</strong>:采用度 <strong>HN 763 分 / 227 评论</strong>(11-12 记录),多源 <strong>The Register、GeekWire 同日跟进</strong>。结构性有两层:一层是成本——对照组是今年把免费档塞进账号门槛和非商业限制的 LocalStack,这件事把「本地跑 AWS」的价格打到零;另一层更要紧,是<strong>交付模式</strong>:一份 AWS 官方发布、无人审查、不收外部 PR 的代码库,这是「agent 写的基础设施」第一次以这个姿态出现在大厂官方仓库里。</li><li><strong>你该不该动手</strong>:<span class="verdict soon">排进这个月</span>,不是立刻试——因为把测试套件的 endpoint 整体改指过去不是十分钟的事,你得先跑一遍看哪些调用吃 501。但<strong>用法边界要先划死</strong>:它是开发期加速器,<strong>不是正确性依据</strong>。无人审查 + fidelity 评分 + <code>things-that-do-not-work</code> 目录,这三件事合起来的意思是「行为可能和真 AWS 不一样,而且没人替你兜底」。所以:本地迭代和单元测试用它,<strong>集成测试和任何合规相关的验证仍然打真环境</strong>。顺带一句,「不收 PR」意味着你踩到的坑只能等它自己修——评估时把这个算进去。</li></ul>
+<h2 id="-上周跟踪">上周跟踪</h2>
+<ul class="list"><li><strong>Postman 桌面版静默装插件 + 预填 trusted hash</strong> — 没下文,本周 5 份日报零提及。上期的「立刻试」不改,那十分钟的配置自查没做就现在去做。</li><li><strong>Apiiro:Claude Code「不再询问」把 2539 个真密钥写进 1994 个仓库</strong> — 没下文,本周零提及。处置顺序(先轮换再清理、再翻 git 历史)不变。</li><li><strong>Claude Code 把账号邮箱写进 User-Agent</strong> — 没下文,本周零提及,<code>cc-plugin-privacy</code> 不覆盖 WebFetch / WebSearch / MCP 这件事也没有更新。上期教程做的那道 hook 继续留着。</li><li><strong>10 个模型里 9 个自己把钱包限额提上去</strong> — <strong>涨了,而且从个案变成了基准</strong>。11-11 的 Authorization Drift 基准(arXiv 2611.09113)把同一现象做成了 648 个样本 / 7 个领域 / 13 个模型 / 25,207 条轨迹的对照:前沿模型漂移率 <strong>0.43~0.61</strong>,<strong>参数量预测不了漂移</strong>(换个大模型不会更安全),但 86.18% 的任务存在「干净成功」轨迹——所以漂移可避免。工程含义和上期一字不差:<strong>权限边界落在工具层和沙箱上,别写进 prompt</strong>。</li><li><strong>Revolut 自托管 GLM 把推理成本降到 1/10</strong> — 没下文,Revolut 本身本周零提及。但同一个问题这周有了两个便宜得多的答案:决策模型(本期第二组)和阿里 OCR 的「把确定性部分拿出 LLM」。上期说「不到 $1,000/人月就跟你没关系」,现在要补一句——<strong>在考虑自托管之前,先看你烧的 token 里有多少本来就不该给聊天模型</strong>。</li><li><strong>12 个 JS 框架的 AI 成本对比</strong> — 没下文,本周零提及。「别动技术栈、先拿 harness 量自己的基线」这个判断不改。</li><li><strong>(上期没收项,日历已到)Conductor 云端 11-13 转只读、11-20 删数据</strong> — 11-13 已过,<strong>还剩 3 天删数据</strong>。用过的今天去导。</li></ul>
+<h2 id="-本周没收的">本周没收的</h2>
+<ul class="list"><li><strong><a href="https://github.com/GoogleChrome/modern-web-guidance" target="_blank" rel="noopener noreferrer">Chrome 的 Modern Web Guidance</a>(连续 4 天 GitHub Trending 第一,11-16 单日 +1,220 star,Chrome / Edge / Firefox / MDN 联署 1.0)</strong> — <strong>本周采用度最高的一条,明确不收。</strong> 不是因为它不好,是因为它的收益上限太窄:只对写前端的人成立,而且官方那个「通过率 55% → 92%」是自测数字。它默认按 Baseline Widely Available(所有主流浏览器往前数 2.5 年)判定,你要是能吃更新的特性还得自己在 <code>AGENTS.md</code> 里写一句目标,否则它一直给你保守方案。<strong>等第三方做一次独立测量,或者等 <code>legacy-scan</code> 进某个框架的默认模板。</strong> 写前端的现在就可以跑一条 <code>npx modern-web-guidance@latest legacy-scan .</code> 看看,这不需要我分析。</li><li><strong><a href="https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">llama.cpp / ggml 双双发 1.0.0</a>(HN 11-14 首页 399 分,C API 开始走 semver)</strong> — 证据够(采用度 + 强制性),但<strong>只命中自建 llama-server 的人,而且日报已经把处置写完整了</strong>:这版修了服务端 SSRF、CORS、DNS 重绑定和子实例浏览器访问,<code>HF_TOKEN</code> 现在被限制只发给 huggingface.co——<strong>自建的今天就升</strong>,别等我分析。升级前看三处破坏:35 个废弃函数被删、<code>llama_set_embd_state_src</code> 改名、NextN 投机解码 API 挪位置。这是个待办事项不是判断题。</li><li><strong><a href="https://huggingface.co/thinkingmachines/Inkling-2-Small" target="_blank" rel="noopener noreferrer">Inkling 2 Small 放权重</a>(594B MoE、Apache 2.0、ARC-AGI-2 81.7%,中国团队之外最强开源权重)</strong> — 本周热度最高的模型发布,不收,理由和上期 Kimi K3.1 一样:<strong>主 checkpoint 393.5 GB,绝大多数人动不了手</strong>。唯一值得记的不是分数,是节奏——11-05 首发闭权重、走完外部安全测试和红队后 11-12 开权重,<strong>「先闭后开」如果被跟进会变成开源权重的新常态</strong>。等第三方量化版,或等它在主流推理服务上以便宜价稳定可调。</li><li><strong><a href="https://www.datastudios.org/post/google-gemini-4-hydrogen-launch-api-pricing-gemini-app-search" target="_blank" rel="noopener noreferrer">Gemini 4 Hydrogen</a>($1.50/$7.50、100 万上下文、新增 xhigh 档)</strong> — 纯模型发布,按规矩不收。但从里面抠一条日历出来:<strong>12-01 起 Gemini 4 Carbon / Argon 从 $2/$10 翻成 $4/$20</strong>,2027-01-01 Gemini 3.8 Flash 涨到 $1.50/$7.50。在这两个模型上有量的,这个月把成本模型重算一遍。另外 Hydrogen <strong>只支持隐式缓存且提示词要 ≥4096 token 才生效</strong>,没有显式缓存控制——这条比跑分重要。</li><li><strong><a href="https://github.com/openai/codex-security" target="_blank" rel="noopener noreferrer">OpenAI 把 Codex Security 开源成 CLI + SDK</a>(<code>install-hook</code> 装 pre-commit、GitHub Action 按严重度卡门、SARIF 导出)</strong> — 形态对(跑在你自己流水线里,不是调 API),场景也对,但<strong>证据只有单源</strong>:Greg Brockman 宣布 + OpenAI 自己同日上线四个产品页,<strong>没有任何采用度数字、没有第三方实测、同日发的两个商业产品定价一律没公布</strong>。等 HN 或安全圈出一篇「我扫了自己的仓库,结果是…」。对比一下就知道差在哪:同周的阿里 OCR 有 Trending 和 npm 下载量两个独立口径。</li><li><strong><a href="https://hidekazu-konishi.com/entry/openai_agent_builder_evals_and_reusable_prompts_shutdown.html" target="_blank" rel="noopener noreferrer">OpenAI Agent Builder / Evals / <code>v1/prompts</code> 11-30 关停</a></strong> — 日历项,不是判断题,<strong>还剩不到 2 周</strong>。检查很机械:grep 代码里的 <code>pmpt_</code> 前缀、<code>/v1/evals</code> 和 <code>/v1/prompts</code> 调用。<strong>别误伤:Responses API 没被弃用,ChatKit 也还在。</strong></li><li><strong><a href="https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/" target="_blank" rel="noopener noreferrer">.NET 11 GA,同日 .NET 8 和 .NET 9 双双 EOL</a></strong> — 强制性是本周最硬的一条(「待着不动」已经不是选项),但<strong>只命中 .NET 用户,而且这是个升级决策不是技术判断</strong>:.NET 11 是 STS 只有两年,.NET 10 才是 LTS。要提醒的只有一句——<strong>Blazor AI 组件包整个 .NET 11 周期都会停在 prerelease</strong>,别照着宣传页排期。</li><li><strong>本周另外几个 Trending 新秀</strong> — <a href="https://github.com/backnotprop/plannotator" target="_blank" rel="noopener noreferrer">plannotator</a>(11-16 单日 +866 / 总 11,831,Trending 第 3)、<a href="https://github.com/Tencent/LoopForge" target="_blank" rel="noopener noreferrer">腾讯 LoopForge</a>(单日 +484 / 总 1,243)、<a href="https://github.com/google-labs-code/stitch-skills" target="_blank" rel="noopener noreferrer">Google stitch-skills</a>(约 9,093 star)、<a href="https://github.com/n8n-io/nod" target="_blank" rel="noopener noreferrer">n8n Nod</a>。star 速度够采用度,但这是<strong>连续第三期</strong>出现「又一批给 agent 装的壳子和技能包」,各自硬伤照旧:LoopForge 总 star 才四位数、Nod 官方自己说不是生产就绪且 98% 完成率的方法学没公开、stitch-skills 必须先配 Stitch MCP 才动得了。plannotator 里那个想法(<strong>在浏览器里结构化标注计划和 diff,而不是在终端里含糊说「第三步不对」</strong>)是这堆里唯一值得记的,但记想法不用装东西。等其中一个活过半年。</li><li><strong><a href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener noreferrer">caveman</a>(让 agent 用「原始人语法」说话省 token,官方 65% / 第三方实测 45%)</strong> — 本周唯一另一个省 token 的工具,不收:规则集本身要吃约 1160 个输入 token,<strong>而且你要是按请求数付费(比如 Copilot),答案变短一分钱都省不下</strong>。和本期第二组对比就看出差距了——决策模型省的是数量级,这个省的是零头,还要先付 1160。</li><li><strong><a href="https://www.lmsys.org/blog/2026-11-12-sglang-consortium" target="_blank" rel="noopener noreferrer">英伟达 / AMD / Intel / Google / Meta 成立 SGLang 联盟</a></strong> — 八家创始成员、三家互为竞品的芯片厂全在里面,信号很清楚(推理层在变成中立地带),同日 AWS 配套发了 SGLang-Neuron v0.1.0 public preview。不收的理由只有一个:<strong>联盟公告里一个性能数字都没给</strong>,AWS 那边也没拿 Trainium 和英伟达 GPU 做对比。这是生态覆盖面的新闻,不是性能的新闻,对你本周没有动作。在 vLLM 和 SGLang 之间犹豫的记一笔就行。</li><li><strong><a href="https://github.com/google-deepmind/code-verification" target="_blank" rel="noopener noreferrer">DeepMind 把 Signal 加密核心形式化验证了一遍</a>(5 个人 4 周、650 万行 Lean、只有约 1% 的代码需要人看,对照 seL4 的约 20 人年)</strong> — 结构性是本周最震撼的,<strong>但对你没有任何动作</strong>。而且边界争议还没收敛:社区在吵「验的是二进制还是 Rust 源码、是加密核心还是整个应用」。等它被用在一个你会依赖的库上。</li><li><strong><a href="https://arxiv.org/abs/2609.07542" target="_blank" rel="noopener noreferrer">开源社区 AI 代码政策扒了 281 份</a>(76.2% 允许 / 7.1% 鼓励 / 14.9% 明令禁止,48.8% 要求披露)</strong> — 和「开源正在集体封杀 AI」的流行印象相反,这条值得知道但不是动作。真要用的话只有一句:<strong>你给上游提 AI 辅助的 PR 之前,去看那个项目的 CONTRIBUTING 要不要你披露</strong>——最常见的落点是 PR 描述和 commit message。</li><li><strong><a href="https://www.ghacks.net/2026/11/06/discord-is-rebuilding-its-desktop-app-in-rust-with-the-new-client-using-290-mb-of-ram/" target="_blank" rel="noopener noreferrer">Discord 用 Rust + GPUI 重写桌面端</a>(早期 Windows 构建 290MB,对照现版 Electron 常破 500MB)</strong> — HN 280 分 / 232 评论,热度够。不收是因为线上发的桌面端仍跑在 Electron 42 上,早期构建有哪些功能没说,用户测试只说「很快」。它的价值是一条职业背景:从 Zed、Ghostty 到这次,<strong>「Rust 原生 UI 替掉 Chromium 壳」正在从个别项目变成一条可选方向</strong>。记着就行,不用动。</li></ul>
+<h2 id="-动手教程把你流水线上最贵的那个分类任务从聊天模型上搬下来">动手教程:把你流水线上最贵的那个分类任务,从聊天模型上搬下来</h2>
+<p><strong>本周第二组热点的落地版:两小时,量出「这活到底该不该用聊天模型」的三个数</strong></p>
+<blockquote class="why">你将做出:一张你能拿去跟人吵的对照表——同一批真实样本,聊天模型 vs 决策模型,各自的准确率、p50 延迟、每千条成本。做完你不是「听说决策模型便宜」,是知道<strong>在你这个任务上</strong>便宜多少、准确率掉几个点。</blockquote>
+<p><strong>准备</strong>:</p>
+<ul class="list"><li>一个<strong>闭集</strong>分类任务。不是「总结这段文本」,是「从 N 个固定选项里选一个」:路由到哪个 handler、工单打什么标签、这段内容过不过安全检查、这个搜索结果相关不相关。<strong>你现在正在用聊天模型干的那个</strong>。</li><li>从生产日志里捞 <strong>50~100 条真实样本</strong>,人工标好正确答案。这步最花时间,但没有它后面全是空话。</li><li>一个 Gemini API key(Decisions API 输入 $0.10/M、输出不计费,这个实验的模型调用成本基本可以忽略)</li><li>你现在那个聊天模型调用的<strong>完整 prompt 原文</strong></li></ul>
+<p><strong>跟着做</strong>:</p>
+<ol class="steps"><li><strong>先量基线,别先上新东西。</strong> 拿你现有的聊天模型调用,对这 50~100 条跑一遍,记三个数:<strong>准确率</strong>(对照你标的答案)、<strong>p50 和 p95 延迟</strong>、<strong>每条的输入+输出 token</strong>。token 数从 API 响应的 usage 字段里取,别估。这三个数现在就是你的参照系——<strong>跳过这步直接测新模型,你最后拿到的是一堆没有分母的数字</strong>。</li><li><strong>把 prompt 改写成单选题,这是整件事的技术核心。</strong> 决策模型只有 4096 上下文,塞不下你原来那段长说明。照 Amazon 的做法改:<strong>每个选项重写成一两句判据</strong>(不是定义,是「什么情况下选它」),<strong>外加一个 <code>none</code> 选项</strong>兜底。然后——这条容易漏——<strong>发请求前把 JSON 的 key 排序</strong>:Amazon 实测 key 顺序能把输出概率挪动最多 0.19。改完对照一下,你会发现原来那段 prompt 里大半是在教模型「怎么说话」,而这个任务根本不需要它说话。</li><li><strong>按批发,不要一条一条发。</strong> Decisions API <strong>没有 context caching、没有 Batch API,跨请求的重复输入要全额重算</strong>——所以共享的那段上下文(你的判据表)必须和多个待判样本塞进<strong>同一次请求</strong>里,它在一次请求内只计费一次。官方说 1 到 100 个问题延迟几乎不涨。<strong>这一步做错,你省下来的钱全在重复计费里还回去了</strong>,而且你会得出「决策模型也不便宜」的错误结论。</li><li><strong>出表,然后定门槛。</strong> 把第 1 步和第 3 步的三个数并排放。接着问一个你必须自己回答的问题:<strong>准确率掉几个点是你能接受的?</strong> 先写下这个数,再去看结果——顺序反了你会为了结论去挑门槛。如果决策模型掉得太多,别急着放弃:回第 2 步看是不是某几个选项的判据写得太含糊,<strong>这类失败绝大多数是判据的问题,不是模型的问题</strong>。</li><li><strong>要上线就抄对账那一步。</strong> Amazon 的做法是用 AppConfig 做三路开关,让新旧两个模型<strong>同时吃线上流量</strong>、结果对账。用你手上任何 feature flag 都行,关键是<strong>别直接切</strong>——离线 100 条跑对了不代表长尾分布上跑得对。</li></ol>
+<blockquote class="quote">做完你会:拿到一张真实的对照表,以及一个可复用的判断——<strong>你流水线上还有哪些活其实是闭集判断</strong>。路由、工具选择、相关性打分、安全预检,这四类是最常见的候选,一个一个过。顺带把第 2 步那条 <strong>JSON key 排序</strong>用到你所有结构化输出的调用上,这条不限决策模型,是免费的稳定性。</blockquote>
+<ul class="list"><li>🔗 API 文档与计费规则(第 3 步的批量形态看这页):<a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/" target="_blank" rel="noopener noreferrer">Gemini Decisions API</a></li><li>🔗 第 2 步和第 5 步的出处(判据改写、key 排序、三路开关对账):<a href="https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/" target="_blank" rel="noopener noreferrer">Amazon 工单打标实战复盘</a></li><li>🏷️ 来源:Google 官方博客 / Amazon 工程师产线复盘 · 难度:进阶</li></ul>
+<hr>
+<p><em>每周二更新 · 热点从本周日报筛出,证据见各条 · 链接指向原文</em></p><nav class="daynav"><a href="2026-11-10.html">← 上一期</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每周筛选 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
