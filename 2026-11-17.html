@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-11-17</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-11-17</h1>
+<blockquote class="quote">面向程序员的 AI 进展速览 · 7 条 · 选你能用的</blockquote>
+<div class="lede"><strong>今日焦点</strong>:挂在你自己域名下的第三方 JS 片段被人改了一行,178 家公司(Zoom、BBC、CNN、Salesforce、GitLab、HSBC 都在内)的线上页面当天就在给访客发窃密脚本——Optimizely 这次,是今年最该让前端和运维看一眼的一条。</div>
+</div><nav class="daynav"><a href="2026-11-16.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>(3 条)</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>(2 条)</li><li class="cat-brief"><a href="#-速览"> 速览</a>(2 条)</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
+<hr>
+<h2 id="-动手派" class="cat-tools">动手派</h2>
+<p><em>今天你能用的工具、技巧、实战经验</em></p>
+<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/" target="_blank" rel="noopener noreferrer">Optimizely 供应链投毒:188 个 snippet 被改,178 家组织的生产页面当场发窃密脚本</a></strong> — 11-16 爆发,<strong>走的是官方 CDN、官方证书,看不出任何异常</strong>。 <code class="chip type">实战</code></div><p>攻击路径很朴素但致命:攻击者往客户 Optimizely 账号里的 <strong>Project JavaScript</strong> 字段塞代码,平台 CDN 照常分发给所有访客。文件还是从 <code>cdn.optimizely.com</code> 来、证书还是 Optimizely 自己的、snippet 其余部分一字没改——<strong>你的 CSP 要是把这个域名整段放行,这次就是全透</strong>。载荷从 <code>1688360[.]cc/track.js</code> 拉二次脚本,能换加密货币收款地址、抓信用卡、偷 cookie、截屏,还带 iOS 专门分支。</p><p><strong>现在就该做的三件事</strong>:翻一遍每个 project 的 Project JavaScript 和每个实验的 custom code,搜 <code>1688360.cc</code>、<code>atob(</code>、以及任何你不认识的外链;给第三方脚本域名上 CSP(Report URI 明确说这类攻击是 CSP 能当场拦住的);把实验平台的写权限和审计日志收紧——<strong>这次攻击者怎么拿到 projectJS 写权限,到现在没人知道,Optimizely 也没发声明</strong>。</p><p>受影响名单里有 Zoom、BBC、CNN、Salesforce、GitLab、IKEA、HSBC、Equifax、Air France-KLM、Ledger、Peacock,连 <code>optimizely.com</code> 和 <code>login.optimizely.com</code> 自己也中了。</p><div class="meta"><code class="chip">信号</code><code class="chip">Report URI 扫了 1,611 个可见 snippet、命中 188 个 / 178 家组织</code><code class="chip">11-16 19:25 UTC 攻击者钱包已收约 $7,000</code><code class="chip">21:52 UTC 仅剩 1 个未清理(TalkTalk)</code><code class="chip">研究者明说真实规模只会更大</code></div></li><li class="item followup"><div class="item-head"><span class="fubadge">后续</span><strong><a href="https://openrouter.ai/qwen/qwen4-max" target="_blank" rel="noopener noreferrer">Qwen4-Max 转正,从 Token Plan 专供改成按量付费,$1.50 / $4.50 每百万 token</a></strong> — 11-16 正式可用(上次 <strong>11-15</strong> 报的是 11-11 开的两周预览),<strong>比原计划的 11-25 提前了 9 天,预览期直接跳过一半</strong>。 <code class="chip type">新发布</code></div><p><strong>升级要改的东西</strong>:模型 ID 从 <code>qwen4-max-preview</code> 换成 <code>qwen4-max</code>;接入方式从「只能走 Token Plan」放开成 Model Studio API 按量计费。API 兼容面挺宽:OpenAI Chat Completions、OpenAI Responses、Anthropic Messages、DashScope 都能直连。</p><p><strong>价格</strong>:新加坡国际区 $1.50 / $4.50 每百万输入/输出,比 Qwen3.8-Max 的 $2 / $6 降了 25%;北京和 Global 区(香港 / 法兰克福 / 弗吉尼亚 / 日本)是 $1.413 / $4.24。隐式缓存读 $0.075/M,显式缓存写 5 分钟档 $1.875、1 小时档 $3。<strong>全上下文一口价、思考模式不额外加钱</strong>——这两点对长上下文场景比峰值价格更重要。</p><p><strong>规格和坑</strong>:2.4T 总参 / 每 token 激活 71B,另有 328B N-gram embedding 参数,原生视觉,收文本 / 图像 / 视频、出文本。标称 100 万上下文,<strong>实际最大输入不开思考 991,808、开思考 983,616</strong>;思考 + 回答合计上限 262,144 token,<strong>思考默认开着</strong>。<strong>没有开放权重</strong>,官方只说后续会开源 Qwen4 家族的小模型,没给尺寸也没给时间。</p><div class="meta"><code class="chip">信号</code><code class="chip">承接 11-15 预览版条目</code><code class="chip">本周第 2 次</code><code class="chip">11-11 预览 → 11-16 转正,仅隔 5 天</code><code class="chip">官方称平均任务成本从 $4.43 降到 $1.67</code></div></li><li class="item"><div class="item-head"><strong><a href="https://frontierharness.org/live/" target="_blank" rel="noopener noreferrer">FrontierHarness 把模型锁死、只比 harness:62 个任务 × 5 个模型 × 21 个 harness × 4 次重试</a></strong> — 11-16 的 live run,<strong>这是目前唯一能回答「换模型要不要跟着换 harness」的公开数据</strong>。 <code class="chip type">资源</code></div><p>为什么这个基准的设计值得看:它把模型、任务、运行时全钉死,只换外面那层 harness(Claude Code、Codex CLI、OpenCode、mini-SWE-agent 等),所以分差能直接归因到 harness 本身。模型侧用 GLM-5.3、GLM-5.3-Flash、DeepSeek-V4.1-Flash-1017、Kimi-K3、Muse Spark Open,任务覆盖软件工程、科学、数据、系统、ML、安全六类,推理走 Baseten,单任务超时 15 分钟到 8 小时不等。</p><p><strong>评分口径比分数本身更值得抄</strong>:得分 = 通过数 ÷ 被评分的尝试数;<strong>超时照样算一次评分,基础设施错误不计分,reward hacking 直接判失败</strong>;给 95% bootstrap 置信区间;成本按「官方列表价 × 上报 token 数」算。自己做内部 agent 评测的,这套口径能省你半天设计时间。</p><p><strong>一个要自己去看的点</strong>:mini-SWE-agent 这个极简基线在不同快照里排名跳得很厉害(有的榜单它在第一梯队、live 板上又排到第 17),<strong>所以别记名次,去 live 板上按你自己要用的模型筛</strong>——这个基准最大的价值恰恰是告诉你排名不可跨模型迁移。</p><div class="meta"><code class="chip">信号</code><code class="chip">11-16 live run</code><code class="chip">数据集 frontier-harness-eval@v1.1.0</code><code class="chip">62 任务 / 22 harness / 每任务 4 次 / 单模型 5,456 次试验</code><code class="chip">v1.1 规模是 v1.0 的 72 倍</code></div></li></ol>
+<h2 id="-职业风向" class="cat-career">职业风向</h2>
+<p><em>影响你技能选择和职业方向的信号</em></p>
+<ol class="items cat-career"><li class="item"><div class="item-head"><strong><a href="https://hntrends.com/2026/november.html" target="_blank" rel="noopener noreferrer">HN &quot;Who is Hiring&quot; 卡在 12 年低位:11 月 244 条岗位、同比少 37%,而 AI 第一次出现在过半岗位里</a></strong> — 截至 11-14 的统计,<strong>这是今年最硬的一份「岗位结构在怎么变」的公开数据</strong>。 <code class="chip type">观点</code></div><p><strong>量</strong>:11 月 244 条,去年同期 387 条,少 37%。7 月以来每期都卡在 224~255 之间,8 月的 224 是 2014 年 1 月以来最少。2026 年月均 287 条,是 2013 年以来最低的年均值。</p><p><strong>关键词结构</strong>:AI 出现在 51.6% 的岗位里,仅次于 Remote,<strong>6 月首次破 50% 之后就没掉下来</strong>;agent / agentic 占 14.8%,已经超过 LLM 的 10.7%;<strong>MCP 从一年前的 0.3% 涨到 4.5%,是本月涨幅最大的单项</strong>。Python 22.1%、TypeScript 17.6% 仍居前,但 TypeScript 去年同期是 22.5%,在掉。</p><p><strong>最该注意的一条,和 AI 没直接关系</strong>:<strong>Front End 这个岗位标签从 2022 年初的 27% 掉到现在的 6.6%,是所有角色里跌得最狠的</strong>。同时 Senior 稳在 30% 左右,Staff 从 2019 年起翻了约 4 倍到 12%,<strong>Junior 只剩 3%</strong>。远程 55.7% / 坐班 26.2% / 混合 17.2%,三项都和去年同期差不到两个百分点——<strong>所以这不是「远程退潮」的故事,是「初级岗位消失 + 职级上移」的故事</strong>。</p><div class="meta"><code class="chip">信号</code><code class="chip">HN 首页 93 分</code><code class="chip">hntrends 官方月报</code><code class="chip">[HN 讨论串](https://news.ycombinator.com/item?id=50512950)</code><code class="chip">另有独立分析用 Codex 跑了 8 年数据得出同向结论(Staff 岗 2019 年 77 条 → 2026 年 277 条)</code></div></li><li class="item"><div class="item-head"><strong><a href="https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html" target="_blank" rel="noopener noreferrer">Google 抓到第一个全自动「补丁转漏洞」的 agent:比对补丁前后代码、自己写 exploit、自己打</a></strong> — 11-16 发布的 GTIG Q4 2026 AI Threat Tracker,<strong>关键词是「no human in the loop」</strong>。 <code class="chip type">观点</code></div><p>这个被命名为 <code>exploit_agent</code> 的东西是在一台暴露的 staging 服务器上被发现的:接了几个前沿模型和本地自托管模型,<strong>持续盯着热门 Web 应用的补丁公告,拿补丁前后的代码做差分分析,判断出可能的漏洞后直接生成并执行 exploit</strong>。同一台服务器上还放着被窃数据、暴破脚本和 webshell 装卸工具,受害者偏法国的媒体 / 娱乐 / 教育站点,运营者疑似俄语背景。</p><p>报告里同时点名了 ARTEX、CAIRN、CyberStrikeAI、HexStrike AI、PentAGI 等框架被实际使用,另外 2026 年零日平均每月 11 个、8 月峰值 22 个;LLMjacking(偷 LLM 凭据转卖代理)已经形成市场,<strong>被盗 AI 账号最低卖到每百万 token $0.10</strong>。</p><p><strong>对工程决策的意思,说直白点</strong>:以前「补丁发布 → 公开 exploit」之间那几天到几周的缓冲窗口,是很多团队打补丁节奏的隐含前提。这份报告说这个窗口正在被自动化压缩。<strong>如果你维护对外服务,依赖升级的 SLA 和 LLM 凭据的保管级别,都该按「窗口会继续缩短」重新定一遍</strong>——这也正在变成招聘里 AppSec / 平台安全岗的新考点。</p><div class="meta"><code class="chip">信号</code><code class="chip">Google 官方 Q4 2026 AI Threat Tracker</code><code class="chip">The Register / SiliconANGLE / Hackread / The Hacker News 同步报道</code></div></li></ol>
+<h2 id="-速览" class="cat-brief">速览</h2>
+<p><em>值得知道但不用细读的动态</em></p>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://www.cmu.edu/news/stories/archives/2026/november/cmu-opens-access-to-top-computer-science-classes-through-free-cs-learn-platform" target="_blank" rel="noopener noreferrer">CMU 把计算机课整学期搬上 YouTube,免费</a></strong> — Griffin 计算机学院新开的 CS Learn 平台,课在官网和 YouTube 频道 <a href="https://www.youtube.com/@CMULearn" target="_blank" rel="noopener noreferrer">@CMULearn</a> 同步放。首批有 Principles of Computing、Generative AI、AI Agents and Machine Learning in Production、Software Architectures,<strong>放的是完整整学期的课而不是精选片段</strong>,发布周每天首发一门,明年 1 月还有一批。教授 Phillip Compeau 在 HN 上说,制作流水线大部分是学生做的自动化工具 + AI 辅助,课讲完几周内就能上线。 <code class="chip type">资源</code></div></li><li class="item"><div class="item-head"><strong><a href="https://iter.ca/post/ubo-uxss/" target="_blank" rel="noopener noreferrer">uBlock Origin 的通用型 XSS:任何网页能把拦截器的元素选择器塞进隐藏 iframe,一键在任意站点执行 JS</a></strong> — GHSA-cmqw-9r2w-6wv2,高危,11-15 公开、11-16 上 HN 首页。成因很值得所有写浏览器扩展的人看一遍:元素选择器挂在 web-accessible resource URL 上,<strong>任何页面都能 iframe 它,而修复前的 message 监听器没做 origin 校验</strong>;选择器加出来的过滤规则又天然带 trusted 标记,于是能注入 JS。修复思路是改成「内容脚本生成一次性密钥,选择器只认带密钥的指令」。受影响 1.75.2 及更低,1.75.4 修掉,<strong>1.76.0 正式列入安全修复,Firefox 用户升到 1.76.0 以上</strong>(当前稳定版 1.76.4);uBO Lite(MV3)有同源问题但影响较轻。 <code class="chip type">实战</code></div></li></ol>
+<hr>
+<h2 id="-今日术语">今日术语</h2>
+<ul class="list"><li><strong>CSP(Content Security Policy,内容安全策略)</strong>:一段由服务端下发的声明,告诉浏览器「这个页面只准从这些地方加载脚本」。今天 Optimizely 那种攻击之所以能被它挡住,是因为恶意载荷要去拉第三方域名的二次脚本——前提是你别把整个 CDN 域名一股脑放行。</li><li><strong>Agent Harness(智能体外壳)</strong>:包在大模型外面那层「怎么给它工具、怎么管上下文、怎么决定下一步」的工程框架。Claude Code、Codex CLI、OpenCode 都是 harness;换 harness 不换模型,成绩和账单都会变。</li><li><strong>UXSS(Universal XSS,通用型跨站脚本)</strong>:普通 XSS 只能在有漏洞的那一个网站上执行脚本;UXSS 是攻破浏览器或扩展本身,于是能在<strong>你打开的任何网站</strong>上执行脚本,危害高一个量级。</li><li><strong>补丁差分分析(Patch Diffing)</strong>:拿软件打补丁前后的代码或二进制做对比,从「改了哪几行」反推出原本的漏洞在哪。本来是需要人肉逆向的活,现在被自动化成了流水线。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-11-16.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
