@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-11-18</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-11-18</h1>
+<blockquote class="quote">面向程序员的 AI 进展速览 · 7 条 · 选你能用的</blockquote>
+<div class="lede"><strong>今日焦点</strong>:OpenJDK 的 Base64 解码器里那段 AVX-512 手写汇编,能让一段畸形 Base64 直接在 Keycloak / Jira / Confluence / Jenkins 上打出免认证 RCE——Oracle 11-17 出补丁,<strong>17.0.6 以后的所有 JDK 都中</strong>,今天该干的事只有一件:查版本、打补丁。</div>
+</div><nav class="daynav"><a href="2026-11-17.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>(4 条)</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>(1 条)</li><li class="cat-brief"><a href="#-速览"> 速览</a>(2 条)</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
+<hr>
+<h2 id="-动手派" class="cat-tools">动手派</h2>
+<p><em>今天你能用的工具、技巧、实战经验</em></p>
+<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://www.wiz.io/blog/cve-2026-114938-rce-java4shell-openjdk" target="_blank" rel="noopener noreferrer">Java4Shell(CVE-2026-114938):Base64 解码越界写 62 字节,免认证 RCE,17.0.6 之后全中</a></strong> — 11-17 披露 + 同日出补丁,<strong>CVSS 4.0 评 9.2</strong>。 <code class="chip type">实战</code></div><p>成因很具体:OpenJDK 用一段手写汇编拿 AVX-512 加速 Base64 解码,<strong>一个很短的畸形输入会在 Java 把它判为非法之前,先往缓冲区尾部外写 62 字节</strong>(Oligo 描述为整数下溢)。Calif 的 Quang Luong 发现,并演示了在 Jira、Confluence、Jenkins、Keycloak 上的免认证 RCE。</p><p><strong>先判断自己中不中,三个条件要同时成立</strong>:① JDK ≥ 17.0.6(2023 年 1 月起,含 21 / 25 / 27,任何厂商的构建——Corretto、Temurin、Microsoft OpenJDK、Zulu、Red Hat OpenJDK 都算);② CPU 是带 <strong>AVX-512 VBMI</strong> 的 x86-64(Intel Xeon Ice Lake~Granite Rapids、AMD EPYC Zen 4+),JVM 需报 <code>avx512_vbmi</code> + <code>avx512bw</code> 且 <code>UseAVX &gt;= 3</code>;③ 跑的是 HotSpot。<strong>17.0.6 以前的版本、标准 OpenJDK 8 和 11、ARM64、OpenJ9、Azul Prime/Zing 都不受影响</strong>;<code>java.util.Base64</code> 的 <strong>MIME 解码器走标量路径,也不受影响</strong>。</p><p><strong>动作</strong>:升到 17.0.21.0.3 / 21.0.13.0.3 / 25.0.5.0.3 / 27.0.1.0.3。<strong>暂时不能升就加 JVM 参数 <code>-XX:-UseBASE64Intrinsics</code></strong>(影响面最小,只是 Base64 变慢;更窄的写法是 <code>-XX:+UnlockDiagnosticVMOptions -XX:DisableIntrinsic=_base64_decodeBlock</code>)。<code>-XX:UseAVX=2</code> 也能挡,但会关掉全部 AVX-512、拖慢其他计算,<strong>而且在 ARM 上会直接起不来</strong>。可以用 <code>JAVA_TOOL_OPTIONS</code> 下发,打完补丁记得把参数撤掉。<strong>优先排查对外暴露的那批</strong>:Keycloak、Jira、Confluence、Artifactory、Jenkins、PingFederate。</p><div class="meta"><code class="chip">信号</code><code class="chip">Oracle 11-17 CSPU 同批修了 655 个漏洞</code><code class="chip">CVSS 3.1 Oracle 评 8.1 / CVSS 4.0 Calif 评 9.2</code><code class="chip">[HN 讨论串](https://news.ycombinator.com/item?id=50538240)</code><code class="chip">截至 11-17 无在野利用报告、未进 CISA KEV</code><code class="chip">有来源称 jdk17u/21u/25u 公开仓库当天尚未带上修复</code></div></li><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/devday-2026-recap/" target="_blank" rel="noopener noreferrer">GPT-6.2 Astra 和 Sol 上线:Astra 降价 20% 到 $8/$40,Sol 以 1/5 成本咬到 Astra 半分之内</a></strong> — 11-17 同时进 ChatGPT Work、Codex 和 API。 <code class="chip type">新发布</code></div><p><strong>接入</strong>:模型 ID 是 <code>gpt-6.2-astra</code> 和 <code>gpt-6.2-sol</code>。Astra $8 输入 / $40 输出 / $0.40 缓存输入(比 GPT-6 Astra 降 20%),<strong>Sol 维持 GPT-6.1 的 $2 / $10 / $0.10 不变</strong>。长上下文和更快的服务档另算钱。</p><p><strong>真正影响选型的那个数</strong>:在 Cognition 的 FrontierCode 2.0(衡量「真实代码库上的改动够不够格合入」)上,<strong>Sol 开到最高推理档,只比 Astra 低半分,成本约为其 1/5</strong>。官方表格:Astra 44.2% / Sol 43.8%,Agents&#x27; Last Exam v1.1 Astra 77.6% / Sol 73.0%。GDPval v2 上 Astra 涨 6.2 分<strong>且输出 token 少 22%</strong>。ARC Prize 侧 ARC-AGI-2 报 95.8%(SOTA)、ARC-AGI-1 98.5%。</p><p><strong>别只看官方表</strong>:独立的 Coding Agent Index(Codex harness、最高算力)里 <strong>GPT-6.2 Astra 与 GPT-6 Astra 持平,GPT-6.2 Sol 反而比 GPT-6.1 Sol 掉了 3 分</strong>,两者在 Vals Index 排第 7 和第 9;Artificial Analysis 的 Intelligence Index 把 Astra 排第 2,<strong>第一是 Claude Fable 5.2</strong>。厂商 benchmark 和第三方榜在这代上分歧明显,<strong>按自己的任务跑一遍再决定路由</strong>。</p><div class="meta"><code class="chip">信号</code><code class="chip">11-17 ChatGPT + Codex + API 同步</code><code class="chip">Astra 输入输出价各降 20%、Sol 不变</code><code class="chip">官方榜与 Coding Agent Index / Vals Index 结论相反</code></div></li><li class="item"><div class="item-head"><strong><a href="https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/" target="_blank" rel="noopener noreferrer">Claude Code 团队公开了自己怎么验 AI 写的代码:90% 代码由 Claude 写,瓶颈早就不是生成</a></strong> — Addy Osmani 11-16 发,<strong>整篇是可以照抄的工程配置,不是方法论鸡汤</strong>。 <code class="chip type">实战</code></div><p>核心判断:生成代码已经很便宜,<strong>「检查」才是你能把多少活交给 agent 的上限</strong>。所以他们把验证做成了基础设施。</p><p><strong>几条能直接搬进自己仓库的</strong>:<code>.claude/skills/</code> 里放一个 <code>verify</code> skill,让 Claude 像 QA 一样真的把应用跑起来;一份 <strong>39 条可靠性清单,但每次只跑与本次改动相关的 3~10 条</strong>;<strong>reviewer 的规则从 base 分支读 <code>REVIEW.md</code>,这样一个 PR 改不了评判自己的标准</strong>——这条最值得抄。</p><p><strong>卡点设计</strong>:开 PR 前先跑测试、构建、lint 这些便宜检查;<strong>连续失败 3 次就停下来交给人</strong>,不许自己硬扛。commit gate 可以在本次会话没跑过 <code>/code-review</code> 或 <code>/verify</code> 时拦住提交,分 off / observe / enforce 三档,<strong>但连拦两次后放行第三次,免得 Claude 卡死</strong>。flaky test 同等对待:不许跳过、不许加 sleep、不许重试到过为止。</p><p><strong>他们怎么验「验证器」本身</strong>:拿历史事故和 revert 造正式 eval,把仓库还原到当时的状态,配一句话答案,<strong>只有正确描述了 bug 的发现才算分</strong>。Boris Cherny 的说法是「给 Claude 一个能自证的办法」是他的头号建议,估计效果差 2~3 倍。</p><div class="meta"><code class="chip">信号</code><code class="chip">[HN 讨论 145 评论](https://news.ycombinator.com/item?id=50512950)</code><code class="chip">配套的 10-15 代码评审篇称 6 月到 9 月合入 PR 翻倍、revert 降超 40%</code><code class="chip">内部一个独立 grader 把结构化文件生成成功率提了最多 10 分</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/microsoft/TokenEconomizer" target="_blank" rel="noopener noreferrer">TokenEconomizer:给 coding agent 装仓库记忆,实测省 18.4%~30.9% token 成本</a></strong> — UC Berkeley + 微软研究院 + 微软安全,<strong>11-16 微软博客推,代码 10-30 已开源</strong>。 <code class="chip type">工具</code></div><p>要解决的浪费说得很准:<strong>agent 每开一个新会话,都要把同一个仓库的同一批事实重新学一遍</strong>,这部分钱纯属白花。</p><p>三个机制,都不动模型权重、也不走额外代理:记录仓库专属的 micro-skills、<strong>裁掉用不上的 tool 定义</strong>、打断重复的失败循环。</p><p><strong>数据比宣传更有说服力</strong>:277 个 SWE-Bench 任务、6 个仓库,<strong>30 个「仓库 × agent」组合全部省钱</strong>,Pass@1 在 5 个配置里有 4 个不降反升,<strong>而且省的是扣掉它自己那部分模型调用之后的净值</strong>。覆盖 Claude Code、Codex、GitHub Copilot CLI。换到 Web 开发和安全审计场景降幅 6.4%~21.2%。</p><p><strong>两个坑</strong>:需要 Python 3.10+,它自己的模型调用走你 agent 现有的登录态(所以会计进你的额度);学习状态存在本地 <code>~/.tokeneconomizer</code>。<strong>前几个任务会更贵</strong>——控制器还在学。</p><div class="meta"><code class="chip">信号</code><code class="chip">论文 arXiv 2026-10</code><code class="chip">277 个 SWE-Bench 任务 / 6 仓库 / 30 个组合全部为正</code><code class="chip">降幅区间 18.4%~30.9%</code></div></li></ol>
+<h2 id="-职业风向" class="cat-career">职业风向</h2>
+<p><em>影响你技能选择和职业方向的信号</em></p>
+<ol class="items cat-career"><li class="item"><div class="item-head"><strong><a href="https://gigazine.net/gsc_news/en/20261117-windows-coding-agent-telemetry" target="_blank" rel="noopener noreferrer">Windows 11 在统计你用哪个 coding agent:9 个进程名写死在遥测组件里,按名字匹配</a></strong> — 11-16 披露,<strong>HN 636 分</strong>。 <code class="chip type">观点</code></div><p>安全研究者 Xusheng Li 逆向 <code>MissionControlAggregator.dll</code>(DiagTrack 遥测服务加载的组件)时发现的,<strong>起因是他让 AI 扫最近的 Windows 二进制找未文档化的功能</strong>。</p><p><strong>写死的名单</strong>:命令行 agent 四个——<code>copilot.exe</code>、<code>claude.exe</code>、<code>codex.exe</code>、<code>agy.exe</code>;桌面端五个——<code>github.exe</code>、<code>claude.exe</code>、<code>codex.exe</code>、<code>cursor.exe</code>、<code>antigravity.exe</code>。另有 12 个更宽的工具类别。</p><p><strong>实现细节决定了它有多容易误判</strong>:它不扫进程,而是监听 Windows 本就产生的事件(<code>KernelProcess.AppStateChangeSummary</code>、<code>Win32kTraceLogging.AppInteractivitySummary</code>),<strong>还会从 WSL 进程里取身份</strong>,再通过 ETW 发一个叫 <code>Segments.SubCohorts</code> 的报告,内容是「本周期内观察到哪些 agent」的位图。<strong>纯按文件名匹配</strong>——Li 把 <code>cmd.exe</code> 改名成 <code>codex.exe</code>,Windows 就认定你用了 Codex。</p><p><strong>关于范围要说准</strong>:功能开关叫 <code>CLICodingAgentUsage</code>(ID 62580080),在他的 Windows 11 ARM64 build 26200 测试机上<strong>未经任何手动操作就是开的</strong>,干净的美版 Win11 家庭版默认 <code>AllowTelemetry=3</code>;但<strong>他用公开 ISO 装的基线虚拟机上这个功能是关的,所以不能说每台机器都在传</strong>。报告里没有 prompt 内容和源码。</p><p><strong>为什么算职业信号</strong>:微软 25H2/24H2 的必需事件清单里就有 <code>Microsoft.Windows.MissionControlAggregator.Segments.Cohorts</code>,描述是按应用使用情况给用户分群,<strong>目前上报的群体标签只有一个:IsDeveloper</strong>。换句话说,「开发者在用哪家的 agent」正在被平台方当成一类市场数据来采。<strong>Win11 家庭版关不干净遥测,公司电脑上这个设置多半也不归你管</strong>。</p><div class="meta"><code class="chip">信号</code><code class="chip">HN 636 分</code><code class="chip">4 个 CLI agent + 5 个桌面 agent 硬编码</code><code class="chip">功能开关 CLICodingAgentUsage / ID 62580080</code><code class="chip">研究者实测改名即可伪造</code></div></li></ol>
+<h2 id="-速览" class="cat-brief">速览</h2>
+<p><em>值得知道但不用细读的动态</em></p>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://news.ycombinator.com/item?id=50534758" target="_blank" rel="noopener noreferrer">Mistral 把 Vibe Pro 在欧洲免费送三个月,桌面版同日发布</a></strong> — 11-17 官推放码 <code>LECHONK</code>,<strong>约一小时内就发完了</strong>,官方说次日还有。Vibe 正常价 Pro $14.99/月、Team $24.99/人/月,学生认证后 $5.99/月(最多 12 个月)。同日上线的 <strong>Vibe 桌面版</strong>更值得看:一个窗口里并行派多个 agent 任务、并排看它们干活、直接审 diff 和跟 PR。Mistral 自称 Vibe + Le Chonk 是「最强开源模型 + harness 组合」,在 FrontierCode 和 Terminal-Bench 上居开源模型之首、且愿意接别的 agent 拒做的安全类任务——<strong>这几条都是厂商自述,没有第三方验证</strong>。 <code class="chip type">新发布</code></div></li><li class="item"><div class="item-head"><strong><a href="https://github.com/NVIDIA/SkillEvaluator" target="_blank" rel="noopener noreferrer">英伟达开源 SkillEvaluator:给 agent skill 做三层质检,能直接挂进 CI</a></strong> — 11-17 单日 +873 star,是 NVIDIA Verified Skills 流水线的一部分。三层设计:<strong>Tier 1 合规性</strong>(validate、quality-check、security-scan、pii-scan、lint-scripts,纯确定性检查<strong>不需要 API key</strong>,完整扫描接 Semgrep / SkillSpector / Gitleaks);<strong>Tier 2 查重</strong>(和已有 skill 的语义重叠);<strong>Tier 3 实测</strong>(生成合成评测集,<strong>对比「装了这个 skill」和「没装」两种情况下 agent 行为的差异</strong>,需要 provider key + agent CLI + 沙箱,走 Harbor,支持 Claude Code / Codex / OpenCode)。装:<code>pip install skillevaluator</code> 或 <code>uv tool install skillevaluator</code>,然后 <code>skillevaluator validate ./my-skill --tiers 1</code>。CI 模板现成(<code>skillevaluator ci init</code>),<strong><code>min-score</code> 默认 70</strong>,Tier 3 默认只给建议不拦,要拦加 <code>--block-on-agent-eval</code>,还能出 SARIF 喂 GitHub Code Scanning。 <code class="chip type">资源</code></div></li></ol>
+<hr>
+<h2 id="-今日术语">今日术语</h2>
+<ul class="list"><li><strong>Intrinsic(内建函数)</strong>:JVM 把某些热点标准库方法(比如 Base64 解码)替换成手写汇编来提速的机制。好处是快,坏处是<strong>绕过了 Java 的内存安全</strong>——今天 Java4Shell 的越界写,正是写在这类手写汇编里。</li><li><strong>AVX-512 VBMI</strong>:Intel/AMD 服务器 CPU 上的一组宽向量指令,能一次处理 64 字节。因为只有部分 CPU 有,所以今天这个漏洞<strong>同一份 JAR,换台机器可能就打不中</strong>。</li><li><strong>Pre-auth RCE(免认证远程代码执行)</strong>:攻击者<strong>不需要任何账号密码</strong>,只要能往服务发请求,就能让它执行自己的代码。是漏洞里最高一档的危害。</li><li><strong>Flaky Test(不稳定测试)</strong>:同样的代码、同样的环境,有时过有时不过的测试。它最大的危害不是烦人,而是<strong>教会 agent「失败了再跑一次就行」</strong>——所以 Claude Code 团队明确禁止 agent 用重试、加 sleep 的办法糊弄过去。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-11-17.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
