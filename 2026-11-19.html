@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-11-19</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-11-19</h1>
+<blockquote class="quote">面向程序员的 AI 进展速览 · 7 条 · 选你能用的</blockquote>
+<div class="lede"><strong>今日焦点</strong>:微软<strong>官方</strong> PyPI 发布账号推出去的 <code>agent-framework</code> 1.26.1 / 1.26.2 带窃密载荷,而且它挂在 <code>.pth</code> 启动钩子上——<strong>只要那个环境里起了 Python 就会跑,你压根没 import 过它也中</strong>。</div>
+</div><nav class="daynav"><a href="2026-11-18.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>(4 条)</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>(1 条)</li><li class="cat-brief"><a href="#-速览"> 速览</a>(2 条)</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
+<hr>
+<h2 id="-动手派" class="cat-tools">动手派</h2>
+<p><em>今天你能用的工具、技巧、实战经验</em></p>
+<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi" target="_blank" rel="noopener noreferrer">微软 agent-framework 被投毒:两个版本窃取 Azure / GitHub Actions 凭据,走的是官方发布账号</a></strong> — 11-17 晚间,恶意版本存活约 45 分钟,<strong>该包月下载约 19 万次</strong>。 <code class="chip type">实战</code></div><p><strong>为什么这次比一般的投毒更难躲</strong>:载荷不是藏在包的代码里等你 import,而是装了一个 <code>.pth</code> 启动钩子——<strong>Python 解释器每次启动都会执行 <code>.pth</code>,所以只要那个 venv / 容器 / CI runner 里跑了任何 Python 脚本,窃密就执行了</strong>。两个版本还都保留了对正常 <code>agent-framework-core 1.26.0</code> 的依赖,<strong>框架功能一切如常,不会报错</strong>。</p><p><strong>时间线和版本</strong>:正常的 1.26.0 发布于 11-12 18:25;恶意的 <strong>1.26.1 在 11-17 20:35 UTC</strong>、<strong>1.26.2 在约 21:08 UTC</strong>(两者相隔约 33 分钟)。PyPI 隔离掉第一个之后,攻击者约 2.5 分钟内又推了第二个,第二个在约 8 分钟后也被隔离。1.26.1 用 <code>agent_framework_meta.pth</code> → <code>agent_framework_meta/_telemetry.py</code>;1.26.2 把初始化文件还原成原样,改挂 <code>af_runtime_diag.pth</code> / <code>af_runtime_diag.py</code>,<strong>并新增抓取 GitHub Actions OIDC token、放宽了凭据环境变量的匹配范围</strong>。</p><p><strong>偷了什么</strong>:Azure CLI 数据、Azure DevOps agent 凭据、Git credential store、Docker 和 npm 配置、<code>.env</code> 文件,还会主动去换一份新的 Azure 托管身份 token 和 Azure DevOps token,外带到一个 <code>webhook[.]site</code> 端点。</p><p><strong>动作</strong>:<code>pip install agent-framework==1.26.0</code> 钉死版本,卸掉 1.26.1 / 1.26.2,<strong>重建受影响的镜像和 runner 而不是原地卸载</strong>(<code>.pth</code> 可能已经跑过),然后<strong>轮换 Azure / Azure DevOps / GitHub 凭据</strong>。排查窗口按 <strong>11-17 20:35–21:20 UTC</strong> 之间有没有装过这个包。根因目前各家说法不完全一致:Wiz 倾向于是微软 ESRP 签名发布管线的客户端证书和私钥被窃(工具链自称 <code>Cairn</code>),SafeDep 发现一个<strong>当天新建、却对该包及另外 5 个项目有发布权限的维护者账号 <code>vibiret</code></strong>;两个 wheel 都没有 trusted publishing 来源证明。</p><div class="meta"><code class="chip">信号</code><code class="chip">Aikido / Chainguard / Endor Labs / OX Security / SafeDep / Socket / StepSecurity / Wiz 八家独立报告</code><code class="chip">月下载约 190,000</code><code class="chip">恶意版本存活约 45 分钟</code><code class="chip">[HN 讨论](https://news.ycombinator.com/item?id=50542084) 只有 13 分,相对于影响面明显被低估</code></div></li><li class="item"><div class="item-head"><strong><a href="https://thenewstack.io/microsoft-mai-code-2/" target="_blank" rel="noopener noreferrer">微软发 MAI Code 2 和 MAI Code 2 Flash:Flash 报 61.0% 均分、每任务 $0.052,主打便宜</a></strong> — 11-17 Ignite 发布,<strong>是一口气放出的七个 MAI 模型之一</strong>。 <code class="chip type">新发布</code></div><p><strong>价格(促销价,到 2027-05-17)</strong>:Flash $0.05 / 百万输入、$0.005 / 百万缓存输入、$0.25 / 百万输出;大号的 MAI Code 2 是 $0.50 / $2.50。<strong>促销结束后翻倍</strong>(Flash 输入涨到 $0.10)。</p><p><strong>官方给的数</strong>:Flash 在 DeepSWE 1.1、Terminal-Bench 2.1、SWE Atlas 三项上均分 <strong>61.0%、平均每任务 $0.052</strong>,对比 GPT-6 Luna 55.1% / $0.080、Claude Haiku 5.5 53.9% / $0.319。大号 MAI Code 2 微软称达到 Claude Opus 5.5 的 <strong>96% 水平、价格 5%</strong>,以及 GPT-6.1 Sol 的 98% 水平、成本 40%。</p><p><strong>这里有个要自己算的坑</strong>:微软的成本数字用的是<strong>五折促销价</strong>,而且所有模型都跑在最高推理档。按原价重算,<strong>有分析指出 Flash 每任务 $0.104,反而比 GPT-6 Luna 的 $0.080 更贵</strong>——只是分数高约 6 分。所以这个「便宜」在促销期内成立,半年后要重新评估。</p><p><strong>规格</strong>:Flash 约 <strong>12B 激活 / 398B 总参</strong>,MAI Code 2 是 77B 激活,两者上下文 <strong>1,050,000 token</strong>。Flash 目前在 Microsoft Foundry 限量预览,一个 Flash 衍生版本正在进 Microsoft 365 和 Fabric IQ。</p><div class="meta"><code class="chip">信号</code><code class="chip">11-17 Ignite</code><code class="chip">HN 379 分</code><code class="chip">七个 MAI 模型同批发布</code><code class="chip">官方成本数字基于 50% 促销价</code></div></li><li class="item"><div class="item-head"><strong><a href="https://www.perplexity.ai/hub/blog/introducing-orchestrator" target="_blank" rel="noopener noreferrer">Perplexity 开放 Orchestrator:45+ 模型一把 key,失败重试换「同一个模型的另一个部署」而不是换模型</a></strong> — 11-17 公开(11-09 起私测),<strong>不收路由费 / 平台费</strong>。 <code class="chip type">工具</code></div><p><strong>和一般网关最不一样的那一点</strong>:它把路由拆成两层。<strong>provider routing</strong> 决定你要的那个模型跑在哪家(按观测到的错误率、容量、延迟分流);<strong>调用失败时重试到同一个模型的另一个部署</strong>——比如把一个 Claude 请求从 Anthropic 切到 AWS Bedrock,<strong>回答你的还是同一个模型</strong>。这解决的是「网关一降级就偷偷换模型、输出风格全变」这个实际痛点。</p><p><strong>接入基本是改三行</strong>:支持 OpenAI Chat Completions、OpenAI Responses、Anthropic Messages 三种请求格式,<strong>SDK 不用换,只改 API key、base URL(<code>https://api.perplexity.ai/orchestrator/v1</code>)和模型 ID</strong>。响应头会告诉你这次路由到哪儿,响应体的 <code>model</code> 字段是实际回答的模型。</p><p><strong>自动选模型是预览功能</strong>:把 model 设成 <code>perplexity/auto</code>,再给一个 routing 对象(一个 <code>default_model</code> + 1~5 条命名路由),<strong>每一轮对话都会重新路由</strong>,所以一段会话可能横跨多个模型。<strong>注意</strong>:带图片 / 音频 / 视频 / 文件的会话<strong>绕过自动路由</strong>,直接走你配的 default;<strong>选型目前不看实时速度数据</strong>,按速度选还没做好。</p><div class="meta"><code class="chip">信号</code><code class="chip">11-09 私测 → 11-17 公开</code><code class="chip">45+ 开放与闭源模型(另有来源称 85+,口径不一)</code><code class="chip">官方称 10-04 至 11-02 期间 Claude / GPT 请求的成功率高于任一单一供应商</code></div></li><li class="item"><div class="item-head"><strong><a href="https://opencode.ai/product/browse" target="_blank" rel="noopener noreferrer">OpenCode Browse:让 agent 直接用你那个已登录的浏览器,而不是另起一个要重新登录的无头实例</a></strong> — 11-16 发布,Anomaly 出品,<strong>不只给 OpenCode 用</strong>。 <code class="chip type">工具</code></div><p><strong>要解决的问题很具体</strong>:Playwright MCP 之类会另起一个干净 profile 的浏览器,<strong>你的登录态、2FA、扩展全都没了</strong>,调试一个需要登录的页面得先想办法把会话搬进去。Browse 反过来——直接驱动你平时在用的那个浏览器。</p><p><strong>架构</strong>(决定了它的权限边界):一个 Chromium 扩展 + 一个叫 <code>browse</code> 的本地程序。<code>browse</code> 跑 MCP server 走 stdio 跟 agent 通话,再把命令交给本地中继(<code>127.0.0.1:19988</code>),扩展通过 WebSocket 收到后用 <code>chrome.debugger</code> 执行。<strong>所以 agent 拿到的是你浏览器的权限</strong>,这一点官方自己也标了。</p><p><strong>实际用起来的几个设计</strong>:agent 开的标签页在后台的折叠分组里,不抢你焦点;<strong>遇到登录 / 2FA / 付款它会把标签页交还给你,你点 Continue 它再接着干</strong>;可以用工具栏按钮把当前这个标签页「借」给 agent;能抓网络请求;<strong>可以限定 agent 只准访问白名单站点</strong>。</p><p><strong>装</strong>:先装 Chrome 扩展,再 <code>curl -fsSL https://opencode.ai/browse/install | bash</code>(也有 pwsh / npm <code>@opencode/browse</code> / bun),然后 <code>browse install</code> 把 MCP server 写进你的 agent 配置并配对扩展,<strong>装完要重启 agent</strong>。兼容 OpenCode、Claude Code、Codex、Cursor 及任意 MCP 客户端,浏览器侧支持 Chrome / Edge / Brave / Arc / Opera / Vivaldi / Chromium。</p><div class="meta"><code class="chip">信号</code><code class="chip">11-16 发布</code><code class="chip">开源仓库 anomalyco/browse</code><code class="chip">支持 5 个主流 agent + 任意 MCP 客户端</code></div></li></ol>
+<h2 id="-职业风向" class="cat-career">职业风向</h2>
+<p><em>影响你技能选择和职业方向的信号</em></p>
+<ol class="items cat-career"><li class="item"><div class="item-head"><strong><a href="https://www.beri.net/article/harvard-jellyfish-study-ai-coding-agents-code-review-bottleneck-output-employment-engineering-org-design" target="_blank" rel="noopener noreferrer">哈佛的工作论文更新了:agent 让代码量涨 44%、PR 涨 35.7%,但「解决掉的问题」只涨 13.7%</a></strong> — 经济学家 Fiona Chen 和 James Stratton,<strong>样本是 655 家公司、720,542 名工程师</strong>。 <code class="chip type">观点</code></div><p>论文叫《Artificial Intelligence in the Firm: Bottlenecks in Software Production》,数据来自 Jellyfish 的工程遥测 + GitHub 活动信号,<strong>覆盖 2021 年到 2026 年 3 月、约 3 亿条工作事件</strong>。</p><p><strong>最新一版的核心数字</strong>:代码行数 +44%、PR 数 +35.7%,<strong>但 Jira 上真正解决的 issue 只涨 13.7%(且统计显著性在边缘),工程师人数没有可观测的变化</strong>。论文把它拆成「<strong>编码生产率涨 73.7%,评审生产率降 7.0%</strong>」,并观察到公司在<strong>重新分配人力:投在写代码上的精力降 22.7%,投在评审上的涨 43.4%</strong>。</p><p><strong>八月那版里更扎人的几条</strong>:PR 的评审耗时涨 <strong>49%</strong>,返工请求数量<strong>接近翻倍</strong>;到 2026 年 3 月,<strong>80% 的公司已经在用 AI code review 工具,但只有 23% 的评审意见是 AI 生成的</strong>——瓶颈在用了 AI 评审的公司里依然在,因为<strong>最终签字的还是人</strong>。</p><p><strong>对个人的意思</strong>:「能让 agent 写得多」正在迅速贬值,<strong>能快速、可靠地判断一堆 agent 产出对不对,才是现在稀缺的那个技能</strong>。这也正好解释了为什么 Claude Code 团队要把验证做成基础设施(见 11-18 那条)。</p><p><strong>诚实说一下口径</strong>:核心数据截止到 2026 年 3 月,<strong>而 agent 能力在 2026 下半年明显上了一个台阶</strong>,所以这到底是「这代模型的局限」还是「评审产能的结构性天花板」,论文本身回答不了。另有一份 NBER 研究结论同向:自主 agent 让提交活动涨 240%,到真正发版时只剩 30%。</p><div class="meta"><code class="chip">信号</code><code class="chip">655 家公司 / 720,542 名工程师 / 约 3 亿条工作事件</code><code class="chip">11-17 上 HN 首页 211 分</code><code class="chip">八月版与十一月版数字不同(LOC 30% → 44%),引用时注意标版本</code><code class="chip">NBER 独立研究结论同向</code></div></li></ol>
+<h2 id="-速览" class="cat-brief">速览</h2>
+<p><em>值得知道但不用细读的动态</em></p>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://github.com/elementalsouls/Claude-BugHunter" target="_blank" rel="noopener noreferrer">Claude-BugHunter 冲上 GitHub Trending 第一:83 个安全 skill、681 条来自已披露报告的模式</a></strong> — MIT 协议,作者 Sachin Sharma,<strong>11-18 单日 +1,005 star</strong>。本质是一大包 markdown skill 文件,把 Claude Code 变成按流程走的漏洞挖掘助手:<strong>覆盖 24 类漏洞</strong>,按阶段组织——侦察(<code>offensive-osint</code>、<code>web2-recon</code>)、按类狩猎(<code>hunt-saml</code>、<code>hunt-ato</code>、<code>hunt-mfa-bypass</code>、<code>hunt-http-smuggling</code>、<code>hunt-ssti</code>、<code>hunt-file-upload</code>、<code>hunt-cloud-misconfig</code>、<code>hunt-llm-ai</code> 等)、再走 <code>triage-validation</code> 的「7 问门禁」做验证,另有 15 个 slash command、企业身份与基础设施攻击矩阵、Burp MCP 集成。装法两种:<code>/plugin marketplace add elementalsouls/Claude-BugHunter</code> 再 <code>/plugin install claude-bughunter@elementalsouls</code>(<strong>namespace 隔离,不往 <code>~/.claude/</code> 里拷文件</strong>,推荐),或者 clone 下来跑 <code>bash scripts/install.sh</code>。<strong>只在你有授权的 bug bounty / 红队范围内用。</strong> <code class="chip type">资源</code></div></li><li class="item"><div class="item-head"><strong><a href="https://news.ycombinator.com/item?id=50536468" target="_blank" rel="noopener noreferrer">Launch HN:StarSling——给「agent 刷 PR」的仓库做会自我优化的 CI</a></strong> — 11-17,YC P25。两件事:一是每个 CI job 一个独立临时沙箱(Zen 5 + NVMe、<strong>并发不限、按秒计费</strong>),让一批 agent 同时开的 PR 能一起跑;二是一个 agent 循环<strong>分析 workflow 日志和遥测、提出优化、拿不改动的 workflow 做 A/B 对照,然后把赢的那个作为 PR 提上来、附带 benchmark 证据</strong>。创始人自己的说法最精准:「一个给 agent 开的 PR 提速 CI 的 agent」。官方给的加速样本:gogs 12.8x、shellcheck 5.5x、chatwoot 3.9x。用法是把 <code>ubuntu-latest</code> 换成 <code>starsling-ubuntu-24.04</code>。<strong>HN 评论区的关注点值得先看一眼</strong>:测试稳定性、自动改动的边界在哪、以及 CI 本身的安全风险。 <code class="chip type">工具</code></div></li></ol>
+<hr>
+<h2 id="-今日术语">今日术语</h2>
+<ul class="list"><li><strong><code>.pth</code> 文件(Python 路径配置文件)</strong>:放在 site-packages 里的一种小文件,Python <strong>每次启动都会读它、并执行其中以 <code>import</code> 开头的行</strong>。本意是给包注册搜索路径用的,今天这起投毒正是把窃密代码挂在这里——<strong>所以「我没 import 那个包」救不了你</strong>。</li><li><strong>Trusted Publishing(可信发布)</strong>:PyPI 的一种发布方式,用 CI 的短期身份凭据代替长期 API token 来上传包,并留下「这个包是从哪个仓库的哪条流水线出来的」的来源证明。今天那两个恶意 wheel <strong>恰恰没有这个证明</strong>,这就是一个可以自动化检查的信号。</li><li><strong>OIDC Token(GitHub Actions 的短期身份令牌)</strong>:CI 作业运行时由 GitHub 签发的一张临时身份证明,用来免密码换取云厂商的访问权限。它被偷了,等于攻击者能以你的流水线身份去拿云资源。</li><li><strong>Provider Routing(供应商路由)</strong>:同一个模型往往有多家可以跑(比如 Claude 既在 Anthropic 也在 AWS Bedrock),网关在这些<strong>部署</strong>之间分流和故障切换,而不改变你用的是哪个模型——和「自动换一个更便宜的模型」是两回事,别混。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-11-18.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
