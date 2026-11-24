@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 前沿日报 · 2026-11-24</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>AI 前沿日报 · 2026-11-24</h1>
+<blockquote class="quote">面向程序员的 AI 进展速览 · 7 条 · 选你能用的</blockquote>
+<div class="lede"><strong>今日焦点</strong>:Anthropic 发 Claude Ship,里面有个 agent 读你写的策略文件、<strong>自己批准 PR</strong>——AI 从「写代码」「评审代码」正式往「签字放行」挪了一格。</div>
+</div><nav class="daynav"><a href="2026-11-20.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-目录">目录</h2>
+<ul class="toc"><li class="cat-tools"><a href="#-动手派"> 动手派</a>(5 条)</li><li class="cat-career"><a href="#-职业风向"> 职业风向</a>(1 条)</li><li class="cat-brief"><a href="#-速览"> 速览</a>(1 条)</li><li class=""><a href="#-今日术语"> 今日术语</a></li></ul>
+<hr>
+<h2 id="-动手派" class="cat-tools">动手派</h2>
+<p><em>今天你能用的工具、技巧、实战经验</em></p>
+<ol class="items cat-tools"><li class="item"><div class="item-head"><strong><a href="https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/" target="_blank" rel="noopener noreferrer">Claude Ship:三个 agent 把 PR 从评审做到批准,其中一个能自己签字</a></strong> — 11-23 发布,<strong>Code Review 正式版,另两个公测</strong>。 <code class="chip type">新发布</code></div><p>三件事分别由三个 agent 干:<strong>Code Review</strong> 找逻辑错误、安全漏洞和没覆盖到的边界,结论按严重度做成行内评论;<strong>PR Steward</strong> 盯失败的 CI、合并冲突和评审意见,自己推修复 commit——<strong>它被设计成不能批准、不能合并</strong>,你用 <code>@claude</code> 指挥它、<code>@claude stop</code> 叫停;<strong>Claude Approvals</strong> 读你写的策略文件 <code>.claude/approvals.yml</code>,按策略决定能不能自己批。Anthropic 自己的说法是「一个更聪明的 CODEOWNERS」。</p><p><strong>策略文件才是重点</strong>,也是你真正要写的东西:比如计费这种关键服务仍要求作者之外两个人审、其中一个必须来自支付团队;一般代码在 Claude 评审干净的前提下人类审批降到一个;<strong>纯文档改动 Claude 可以自己批</strong>。合不合得进去<strong>最终还是由你 GitHub 的分支保护规则说了算</strong>,这条边界没被动。</p><p><strong>个人也能用的那部分</strong>:任意付费计划在 Claude Code 里跑 <code>/ship</code>——提交、推送、开 PR、评审、再去啃反馈和挂掉的检查,<strong>合并仍然你自己点</strong>。要求 <strong>Claude Code v2.1.330+、GitHub CLI 2.63+、git 2.38+</strong>;<code>/ship</code> 在本地跑,最长 7 天,<strong>会话要一直开着、电脑不能睡</strong>。另外注意:你自己定义的 <code>ship</code> / <code>ship-local</code> / <code>steward</code> 同名 skill 或命令<strong>会被内置的顶掉、加载不了</strong>。</p><p><strong>钱怎么算</strong>:<code>/ship</code> 算普通 Claude Code 用量;Claude Ship 走 Team / Enterprise 计划的 GitHub 仓库,按 token 从独立的 usage credits 里扣、管理员可设花费上限。<strong>Claude Approvals 没有基础费,但分类器本身要烧 token,而且策略里只要触发 Code Review 就是一次付费评审——哪怕你设成只观察不动手。</strong> 符合条件的 Enterprise 可在 <strong>2027-01-15 前</strong>领至少 $10,000 促销额度,<strong>领了要 30 天内用掉</strong>。</p><p><strong>自述数据,看看就行</strong>:Claude Code 团队 6 月到 9 月合并 PR 翻了一倍多、被 revert 的比例降 40%+、带实质评审意见的 PR 从 16% 涨到 54%、一轮「评审+修」就过的从 65% 涨到 78%、平均评审轮次 2.08 → 1.32;多数 Code Review 跑完要 6~10 分钟。<strong>官方 FAQ 自己写了「会用 AI,可能漏掉 bug、安全漏洞或其他问题」。</strong></p><div class="meta"><code class="chip">信号</code><code class="chip">HN 两个帖都很冷(官方公告帖 5 分 0 评论)</code><code class="chip">评论区的点在「自动批准的代码没人读过」</code><code class="chip">效果数据全部为 Anthropic 自述</code></div></li><li class="item"><div class="item-head"><strong><a href="https://docs.bigmodel.cn/cn/guide/models/glm-5.4" target="_blank" rel="noopener noreferrer">智谱 GLM-5.4:把 GLM-5 的 28 层跑两遍,7500 亿参数号称摸到 2~3 万亿的水平</a></strong> — 11-23 上线,<strong>首个 Loop Transformer 架构的 GLM</strong>。 <code class="chip type">新发布</code></div><p><strong>做法</strong>:不是从头预训练,而是<strong>拿已经练好的基座继续训练、改造成 Loop Transformer</strong>——官方给的理由很实在:权重共享在同等预训练算力下打不过非共享,所以走改造路线。中间 28 层每个 token 过两遍,参数量不变、<strong>计算深度翻倍</strong>。</p><p><strong>唯一公开的 benchmark 是一个 30B 的消融对照</strong>(不是 750B 本体):MMLU-Pro 71.14→74.47、GPQA-Diamond 47.62→56.31、AIME25 19.17→30.42、AA-LCR 40.25→47.73、IFBench 22.31→25.81。值得注意的副作用:<strong>平均输出长度在 GPQA-Diamond 和 MMLU-Pro 上降了 10~14%</strong>,官方归因为推理搬进了循环的隐式深度里——<strong>少吐 token 也是省钱</strong>。</p><p><strong>规格</strong>:上下文 1M、最大输出 128K、纯文本输出,新增视觉输入,支持多思考档、流式、Function Calling、上下文缓存、结构化输出。模型名 <code>glm-5.4</code>,<strong>在 Claude Code 里是 <code>glm-5.4[1m]</code></strong>。非高峰报到 200 token/s、高峰 70~80。</p><p><strong>两个坑说清楚</strong>:<strong>按量 API 还没开</strong>(说要等安全评估),<strong>权重也还没开源</strong>(只承诺「以负责任的方式」,无日期);目前只能走 GLM Coding Plan 订阅,以及 ZCode / Trae / Qoder / 智谱清言等。Coding Plan V2/V3/团队版用这个模型<strong>额度给到 1.5 倍</strong>。</p><div class="meta"><code class="chip">信号</code><code class="chip">11-23 发布</code><code class="chip">750B 本体无官方 benchmark、无 API 定价、权重未开</code><code class="chip">与 Inkling 2 Mini 同周:两家独立团队一周内各放一个循环架构</code></div></li><li class="item followup"><div class="item-head"><span class="fubadge">后续</span><strong><a href="https://thinkingmachines.ai/news/inkling-2-mini/" target="_blank" rel="noopener noreferrer">Inkling 2 Mini 开权重——26.4B、Apache 2.0、32G 内存的 MacBook 就能跑</a></strong> — 11-20 发布,<strong>100B 以下开源权重里 agentic coding 第一</strong>。 <code class="chip type">新发布</code></div><p>上次报的是 11-12 那个 594B 的 Inkling 2 Small(见 11-15),嫌太大的人这次有交代了:<strong>约 20GB checkpoint</strong>,塞得进 32G 内存的 MacBook 或单台 NVIDIA DGX Spark。权重在 Hugging Face <code>thinkingmachines/Inkling-2-Mini</code>,<strong>公开不设门禁、Apache 2.0</strong>,另放了一个支持可变循环次数的研究版。</p><p><strong>架构</strong>:26.4B 总参、标称激活 3.4B 的 MoE;24 层分四块,<strong>中间两块(第 6~17 层)用同一份权重跑三遍</strong>,每 token 共 48 次层访问、约 <strong>5.4B 等效激活参数</strong>。多数权重是 NVFP4,最后四层 MXFP8。收文本和图像,上下文 1M。</p><p><strong>分数</strong>:100B 以下开源权重里领跑 DeepSWE v1.1(48.2%)、SWE-bench Pro v2 Hard(77.9%)、Vals Index v2.2(46.5%);SWE-bench Verified 79.2%、DeepSearchQA 85.3%。Artificial Analysis Index 上 20.1,与 Qwen3.8-27B 打平。</p><p><strong>HN 上几条比官方博客有用的实测结论</strong>:<strong>循环省的是内存容量,不是吞吐——它要的内存带宽更多,而且循环层各遍不共享 KV,KV cache 反而变大。</strong> 有人实测只有 18 tps、像一个同体量的 dense 模型;还有人试过给已经训好的模型事后加循环(×2、×4),<strong>只多花算力、能力没涨,结论是循环必须一开始就训进去</strong>。另有人在 Mac Mini 上撞到工具调用失控(3 小时 180+ 次)。</p><p><strong>要跑的话</strong>:SGLang / vLLM / Ollama / Unsloth / NVIDIA Dynamo 都支持,Unsloth 有 GGUF;<strong>llama.cpp 要等那个加循环架构支持的 PR</strong>。</p><div class="meta"><code class="chip">信号</code><code class="chip">承接 11-15</code><code class="chip">本周第 2 次</code><code class="chip">HN 主帖 [50581260](https://news.ycombinator.com/item?id=50581260) + 另一帖「Inkling-2-Mini in 5.4 GB Memory」572 分 136 评论</code><code class="chip">「5.4」是等效激活参数(B),不是 GB,不少人看错了</code></div></li><li class="item"><div class="item-head"><strong><a href="https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html" target="_blank" rel="noopener noreferrer">GPGME 一个双重释放洞影响几乎所有邮件客户端:一把超长 user ID 的 OpenPGP 公钥就够了</a></strong> — CVE-2026-129975(GnuPG 工单 T8557),<strong>官方不排除 RCE</strong>。 <code class="chip type">实战</code></div><p><strong>触发条件低到离谱</strong>:一把 user ID 异常长、精心构造的 OpenPGP 公钥,走到 <code>read_status()</code> 和 <code>read_colon_line()</code> 这两个读 GnuPG 状态行和 key listing 的函数里,就能打成双重释放。<strong>别人给你发一封带附件公钥的邮件就进入射程。</strong></p><p><strong>影响面</strong>:<strong>所有 2.3.0 以前的 GPGME,动态库、Windows DLL、静态链接都算</strong>——大多数邮件客户端、很多 XMPP 客户端、Samba,以及 GnuPG 自家的 Gpg4win、GnuPG Desktop、GnuPG VS-Desktop,Flatpak 也中。</p><p><strong>升</strong>:GPGME <strong>2.3.1</strong>(11-19)或旧线 <strong>1.24.4</strong>(11-20),Gpg4win <strong>5.1.2</strong> 已打包;advisory 附了能干净打到旧版本上的 patch。Debian 走 DSA-6646-1(trixie)/ DLA-4924-1(bookworm)。<strong>重点是查「别的软件里静态链进去的那一份」,不只是你 <code>apt list</code> 看得到的那个包。</strong></p><div class="meta"><code class="chip">信号</code><code class="chip">GitLab 的 Johan Carlsson 发现、11-12 通报 GnuPG</code><code class="chip">原定 11-25 协同披露,因 Ruby2Shell(见 11-20)被 GitLab 提前公开而改到 11-20</code><code class="chip">截至 11-22 无在野利用、未进 CISA KEV、无 PoC</code><code class="chip">GnuPG 未发 CVSS</code><code class="chip">HN 247 分</code></div></li><li class="item"><div class="item-head"><strong><a href="https://openai.com/index/inside-the-codex-sandbox/" target="_blank" rel="noopener noreferrer"><code>codex sandbox</code>:OpenAI 把 Codex 的沙箱拆出来当独立命令,任何命令都能塞进去跑</a></strong> — 11-18 工程博客,作者 Michael Bolin。 <code class="chip type">实战</code></div><p><strong>最值得抄走的一行</strong>:Codex CLI 暴露了一个 <code>codex sandbox</code> 子命令,<strong>按指定的 permission profile 跑任意命令</strong>——也就是说这套沙箱<strong>脱离 agent 会话也能用</strong>,你想隔离跑一段不信任的脚本,直接拿它当工具。</p><p><strong>三档写权限</strong>:<code>read-only</code>、<code>workspace</code>(只准写当前仓库根目录)、<code>danger-full-access</code>。</p><p><strong>实现不走 VM 也不走容器</strong>,而是把 profile 翻译成操作系统自己的限制:macOS 用 Seatbelt(<code>/usr/bin/sandbox-exec</code>),Linux 用一个叫 <code>codex-linux-sandbox</code> 的内部 helper。<strong>所以开销小,但上限就是 OS 给的那点能力。</strong></p><p><strong>网络侧</strong>:agent 跑的命令出站流量全部过一个本地过滤代理,<strong>默认拦掉任意外连、只放行指定的开发者端点</strong>——这正好挡住今天 Sonar 那条里说的「被注入后往外带数据」。</p><div class="meta"><code class="chip">信号</code><code class="chip">11-18 发布</code><code class="chip">Simon Willison 11-17 前后撰文关注,称之为「external sandbox pattern」</code><code class="chip">同线还有 11-12 的《Securing persistent agents like OpenClaw at OpenAI》</code></div></li></ol>
+<h2 id="-职业风向" class="cat-career">职业风向</h2>
+<p><em>影响你技能选择和职业方向的信号</em></p>
+<ol class="items cat-career"><li class="item"><div class="item-head"><strong><a href="https://www.sonarsource.com/resources/library/prompt-injection-coding-agents/" target="_blank" rel="noopener noreferrer">Sonar 把「coding agent 的提示注入」摊开讲:防御能挡住一部分,剩下的只能靠改完之后有人验</a></strong> — 11-23 发布,<strong>核心论点是「暴露面随自主度复利增长」</strong>。 <code class="chip type">观点</code></div><p><strong>机制一句话</strong>:agent 分不清「数据」和「指令」,所以藏在它要读的东西里的攻击者文本——文件、网页、PR 评论、工具输出——会被当成可信指令执行。<strong>多步 agent 的要命之处在于没人逐步读,注入进去就一路执行下去。</strong></p><p><strong>几个能用来说服领导的数字</strong>:企业对直接注入(34% vs 25%)和间接注入(35% vs 25%)的担忧明显高于中小公司;<strong>61% 的开发者同意「AI 产出的代码看起来对、其实不可靠」</strong>,同样 61% 说「要从 AI 那儿拿到好代码得花很大力气」;<strong>只有 48% 的开发者每次提交前都会检查 AI 写的代码</strong>,而用 SonarQube 做验证的那批人<strong>报告 AI 相关线上事故的概率低 44%</strong>。</p><p><strong>攻击面有多大,别的研究给了量级</strong>:一项针对开启自动批准 / 自动执行的 Cursor 和 GitHub Copilot 的研究,用 314 个 payload 覆盖 70 个 MITRE ATT&amp;CK 技术,<strong>执行恶意命令的成功率最高到 84%</strong>。</p><p><strong>对你的意思</strong>:今天第 1 条里 Claude Approvals 能自动批 PR,这条讲的就是<strong>自动批准的那一半风险从哪来</strong>——两条放一起看才完整。<strong>「能让 agent 自动跑」正在变成默认配置,「能设计出让注入跑不通的边界、并且改完之后真有人/有工具去验」才是在涨的那个技能。</strong> 今天第 5 条的 <code>codex sandbox</code> 和网络白名单,就是这个技能最落地的形态。</p><p><strong>一个值得记住的时间差</strong>:Sonar 引 Mandiant M-Trends 2026 和 Edgescan 2026——<strong>漏洞被利用往往比补丁存在早约一周,而防守方平均要 54 天以上才打上补丁</strong>。</p><div class="meta"><code class="chip">信号</code><code class="chip">11-23 发布</code><code class="chip">另有同期 arXiv 研究 HarnessSecurity-Bench、AgentXploit、Scaling Adaptive Prompt Injection Attacks with Agent Swarms</code><code class="chip">调查数据来自 Sonar 自家 State of Code 2026</code></div></li></ol>
+<h2 id="-速览" class="cat-brief">速览</h2>
+<p><em>值得知道但不用细读的动态</em></p>
+<ol class="items cat-brief"><li class="item"><div class="item-head"><strong><a href="https://github.com/chizy7/tether" target="_blank" rel="noopener noreferrer">tether:给你不信任的 agent 套一层——沙箱 + 硬预算 + 可重放的 trace</a></strong> — Rust 写的 model-agnostic、MCP 原生运行时,口号是「Run agents you don&#x27;t trust on infrastructure you do」。它包住任意 agent,记下每一次模型调用、工具调用和策略决定,然后 <strong><code>tether replay</code> 不联网、不花钱地把这条 trace 重跑一遍</strong>(可以换个 policy 或 prompt 再跑)、<code>tether diff</code> 指出两次跑哪里分叉。11-21 合进来的 <code>tether eval</code> 更实用:<strong>拿录下来的 trace 当回归测试集</strong>,对着 <code>eval.toml</code> 断言 <code>outcome</code>、<code>max_steps</code>、<code>max_usd</code>、<code>no_deny</code>、<code>tool_called</code> / <code>tool_not_called</code>、<code>file_contains</code>。重放语义写得很清楚——<strong>它压根不跑 agent,只按顺序重发录下来的请求和工具调用,工具结果按「工具名 + 参数」匹配</strong>;被拒绝过的调用没有结果可重放,因为那个工具当时根本没跑。 <code class="chip type">工具</code></div></li></ol>
+<hr>
+<h2 id="-今日术语">今日术语</h2>
+<ul class="list"><li><strong>Loop Transformer(循环 Transformer)</strong>:让模型的中间几层用<strong>同一份权重</strong>反复跑几遍,参数量不涨而计算深度涨——相当于「想得更深」而不是「脑子更大」。今天 GLM-5.4(28 层跑两遍)和 Inkling 2 Mini(12 层跑三遍)是两家独立团队同一周的两个样本。<strong>注意它省的是内存容量,不省带宽、也不省 KV cache。</strong></li><li><strong>双重释放(Double Free)</strong>:同一块内存被 <code>free</code> 了两次,把内存分配器的内部记账搞乱,攻击者精心构造就能借此改写别处的内存、甚至执行自己的代码。</li><li><strong>间接提示注入(Indirect Prompt Injection)</strong>:攻击者不直接跟模型对话,而是把指令藏在模型「将来会去读」的东西里——网页、PR 评论、依赖的 README、搜索结果——等 agent 读到的那一刻,数据就变成了命令。</li><li><strong>Permission Profile(权限档案)</strong>:一份声明「这个进程能读写哪些目录、能连哪些网络地址」的配置,由操作系统而不是程序自己来强制执行。<code>codex sandbox</code> 的三档 <code>read-only</code> / <code>workspace</code> / <code>danger-full-access</code> 就是这个。</li><li><strong>CODEOWNERS</strong>:GitHub 仓库里一个文本文件,写明「哪些路径下的改动必须由谁来审」。Anthropic 把 Claude Approvals 的 <code>.claude/approvals.yml</code> 类比成它的升级版——区别是后者能按条件决定「需要几个人审」甚至「不用人审」。</li></ul>
+<hr>
+<p><em>由 Claude 自动生成 · 链接指向原文</em></p><nav class="daynav"><a href="2026-11-20.html">← 前一天</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每天自动采集 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
