@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>本周 AI · 2026-11-24(第 12 期)</title><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>"><style>
+*{box-sizing:border-box}
+:root{
+ --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+ --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+ --bg:#faf8f4; --card:#fffdf9; --ink:#242019; --muted:#7d7566; --line:#e6dfd0;
+ --accent:#9c3a2b; --accentsoft:#f3e8e4;
+ --mysta:#c98a2d; --mystb:#9c3a2b}
+@media (prefers-color-scheme: dark){:root:not(.light){
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}}
+:root.dark{
+ --bg:#171410; --card:#1f1a14; --ink:#e9e3d6; --muted:#9a9081; --line:#35291c;
+ --accent:#e0a05c; --accentsoft:#2b2114;
+ --mysta:#6366f1; --mystb:#8b5cf6}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 var(--sans);
+ -webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+.wrap{max-width:660px;margin:0 auto;padding:36px 22px 90px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+/* 报头 masthead(无渐变) */
+.hero{padding:14px 0 0;margin:0 0 4px;background:none;color:var(--ink);border-radius:0;box-shadow:none}
+.hero h1{font-family:var(--serif);font-size:32px;line-height:1.22;margin:0;color:var(--ink);letter-spacing:0}
+.hero .subtitle{font-size:14px;color:var(--muted);margin:9px 0 0;padding:0;border:0;font-family:var(--sans)}
+.hero blockquote{border:0;background:none;padding:0;margin:0}
+.hero .lede{background:none;border:0;border-left:2px solid var(--accent);border-radius:0;
+ padding:2px 0 2px 16px;margin:18px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.75;color:var(--ink)}
+.hero .lede strong{color:var(--ink)}
+/* 上/下一篇导航(纯文本) */
+.daynav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0 2px;font-size:14px;font-family:var(--sans)}
+.daynav a{color:var(--muted);background:none;border:0;box-shadow:none;padding:0;text-decoration:none}
+.daynav a:hover{color:var(--accent);text-decoration:underline}
+.daynav .home{color:var(--muted)}
+.daynav span{width:1px}
+/* 分区标题:serif + 发丝线,无彩色 */
+h2{font-family:var(--serif);font-size:23px;font-weight:700;margin:38px 0 6px;padding:0 0 8px;
+ border:0;border-bottom:1px solid var(--line);letter-spacing:0;color:var(--ink)}
+/* 小标题:周报里用作「主题线」分组,给个左侧细线让归属关系看得出来 */
+h3{font-family:var(--serif);font-size:18px;font-weight:600;margin:30px 0 10px;color:var(--ink);
+ border-left:3px solid var(--accent);padding-left:11px}
+h4{font-family:var(--sans);font-size:15px;font-weight:600;margin:16px 0 4px;color:var(--muted)}
+/* 目录:简洁文本索引 */
+ul.toc{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:5px 16px;
+ font-size:14px;font-family:var(--sans)}
+ul.toc li{margin:0}
+ul.toc a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+ul.toc a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+ul.list{margin:8px 0;padding-left:22px}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+/* 条目:发丝分隔的列表,无卡片无阴影 */
+ol.items{list-style:none;padding:0;margin:8px 0 0;counter-reset:it}
+li.item{background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0 14px;margin:0;box-shadow:none;position:relative;counter-increment:it}
+li.item:first-child{border-top:0}
+li.item::before{content:counter(it);position:absolute;top:16px;right:0;font-family:var(--serif);
+ font-size:14px;color:var(--muted);background:none;border-radius:0;min-width:0;height:auto;padding:0}
+.item-head{font-family:var(--serif);font-size:17.5px;font-weight:600;line-height:1.5;padding-right:32px;color:var(--ink)}
+/* 「后续」徽标:细边小字 */
+.fubadge{display:inline-block;background:none;color:var(--accent);font-size:11px;font-weight:600;
+ border:1px solid var(--accent);border-radius:4px;padding:0 6px;margin-right:7px;vertical-align:2px;font-family:var(--sans)}
+blockquote{margin:10px 0 0;padding:0;border:0}
+blockquote.why{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin-top:10px;font-size:14.5px;font-style:italic;color:var(--muted);font-family:var(--serif)}
+blockquote.note{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:14px 0;font-size:14px;font-style:italic;color:var(--muted)}
+blockquote.quote{background:none;border:0;border-left:2px solid var(--line);border-radius:0;
+ padding:2px 0 2px 14px;margin:10px 0;font-style:italic;color:var(--muted)}
+/* 来源/日期:byline 文本 */
+.meta{margin-top:9px;display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+code.chip{background:none;color:var(--muted);border-radius:0;padding:0;font-size:12.5px;font-family:var(--sans)}
+code.chip + code.chip::before{content:" · "}
+code.chip.type{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 7px;margin-right:3px;font-size:11px;font-weight:600}
+code.chip.type + code.chip::before{content:""}
+/* 行内代码(命令、标识符):不加底色会和正文糊在一起,加太重又抢标题 */
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+ background:var(--accentsoft);border-radius:4px;padding:1px 5px}
+.item-head code{font-size:.82em}
+/* 教程的「跟着做」步骤:普通有序列表,不要套用日报条目的卡片样式 */
+ol.steps{margin:10px 0;padding-left:24px}
+ol.steps li{margin:7px 0}
+/* 周报的「该不该动手」四档结论 */
+.verdict{display:inline-block;font-size:12px;font-weight:600;font-family:var(--sans);
+ border-radius:999px;padding:1px 9px;margin:0 2px;vertical-align:1px;white-space:nowrap}
+.verdict.go{background:var(--accent);color:var(--bg)}
+.verdict.soon{color:var(--accent);border:1px solid var(--accent)}
+.verdict.wait{color:var(--muted);border:1px solid var(--line)}
+.verdict.skip{color:var(--muted);opacity:.75}
+p{margin:10px 0}
+em{color:var(--muted)}
+/* 代码块(学习页用):暖底细边,等宽,横向滚动 */
+pre.codeblock{background:var(--card);border:1px solid var(--line);border-radius:8px;
+ padding:13px 16px;margin:12px 0;overflow-x:auto;font-size:13px;line-height:1.6;
+ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre.codeblock code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);
+ font-size:12.5px;text-align:left;font-family:var(--sans)}
+.toplink{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;padding:7px 13px;font-size:12.5px;box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:9;color:var(--muted)}
+.themebtn{position:fixed;top:16px;right:16px;z-index:10;background:var(--card);border:1px solid var(--line);
+ border-radius:999px;width:40px;height:40px;font-size:17px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.06);
+ display:flex;align-items:center;justify-content:center;padding:0}
+.themebtn:hover{border-color:var(--accent)}
+/* 神秘链接彩蛋:满屏乱跑,白日=太阳/深夜=月亮 */
+.mystery{position:fixed;z-index:11;display:inline-flex;align-items:center;gap:6px;left:18px;top:76%;
+ background:linear-gradient(135deg,var(--mysta),var(--mystb));color:#fff;border:0;border-radius:999px;
+ padding:10px 18px;font-size:15px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.18);
+ transition:top 1.5s cubic-bezier(.3,1.3,.5,1),left 1.5s cubic-bezier(.3,1.3,.5,1),transform .15s ease}
+.mystery:hover{transform:scale(1.1) rotate(-2deg);text-decoration:none}
+.mystery .mi{font-size:17px;line-height:1}
+/* 首页搜索框:下划线式 */
+.search{margin:6px 0 20px}
+.search input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;
+ padding:10px 2px;font-size:15px;color:var(--ink);box-shadow:none;outline:none;font-family:var(--sans)}
+.search input:focus{border-color:var(--accent)}
+.search input::placeholder{color:var(--muted)}
+/* 首页日期条目:发丝分隔 */
+.day{display:block;background:none;border:0;border-radius:0;border-top:1px solid var(--line);
+ padding:16px 0;margin:0;box-shadow:none}
+.day:hover{text-decoration:none}
+.day .dt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.day:hover .dt{color:var(--accent)}
+.day .ct{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:10px;font-family:var(--sans)}
+.day .th{margin-top:5px;font-size:14px;color:var(--muted);line-height:1.6}
+/* 栏目链接(比价/专栏):编辑式链接行,无渐变 */
+.pcard{display:block;background:none;border:0;border-top:1px solid var(--line);border-radius:0;
+ padding:14px 0;margin:0;box-shadow:none;color:var(--ink)}
+.pcard:hover{text-decoration:none}
+.pcard .dt{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--accent)}
+.pcard .ct{font-size:11px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;
+ padding:1px 8px;margin-left:8px;font-family:var(--sans)}
+.pcard .th{margin-top:4px;font-size:14px;color:var(--muted);line-height:1.55}
+@media (max-width:560px){.hero h1{font-size:26px}.wrap{padding:24px 16px 70px}}
+</style></head><body><button id="themeBtn" class="themebtn" onclick="toggleTheme()" title="切换深/浅色">🌙</button><div class="wrap" id="top"><div class="hero"><h1>本周 AI · 2026-11-24(第 12 期)</h1>
+<blockquote class="quote">覆盖 11-18 ~ 11-24 · 读了 3 份日报共 20 条(11-21 / 11-22 / 11-23 / 11-24 连续漏跑) · 够格的 6 条进来了 两条口径说明: 1. <strong>本期只有 3 份日报,且全部集中在 11-18~11-20 这三天。</strong> 按规矩该把窗口放宽到 14 天,但 11-11~11-17 那段上期周报已经逐条处理过了,回头再收一遍是重复不是补料。所以本期<strong>不放宽</strong>,就按这 20 条写,写不满就少写。 2. <strong>联网核实通道本期仍然不可用</strong>(WebFetch 的摘要模型 403、curl 未获授权)。所以下文所有热度数字<strong>一律是日报当天记录的值</strong>,并标了记录日期。没有我编的数。</blockquote>
+<div class="lede"><strong>这周真正的那件事</strong>:两篇互不相干的数据,说的是同一句话。哈佛那篇用 655 家公司、72 万名工程师的遥测算出来:AI 让代码量涨 44%、PR 涨 35.7%,<strong>但 Jira 上真正解决掉的 issue 只涨 13.7%</strong>——因为<strong>编码生产率涨了 73.7%,评审生产率反而降了 7.0%</strong>。同一周,Anthropic 那条 AI 漏洞扫描流水线也交了一份成绩单:模型标出 <strong>29,439 个</strong>候选漏洞,报给维护者 6,157 个,<strong>到 10-02 真正在上游打上补丁的只有 516 个,1.75%</strong>。一个是写代码,一个是找漏洞,漏斗形状一模一样:<strong>上游产能涨了一个台阶,下游把关没有,于是涨出来的东西全堵在「人要签字」那一道</strong>。这周另外两条热点就是对这个瓶颈的正面回答——Claude Code 团队和 OpenAI 的 Performance Factory,<strong>各自独立地做了同一件事:把验证写成基础设施,然后拿历史上真实发生过的事故当 eval 去调那个验证器</strong>。两边用的词不一样,方法是一个方法。上期的结论是「你轮换的那一层可能不是他们待着的那一层」,这期是另一条线上的同类判断:<strong>你以为你的瓶颈是模型不够强,其实是你没有一把能自动量出「这次改动对不对」的尺子。</strong></div>
+</div><nav class="daynav"><a href="2026-11-17.html">← 上一期</a><a class="home" href="index.html">全部</a><span></span></nav><h2 id="-本周热点">本周热点</h2>
+<h3 id="产出翻倍过审没翻倍这周两份独立数据画出了同一个漏斗">产出翻倍,过审没翻倍——这周两份独立数据画出了同一个漏斗</h3>
+<p><strong><a href="https://www.beri.net/article/harvard-jellyfish-study-ai-coding-agents-code-review-bottleneck-output-employment-engineering-org-design" target="_blank" rel="noopener noreferrer">哈佛的工作论文更新了:agent 让代码量涨 44%、PR 涨 35.7%,但「解决掉的问题」只涨 13.7%</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:经济学家 Fiona Chen 和 James Stratton 的《Artificial Intelligence in the Firm: Bottlenecks in Software Production》更新版。数据来自 Jellyfish 的工程遥测加 GitHub 活动信号,覆盖 2021 年到 2026 年 3 月、约 3 亿条工作事件。核心拆解是:<strong>编码生产率 +73.7%,评审生产率 -7.0%</strong>;公司已经在重新分配人力——<strong>投在写代码上的精力降 22.7%,投在评审上的涨 43.4%</strong>;而工程师人数没有可观测的变化。八月那版里还有两个更扎人的数:PR 的评审耗时涨 <strong>49%</strong>,返工请求数量<strong>接近翻倍</strong>。</li><li><strong>凭什么算热点</strong>:样本量是本期最硬的一条——<strong>655 家公司、720,542 名工程师、约 3 亿条工作事件</strong>,不是 benchmark 也不是问卷。多源成立:<strong>另有一份 NBER 独立研究结论同向</strong>(自主 agent 让提交活动涨 240%,到真正发版时只剩 30%)。采用度口径有数:<strong>11-17 上 HN 首页 211 分</strong>(11-19 日报记录)。结构性是我收它的主因——它把「AI 提效」这件事从一个形容词变成了一个<strong>可定位的瓶颈坐标</strong>,而且论文自己给了反证据:到 2026 年 3 月,<strong>80% 的公司已经在用 AI code review 工具,但只有 23% 的评审意见是 AI 生成的</strong>,瓶颈在这些公司里照样存在,因为最终签字的还是人。</li><li><strong>你该不该动手</strong>:<span class="verdict soon">排进这个月</span>,但动的不是工具,是<strong>你自己量一次这三个数</strong>。照论文的口径在你们团队上取:近半年的 PR 数、合入后 revert / hotfix 数、Jira 上真正 close 的 issue 数。<strong>如果 PR 涨了而第三个数没涨,你买再多 agent 席位都是在给第二个数加油</strong>。要提醒一句口径:<strong>核心数据截止到 2026 年 3 月,而 agent 能力在 2026 下半年明显上了一个台阶</strong>——所以这到底是「这代模型的局限」还是「人类评审产能的结构性天花板」,论文回答不了,你自己那三个数能回答。另外引用时注意标版本,八月版 LOC 是 +30%,十一月版是 +44%。</li></ul>
+<p><strong><a href="https://thenewstack.io/anthropic-oss-scanner-vulnerabilities/" target="_blank" rel="noopener noreferrer">AI 扫描器已经是开源 CVE 的上游了:找到 29,439 个,真正修到上游的只有 516 个</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:Anthropic OSS Scanner 的完整漏斗第一次公开。模型标出 <strong>29,439 个</strong>候选 → 报给维护者 <strong>6,157 个</strong>(覆盖 591 个项目,其中 5,103 个被确认)→ 截至 10-02,<strong>上游真正打上补丁的 516 个</strong>。占总发现量的 1.75%,占已上报量的 8.4%。Anthropic 自己也承认:报告<strong>不经人工验证直接发给维护者</strong>,其中 4,824 条是直接发出的、明说「可能含误报」;维护者反馈过严重性虚高、以及扫描器误解项目威胁模型的情况。</li><li><strong>凭什么算热点</strong>:持续性和多源在<strong>同一天</strong>凑齐了,这很少见——<strong>11-20 日报里的 Drupal 和 Ruby 两批高危,报告方都是这条流水线</strong>。Drupal 那条是 CVE-2026-132165 免认证 RCE(编号 ANT-2026-GMRPK0BU),Drupal 自评 Critical 18/25、PoC 已存在;Ruby 那批七个内存安全洞、五个带 PoC 能打到 RCE,报告方是 Ada Logics 的 Stephan Lipp 和 Anthropic。换句话说这不是一篇报道,是<strong>一条流水线的产出当天就落在两个你可能在用的东西上</strong>。结构性和上一条严丝合缝:1.75% 的转化率说明<strong>瓶颈已经从「发现」搬到了「分诊和修复」</strong>。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>,而且这条有两个具体动作,一个今天做一个这个月做。今天的:<strong>升 Drupal 和 Ruby</strong>。Drupal 修复版本 10.6.22 / 11.3.22 / 11.4.13,<strong>11.2.x 及更早、10.5.x 及更早已脱离安全支持,没有补丁</strong>;来不及升就在 web server 配置或根 <code>.htaccess</code> 里封掉 <code>/core/install.php</code>(Apache <code>Require all denied</code>,nginx <code>location = /core/install.php</code>),同时确认 web server 进程<strong>不能写 <code>settings.php</code></strong>——这是触发条件之一。Ruby 升到 <strong>4.0.10 / 3.4.13 / 3.3.14</strong>,并且<strong>别只查你自己装的那份,别的产品里捆绑的 Ruby 也要查</strong>。这个月的那个动作是判断题:<strong>「能找漏洞」正在飞快贬值</strong>,你要是在做安全方向,值钱的那一端已经换成了分诊、判断威胁模型、把补丁真正推到上游合并。顺带一句,这里面所有准确率数据<strong>均为 Anthropic 自述,无独立审计</strong>。</li></ul>
+<h3 id="两家顶级团队各自独立地给出了同一个答案拿历史事故当-eval-去调你的验证器">两家顶级团队,各自独立地给出了同一个答案:拿历史事故当 eval 去调你的验证器</h3>
+<p><strong><a href="https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/" target="_blank" rel="noopener noreferrer">Claude Code 团队公开了自己怎么验 AI 写的代码:90% 代码由 Claude 写,瓶颈早就不是生成</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:Addy Osmani 11-16 发的一篇<strong>可以照抄的工程配置</strong>,不是方法论鸡汤。核心判断和上一组的数据完全对上:生成代码已经很便宜,<strong>「检查」才是你能把多少活交给 agent 的上限</strong>。能直接搬的几条:<code>.claude/skills/</code> 里放一个 <code>verify</code> skill,让 Claude 像 QA 一样真的把应用跑起来;一份 39 条可靠性清单,<strong>但每次只跑与本次改动相关的 3~10 条</strong>;<strong>reviewer 的规则从 base 分支读 <code>REVIEW.md</code>,这样一个 PR 改不了评判自己的标准</strong>。卡点设计:开 PR 前先跑测试、构建、lint 这些便宜检查;<strong>连续失败 3 次就停下来交给人</strong>;commit gate 分 off / observe / enforce 三档,<strong>但连拦两次后放行第三次,免得 Claude 卡死</strong>。flaky test 不许跳过、不许加 sleep、不许重试到过为止。</li><li><strong>凭什么算热点</strong>:真人用过是这条的主证据——<strong>这是他们自己产线上跑着的配置,不是建议</strong>。采用度有数:<strong>HN 讨论 145 条评论</strong>(11-18 日报记录)。配套数字:同系列的 10-15 代码评审篇称 <strong>6 月到 9 月合入 PR 翻倍、revert 降超 40%</strong>,内部一个独立 grader 把结构化文件生成成功率提了最多 10 分。结构性在于<strong>他们怎么验「验证器」本身</strong>:拿历史事故和 revert 造正式 eval,把仓库还原到当时的状态,配一句话答案,<strong>只有正确描述了 bug 的发现才算分</strong>。Boris Cherny 的说法是「给 Claude 一个能自证的办法」是他的头号建议,估计效果差 2~3 倍。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>,但只抄两条,别抄三十九条。第一条是 <strong><code>REVIEW.md</code> 从 base 分支读</strong>——这是本周性价比最高的五分钟,因为它堵的是一个你多半没想过的洞:<strong>reviewer 的规则如果跟代码放在同一个分支里,agent 改规则比改代码容易</strong>。第二条是<strong>清单按 diff 裁剪</strong>,全量跑清单既贵又会把真问题淹在噪音里。至于那套 commit gate,<strong>先开 observe 档收两周数据再说</strong>,一上来 enforce 你只会收获一群绕过它的人。</li></ul>
+<p><strong><a href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/" target="_blank" rel="noopener noreferrer">OpenAI 公开 Performance Factory:让 Codex agent 自己查 ChatGPT 的性能回归,三个月 1,700+ 次调查</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:11-19 发布。流程是性能告警触发开任务 → 派 agent 调查 → 记录结论 → 把修复方案交给工程师评审,<strong>人始终在审批位上</strong>,不是全自动合并。三个多月跑下来:<strong>1,700+ 次调查,600+ 次定位到根因,其中约 15 个修复是 Codex 原封不动的 PR 被合进去的</strong>。边界写得很明确:<strong>Codex 在「原因清晰、改动范围收得住」的场景最好用</strong>,复杂的还是人来。</li><li><strong>凭什么算热点</strong>:真人用过加产线数据——1,700 次调查跑在 ChatGPT 自己的性能告警流上。多源:<strong>OpenAI 官方博客和 VentureBeat 独家同日发</strong>。真正让我把它和上一条放进同一组的是结构性:<strong>他们做了个 <code>perf-forensics</code> skill,拿历史上真实发生过的回归当 eval 去调这个 skill</strong>,调到能「给一条告警、单轮返回一个诊断」为止;另外加了对抗式复核——<strong>不同轮次分别负责调查、质疑诊断、提修复</strong>。这和 Claude Code 团队「拿历史 revert 造 eval、只有正确描述 bug 才算分」是同一个方法,两家没商量过。</li><li><strong>你该不该动手</strong>:<span class="verdict soon">排进这个月</span>,抄的是方法不是流水线。那三个数字要会读——<strong>1,700 次调查只换来约 15 个合入的 PR,成功率不到 1%</strong>,和这期第一组的漏斗是同一个形状。所以别把它理解成「agent 能修性能问题」,要理解成「<strong>agent 可以把 600 次根因定位的脏活干掉,省下的是人去看 1,700 条告警的时间</strong>」。真正可复制的只有一条:<strong>你手上任何一个 agent skill,只要你说不清它好不好用,就去历史里找十个已经发生过、已经知道答案的案例,把它们做成一个能打分的集合</strong>。没有这个集合,你调 prompt 就是在凭感觉掷骰子。</li></ul>
+<h3 id="这周塌的两处都在你没写也没选过的那层代码里">这周塌的两处,都在你没写、也没选过的那层代码里</h3>
+<p><strong><a href="https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi" target="_blank" rel="noopener noreferrer">微软 agent-framework 被投毒:两个版本窃取 Azure / GitHub Actions 凭据,走的是官方发布账号</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:11-17 晚间,恶意版本存活约 45 分钟。<strong>为什么这次比一般投毒更难躲</strong>:载荷不是藏在包的代码里等你 import,而是装了一个 <code>.pth</code> 启动钩子——<strong>Python 解释器每次启动都会执行 <code>.pth</code>,所以只要那个 venv / 容器 / CI runner 里跑了任何 Python 脚本,窃密就执行了</strong>。两个版本还都保留了对正常 <code>agent-framework-core 1.26.0</code> 的依赖,<strong>框架功能一切如常,不会报错</strong>。偷的东西:Azure CLI 数据、Azure DevOps agent 凭据、Git credential store、Docker 和 npm 配置、<code>.env</code> 文件,还会主动去换一份新的 Azure 托管身份 token 和 Azure DevOps token,外带到一个 <code>webhook[.]site</code> 端点。1.26.2 比 1.26.1 还多抓了 <strong>GitHub Actions OIDC token</strong>。</li><li><strong>凭什么算热点</strong>:多源是本期最硬的一条,没有之一——<strong>Aikido / Chainguard / Endor Labs / OX Security / SafeDep / Socket / StepSecurity / Wiz 八家独立报告</strong>。采用度:<strong>该包月下载约 190,000 次</strong>。强制性不用解释:中了就得轮换云凭据。值得单独说一句的是<strong>热度和影响面的背离</strong>:<a href="https://news.ycombinator.com/item?id=50542084" target="_blank" rel="noopener noreferrer">HN 讨论</a>只有 13 分——<strong>这件事的社区关注度明显低于它的实际杀伤力</strong>,这正是周报该干的活。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>,三步,顺序不能换。① <strong>排查窗口是 11-17 20:35–21:20 UTC</strong>——这段时间内有没有机器装过 <code>agent-framework</code> 1.26.1 或 1.26.2。② <strong>重建受影响的镜像和 runner,而不是原地卸载</strong>——<code>.pth</code> 可能已经跑过了,卸载包不等于清掉后果。③ <strong>轮换 Azure / Azure DevOps / GitHub 凭据</strong>,然后 <code>pip install agent-framework==1.26.0</code> 钉死。另外有一条能自动化的通用检查值得现在就加进你的依赖门禁:<strong>这两个恶意 wheel 都没有 trusted publishing 来源证明</strong>。根因目前各家说法不一致——Wiz 倾向于微软 ESRP 签名发布管线的客户端证书和私钥被窃(工具链自称 <code>Cairn</code>),SafeDep 发现一个<strong>当天新建、却对该包及另外 5 个项目有发布权限的维护者账号 <code>vibiret</code></strong>。不管哪个对,结论一样:<strong>「它是官方账号发的」已经不是一条安全保证了。</strong></li></ul>
+<p><strong><a href="https://www.wiz.io/blog/cve-2026-114938-rce-java4shell-openjdk" target="_blank" rel="noopener noreferrer">Java4Shell(CVE-2026-114938):Base64 解码越界写 62 字节,免认证 RCE,JDK 17.0.6 之后全中</a></strong></p>
+<ul class="list"><li><strong>发生了什么</strong>:OpenJDK 用一段手写汇编拿 AVX-512 加速 Base64 解码,<strong>一个很短的畸形输入会在 Java 把它判为非法之前,先往缓冲区尾部外写 62 字节</strong>(Oligo 描述为整数下溢)。Calif 的 Quang Luong 发现,并演示了在 Jira、Confluence、Jenkins、Keycloak 上的免认证 RCE。<strong>三个条件同时成立才中</strong>:① JDK ≥ 17.0.6(2023 年 1 月起,含 21 / 25 / 27,任何厂商构建——Corretto、Temurin、Microsoft OpenJDK、Zulu、Red Hat OpenJDK 都算);② CPU 带 <strong>AVX-512 VBMI</strong> 的 x86-64(Intel Xeon Ice Lake~Granite Rapids、AMD EPYC Zen 4+);③ 跑的是 HotSpot。<strong>17.0.6 以前的版本、标准 OpenJDK 8 和 11、ARM64、OpenJ9、Azul Prime/Zing 不受影响</strong>;<code>java.util.Base64</code> 的 <strong>MIME 解码器走标量路径,也不受影响</strong>。</li><li><strong>凭什么算热点</strong>:强制性顶格——<strong>CVSS 4.0 Calif 评 9.2 / CVSS 3.1 Oracle 评 8.1</strong>,免认证 RCE,<strong>Oracle 11-17 CSPU 同批修了 655 个漏洞</strong>。多源:Wiz、Oligo、Calif 三家各出技术分析,配 <a href="https://news.ycombinator.com/item?id=50538240" target="_blank" rel="noopener noreferrer">HN 讨论串</a>。和上一条放在同一组,是因为它们的共性比各自的细节更值得记:<strong>一个是 <code>.pth</code> 让你「没 import 也中」,一个是 JVM intrinsic 让你「没写过一行不安全代码也中」</strong>——两处都在你没选过的那层。</li><li><strong>你该不该动手</strong>:<span class="verdict go">立刻试</span>,今天就做,而且这条有个比打补丁更快的止血点。升到 <strong>17.0.21.0.3 / 21.0.13.0.3 / 25.0.5.0.3 / 27.0.1.0.3</strong>;<strong>暂时不能升就加 JVM 参数 <code>-XX:-UseBASE64Intrinsics</code></strong>——影响面最小,代价只是 Base64 变慢,可以用 <code>JAVA_TOOL_OPTIONS</code> 批量下发,<strong>打完补丁记得撤掉</strong>。更窄的写法是 <code>-XX:+UnlockDiagnosticVMOptions -XX:DisableIntrinsic=_base64_decodeBlock</code>。<strong>别用 <code>-XX:UseAVX=2</code></strong>:它也能挡,但会关掉全部 AVX-512 拖慢其他计算,<strong>而且在 ARM 上会直接起不来</strong>。排查顺序按暴露面来:<strong>Keycloak、Jira、Confluence、Artifactory、Jenkins、PingFederate 这批对外的先过一遍</strong>。截至 11-17 无在野利用报告、未进 CISA KEV——但这条别当成可以拖的理由,<strong>PoC 的构造在公开分析里已经讲得很清楚了</strong>。</li></ul>
+<h2 id="-上周跟踪">上周跟踪</h2>
+<ul class="list"><li><strong>Cursor 认了:带 SSH 后门的扩展源头是 Fireworks 泄露的密钥</strong> — <strong>没下文</strong>,本周 3 份日报零提及。上期「去签发方轮换、而不是在 Fireworks 上删 secret」的动作不变。</li><li><strong>wfx-loot:4837 个被盗 GitHub 账号推 CI 密钥窃取器</strong> — <strong>没下文</strong>,本周零提及。但本周的 agent-framework 投毒是同一类事情的下一次,而且这次攻的是<strong>官方发布账号</strong>,比偷贡献者账号更上游一层。</li><li><strong>Amazon 把工单打标从 Sonnet 换成决策模型(每百万工单 $22,200 → $500)</strong> — <strong>没下文</strong>,本周零提及,没有第三方复现。</li><li><strong>Google Gemini Decisions API</strong> — <strong>没下文</strong>,本周零提及。不过同一个方向这周有了新动作:Gemini API 上线了 Tool Retrieval(见下面「没收的」),<strong>都是在省「本来就不该进上下文的那部分」</strong>。</li><li><strong>阿里开源 open-code-review(宣称 token 只要 Claude Code 的 1/9)</strong> — <strong>没下文</strong>,本周零提及、没有第三方实测。但本周哈佛那篇给它补上了分母:<strong>评审生产率 -7.0%,这就是这类工具要吃的那块市场</strong>。上期「十分钟、Delegation 模式不用新 key」的建议不变。</li><li><strong>AWS Emulator(本地跑 200+ AWS 服务)</strong> — <strong>没下文</strong>,本周零提及。「开发期加速器,不是正确性依据」这个边界不变。</li><li><strong>(上期没收项日历)Conductor 云端 11-20 删数据</strong> — <strong>已过期</strong>。没导的数据现在导不回来了。</li><li><strong>(上期没收项日历)OpenAI Agent Builder / Evals / <code>v1/prompts</code> 11-30 关停</strong> — <strong>还剩 6 天</strong>。grep 代码里的 <code>pmpt_</code> 前缀、<code>/v1/evals</code> 和 <code>/v1/prompts</code> 调用。别误伤:Responses API 没被弃用,ChatKit 也还在。</li></ul>
+<h2 id="-本周没收的">本周没收的</h2>
+<ul class="list"><li><strong><a href="https://openai.com/index/devday-2026-recap/" target="_blank" rel="noopener noreferrer">GPT-6.2 Astra 和 Sol</a>(Astra 降价 20% 到 $8/$40,Sol 维持 $2/$10 却在 FrontierCode 2.0 上只差 Astra 半分)</strong> — 本周最大的模型发布,不收。降价 20% 不是量级变化,而「Sol 用 1/5 成本咬到半分之内」这个卖点<strong>恰好是第三方不认的那一条</strong>:独立的 Coding Agent Index(Codex harness、最高算力)里 <strong>GPT-6.2 Astra 与 GPT-6 Astra 持平,GPT-6.2 Sol 反而比 GPT-6.1 Sol 掉了 3 分</strong>,两者在 Vals Index 排第 7 和第 9;Artificial Analysis 把 Astra 排第 2、第一是 Claude Fable 5.2。厂商榜和第三方榜在这代上公开打架,<strong>这种情况下我给不出任何有价值的判断,只能让你自己在自己的任务上跑一遍再定路由</strong>。等第三方榜单之间先收敛。</li><li><strong><a href="https://thenewstack.io/microsoft-mai-code-2/" target="_blank" rel="noopener noreferrer">微软 MAI Code 2 / MAI Code 2 Flash</a>(Flash 报 61.0% 均分、每任务 $0.052,HN 379 分)</strong> — 热度够(HN 379 分,11-19 记录),不收是因为<strong>那个「便宜」是促销价算出来的</strong>:微软的成本数字用的是五折价,按原价重算有分析指出 <strong>Flash 每任务 $0.104,反而比 GPT-6 Luna 的 $0.080 更贵</strong>,只是分数高约 6 分。而且 Flash 目前只在 Microsoft Foundry 限量预览,多数人动不了手。记一个日历就够:<strong>促销 2027-05-17 结束后价格翻倍</strong>,真在上面有量的到时候重算。</li><li><strong><a href="https://gigazine.net/gsc_news/en/20261117-windows-coding-agent-telemetry" target="_blank" rel="noopener noreferrer">Windows 11 在统计你用哪个 coding agent</a>(9 个进程名写死在 <code>MissionControlAggregator.dll</code> 里,HN 636 分)</strong> — <strong>本周采用度最高的一条,明确不收。</strong> HN 636 分(11-18 记录)是实打实的,但它对你<strong>没有任何动作</strong>:Win11 家庭版关不干净遥测,公司电脑上这个设置多半也不归你管。而且研究者自己证明了这份数据不可靠——<strong>纯按文件名匹配,把 <code>cmd.exe</code> 改名成 <code>codex.exe</code>,Windows 就认定你用了 Codex</strong>;他用公开 ISO 装的基线虚拟机上这个功能还是关的,<strong>所以连「每台机器都在传」都不能说</strong>。唯一值得记一笔的是方向:<code>Segments.Cohorts</code> 目前上报的群体标签只有一个 <code>IsDeveloper</code>,<strong>「开发者在用哪家 agent」正在被平台方当成市场数据采集</strong>。等它出现在一份公开的微软市场份额报告里,那才是故事。</li><li><strong><a href="https://github.com/elementalsouls/Claude-BugHunter" target="_blank" rel="noopener noreferrer">Claude-BugHunter</a>(11-18 单日 +1,005 star、GitHub Trending 第一,83 个安全 skill)+ <a href="https://github.com/NVIDIA/SkillEvaluator" target="_blank" rel="noopener noreferrer">NVIDIA SkillEvaluator</a>(11-17 单日 +873 star)</strong> — star 速度完全够采用度,但这是<strong>连续第四期</strong>出现「又一批给 agent 装的技能包」,两条的硬伤也照旧:BugHunter 本质是一大包 markdown,<strong>没有任何第三方实测说它真挖到了什么</strong>(而且只能在你有授权的 bug bounty / 红队范围内用);SkillEvaluator 的 Tier 3 要 provider key + agent CLI + 沙箱,门槛不低。<strong>SkillEvaluator 的 Tier 1 倒是不用等我</strong>——<code>skillevaluator validate ./my-skill --tiers 1</code> 是纯确定性检查、不要 API key、能出 SARIF 喂 GitHub Code Scanning,写 skill 的今天就挂上 CI。这是个待办不是判断题。</li><li><strong><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/" target="_blank" rel="noopener noreferrer">Gemini API 上线 Tool Retrieval / <code>defer_loading</code></a>(闲置工具只占约 26 token,不额外收费)</strong> — 这条我犹豫最久。结构性是成立的:<strong>几百个工具不再全量塞上下文,模型仍看得到名字和描述、参数 schema 用到才加载</strong>,对接 MCP 尤其划算(给 <code>mcp_server</code> 设 <code>defer_loading: true</code> 会把这台 server 的所有工具一起 defer)。不收的理由是<strong>绑死一家且还在预览</strong>:只支持 <strong>Gemini 3.6 及以后</strong>、必须走 <strong>v1beta 的 Interactions API</strong>(<code>generateContent</code> 不支持)、每个请求只准一个 <code>tool_search</code>。<strong>MCP 工具已经多到撑爆上下文的人今天就可以试,不用等我分析</strong>——一个请求加一个工具、给不常用的挂 <code>defer_loading</code>,两步的事。等它进稳定版、或等 Anthropic / OpenAI 跟进同一形态,这件事才算「这类工具的玩法变了」。</li><li><strong><a href="https://www.perplexity.ai/hub/blog/introducing-orchestrator" target="_blank" rel="noopener noreferrer">Perplexity Orchestrator</a>(45+ 模型一把 key,不收路由费)</strong> — 形态确实对上了一个真痛点:<strong>失败重试换的是「同一个模型的另一个部署」而不是偷偷换成别的模型</strong>(比如把 Claude 请求从 Anthropic 切到 AWS Bedrock),接入只改 key、base URL 和模型 ID。不收是因为<strong>只有官方单源、零采用度数字</strong>:官方说 10-04 至 11-02 期间成功率高于任一单一供应商,<strong>没有第三方复核</strong>;45+ 还是 85+ 模型两个来源口径都不一致。等有人贴出切换前后的成功率对照。</li><li><strong><a href="https://opencode.ai/product/browse" target="_blank" rel="noopener noreferrer">OpenCode Browse</a>(让 agent 用你那个已登录的浏览器)</strong> — 想法是对的(Playwright MCP 另起干净 profile,你的登录态、2FA、扩展全没了),但<strong>单源、无采用数字</strong>,而且它自己标明了权限边界:扩展用 <code>chrome.debugger</code> 执行命令,<strong>agent 拿到的是你浏览器的全部权限</strong>。等有人贴实测,或者等一个把权限收窄到单标签页的版本。想现在用的至少把「限定白名单站点」那个开关打开。</li><li><strong><a href="https://news.ycombinator.com/item?id=50536468" target="_blank" rel="noopener noreferrer">StarSling</a>(给「agent 刷 PR」的仓库做会自我优化的 CI)/ <a href="https://x.com/Replit/status/2122754933367955951" target="_blank" rel="noopener noreferrer">Replit Missions</a>(按预算买 agent 集群产出)/ <a href="https://news.ycombinator.com/item?id=50534758" target="_blank" rel="noopener noreferrer">Mistral Vibe 欧洲免费三个月</a></strong> — 三条一起不收,理由同一个:<strong>全是厂商自述或促销,没有一条有第三方数字</strong>。StarSling 的加速样本(gogs 12.8x、shellcheck 5.5x)是官方给的,HN 评论区自己就在问测试稳定性和自动改动的边界;Replit 那 13 个 NumPy 任务的加速曲线也是自测,而且收益主要来自前 16 个 agent;Mistral 的码一小时就发完了,Vibe + Le Chonk「最强开源组合」的说法没有任何第三方验证。StarSling 那个想法——<strong>「一个给 agent 开的 PR 提速 CI 的 agent」</strong>——和本期主线其实是同一个母题,等它有第三方实测再说。</li></ul>
+<h2 id="-动手教程用你仓库里的-revert-历史造一把能给ai-审查打分的尺子">动手教程:用你仓库里的 revert 历史,造一把能给「AI 审查」打分的尺子</h2>
+<p><strong>本周第二组热点的落地版:一个下午,你会拿到一个 10 条的回归 eval,以后每次改评审规则都能量出来变好还是变坏</strong></p>
+<blockquote class="why">你将做出:一个属于你这个仓库的评审 eval 集——10 个<strong>历史上真的漏网、真的被 revert 过</strong>的 bug,每个配一句话标准答案和一个可打分的 diff。做完你调 review prompt 不再是凭感觉,是能看着 <code>命中 4/10 → 7/10</code> 做决定。</blockquote>
+<p><strong>准备</strong>:</p>
+<ul class="list"><li>一个<strong>至少有一年历史</strong>、能找到 revert 或 hotfix 记录的仓库。你主力维护的那个。</li><li><code>git</code>,和<strong>任意一个你现在正在用的 AI 评审入口</strong>——<code>/code-review</code>、CI 上挂的 AI reviewer、或者干脆就是手动把 diff 贴给模型。用哪个不重要,<strong>重要的是整个过程里只换一个变量</strong>。</li><li>两小时不被打断的时间。第 2 步占掉其中一大半,没有捷径。</li></ul>
+<p><strong>跟着做</strong>:</p>
+<ol class="steps"><li><strong>先把候选捞出来,这步用 git 不用脑子。</strong> <code>git log --oneline --grep=&#x27;^Revert&#x27; --grep=&#x27;revert:&#x27; --grep=&#x27;hotfix&#x27; -i -n 200</code>。再补一条找修复型提交:<code>git log --oneline --grep=&#x27;fix:&#x27; -i -n 200</code>。你会拿到几十上百条,<strong>先别筛</strong>。</li><li><strong>筛出 10 个「真 bug」,这步全是人工判断,也是整件事的价值所在。</strong> 一条一条看,<strong>只留「当时合进去了、后来发现是错的、然后被回滚或热修」的</strong>。要明确排除三类:改需求回滚的、回滚实验性功能的、纯格式/依赖升级的。对留下的每一条,记三样东西到一个文件里:<strong>(a) 引入 bug 的那个 commit SHA;(b) 那个 commit 的 diff(<code>git show &lt;sha&gt;</code> 存下来,这就是你的「待审 PR」);(c) 一句话标准答案——这个 bug 到底是什么、会在什么条件下出事</strong>。这个「一句话答案」就是打分依据,照 Claude Code 团队的口径:<strong>只有正确描述了 bug 才算分,「这里变量名不好」「建议加个注释」一律不算</strong>。</li><li><strong>跑基线,记两个数。</strong> 把 10 个 diff 逐个喂给你现在的评审入口,<strong>只给 diff,别给答案,也别暗示有 bug</strong>。每跑一个,对照第 2 步的标准答案打一个 0 或 1。记:<strong>命中数 N/10</strong>,以及<strong>每次的 token 消耗</strong>(从 API usage 字段取,别估)。跑完你大概率会有点难受——<strong>这是对的,你第一次知道了你的评审网眼有多大</strong>。</li><li><strong>只改一处,再跑同一批。</strong> 挑本周 Claude Code 团队那两条里最便宜的一条先改:<strong>把你的评审规则抽成一个 <code>REVIEW.md</code>,并且让 reviewer 从 base 分支读它</strong>(CI 里就是 <code>git show origin/main:REVIEW.md</code>,别读工作区的那份)。这条堵的是「PR 能改评判自己的标准」这个洞。改完<strong>用同一批 10 个 diff 重跑</strong>,对比 N 和 token。然后再试第二处:<strong>清单别全量跑,按 diff 命中的文件类型只跑相关的 3~10 条</strong>——看命中数掉没掉、token 省了多少。</li><li><strong>把尺子留下,顺手接上两道闸。</strong> 把这 10 条连同答案 commit 进仓库(建议放 <code>evals/review/</code>),<strong>以后任何人想改评审 prompt,先拿这 10 条跑一遍</strong>。另外抄两条便宜的卡点:<strong>agent 连续失败 3 次就停下来交给人</strong>;<strong>flaky test 不许靠重试、加 sleep 糊弄过去</strong>——后面这条不是洁癖,它防的是你把「失败了再跑一次就行」教给 agent。</li></ol>
+<blockquote class="quote">做完你会:有一个能复现的分数,以及一个更值钱的副产品——<strong>第 2 步那 10 条标准答案,本身就是你这个仓库最容易出事的地方的清单</strong>。拿它去对照你的测试覆盖,大概率能发现其中三四条根本没有对应的测试。下一步:每季度往里补 3 条新的 revert,让这把尺子跟着仓库一起长。</blockquote>
+<ul class="list"><li>🔗 方法出处(历史 revert 造 eval、<code>REVIEW.md</code> 从 base 分支读、清单按 diff 裁剪、失败 3 次交人):<a href="https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/" target="_blank" rel="noopener noreferrer">Claude Code 团队谈验证</a></li><li>🔗 同一方法的另一个版本(拿历史回归调 <code>perf-forensics</code> skill、对抗式复核):<a href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/" target="_blank" rel="noopener noreferrer">OpenAI Performance Factory</a></li><li>🏷️ 来源:Anthropic Claude Code 团队 / OpenAI 官方博客 · 难度:进阶</li></ul>
+<hr>
+<p><em>每周二更新 · 热点从本周日报筛出,证据见各条 · 链接指向原文</em></p><nav class="daynav"><a href="2026-11-17.html">← 上一期</a><a class="home" href="index.html">全部</a><span></span></nav><div class="footer">由 Claude 每周筛选 · 本地渲染网页版 · <a href="https://liiiiink.github.io/AiDigest/" target="_blank" rel="noopener">在线版</a></div></div><a class="toplink" href="#top">↑ 顶部</a><script>
+(function(){
+  var root=document.documentElement, key='ai-digest-theme', btn=document.getElementById('themeBtn');
+  function sysDark(){ return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark(){ return root.classList.contains('dark') || (!root.classList.contains('light') && sysDark()); }
+  function paint(){ var d=isDark(); if(btn) btn.textContent = d?'☀️':'🌙'; var mi=document.getElementById('mysteryIcon'); if(mi) mi.textContent = d?'🌙':'☀️'; }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='dark') root.classList.add('dark'); else if(saved==='light') root.classList.add('light');
+  window.toggleTheme=function(){
+    if(isDark()){ root.classList.remove('dark'); root.classList.add('light'); try{localStorage.setItem(key,'light');}catch(e){} }
+    else { root.classList.remove('light'); root.classList.add('dark'); try{localStorage.setItem(key,'dark');}catch(e){} }
+    paint();
+  };
+  paint();
+  var q=document.getElementById('q');
+  if(q){ q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), days=document.querySelectorAll('.day');
+    for(var i=0;i<days.length;i++){
+      days[i].style.display = (!v || days[i].textContent.toLowerCase().indexOf(v)>=0)?'':'none';
+    }
+  }); }
+  // 神秘链接彩蛋:满屏随意移动
+  var mb=document.getElementById('mysteryBtn');
+  if(mb){
+    function roam(inst){
+      var w=window.innerWidth,h=window.innerHeight,bw=mb.offsetWidth||150,bh=mb.offsetHeight||46,m=14;
+      if(inst){mb.style.transition='none';}
+      mb.style.left=(m+Math.random()*Math.max(0,w-bw-2*m))+'px';
+      mb.style.top=(m+Math.random()*Math.max(0,h-bh-2*m))+'px';
+      if(inst){void mb.offsetWidth; mb.style.transition='';}
+    }
+    roam(true); setInterval(function(){roam(false);},5000);
+  }
+})();
+</script></body></html>
